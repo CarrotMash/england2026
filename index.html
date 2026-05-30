@@ -1,0 +1,2231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🇬🇧 England 2026 – Familie Familienreise</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IM+Fell+English:ital@0;1&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --red: #CF142B;
+    --navy: #012169;
+    --gold: #C8A84B;
+    --cream: #F5F0E8;
+    --dark: #1a1a2e;
+    --white: #FFFFFF;
+    --grey: #6b6b6b;
+    --light-grey: #e8e2d8;
+    --teal: #0d6e6e;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+/* ===== HERO SPLASH ===== */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    background: var(--navy);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+
+  .hero-cityscape {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    width: 100%; height: 75%;
+    z-index: 1;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      #0a1628 0%,
+      #012169 35%,
+      #1a3a8a 55%,
+      #c0392b 72%,
+      #e67e22 80%,
+      #f39c12 88%,
+      #fce38a 100%
+    );
+    z-index: 0;
+  }
+
+  .hero-cloud {
+    position: absolute;
+    background: rgba(255,255,255,0.07);
+    border-radius: 50px;
+    z-index: 1;
+  }
+  .cloud-1 { width: 120px; height: 30px; top: 18%; left: -130px; animation: drift 28s linear infinite; }
+  .cloud-2 { width: 80px; height: 20px; top: 28%; left: -90px; animation: drift 38s linear infinite 8s; }
+  .cloud-3 { width: 150px; height: 35px; top: 12%; left: -160px; animation: drift 22s linear infinite 4s; }
+  @keyframes drift { to { left: 110%; } }
+
+  .hero-stars {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 50%;
+    z-index: 1;
+  }
+  .star {
+    position: absolute;
+    width: 2px; height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 3s ease-in-out infinite;
+  }
+  @keyframes twinkle { 0%,100%{opacity:0.2} 50%{opacity:1} }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 24px 0;
+    pointer-events: none;
+  }
+
+  .hero-flag {
+    font-size: 3.5rem;
+    animation: flagwave 4s ease-in-out infinite;
+    display: block;
+    margin-bottom: 8px;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+  }
+  @keyframes flagwave { 0%,100%{transform:rotate(-3deg) scale(1)} 50%{transform:rotate(3deg) scale(1.05)} }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    line-height: 1;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.6), 0 0 60px rgba(200,168,75,0.3);
+    margin-bottom: 4px;
+  }
+
+  .hero-subtitle {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.0rem;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    margin-bottom: 8px;
+  }
+
+  /* Phase pills */
+  .hero-phases {
+    display: inline-flex;
+    gap: 8px;
+    margin-bottom: 14px;
+    pointer-events: all;
+  }
+  .phase-pill {
+    background: rgba(255,255,255,0.13);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(200,168,75,0.5);
+    border-radius: 20px;
+    padding: 5px 14px;
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .phase-pill:hover { background: rgba(200,168,75,0.3); border-color: var(--gold); }
+
+  .hero-countdown-box {
+    display: inline-flex;
+    gap: 12px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(200,168,75,0.4);
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin-bottom: 12px;
+  }
+  .hero-count-unit {
+    text-align: center;
+    min-width: 44px;
+  }
+  .hero-count-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+    display: block;
+  }
+  .hero-count-label {
+    font-size: 0.62rem;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .hero-count-sep {
+    font-size: 1.8rem;
+    color: rgba(255,255,255,0.3);
+    align-self: center;
+    font-family: 'Playfair Display', serif;
+    margin-top: -6px;
+  }
+
+  .hero-date-line {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.65);
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    margin-bottom: 20px;
+    pointer-events: none;
+  }
+
+  .hero-menu-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(200,168,75,0.7);
+    border-radius: 50px;
+    padding: 12px 32px;
+    color: white;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: all 0.2s;
+    pointer-events: all;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .hero-menu-btn:hover, .hero-menu-btn:active {
+    background: rgba(200,168,75,0.35);
+    border-color: var(--gold);
+    transform: scale(1.04);
+  }
+  .hero-menu-icon { font-size: 1.3rem; }
+  .hero-menu-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  /* Union Jack bottom border */
+  .hero-jack-bar {
+    height: 8px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--red) 0px, var(--red) 33%,
+      white 33%, white 36%,
+      var(--navy) 36%, var(--navy) 64%,
+      white 64%, white 67%,
+      var(--red) 67%, var(--red) 100%
+    );
+    position: relative;
+    z-index: 10;
+  }
+
+  /* ===== MENU OVERLAY ===== */
+  .menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 500;
+    backdrop-filter: blur(3px);
+    align-items: flex-end;
+  }
+  .menu-overlay.open { display: flex; }
+
+  .menu-sheet {
+    background: var(--navy);
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    border-radius: 20px 20px 0 0;
+    padding-bottom: 16px;
+    animation: slideUp 0.28s cubic-bezier(.22,.8,.36,1);
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+
+  .menu-sheet-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px 12px;
+    border-bottom: 1px solid rgba(200,168,75,0.3);
+  }
+  .menu-close-btn {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.15s;
+  }
+  .menu-close-btn:hover { background: rgba(207,20,43,0.5); }
+
+  .menu-section-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    padding: 10px 16px 4px;
+    opacity: 0.8;
+  }
+
+  .menu-tiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 4px 16px 10px;
+  }
+
+  .menu-tile {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 14px 8px 10px;
+    text-align: center;
+    cursor: pointer;
+    display: flex; flex-direction: column; align-items: center;
+    gap: 3px;
+    transition: all 0.18s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .menu-tile:hover, .menu-tile:active {
+    background: rgba(200,168,75,0.25);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
+  .menu-tile.sos-tile {
+    background: rgba(207,20,43,0.2);
+    border-color: rgba(207,20,43,0.5);
+  }
+  .menu-tile.sos-tile:hover { background: rgba(207,20,43,0.4); border-color: var(--red); }
+  .mt-icon { font-size: 1.8rem; line-height: 1; }
+  .mt-label {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .mt-sub {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 0.68rem;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .menu-sheet-footer {
+    text-align: center;
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    color: rgba(200,168,75,0.6);
+    font-size: 0.8rem;
+    padding: 4px 0 8px;
+  }
+
+  /* ===== INNER APP ===== */
+  .app-inner { display: none; }
+  .app-inner.visible { display: block; }
+
+  .inner-header {
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  .inner-back {
+    background: none;
+    border: none;
+    color: var(--gold);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0 4px;
+    line-height: 1;
+  }
+  .inner-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    flex: 1;
+  }
+  .inner-flag { font-size: 1.2rem; }
+
+  /* SECTIONS */
+  .section {
+    display: none;
+    padding: 16px 16px 0;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .section.active { display: block; }
+
+  .section-header {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+    border-left: 4px solid var(--red);
+    padding-left: 12px;
+  }
+  .section-subheader {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    color: var(--grey);
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+    padding-left: 16px;
+  }
+
+  /* Phase badge */
+  .phase-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+  .phase-london { background: var(--navy); color: white; }
+  .phase-poole { background: var(--teal); color: white; }
+  .phase-both { background: var(--gold); color: white; }
+
+  /* CARDS */
+  .card {
+    background: var(--white);
+    border: 1px solid var(--light-grey);
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 3px 3px 0 var(--light-grey);
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: var(--red);
+  }
+  .card.navy-accent::before { background: var(--navy); }
+  .card.gold-accent::before { background: var(--gold); }
+  .card.teal-accent::before { background: var(--teal); }
+
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+    padding-left: 8px;
+  }
+  .card-meta {
+    font-size: 0.78rem;
+    color: var(--grey);
+    margin-bottom: 6px;
+    padding-left: 8px;
+  }
+  .card-text {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--dark);
+    padding-left: 8px;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 2px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-right: 4px;
+    margin-top: 4px;
+  }
+  .tag-red { background: var(--red); color: white; }
+  .tag-navy { background: var(--navy); color: white; }
+  .tag-gold { background: var(--gold); color: white; }
+  .tag-green { background: #2d6a4f; color: white; }
+  .tag-teal { background: var(--teal); color: white; }
+
+  /* ÖPNV highlight box */
+  .transport-box {
+    background: linear-gradient(135deg, #012169 0%, #0d3580 100%);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    color: white;
+  }
+  .transport-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .transport-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.83rem;
+  }
+  .transport-row:last-child { border-bottom: none; }
+  .transport-icon { font-size: 1.2rem; flex-shrink: 0; width: 24px; }
+  .transport-text { line-height: 1.4; }
+  .transport-text strong { display: block; color: var(--gold); font-size: 0.85rem; }
+
+  /* WEATHER WIDGET */
+  .weather-widget {
+    background: linear-gradient(135deg, var(--navy) 0%, #1a3a7a 100%);
+    color: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .weather-widget::after {
+    content: '⛅';
+    position: absolute;
+    right: 20px; top: 15px;
+    font-size: 4rem;
+    opacity: 0.15;
+  }
+  .weather-temp {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+  .weather-desc {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    color: var(--gold);
+    font-size: 1rem;
+    margin-top: 4px;
+  }
+  .weather-details {
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+    font-size: 0.8rem;
+    opacity: 0.85;
+  }
+  .sun-times {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-top: 10px;
+    font-size: 0.85rem;
+  }
+
+  /* TRIP PHASES */
+  .phase-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .phase-tab {
+    flex: 1;
+    padding: 8px 6px;
+    border-radius: 6px;
+    border: 2px solid var(--light-grey);
+    background: var(--white);
+    font-family: 'Playfair Display', serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--grey);
+  }
+  .phase-tab.active-london {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: white;
+  }
+  .phase-tab.active-poole {
+    background: var(--teal);
+    border-color: var(--teal);
+    color: white;
+  }
+  .phase-content { display: none; }
+  .phase-content.visible { display: block; }
+
+  /* DIARY */
+  .diary-day {
+    background: var(--white);
+    border: 1px solid var(--light-grey);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 0 var(--light-grey);
+  }
+  .diary-day-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: var(--navy);
+    color: white;
+    cursor: pointer;
+  }
+  .diary-day-header.poole-header { background: var(--teal); }
+  .diary-day-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
+  .diary-day-date {
+    font-size: 0.75rem;
+    opacity: 0.75;
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+  }
+  .diary-stars { color: var(--gold); font-size: 0.9rem; }
+  .diary-day-body { display: none; padding: 14px 16px; }
+  .diary-day-body.open { display: block; }
+  .diary-textarea {
+    width: 100%;
+    min-height: 80px;
+    border: 1px solid var(--light-grey);
+    border-radius: 3px;
+    padding: 8px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.88rem;
+    resize: vertical;
+    margin-bottom: 8px;
+    background: var(--cream);
+    color: var(--dark);
+  }
+  .star-rating { display: flex; gap: 6px; margin-bottom: 8px; }
+  .star-btn {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--light-grey);
+    transition: color 0.15s;
+  }
+  .star-btn.active { color: var(--gold); }
+  .save-btn {
+    background: var(--red);
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 2px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .save-btn:hover { background: var(--navy); }
+
+  /* QUIZ */
+  .quiz-question {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--navy);
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .quiz-options { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+  .quiz-option {
+    background: var(--white);
+    border: 2px solid var(--light-grey);
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: left;
+    transition: border-color 0.15s;
+  }
+  .quiz-option:hover { border-color: var(--navy); }
+  .quiz-option.correct { background: #d8f3dc; border-color: #2d6a4f; color: #2d6a4f; font-weight: 600; }
+  .quiz-option.wrong { background: #ffe0e0; border-color: var(--red); color: var(--red); }
+  .quiz-feedback {
+    background: #f0f0f0;
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    display: none;
+    margin-bottom: 8px;
+  }
+  .quiz-score-bar {
+    background: var(--navy);
+    color: white;
+    border-radius: 4px;
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-family: 'Playfair Display', serif;
+  }
+  .next-btn {
+    background: var(--navy);
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 2px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: none;
+    margin-top: 8px;
+  }
+
+  /* TIPS */
+  .tip-item {
+    display: flex;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--light-grey);
+  }
+  .tip-item:last-child { border-bottom: none; }
+  .tip-icon { font-size: 1.5rem; flex-shrink: 0; width: 36px; text-align: center; }
+  .tip-text { font-size: 0.88rem; line-height: 1.6; color: var(--dark); }
+  .tip-text strong { display: block; color: var(--navy); font-weight: 600; margin-bottom: 2px; }
+
+  /* DIVIDER */
+  .british-divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 16px 0;
+  }
+  .british-divider::before, .british-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .british-divider span { font-size: 1rem; color: var(--gold); }
+
+  /* RESTAURANT FILTER */
+  .restaurant-filter {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  .filter-btn {
+    padding: 4px 12px;
+    border: 2px solid var(--navy);
+    border-radius: 20px;
+    background: none;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    background: var(--navy);
+    color: white;
+  }
+
+  /* BOTTOM NAV */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--navy);
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 3px solid var(--red);
+    z-index: 200;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
+  }
+  .bottom-nav.visible { display: grid; }
+  .bnav-btn {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.55);
+    cursor: pointer;
+    padding: 8px 4px 6px;
+    display: flex; flex-direction: column; align-items: center;
+    gap: 2px;
+    transition: all 0.15s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .bnav-btn.active { color: var(--gold); }
+  .bnav-btn:hover { color: var(--white); }
+  .bnav-icon { font-size: 1.3rem; line-height: 1; }
+  .bnav-label { font-size: 0.58rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; }
+
+  /* MORE MENU */
+  .more-menu {
+    display: none;
+    position: fixed;
+    bottom: 52px; left: 0; right: 0;
+    background: var(--navy);
+    border-top: 2px solid var(--gold);
+    z-index: 190;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 8px;
+    gap: 6px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
+  }
+  .more-menu.open { display: grid; }
+  .more-item {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding: 10px 4px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.15s;
+  }
+  .more-item:hover, .more-item:active { background: rgba(200,168,75,0.3); border-color: var(--gold); }
+  .more-item .mi-icon { font-size: 1.4rem; display: block; margin-bottom: 3px; }
+  .more-item .mi-label { font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  .bnav-spacer { height: 58px; }
+
+  /* FOOTER */
+  .footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 16px;
+    font-size: 0.75rem;
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    margin-top: 24px;
+  }
+  .footer span { color: var(--gold); }
+
+  /* PERSON LIST */
+  .person-list { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0 12px; padding-left: 8px; }
+  .person-chip {
+    background: var(--cream);
+    border: 1px solid var(--light-grey);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.78rem;
+    color: var(--dark);
+  }
+  .person-chip.adult { border-color: var(--navy); color: var(--navy); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<!-- ===== HERO SPLASH ===== -->
+<div class="hero" id="hero-screen">
+
+  <div class="hero-stars" id="hero-stars"></div>
+  <div class="hero-cloud cloud-1"></div>
+  <div class="hero-cloud cloud-2"></div>
+  <div class="hero-cloud cloud-3"></div>
+
+  <!-- Animated SVG Skyline (London + Küstenszene) -->
+  <svg class="hero-cityscape" viewBox="0 0 400 300" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+    <!-- Thames/Sea -->
+    <rect x="0" y="240" width="400" height="60" fill="#1a3a6a" opacity="0.9"/>
+    <rect x="0" y="245" width="400" height="4" fill="rgba(255,255,255,0.08)"/>
+    <rect x="30" y="248" width="40" height="1.5" fill="rgba(200,168,75,0.25)" rx="1"/>
+    <rect x="180" y="252" width="60" height="1.5" fill="rgba(200,168,75,0.2)" rx="1"/>
+    <rect x="300" y="249" width="30" height="1" fill="rgba(200,168,75,0.15)" rx="1"/>
+    <rect x="0" y="238" width="400" height="6" fill="#0d1f4a"/>
+    <!-- Far buildings -->
+    <rect x="0" y="185" width="18" height="55" fill="#0f2250"/>
+    <rect x="20" y="195" width="14" height="45" fill="#0f2250"/>
+    <rect x="36" y="175" width="22" height="65" fill="#0f2250"/>
+    <!-- Tower Bridge -->
+    <rect x="218" y="155" width="22" height="85" fill="#1a3a7a"/>
+    <polygon points="218,155 229,138 240,155" fill="#1a3a7a"/>
+    <rect x="260" y="155" width="22" height="85" fill="#1a3a7a"/>
+    <polygon points="260,155 271,138 282,155" fill="#1a3a7a"/>
+    <rect x="200" y="215" width="100" height="8" fill="#152d6a"/>
+    <rect x="240" y="175" width="20" height="6" fill="#152d6a"/>
+    <line x1="229" y1="148" x2="200" y2="220" stroke="#2a4a8a" stroke-width="1.5" opacity="0.8"/>
+    <line x1="271" y1="148" x2="300" y2="220" stroke="#2a4a8a" stroke-width="1.5" opacity="0.8"/>
+    <rect x="223" y="165" width="4" height="5" fill="rgba(255,220,100,0.6)" rx="1"/>
+    <rect x="265" y="165" width="4" height="5" fill="rgba(255,220,100,0.6)" rx="1"/>
+    <!-- Big Ben -->
+    <rect x="120" y="120" width="28" height="120" fill="#162d6b"/>
+    <rect x="116" y="112" width="36" height="12" fill="#1a3580"/>
+    <polygon points="116,112 134,90 152,112" fill="#1a3580"/>
+    <line x1="134" y1="90" x2="134" y2="72" stroke="#c8a84b" stroke-width="2.5"/>
+    <circle cx="134" cy="70" r="3" fill="#c8a84b"/>
+    <circle cx="134" cy="140" r="10" fill="#e8f0ff" opacity="0.9"/>
+    <circle cx="134" cy="140" r="10" fill="none" stroke="#c8a84b" stroke-width="1.5"/>
+    <line x1="134" y1="140" x2="134" y2="132" stroke="#162d6b" stroke-width="1.5"/>
+    <line x1="134" y1="140" x2="140" y2="140" stroke="#162d6b" stroke-width="1.5"/>
+    <!-- Houses of Parliament -->
+    <rect x="60" y="185" width="75" height="55" fill="#162d6b"/>
+    <rect x="60" y="180" width="8" height="8" fill="#162d6b"/>
+    <rect x="72" y="180" width="8" height="8" fill="#162d6b"/>
+    <rect x="84" y="180" width="8" height="8" fill="#162d6b"/>
+    <rect x="66" y="195" width="5" height="8" fill="rgba(255,220,100,0.5)" rx="1"/>
+    <rect x="86" y="195" width="5" height="8" fill="rgba(255,220,100,0.6)" rx="1"/>
+    <!-- St Pauls -->
+    <rect x="320" y="175" width="50" height="65" fill="#152d6b"/>
+    <ellipse cx="345" cy="175" rx="28" ry="18" fill="#152d6b"/>
+    <ellipse cx="345" cy="170" rx="18" ry="12" fill="#1a3a80"/>
+    <line x1="345" y1="158" x2="345" y2="145" stroke="#c8a84b" stroke-width="2"/>
+    <line x1="340" y1="151" x2="350" y2="151" stroke="#c8a84b" stroke-width="2"/>
+    <!-- Sailboat in sea -->
+    <polygon points="385,225 390,200 395,225" fill="rgba(255,255,255,0.4)"/>
+    <line x1="390" y1="225" x2="390" y2="200" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+    <rect x="382" y="225" width="16" height="4" fill="rgba(200,200,255,0.3)" rx="2"/>
+    <!-- Animated red bus -->
+    <g>
+      <rect x="-60" y="228" width="55" height="10" fill="#CF142B" rx="2">
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="460,0" dur="16s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="-58" y="224" width="45" height="7" fill="#CF142B" rx="1">
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="460,0" dur="16s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="-52" y="225" width="8" height="5" fill="rgba(200,230,255,0.8)" rx="1">
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="460,0" dur="16s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="-42" y="225" width="8" height="5" fill="rgba(200,230,255,0.8)" rx="1">
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="460,0" dur="16s" repeatCount="indefinite"/>
+      </rect>
+      <circle cx="-50" cy="238" r="3" fill="#111">
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="460,0" dur="16s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-15" cy="238" r="3" fill="#111">
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="460,0" dur="16s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <rect x="0" y="233" width="400" height="8" fill="#0a1628"/>
+    <!-- Lampposts -->
+    <line x1="45" y1="200" x2="45" y2="234" stroke="#0a1628" stroke-width="2.5"/>
+    <circle cx="45" cy="198" r="3" fill="#c8a84b" opacity="0.8"/>
+    <line x1="175" y1="205" x2="175" y2="234" stroke="#0a1628" stroke-width="2.5"/>
+    <circle cx="175" cy="203" r="3" fill="#c8a84b" opacity="0.8"/>
+    <line x1="310" y1="202" x2="310" y2="234" stroke="#0a1628" stroke-width="2.5"/>
+    <circle cx="310" cy="200" r="3" fill="#c8a84b" opacity="0.8"/>
+  </svg>
+
+  <!-- Hero content -->
+  <div class="hero-content">
+    <span class="hero-flag">🇬🇧</span>
+    <div class="hero-title">England 2026</div>
+    <div class="hero-subtitle">Manuela, Sven, Mila, Jojo &amp; Mikko</div>
+    <div class="hero-phases">
+      <div class="phase-pill" onclick="openSection('london_phase')">🏙 London · 13.–19. Juli</div>
+      <div class="phase-pill" onclick="openSection('poole_phase')">⛵ Poole · 19.–24. Juli</div>
+    </div>
+    <div class="hero-countdown-box">
+      <div class="hero-count-unit">
+        <span class="hero-count-num" id="hc-days">–</span>
+        <span class="hero-count-label">Tage</span>
+      </div>
+      <div class="hero-count-sep">:</div>
+      <div class="hero-count-unit">
+        <span class="hero-count-num" id="hc-hours">–</span>
+        <span class="hero-count-label">Stunden</span>
+      </div>
+      <div class="hero-count-sep">:</div>
+      <div class="hero-count-unit">
+        <span class="hero-count-num" id="hc-mins">–</span>
+        <span class="hero-count-label">Minuten</span>
+      </div>
+    </div>
+    <div class="hero-date-line">Abflug 13. Juli 2026 · 2 Erwachsene + 3 Kinder · 11 Nächte</div>
+    <button class="hero-menu-btn" onclick="openMenuOverlay()">
+      <span class="hero-menu-icon">☰</span>
+      <span class="hero-menu-text">Menü</span>
+    </button>
+  </div>
+
+  <div class="hero-jack-bar"></div>
+</div>
+
+<!-- ===== MENU OVERLAY ===== -->
+<div class="menu-overlay" id="menu-overlay" onclick="closeMenuOverlay(event)">
+  <div class="menu-sheet" id="menu-sheet">
+    <div class="menu-sheet-header">
+      <span style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:white;letter-spacing:2px;text-transform:uppercase;">🇬🇧 England 2026</span>
+      <button class="menu-close-btn" onclick="closeMenuOverlay()">✕</button>
+    </div>
+    <div class="menu-section-label">🏙 London · 13.–19. Juli</div>
+    <div class="menu-tiles">
+      <div class="menu-tile" onclick="openSection('wetter')">
+        <span class="mt-icon">🌦</span>
+        <span class="mt-label">Wetter</span>
+        <span class="mt-sub">Aktuell</span>
+      </div>
+      <div class="menu-tile" onclick="openSection('london_phase')">
+        <span class="mt-icon">🏙</span>
+        <span class="mt-label">London</span>
+        <span class="mt-sub">Reisephase 1</span>
+      </div>
+      <div class="menu-tile" onclick="openSection('sehenswuerdigkeiten')">
+        <span class="mt-icon">🎡</span>
+        <span class="mt-label">Sights</span>
+        <span class="mt-sub">Must-sees</span>
+      </div>
+      <div class="menu-tile" onclick="openSection('oepnv')">
+        <span class="mt-icon">🚇</span>
+        <span class="mt-label">ÖPNV</span>
+        <span class="mt-sub">Bus & Tube</span>
+      </div>
+      <div class="menu-tile" onclick="openSection('restaurants')">
+        <span class="mt-icon">🫖</span>
+        <span class="mt-label">Essen</span>
+        <span class="mt-sub">Pubs &amp; Cafés</span>
+      </div>
+      <div class="menu-tile" onclick="openSection('greenwich')">
+        <span class="mt-icon">⚓</span>
+        <span class="mt-label">Greenwich</span>
+        <span class="mt-sub">Unser Kiez</span>
+      </div>
+    </div>
+    <div class="menu-section-label">⛵ Poole & Umgebung · 19.–24. Juli</div>
+    <div class="menu-tiles">
+      <div class="menu-tile" onclick="openSection('poole_phase')">
+        <span class="mt-icon">⛵</span>
+        <span class="mt-label">Poole</span>
+        <span class="mt-sub">Reisephase 2</span>
+      </div>
+      <div class="menu-tile" onclick="openSection('poole_sights')">
+        <span class="mt-icon">🏖</span>
+        <span class="mt-label">Dorset</span>
+        <span class="mt-sub">Ausflüge</span>
+      </div>
+      <div class="menu-tile" onclick="openSection('poole_oepnv')">
+        <span class="mt-icon">🚌</span>
+        <span class="mt-label">Bus+Fähre</span>
+        <span class="mt-sub">Vor Ort</span>
+      </div>
+    </div>
+    <div class="menu-section-label">🗂 Allgemein</div>
+    <div class="menu-tiles">
+      <div class="menu-tile" onclick="openSection('tagebuch')">
+        <span class="mt-icon">📖</span>
+        <span class="mt-label">Tagebuch</span>
+        <span class="mt-sub">11 Tage</span>
+      </div>
+      <div class="menu-tile" onclick="openSection('quiz')">
+        <span class="mt-icon">🎓</span>
+        <span class="mt-label">Quiz</span>
+        <span class="mt-sub">England-Wissen</span>
+      </div>
+      <div class="menu-tile" onclick="openSection('tipps')">
+        <span class="mt-icon">💡</span>
+        <span class="mt-label">Tipps</span>
+        <span class="mt-sub">Familien-Insider</span>
+      </div>
+      <div class="menu-tile" onclick="openSection('flug')">
+        <span class="mt-icon">✈️</span>
+        <span class="mt-label">Flug</span>
+        <span class="mt-sub">Reisedaten</span>
+      </div>
+      <div class="menu-tile sos-tile" onclick="openSection('sos')">
+        <span class="mt-icon">🆘</span>
+        <span class="mt-label">SOS</span>
+        <span class="mt-sub">Notfall &amp; Hilfe</span>
+      </div>
+    </div>
+    <div class="menu-sheet-footer">God Save the King 👑 · Safe Travels!</div>
+  </div>
+</div>
+
+<!-- ===== INNER APP ===== -->
+<div class="app-inner" id="app-inner">
+
+  <div class="inner-header">
+    <button class="inner-back" onclick="goHome()" title="Startseite">←</button>
+    <div class="inner-title" id="inner-title">England 2026</div>
+    <div class="inner-flag">🇬🇧</div>
+  </div>
+
+<!-- ===================== WETTER ===================== -->
+<div id="wetter" class="section">
+  <div class="section-header">Wetter</div>
+  <div class="section-subheader">»Always carry an umbrella – this is England!«</div>
+
+  <div class="weather-widget" id="weather-widget">
+    <div style="font-size:0.8rem;opacity:0.7;margin-bottom:8px;font-family:'IM Fell English',serif;font-style:italic;" id="weather-city">London, England</div>
+    <div class="weather-temp" id="weather-temp">–°C</div>
+    <div class="weather-desc" id="weather-desc">Wird geladen...</div>
+    <div class="weather-details">
+      <div>💧 <span id="weather-humidity">–</span>% Feuchte</div>
+      <div>💨 <span id="weather-wind">–</span> km/h Wind</div>
+      <div>🌡 <span id="weather-feel">–</span>°C Gefühlt</div>
+    </div>
+    <div class="sun-times">
+      <div>🌅 <strong id="sunrise">–</strong></div>
+      <div>🌇 <strong id="sunset">–</strong></div>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:8px;margin-bottom:12px;">
+    <button class="filter-btn active" onclick="switchWeather('london',this)" id="w-london">🏙 London</button>
+    <button class="filter-btn" onclick="switchWeather('poole',this)" id="w-poole">⛵ Poole</button>
+  </div>
+
+  <div class="card navy-accent">
+    <div class="card-title">📅 Juli in England</div>
+    <div class="card-text">
+      <strong>London:</strong> 18–23°C, gelegentliche Schauer. Sonnenstunden: ~6–7 h/Tag.<br>
+      <strong>Poole/Dorset:</strong> Ähnlich, oft etwas wärmer dank Küstenlage (18–25°C). Badetemperatur Ärmelkanal: ca. 17–18°C.<br><br>
+      Sonnenaufgang Juli: ca. 04:55 Uhr · Sonnenuntergang: ca. 21:20 Uhr
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🧳 Packliste Wetter</div>
+    <div class="card-text">
+      ☂ Faltbarer Regenschirm (unverzichtbar!)<br>
+      🧥 Leichte Regenjacke für alle 5<br>
+      👟 Bequeme Laufschuhe (London = viel zu Fuß)<br>
+      🩱 Badezeug für Poole / Sandbanks Beach<br>
+      🕶 Sonnenbrille + 🧴 Sonnencreme SPF 30+
+    </div>
+  </div>
+</div>
+
+<!-- ===================== LONDON PHASE ===================== -->
+<div id="london_phase" class="section">
+  <div class="section-header">London – Phase 1</div>
+  <div class="section-subheader">13. bis 19. Juli 2026 · 6 Nächte</div>
+
+  <div class="card navy-accent">
+    <div class="card-title">🏨 Unterkunft</div>
+    <div class="card-text">
+      <strong>Clarendon Hotel</strong><br>
+      Montpelier Row, Blackheath / Greenwich<br>
+      London SE3<br><br>
+      🚂 <strong>Zugverbindung zur Innenstadt:</strong><br>
+      Blackheath → London Bridge: ca. 20 Min. (Southeastern)<br>
+      Blackheath → Charing Cross: ca. 27 Min.<br>
+      Greenwich (DLR) → Bank/Monument: ca. 20 Min.
+    </div>
+  </div>
+
+  <div class="transport-box">
+    <h3>🚇 ÖPNV-Info: London ab Greenwich/Blackheath</h3>
+    <div class="transport-row">
+      <div class="transport-icon">🚂</div>
+      <div class="transport-text"><strong>Southeastern (Zug)</strong>Blackheath Station, 3 Min. zu Fuß vom Hotel. Direkt nach London Bridge, Cannon Street, Charing Cross, Waterloo East.</div>
+    </div>
+    <div class="transport-row">
+      <div class="transport-icon">🚈</div>
+      <div class="transport-text"><strong>DLR (Docklands Light Railway)</strong>Greenwich DLR Station. Verbindet Canary Wharf, Bank, Tower Gateway, Stratford.</div>
+    </div>
+    <div class="transport-row">
+      <div class="transport-icon">🚌</div>
+      <div class="transport-text"><strong>Bus</strong>Linie 53, 54, 89, 386 ab Blackheath. Bus 177/180 ab Greenwich. Immer oben vorne sitzen!</div>
+    </div>
+    <div class="transport-row">
+      <div class="transport-icon">🛳</div>
+      <div class="transport-text"><strong>Thames Clipper (Riverboat)</strong>Ab Greenwich Pier direkt zur Westminster Pier / London Eye! Malerisch und preiswert.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">👨‍👩‍👧‍👦 Eure Reisegruppe</div>
+    <div class="card-text" style="padding-left:8px;">
+      <div class="person-list">
+        <span class="person-chip adult">👩 Manuela</span>
+        <span class="person-chip adult">👨 Sven</span>
+        <span class="person-chip">👧 Mila (15)</span>
+        <span class="person-chip">👦 Jojo (12)</span>
+        <span class="person-chip">👦 Mikko (12)</span>
+      </div>
+      <strong>Oyster Cards:</strong> Für alle 5 besorgen! Kinder unter 11 kostenlos – Mila, Jojo und Mikko benötigen eine Oyster (Kinder-Tarif 11–15: Hälfte des Erwachsenenpreises nach Aktivierung über TfL). Ab 16 normaler Tarif.
+    </div>
+  </div>
+
+  <div class="card gold-accent">
+    <div class="card-title">🗓 Tages-Vorschläge London</div>
+    <div class="card-text">
+      <strong>Tag 1 (13.7.) – Ankunft & Greenwich:</strong> Anreise, einchecken, Greenwich Park & Meridian-Linie erkunden. Royal Observatory. Entspannt einleben.<br><br>
+      <strong>Tag 2 (14.7.) – South Bank:</strong> Thames Clipper → Westminster. London Eye (vorbuchen!), Tate Modern, Millennium Bridge, Borough Market. Zurück mit Bus/Zug.<br><br>
+      <strong>Tag 3 (15.7.) – Tower & East London:</strong> DLR → Tower Gateway. Tower of London, Tower Bridge, Spaziergang South Bank. Abends Borough Market.<br><br>
+      <strong>Tag 4 (16.7.) – Museumsmeile:</strong> Natural History Museum + Science Museum (South Kensington). Tube: District/Circle Line → South Kensington.<br><br>
+      <strong>Tag 5 (17.7.) – Hyde Park & West End:</strong> Hyde Park, Diana Spielplatz, Kensington Gardens. Nachmittags Piccadilly/Covent Garden. Ggf. West End Show abends!<br><br>
+      <strong>Tag 6 (18.7.) – Buckingham & British Museum:</strong> Buckingham Palace (Wachablösung 11 Uhr!), St. James's Park. Nachmittags British Museum.<br><br>
+      <strong>Tag 7 (19.7.) – Abfahrt Poole:</strong> Morgendlicher Abschluss in Greenwich. Dann Zug/National Express nach Poole.
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SEHENSWÜRDIGKEITEN ===================== -->
+<div id="sehenswuerdigkeiten" class="section">
+  <div class="section-header">Sehenswürdigkeiten</div>
+  <div class="section-subheader">»London, thou art the flower of cities all«</div>
+
+  <div class="card">
+    <div class="card-title">🎡 London Eye</div>
+    <div class="card-meta">📍 South Bank, SE1 7PB · ⏱ 30 Min. · 🚇 Waterloo (Tube) oder Thames Clipper</div>
+    <div class="card-text">Spektakulärer 360°-Blick für alle 5! Für Jojo und Mikko ein absolutes Highlight. Tickets online vorbuchen – spart Wartezeit. Kombination mit South Bank-Spaziergang ideal.</div>
+    <div><span class="tag tag-red">Top für Kinder</span><span class="tag tag-navy">Vorbuchen!</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🏰 Tower of London</div>
+    <div class="card-meta">📍 Tower Hill, EC3N 4AB · ⏱ 2–3 Std. · 🚈 DLR Tower Gateway oder Tube Tower Hill</div>
+    <div class="card-text">Kronjuwelen, Beefeaters, fast 1000 Jahre Geschichte. Die Rüstungen und der Bloody Tower faszinieren Jojo und Mikko sicher! Wachablösungs-Rundgang mitmachen.</div>
+    <div><span class="tag tag-red">Highlight</span><span class="tag tag-navy">Familie</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🦕 Natural History Museum</div>
+    <div class="card-meta">📍 Cromwell Rd, SW7 · ⏱ 3–4 Std. · 🚇 South Kensington (District/Circle/Piccadilly)</div>
+    <div class="card-text">Blauwalskelett, Dinosaurier, Vulkane – kostenlos und riesig. Das Atrium allein ist beeindruckend. Pflicht für alle Kinder! Direkt anschließend Science Museum möglich.</div>
+    <div><span class="tag tag-green">Kostenlos</span><span class="tag tag-navy">Familie</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🔬 Science Museum</div>
+    <div class="card-meta">📍 Exhibition Rd, SW7 · ⏱ 2–3 Std. · 🚇 South Kensington</div>
+    <div class="card-text">Direkt neben dem Natural History Museum – Weltraumkapseln, Dampfmaschinen, interaktive Stationen. Für neugierige Tweens und Teens ideal. IMAX-Kino buchbar.</div>
+    <div><span class="tag tag-green">Kostenlos</span><span class="tag tag-red">Teens</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🎠 Hyde Park & Kensington Gardens</div>
+    <div class="card-meta">📍 Hyde Park, W2 · 🚇 Hyde Park Corner oder Lancaster Gate</div>
+    <div class="card-text">Riesiger Park – Diana Spielplatz (auch für 12-Jährige noch Spaß!), Tretboote auf dem Serpentine, Konzerte im Sommer. Kostenlos und herrlich zum Durchatmen.</div>
+    <div><span class="tag tag-green">Kostenlos</span><span class="tag tag-red">Familie</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">👑 Buckingham Palace & Wachablösung</div>
+    <div class="card-meta">📍 Westminster, SW1A · 🚇 St James's Park oder Victoria</div>
+    <div class="card-text">Die Wachablösung (Changing of the Guard) ist ein echtes Spektakel – meist 11:00 Uhr, aber Zeiten variieren. Abends: Spaziergang durch St. James's Park zum Buckingham Palace.</div>
+    <div><span class="tag tag-red">Klassiker</span><span class="tag tag-gold">Königlich</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🌉 Tower Bridge</div>
+    <div class="card-meta">📍 SE1 2UP · 🚈 DLR Tower Gateway · ⏱ 1 Std.</div>
+    <div class="card-text">Die gläserne Gehbrücke bietet einen Blick nach unten auf die Themse – nichts für schwache Nerven! Kombination mit Tower of London am selben Tag perfekt.</div>
+    <div><span class="tag tag-navy">Fotostopp</span><span class="tag tag-teal">Glasbrücke</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🎭 West End Show</div>
+    <div class="card-meta">📍 Theaterviertel WC2 · 🚇 Covent Garden, Leicester Square</div>
+    <div class="card-text">Ein Musical gehört zu London wie Fish & Chips. Für 12- und 15-Jährige empfehlen sich: <strong>The Lion King</strong>, <strong>Matilda</strong>, <strong>Frozen</strong>, <strong>Back to the Future</strong>. Frühzeitig buchen!</div>
+    <div><span class="tag tag-red">Abends</span><span class="tag tag-navy">Teens</span><span class="tag tag-gold">Vorbuchen!</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🏛 British Museum</div>
+    <div class="card-meta">📍 Great Russell St, WC1B · 🚇 Tottenham Court Road, Holborn</div>
+    <div class="card-text">Weltberühmte Sammlung mit Rosetta Stone, ägyptischen Mumien und griechischen Tempelfriesen. Kostenlos. Für Mila und die Jungs ein guter Regentag-Plan.</div>
+    <div><span class="tag tag-green">Kostenlos</span><span class="tag tag-navy">Bildung</span></div>
+  </div>
+</div>
+
+<!-- ===================== ÖPNV LONDON ===================== -->
+<div id="oepnv" class="section">
+  <div class="section-header">ÖPNV in London</div>
+  <div class="section-subheader">»The Tube & the Bus – London's lifeline«</div>
+
+  <div class="card navy-accent">
+    <div class="card-title">🃏 Oyster Card – Das Wichtigste</div>
+    <div class="card-text">
+      <strong>Für alle 5 unbedingt Oyster Cards besorgen!</strong><br><br>
+      📍 Erhältlich am Flughafen (Heathrow, Gatwick, Stansted) und allen Tube-Stationen.<br>
+      💰 Kaution: £7 pro Karte (wird zurückerstattet).<br><br>
+      <strong>Kindertarife:</strong><br>
+      • 11–15 Jahre: halber Erwachsenenpreis nach Online-Aktivierung (tfl.gov.uk/fares) → Mila, Jojo, Mikko<br>
+      • Kinder-Oyster beantragen am besten vorher online oder direkt am Flughafen am TfL Help Point.<br><br>
+      <strong>Daily Cap (Tageshöchstbetrag):</strong> Ihr zahlt nie mehr als das Tages-Ticket kostet! Zonen 1-2: ca. £8,10 (Erwachsener), Kinder ca. £4,05.
+    </div>
+  </div>
+
+  <div class="transport-box">
+    <h3>🚇 Die wichtigsten Linien ab Greenwich/Blackheath</h3>
+    <div class="transport-row">
+      <div class="transport-icon">🚂</div>
+      <div class="transport-text"><strong>Southeastern Zug (Blackheath)</strong>→ London Bridge (20 Min.) → Charing Cross (27 Min.) → Waterloo East. Häufig, günstig, zuverlässig.</div>
+    </div>
+    <div class="transport-row">
+      <div class="transport-icon">🚈</div>
+      <div class="transport-text"><strong>DLR (Docklands Light Railway)</strong>Ab Greenwich → Canary Wharf (5 Min.) → Bank/Monument (20 Min.) → Tower Gateway. Keine Treppen, kinderwagefreundlich.</div>
+    </div>
+    <div class="transport-row">
+      <div class="transport-icon">🛳</div>
+      <div class="transport-text"><strong>Thames Clipper (Riverboat)</strong>Ab Greenwich Pier → Bankside (für Tate Modern) → London Eye/Waterloo → Westminster. Ca. 45 Min., günstig mit Oyster, traumhafte Aussicht!</div>
+    </div>
+    <div class="transport-row">
+      <div class="transport-icon">🚌</div>
+      <div class="transport-text"><strong>Bus 177 / 180</strong>Ab Greenwich → Waterloo, Aldwych. Bus 53 ab Blackheath → Elephant & Castle. Oben vorne = kostenlose Stadtrundfahrt!</div>
+    </div>
+    <div class="transport-row">
+      <div class="transport-icon">🚇</div>
+      <div class="transport-text"><strong>Tube (Underground)</strong>Nächste Station: New Cross (Overground), von dort East London Line. Oder Bus/DLR zur nächsten Tube-Station.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📱 Nützliche Apps</div>
+    <div class="card-text">
+      <div class="tip-item">
+        <div class="tip-icon">🗺</div>
+        <div class="tip-text"><strong>Citymapper London</strong>Die beste App für den Londoner ÖPNV. Zeigt Tube, Bus, DLR, Overground, Thames Clipper in Echtzeit. Kostenlos.</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">🚇</div>
+        <div class="tip-text"><strong>TfL Go (Transport for London)</strong>Offizielle App. Oyster-Guthaben prüfen, Live-Abfahrtszeiten, Service-Alerts.</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">🗺</div>
+        <div class="tip-text"><strong>Google Maps / Apple Maps</strong>Funktioniert gut, aber Citymapper ist für London präziser bei Umstiegen.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card gold-accent">
+    <div class="card-title">💡 ÖPNV-Tipps für Familien</div>
+    <div class="card-text">
+      <div class="tip-item">
+        <div class="tip-icon">🔴</div>
+        <div class="tip-text"><strong>Roter Doppeldecker</strong>Immer oben vorne sitzen – beste kostenlose Stadttour Londons, gratis für Kinder!</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">⏰</div>
+        <div class="tip-text"><strong>Rush Hour meiden</strong>7:30–9:30 und 17:00–19:00 Uhr sehr voll. Mit 3 Kindern lieber etwas später oder früher fahren.</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">🚶</div>
+        <div class="tip-text"><strong>Zu Fuß</strong>South Bank, Greenwich Park, Hyde Park, Covent Garden → viele Attraktionen in Laufweite voneinander!</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">♿</div>
+        <div class="tip-text"><strong>Barrierefrei</strong>DLR und Overground sind stufenfreier als die alte Tube. Bei der Tube: Elizabeth Line und Jubilee Line sind rollstuhlgeeignet.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== GREENWICH ===================== -->
+<div id="greenwich" class="section">
+  <div class="section-header">Greenwich & Blackheath</div>
+  <div class="section-subheader">Euer Londoner Zuhause auf Zeit</div>
+
+  <div class="card navy-accent">
+    <div class="card-title">🏨 Clarendon Hotel</div>
+    <div class="card-text">
+      <strong>Lage:</strong> Montpelier Row, Blackheath SE3<br>
+      <strong>Blackheath Station:</strong> ca. 3 Min. zu Fuß<br>
+      <strong>Greenwich Stadtzentrum:</strong> ca. 15 Min. zu Fuß oder Bus 54<br><br>
+      Blackheath Village ist ein wunderschönes, ruhiges Viertel mit Cafés, Pubs und Parks – ideal für eine Familie. Weit weg vom touristischen Trubel, aber gut angebunden.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">⚓ Greenwich erkunden</div>
+    <div class="card-text">
+      <div class="tip-item">
+        <div class="tip-icon">🌍</div>
+        <div class="tip-text"><strong>Royal Observatory & Meridian-Linie</strong>Gratis zum Hineingehen (Park). Ein Bein auf jeder Seite des Nullmeridians! Für Jojo und Mikko toll.</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">⚓</div>
+        <div class="tip-text"><strong>Cutty Sark</strong>Das weltberühmte Tee-Klipperschiff direkt am Greenwich-Ufer. Eintritt ca. £18 Erwachsene, £9 Kinder.</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">🏞</div>
+        <div class="tip-text"><strong>Greenwich Park</strong>Einer der 8 Royal Parks – schöner Blick über London vom Hügel, großer Wildtierpark (Rehe!), kostenlos.</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">🛒</div>
+        <div class="tip-text"><strong>Greenwich Market</strong>Kunst, Streetfood, Souvenirs. Di–So geöffnet. Ideal für Mittagessen!</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">🌳</div>
+        <div class="tip-text"><strong>Blackheath Common</strong>Riesige Grünfläche direkt beim Hotel – Freiluftaktivitäten, Drachen steigen lassen.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card gold-accent">
+    <div class="card-title">☕ Cafés & Pubs in der Nähe</div>
+    <div class="card-text">
+      <strong>Zerodegrees Brewery</strong> – Montpelier Vale, Blackheath (Hausgebrautes Bier, gutes Essen, familienfreundlich)<br><br>
+      <strong>The Hare & Billet</strong> – Blackheath (Traditioneller Pub am Blackheath-Rand, Terrasse)<br><br>
+      <strong>Comptoir Libanais</strong> – Greenwich (Lecker, günstig, auch für Kinder)<br><br>
+      <strong>Gourmet Burger Kitchen</strong> – Greenwich High Road (schnelle, gute Burger)
+    </div>
+  </div>
+</div>
+
+<!-- ===================== RESTAURANTS ===================== -->
+<div id="restaurants" class="section">
+  <div class="section-header">Essen & Trinken</div>
+  <div class="section-subheader">»We are a nation of shopkeepers and pub-goers«</div>
+
+  <div class="restaurant-filter">
+    <button class="filter-btn active" onclick="filterRestaurants('alle', this)">Alle</button>
+    <button class="filter-btn" onclick="filterRestaurants('britisch', this)">🫖 Britisch</button>
+    <button class="filter-btn" onclick="filterRestaurants('familie', this)">👨‍👩‍👧 Familie</button>
+    <button class="filter-btn" onclick="filterRestaurants('pub', this)">🍺 Pub</button>
+    <button class="filter-btn" onclick="filterRestaurants('budget', this)">💰 Budget</button>
+  </div>
+
+  <div class="restaurant-list">
+    <div class="card" data-cat="britisch familie">
+      <div class="card-title">🥣 Dishoom</div>
+      <div class="card-meta">📍 12 Upper St Martin's Lane, WC2 · 🚇 Covent Garden · ££</div>
+      <div class="card-text">Bombay-Café-Flair mit britischem Charme. Das Bacon Naan zum Frühstück ist legendär. Für alle 5 super – früh hingehen wegen Warteschlange!</div>
+      <div><span class="tag tag-navy">Frühstück</span><span class="tag tag-red">Muss!</span></div>
+    </div>
+
+    <div class="card" data-cat="britisch pub">
+      <div class="card-title">🐟 The Golden Hind</div>
+      <div class="card-meta">📍 73 Marylebone Lane, W1 · 🚇 Bond Street · ££</div>
+      <div class="card-text">Einer der besten Fish & Chips Londons seit 1914. Knusprig, frisch, günstig. Der Klassiker schlechthin für die Familie!</div>
+      <div><span class="tag tag-red">Britisch</span><span class="tag tag-gold">Klassiker</span></div>
+    </div>
+
+    <div class="card" data-cat="budget familie">
+      <div class="card-title">🥙 Borough Market</div>
+      <div class="card-meta">📍 8 Southwark St, SE1 · 🚇 London Bridge · £</div>
+      <div class="card-text">Einer der besten Märkte Europas. Jeder wählt selbst – Käse, Pasta, Pasteten, Raclette, Smoothies. Perfekt für 5 verschiedene Geschmäcker!</div>
+      <div><span class="tag tag-green">Budget</span><span class="tag tag-navy">Markt</span></div>
+    </div>
+
+    <div class="card" data-cat="familie budget">
+      <div class="card-title">🍕 Flat Iron Pizza</div>
+      <div class="card-meta">📍 Mehrere Standorte · £</div>
+      <div class="card-text">Riesige, günstige Pizzen. Perfekt nach Museumstag. Kinder können Beläge selbst wählen – nach dem NHM oder Science Museum ideal.</div>
+      <div><span class="tag tag-green">Budget</span><span class="tag tag-red">Familie</span></div>
+    </div>
+
+    <div class="card" data-cat="pub britisch">
+      <div class="card-title">🍺 The Churchill Arms</div>
+      <div class="card-meta">📍 119 Kensington Church St, W8 · 🚇 Notting Hill Gate · ££</div>
+      <div class="card-text">Berühmtester Pub Londons dank Blumenpracht. Authentisch britisch. Foto-Pflicht! Vor allem nach Hyde Park-Besuch ein Muss für Manuela und Sven.</div>
+      <div><span class="tag tag-navy">Pub</span><span class="tag tag-gold">Fotostopp</span></div>
+    </div>
+
+    <div class="card" data-cat="britisch familie">
+      <div class="card-title">☕ Afternoon Tea</div>
+      <div class="card-meta">📍 Diverse Orte · £££</div>
+      <div class="card-text">Scones, Clotted Cream, Sandwiches – das volle britische Erlebnis. Im Fortnum & Mason oder als günstigere Option in vielen Cafés. Mila wird begeistert sein!</div>
+      <div><span class="tag tag-gold">Britisch</span><span class="tag tag-red">Erlebnis</span></div>
+    </div>
+
+    <div class="card" data-cat="familie budget">
+      <div class="card-title">🧆 Greenwich Market</div>
+      <div class="card-meta">📍 Greenwich Town Centre · 🚈 DLR Greenwich · £</div>
+      <div class="card-text">Direkt vor der Haustür! Streetfood aus aller Welt, günstig, familienfreundlich. Ideal für spontane Abendessen nach langen Ausflugstagen.</div>
+      <div><span class="tag tag-teal">Heimatviertel</span><span class="tag tag-green">Budget</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== POOLE PHASE ===================== -->
+<div id="poole_phase" class="section">
+  <div class="section-header">Poole – Phase 2</div>
+  <div class="section-subheader">19. bis 24. Juli 2026 · 5 Nächte</div>
+
+  <div class="card teal-accent">
+    <div class="card-title">🏨 Unterkunft Poole</div>
+    <div class="card-text">
+      <strong>Drift &amp; Dune</strong><br>
+      39 Labrador Drive, BH15 1UX Poole<br><br>
+      📍 <strong>Lage:</strong> Hamworthy, direkt am Poole Harbour – ruhige Wohnlage, ca. 1,5 km zum Poole Quay.<br><br>
+      🚌 <strong>ÖPNV ab Drift &amp; Dune:</strong><br>
+      • Bus More 2 / 2A: Labrador Drive → Poole Quay (ca. 10 Min.)<br>
+      • Bus More 50: Poole Quay → Sandbanks Beach<br>
+      • Poole Bahnhof: ca. 15 Min. mit Bus oder 20 Min. zu Fuß
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🚂 Anreise London → Poole</div>
+    <div class="card-text">
+      <strong>Zug (empfohlen):</strong><br>
+      London Waterloo → Poole: ca. 2 Std. (South Western Railway)<br>
+      Direkte Verbindung, kein Umsteigen!<br><br>
+      <strong>National Express (Bus):</strong><br>
+      London Victoria Coach Station → Poole: ca. 3–3,5 Std.<br>
+      Günstiger als Zug, aber langsamer.<br><br>
+      💡 Mit 5 Personen: Zug oft das beste Preis-Leistungs-Verhältnis, besonders bei Advance-Buchung.
+    </div>
+  </div>
+
+  <div class="card gold-accent">
+    <div class="card-title">🗓 Tages-Vorschläge Poole</div>
+    <div class="card-text">
+      <strong>Tag 7 (19.7.) – Ankunft Poole:</strong> Zug von London Waterloo. Einchecken, Poole Quay erkunden, Abendbummel.<br><br>
+      <strong>Tag 8 (20.7.) – Sandbanks Beach:</strong> Bester Sandstrand in England! Bus 50 von Poole Quay. Badezeug nicht vergessen, Ärmelkanal ca. 17°C.<br><br>
+      <strong>Tag 9 (21.7.) – Brownsea Island:</strong> Fähre ab Poole Quay. Nationalpark-Insel mit Pfauen und roten Eichhörnchen. Picknick mitnehmen!<br><br>
+      <strong>Tag 10 (22.7.) – Swanage & Jurassic Coast:</strong> Bus X54 nach Swanage. Fossilien suchen am Kimmeridge Bay oder Old Harry Rocks Wanderung.<br><br>
+      <strong>Tag 11 (23.7.) – Bournemouth:</strong> Bus/Zug nach Bournemouth. Promenade, Pier, Eiscreme. Abends Farewell Dinner in Poole.<br><br>
+      <strong>Tag 12 (24.7.) – Abreise:</strong> Zug Poole → London Waterloo, dann National Express/Zug nach Stansted. Ryanair FR6135 ab 13:10 Uhr → Lübeck.
+    </div>
+  </div>
+</div>
+
+<!-- ===================== POOLE SIGHTS ===================== -->
+<div id="poole_sights" class="section">
+  <div class="section-header">Dorset Highlights</div>
+  <div class="section-subheader">»Dorset – England at its most beautiful«</div>
+
+  <div class="card teal-accent">
+    <div class="card-title">🏖 Sandbanks Beach</div>
+    <div class="card-meta">📍 Sandbanks, BH13 · 🚌 Bus More 50 ab Poole Quay</div>
+    <div class="card-text">Einer der besten Sandstrände Europas – weitläufig, sauber, flaches Wasser. Im Juli voll, aber traumhaft. Frühzeitig kommen! Wassersportverleihe vor Ort.</div>
+    <div><span class="tag tag-teal">Strand</span><span class="tag tag-red">Familie</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🦚 Brownsea Island</div>
+    <div class="card-meta">📍 Poole Harbour · 🛳 Fähre ab Poole Quay (15 Min.)</div>
+    <div class="card-text">Malerische Insel im Poole Harbour – Heimat der letzten roten Eichhörnchen Südenglands und wilder Pfauen. National Trust-Gelände. Fähre ca. £10/Person. Für Jojo & Mikko unvergesslich!</div>
+    <div><span class="tag tag-green">Natur</span><span class="tag tag-teal">Familie</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🦕 Jurassic Coast</div>
+    <div class="card-meta">📍 Kimmeridge Bay, Old Harry Rocks · 🚌 Bus X54 nach Swanage</div>
+    <div class="card-text">UNESCO-Welterbe! 185 Millionen Jahre Erdgeschichte entlang der Küste. Fossilien suchen am Strand (Ammoniten!), Wanderung zu den Old Harry Rocks. Für Mila und Jojo ein echter Wow-Moment.</div>
+    <div><span class="tag tag-teal">UNESCO</span><span class="tag tag-red">Teens</span><span class="tag tag-gold">Wandern</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🏖 Bournemouth</div>
+    <div class="card-meta">📍 Bournemouth · 🚌 Bus oder Zug (10–15 Min.)</div>
+    <div class="card-text">Belebte Küstenstadt mit langem Sandstrand, Pier mit Kunstinstallation, guter Restaurant-Szene. Für einen Halbtag ideal. Eiscreme am Pier ist Pflicht!</div>
+    <div><span class="tag tag-navy">Strandpromenade</span><span class="tag tag-green">Budget</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">⚓ Poole Old Town & Quay</div>
+    <div class="card-meta">📍 Poole Quay, BH15</div>
+    <div class="card-text">Einer der größten Naturhäfen Europas. Historische Altstadt, Waterfront-Restaurants, Kunsthandwerk. Perfekt für einen entspannten Abend. Die RNLI-Lifeboat Station gibt es gratis zu besichtigen.</div>
+    <div><span class="tag tag-teal">Heimatort</span><span class="tag tag-green">Kostenlos</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🏰 Corfe Castle</div>
+    <div class="card-meta">📍 Corfe Castle, BH20 · 🚂 Swanage Railway (Dampfbahn!) ab Swanage</div>
+    <div class="card-text">Spektakuläre Burgruine auf einem Hügel. National Trust. Am besten kombiniert mit einer Fahrt auf der Swanage Railway (historische Dampfeisenbahn) – für alle 5 unvergesslich!</div>
+    <div><span class="tag tag-red">Highlight</span><span class="tag tag-teal">Dampfbahn</span></div>
+  </div>
+</div>
+
+<!-- ===================== POOLE ÖPNV ===================== -->
+<div id="poole_oepnv" class="section">
+  <div class="section-header">ÖPNV in Poole & Dorset</div>
+  <div class="section-subheader">Ohne eigenes Auto durch Dorset</div>
+
+  <div class="card teal-accent">
+    <div class="card-title">🚌 Morebus – Das Rückgrat in Dorset</div>
+    <div class="card-text">
+      <strong>Morebus (More Bus)</strong> ist der lokale Busbetreiber für Bournemouth, Poole und Dorset.<br><br>
+      <strong>Wichtige Linien:</strong><br>
+      🔵 <strong>Linie 50:</strong> Poole Quay → Sandbanks → Bournemouth<br>
+      🟡 <strong>Linie X54:</strong> Poole → Wareham → Swanage (Jurassic Coast)<br>
+      🟢 <strong>Linie 101:</strong> Poole → Bournemouth (schnell)<br><br>
+      <strong>App:</strong> Morebus App oder Bustimes.org für Echtzeit-Abfahrten<br>
+      <strong>Tageskarte:</strong> Morebus Day Rider (alle Busse 1 Tag, ca. £5–7/Person)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🛳 Fähren im Poole Harbour</div>
+    <div class="card-text">
+      <div class="tip-item">
+        <div class="tip-icon">🦚</div>
+        <div class="tip-text"><strong>Brownsea Island Ferry</strong>Greenslade Pleasure Boats ab Poole Quay. Ca. April–Oktober täglich. Keine Oyster – Barticket kaufen.</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">⛴</div>
+        <div class="tip-text"><strong>Poole-Sandbanks Chain Ferry</strong>Mini-Kettenfähre für Fußgänger, verbindet Sandbanks mit der Shell Bay. Nur wenige Minuten, sehr günstig. Für Jojo & Mikko ein Erlebnis!</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🚂 Swanage Railway (Dampfbahn!)</div>
+    <div class="card-meta">📍 Swanage → Corfe Castle</div>
+    <div class="card-text">
+      Historische Dampfeisenbahn durch die Purbeck Hills. Fährt von Swanage nach Corfe Castle (und zurück). Ca. £14 Erwachsene, £7 Kinder für Hin- und Rückfahrt.<br><br>
+      Swanage ist erreichbar mit Bus X54 ab Poole (ca. 1 Std.).
+    </div>
+  </div>
+
+  <div class="card navy-accent">
+    <div class="card-title">💡 Tipps ohne Auto in Dorset</div>
+    <div class="card-text">
+      <div class="tip-item">
+        <div class="tip-icon">📅</div>
+        <div class="tip-text"><strong>Fahrplan vorbereiten</strong>Busse in Dorset fahren seltener als in London – abends oft nur stündlich. Immer den letzten Bus kennen!</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">💳</div>
+        <div class="tip-text"><strong>Kontaktlos zahlen</strong>Die meisten Busse akzeptieren kontaktlose Kreditkarten. Morebus App für mobile Tickets.</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">🚕</div>
+        <div class="tip-text"><strong>Taxi für Notfälle</strong>Poole Taxis: Flexi Cabs (01202 555555). Uber verfügbar, aber begrenzte Abdeckung außerhalb Pooles.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FLUG ===================== -->
+<div id="flug" class="section">
+  <div class="section-header">✈️ Flug & Anreise</div>
+  <div class="section-subheader">Ryanair · Lübeck ↔ London Stansted</div>
+
+  <div class="card navy-accent">
+    <div class="card-title">✈️ Hinflug – 13. Juli 2026</div>
+    <div class="card-text">
+      <strong style="font-size:1.1rem;">FR 6134</strong> &nbsp;·&nbsp; Ryanair<br><br>
+      🛫 <strong>Lübeck (LBC)</strong> &nbsp;→&nbsp; 🛬 <strong>London Stansted (STN)</strong><br>
+      ⏰ Abflug: <strong>16:20 Uhr</strong><br><br>
+      👥 Manuela · Sven · Mila · Jojo · Mikko<br><br>
+      💡 <strong>Tipp:</strong> Ryanair empfiehlt Check-in mind. 2 Std. vorher. Am Lübecker Flughafen reicht oft 1,5 Std. – trotzdem früh da sein mit 5 Personen!
+    </div>
+  </div>
+
+  <div class="card teal-accent">
+    <div class="card-title">✈️ Rückflug – 24. Juli 2026</div>
+    <div class="card-text">
+      <strong style="font-size:1.1rem;">FR 6135</strong> &nbsp;·&nbsp; Ryanair<br><br>
+      🛫 <strong>London Stansted (STN)</strong> &nbsp;→&nbsp; 🛬 <strong>Lübeck (LBC)</strong><br>
+      ⏰ Abflug: <strong>13:10 Uhr</strong><br><br>
+      👥 Manuela · Sven · Mila · Jojo · Mikko<br><br>
+      ⚠️ <strong>Zeitplanung Rückreisetag:</strong> Poole → London Waterloo ca. 2 Std. + Stansted Express ca. 50 Min. + Puffer → Abfahrt aus Poole spätestens <strong>08:30 Uhr</strong> empfohlen!
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🚂 Stansted → Blackheath (Ankunftstag)</div>
+    <div class="card-text">
+      <strong>Stansted Express</strong> → Liverpool Street (ca. 50 Min.)<br>
+      dann <strong>Southeastern</strong> → London Bridge → Blackheath (ca. 25 Min.)<br>
+      <strong>Gesamtdauer ab Stansted:</strong> ca. 1 Std. 30 Min.<br><br>
+      🕐 Ankunft Stansted ca. 17:30–18:00 Uhr (Ortszeit) · Ankunft Hotel ca. 19:30 Uhr<br><br>
+      💡 Stansted Express fährt alle 15–30 Min. · Tickets vorab online günstiger (nationalrail.co.uk)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🚂 Poole → Stansted (Rückreisetag)</div>
+    <div class="card-text">
+      <strong>Option A (Zug):</strong><br>
+      Poole → London Waterloo (South Western Railway, ca. 2 Std.)<br>
+      Waterloo → Liverpool Street (Tube Central/District, ca. 20 Min.)<br>
+      Stansted Express → Stansted (ca. 50 Min.)<br>
+      <strong>Gesamt: ca. 3,5 Std.</strong><br><br>
+      <strong>Option B (National Express):</strong><br>
+      Poole → Stansted Airport direkt (National Express, ca. 3–4 Std.)<br>
+      Direktbus, aber seltener und zeitlich weniger flexibel.<br><br>
+      ⚠️ Bei Abflug 13:10 Uhr: Abreise aus Poole <strong>spätestens 08:30 Uhr</strong>!
+    </div>
+  </div>
+
+  <div class="card gold-accent">
+    <div class="card-title">📋 Checkliste vor dem Abflug</div>
+    <div class="card-text">
+      ☐ Reisepässe für alle 5 prüfen (gültig – UK braucht Reisepass!)<br>
+      ☐ GHIC (Global Health Insurance Card) für alle beantragen<br>
+      ☐ Ryanair Online-Check-in (öffnet 60 Tage vor Abflug)<br>
+      ☐ Boardingpässe auf Handy laden oder ausdrucken<br>
+      ☐ Reiserücktrittsversicherung prüfen<br>
+      ☐ Oyster Cards online vorregistrieren (tfl.gov.uk)<br>
+      ☐ Stecker-Adapter Typ G kaufen (min. 2–3 Stück!)<br>
+      ☐ Citymapper App herunterladen<br>
+      ☐ Pfund Sterling (GBP) – vorab besorgen<br>
+      ☐ West End-Tickets buchen (falls gewünscht)<br>
+      ☐ London Eye vorbuchen<br>
+      ☐ Badezeug für Poole nicht vergessen! 🩱
+    </div>
+  </div>
+</div>
+
+<!-- ===================== TAGEBUCH ===================== -->
+<div id="tagebuch" class="section">
+  <div class="section-header">Reisetagebuch</div>
+  <div class="section-subheader">»Every day in England is an adventure«</div>
+  <div id="diary-container"></div>
+</div>
+
+<!-- ===================== QUIZ ===================== -->
+<div id="quiz" class="section">
+  <div class="section-header">England-Quiz 🎓</div>
+  <div class="section-subheader">»Wie gut kennt ihr das Vereinigte Königreich?«</div>
+
+  <div class="quiz-score-bar">
+    <span style="font-family:'IM Fell English',serif;font-style:italic;">Punkte:</span>
+    <span id="quiz-score-display">0 / 0</span>
+  </div>
+
+  <div class="card" id="quiz-card">
+    <div class="quiz-question" id="quiz-q"></div>
+    <div class="quiz-options" id="quiz-opts"></div>
+    <div class="quiz-feedback" id="quiz-feedback"></div>
+    <button class="next-btn" id="quiz-next" onclick="nextQuestion()">Nächste Frage →</button>
+    <button class="save-btn" id="quiz-restart" onclick="startQuiz()" style="display:none;">Nochmal spielen</button>
+  </div>
+</div>
+
+<!-- ===================== TIPPS ===================== -->
+<div id="tipps" class="section">
+  <div class="section-header">Familien-Tipps</div>
+  <div class="section-subheader">»Insider-Wissen für England mit Kindern«</div>
+
+  <div class="card navy-accent">
+    <div class="card-title">💰 Geld & Kosten</div>
+    <div class="card-text">
+      <div class="tip-item">
+        <div class="tip-icon">💷</div>
+        <div class="tip-text"><strong>Pfund Sterling (GBP)</strong>Kreditkarten werden fast überall akzeptiert. Bargeld kaum nötig. Kontaktlos ist Standard.</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">🏦</div>
+        <div class="tip-text"><strong>Reisekarte</strong>Revolut oder Wise empfehlenswert – keine Auslandsgebühren, guter Kurs. Vor der Reise einrichten!</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">🎟</div>
+        <div class="tip-text"><strong>Kostenlose Museen nutzen</strong>Natural History Museum, Science Museum, British Museum, V&A, Tate Modern – alle gratis! Das spart für 5 Personen enorm.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🧒 Mit 12- und 15-Jährigen unterwegs</div>
+    <div class="card-text">
+      <div class="tip-item">
+        <div class="tip-icon">🎮</div>
+        <div class="tip-text"><strong>Science Museum</strong>Interaktive Exponate, Weltraumtechnik, Retro-Computer – Jojo und Mikko werden stundenlang beschäftigt sein.</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">🦕</div>
+        <div class="tip-text"><strong>Jurassic Coast</strong>Fossilien selbst ausgraben – authentisch und aufregend. Hammer und Meissel mitnehmen!</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">🎭</div>
+        <div class="tip-text"><strong>West End Musical</strong>Ab 12 Jahren ein echter Wow-Moment. Für Mila besonders – "Back to the Future" oder "The Lion King" wäre perfekt.</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-icon">📱</div>
+        <div class="tip-text"><strong>Handy-Daten</strong>Vor Ort eine UK-SIM (giffgaff, Three UK) kaufen oder prüfen, ob die dt. Karte EU-Roaming in UK hat. Einige Tarife decken UK ab!</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card gold-accent">
+    <div class="card-title">🌧 Typisch britisch</div>
+    <div class="card-text">
+      <div class="tip-item"><div class="tip-icon">☂</div><div class="tip-text"><strong>Regen</strong>Kommt oft kurz und heftig. Mini-Schirm immer dabei – kein Drama machen, einfach weitermachen!</div></div>
+      <div class="tip-item"><div class="tip-icon">🙏</div><div class="tip-text"><strong>Queuing</strong>Briten lieben Warteschlangen – einfach hinten anstellen. Vordrängeln ist ein Verbrechen!</div></div>
+      <div class="tip-item"><div class="tip-icon">🗣</div><div class="tip-text"><strong>Sorry & Please</strong>Diese Wörter öffnen alle Türen. Die Briten sind enorm höflich – und erwarten es auch.</div></div>
+      <div class="tip-item"><div class="tip-icon">🚶</div><div class="tip-text"><strong>Links gehen!</strong>Auf Rolltreppen rechts stehen, links gehen – sonst gibt es böse Blicke in der Tube!</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🔌 Praktisches</div>
+    <div class="card-text">
+      <div class="tip-item"><div class="tip-icon">🔌</div><div class="tip-text"><strong>Stecker Typ G</strong>UK-Stecker (3 Stifte) sind anders. Mindestens 2–3 Adapter kaufen für 5 Personen und viele Geräte.</div></div>
+      <div class="tip-item"><div class="tip-icon">🛃</div><div class="tip-text"><strong>UK-Einreise</strong>UK ist kein EU-Land mehr. Reisepass oder Personalausweis? Deutsche Staatsbürger können mit Personalausweis bis 31.12.2025 einreisen – danach Reisepass prüfen!</div></div>
+      <div class="tip-item"><div class="tip-icon">💉</div><div class="tip-text"><strong>GHIC Karte</strong>Global Health Insurance Card (ersetzt EHIC in UK) kostenlos auf nhs.uk beantragen. Gibt Anspruch auf NHS-Behandlung.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SOS ===================== -->
+<div id="sos" class="section">
+  <div class="section-header" style="color:var(--red);">🆘 SOS & Notfall</div>
+  <div class="section-subheader">»Sicherheit geht vor – immer«</div>
+
+  <div class="card" style="border-top:4px solid var(--red);">
+    <div class="card-title" style="color:var(--red);">☎ Notrufnummern UK</div>
+    <div class="card-text" style="padding-left:8px;font-size:1rem;line-height:2.4;">
+      <strong style="font-size:1.5rem;color:var(--red);">999</strong> &nbsp;– Polizei, Feuerwehr, Rettungsdienst (UK)<br>
+      <strong style="font-size:1.3rem;color:var(--navy);">112</strong> &nbsp;– Europaweiter Notruf (auch in UK)<br>
+      <strong style="color:var(--navy);">NHS 111</strong> &nbsp;– Ärztliche Auskunft (nicht lebensbedrohlich)<br>
+      <strong style="color:var(--navy);">101</strong> &nbsp;– Polizei (nicht dringend)
+    </div>
+  </div>
+
+  <div class="card navy-accent">
+    <div class="card-title">🏥 Nächste Notaufnahmen</div>
+    <div class="card-text">
+      <strong>London – Greenwich/Blackheath:</strong><br>
+      Queen Elizabeth Hospital<br>Stadium Rd, Woolwich SE18 4QH · ☎ 020 8836 6000<br><br>
+      <strong>London – Zentrum:</strong><br>
+      St. Thomas' Hospital<br>Westminster Bridge Rd, SE1 7EH · ☎ 020 7188 7188<br><br>
+      <strong>Poole:</strong><br>
+      Poole Hospital (University Hospitals Dorset)<br>Longfleet Rd, BH15 2JB · ☎ 01202 665511<br><br>
+      <strong>Bournemouth:</strong><br>
+      Royal Bournemouth Hospital<br>Castle Lane East, BH7 7DW · ☎ 01202 303626
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">👨‍👩‍👧 Kinder-Notfall-Info</div>
+    <div class="card-text">
+      <strong>Great Ormond Street Hospital (Kinderklinik, London):</strong><br>
+      Great Ormond St, WC1N 3JH · ☎ 020 7405 9200<br><br>
+      <strong>Im Notfall immer:</strong><br>
+      ✓ Ruhe bewahren<br>
+      ✓ 999 anrufen – einfach sagen: <em>"I need help, I'm German"</em> – Dolmetscher werden gestellt<br>
+      ✓ Hotelname und Adresse parat haben
+    </div>
+  </div>
+
+  <div class="card gold-accent">
+    <div class="card-title">🇩🇪 Deutsche Botschaft London</div>
+    <div class="card-text">
+      <strong>Adresse:</strong> 23 Belgrave Square, SW1X 8PZ<br>
+      <strong>Telefon:</strong> +44 20 7824 1300<br>
+      <strong>Notfall-Hotline (24h):</strong> +49 30 5000<br>
+      <strong>E-Mail:</strong> info@london.diplo.de
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">💳 Karten sperren / Diebstahl</div>
+    <div class="card-text">
+      🔴 Visa: +1 800 847 2911<br>
+      🔵 Mastercard: +1 800 627 8372<br>
+      🟡 ADAC: 0800 5101112<br><br>
+      <strong>Reisepass verloren:</strong> Polizei → Deutsche Botschaft<br>
+      <strong>Handy verloren:</strong><br>
+      iOS: icloud.com/find → Gerät sperren<br>
+      Android: android.com/find
+    </div>
+  </div>
+</div>
+
+<div class="bnav-spacer"></div>
+</div><!-- end app-inner -->
+
+<!-- BOTTOM NAV -->
+<div class="bottom-nav" id="bottom-nav">
+  <button class="bnav-btn active" id="bnav-wetter" onclick="openSection('wetter')">
+    <span class="bnav-icon">🌦</span>
+    <span class="bnav-label">Wetter</span>
+  </button>
+  <button class="bnav-btn" id="bnav-oepnv" onclick="openSection('oepnv')">
+    <span class="bnav-icon">🚇</span>
+    <span class="bnav-label">ÖPNV</span>
+  </button>
+  <button class="bnav-btn" id="bnav-sehenswuerdigkeiten" onclick="openSection('sehenswuerdigkeiten')">
+    <span class="bnav-icon">🎡</span>
+    <span class="bnav-label">Sights</span>
+  </button>
+  <button class="bnav-btn" id="bnav-more" onclick="toggleMore()">
+    <span class="bnav-icon">☰</span>
+    <span class="bnav-label">Mehr</span>
+  </button>
+</div>
+
+<!-- MORE MENU -->
+<div class="more-menu" id="more-menu">
+  <div class="more-item" onclick="openSection('london_phase')">
+    <span class="mi-icon">🏙</span>
+    <span class="mi-label">London</span>
+  </div>
+  <div class="more-item" onclick="openSection('poole_phase')">
+    <span class="mi-icon">⛵</span>
+    <span class="mi-label">Poole</span>
+  </div>
+  <div class="more-item" onclick="openSection('restaurants')">
+    <span class="mi-icon">🫖</span>
+    <span class="mi-label">Essen</span>
+  </div>
+  <div class="more-item" onclick="openSection('tagebuch')">
+    <span class="mi-icon">📖</span>
+    <span class="mi-label">Tagebuch</span>
+  </div>
+  <div class="more-item" onclick="openSection('quiz')">
+    <span class="mi-icon">🎓</span>
+    <span class="mi-label">Quiz</span>
+  </div>
+  <div class="more-item" onclick="openSection('tipps')">
+    <span class="mi-icon">💡</span>
+    <span class="mi-label">Tipps</span>
+  </div>
+  <div class="more-item" onclick="openSection('flug')">
+    <span class="mi-icon">✈️</span>
+    <span class="mi-label">Flug</span>
+  </div>
+  <div class="more-item" onclick="openSection('sos')">
+    <span class="mi-icon">🆘</span>
+    <span class="mi-label">SOS</span>
+  </div>
+</div>
+
+<div class="footer">
+  England 2026 – <span>Manuela, Sven, Mila, Jojo &amp; Mikko</span> 🇬🇧 · God Save the King · Have a lovely trip!
+</div>
+
+<script>
+// ===================== HERO STARS =====================
+(function() {
+  const container = document.getElementById('hero-stars');
+  for (let i = 0; i < 40; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 4 + 's';
+    s.style.opacity = Math.random() * 0.6 + 0.1;
+    container.appendChild(s);
+  }
+})();
+
+// ===================== COUNTDOWN =====================
+function updateCountdown() {
+  const departure = new Date('2026-07-13T00:00:00');
+  const now = new Date();
+  const diff = departure - now;
+  if (diff <= 0) {
+    document.getElementById('hc-days').textContent = '✈';
+    document.getElementById('hc-hours').textContent = '00';
+    document.getElementById('hc-mins').textContent = '00';
+    return;
+  }
+  const days = Math.floor(diff / 86400000);
+  const hours = Math.floor((diff % 86400000) / 3600000);
+  const mins = Math.floor((diff % 3600000) / 60000);
+  document.getElementById('hc-days').textContent = days;
+  document.getElementById('hc-hours').textContent = String(hours).padStart(2,'0');
+  document.getElementById('hc-mins').textContent = String(mins).padStart(2,'0');
+}
+updateCountdown();
+setInterval(updateCountdown, 30000);
+
+// ===================== NAVIGATION =====================
+const sectionTitles = {
+  wetter: '🌦 Wetter',
+  london_phase: '🏙 London – Phase 1',
+  poole_phase: '⛵ Poole – Phase 2',
+  sehenswuerdigkeiten: '🎡 Sights London',
+  oepnv: '🚇 ÖPNV London',
+  greenwich: '⚓ Greenwich',
+  restaurants: '🫖 Essen & Pubs',
+  poole_sights: '🏖 Dorset Highlights',
+  poole_oepnv: '🚌 ÖPNV Poole',
+  tagebuch: '📖 Reisetagebuch',
+  quiz: '🎓 England-Quiz',
+  tipps: '💡 Familien-Tipps',
+  flug: '✈️ Flug & Ryanair',
+  sos: '🆘 SOS & Notfall',
+};
+
+let currentSection = null;
+let moreOpen = false;
+
+function openMenuOverlay() {
+  document.getElementById('menu-overlay').classList.add('open');
+}
+
+function closeMenuOverlay(e) {
+  if (!e || e.target === document.getElementById('menu-overlay')) {
+    document.getElementById('menu-overlay').classList.remove('open');
+  }
+}
+
+function openSection(id) {
+  document.getElementById('menu-overlay').classList.remove('open');
+  if (moreOpen) toggleMore();
+
+  document.getElementById('hero-screen').style.display = 'none';
+  const inner = document.getElementById('app-inner');
+  inner.classList.add('visible');
+  document.getElementById('bottom-nav').classList.add('visible');
+
+  document.getElementById('inner-title').textContent = sectionTitles[id] || 'England 2026';
+
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+  currentSection = id;
+
+  document.querySelectorAll('.bnav-btn').forEach(b => b.classList.remove('active'));
+  const btn = document.getElementById('bnav-' + id);
+  if (btn) btn.classList.add('active');
+
+  window.scrollTo(0, 0);
+
+  if (id === 'wetter') loadWeather('london');
+  if (id === 'quiz' && !quizStarted) startQuiz();
+}
+
+function goHome() {
+  document.getElementById('hero-screen').style.display = '';
+  document.getElementById('app-inner').classList.remove('visible');
+  document.getElementById('bottom-nav').classList.remove('visible');
+  if (moreOpen) toggleMore();
+  window.scrollTo(0, 0);
+}
+
+function toggleMore() {
+  moreOpen = !moreOpen;
+  document.getElementById('more-menu').classList.toggle('open', moreOpen);
+  document.getElementById('bnav-more').classList.toggle('active', moreOpen);
+}
+
+// ===================== WEATHER =====================
+let currentWeatherCity = 'london';
+const weatherCities = {
+  london: { name: 'London, England', lat: 51.4826, lon: -0.0077 }, // Greenwich
+  poole: { name: 'Poole, Dorset', lat: 50.7192, lon: -1.9874 }
+};
+
+function switchWeather(city, btn) {
+  document.querySelectorAll('#wetter .filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentWeatherCity = city;
+  loadWeather(city);
+}
+
+async function loadWeather(city) {
+  city = city || currentWeatherCity;
+  const c = weatherCities[city];
+  document.getElementById('weather-city').textContent = c.name;
+  document.getElementById('weather-temp').textContent = '–°C';
+  document.getElementById('weather-desc').textContent = 'Wird geladen...';
+
+  try {
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${c.lat}&longitude=${c.lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m&daily=sunrise,sunset&timezone=Europe%2FLondon`;
+    const resp = await fetch(url);
+    const data = await resp.json();
+    const cur = data.current;
+
+    document.getElementById('weather-temp').textContent = Math.round(cur.temperature_2m) + '°C';
+    document.getElementById('weather-desc').textContent = weatherCodeDesc(cur.weather_code);
+    document.getElementById('weather-humidity').textContent = cur.relative_humidity_2m;
+    document.getElementById('weather-wind').textContent = Math.round(cur.wind_speed_10m);
+    document.getElementById('weather-feel').textContent = Math.round(cur.apparent_temperature);
+
+    if (data.daily) {
+      const sr = new Date(data.daily.sunrise[0]).toLocaleTimeString('de-DE', {hour:'2-digit',minute:'2-digit'});
+      const ss = new Date(data.daily.sunset[0]).toLocaleTimeString('de-DE', {hour:'2-digit',minute:'2-digit'});
+      document.getElementById('sunrise').textContent = '🌅 ' + sr + ' Uhr';
+      document.getElementById('sunset').textContent = '🌇 ' + ss + ' Uhr';
+    }
+  } catch(e) {
+    document.getElementById('weather-desc').textContent = 'Keine Verbindung';
+  }
+}
+
+function weatherCodeDesc(code) {
+  const map = {0:'☀️ Sonnig',1:'🌤 Überwiegend klar',2:'⛅ Teilbewölkt',3:'☁️ Bedeckt',
+    45:'🌫 Neblig',48:'🌫 Reifnebel',51:'🌦 Leichter Niesel',53:'🌦 Niesel',55:'🌧 Starker Niesel',
+    61:'🌧 Leichter Regen',63:'🌧 Regen',65:'🌧 Starker Regen',
+    71:'🌨 Leichter Schnee',73:'🌨 Schnee',75:'❄️ Starker Schnee',
+    80:'🌦 Regenschauer',81:'🌧 Kräftige Schauer',82:'⛈ Starke Schauer',
+    95:'⛈ Gewitter',96:'⛈ Gewitter mit Hagel',99:'⛈ Schweres Gewitter'};
+  return map[code] || '🌡 ' + code;
+}
+
+// ===================== DIARY =====================
+const diaryDays = [
+  {day:1,  date:'13. Juli 2026', label:'Tag 1 – Ankunft London & Greenwich'},
+  {day:2,  date:'14. Juli 2026', label:'Tag 2 – South Bank & Thames Clipper'},
+  {day:3,  date:'15. Juli 2026', label:'Tag 3 – Tower of London & Tower Bridge'},
+  {day:4,  date:'16. Juli 2026', label:'Tag 4 – Natural History & Science Museum'},
+  {day:5,  date:'17. Juli 2026', label:'Tag 5 – Hyde Park & West End'},
+  {day:6,  date:'18. Juli 2026', label:'Tag 6 – Buckingham Palace & British Museum'},
+  {day:7,  date:'19. Juli 2026', label:'Tag 7 – Abfahrt nach Poole', phase:'poole'},
+  {day:8,  date:'20. Juli 2026', label:'Tag 8 – Sandbanks Beach', phase:'poole'},
+  {day:9,  date:'21. Juli 2026', label:'Tag 9 – Brownsea Island', phase:'poole'},
+  {day:10, date:'22. Juli 2026', label:'Tag 10 – Jurassic Coast & Swanage', phase:'poole'},
+  {day:11, date:'23. Juli 2026', label:'Tag 11 – Bournemouth & Corfe Castle', phase:'poole'},
+  {day:12, date:'24. Juli 2026', label:'Tag 12 – Abreise nach Hause', phase:'poole'},
+];
+
+function buildDiary() {
+  const container = document.getElementById('diary-container');
+  diaryDays.forEach(d => {
+    const saved = JSON.parse(localStorage.getItem('englanddiary_' + d.day) || '{"text":"","stars":0}');
+    const isPoole = d.phase === 'poole';
+    const el = document.createElement('div');
+    el.className = 'diary-day';
+    el.id = 'diary-' + d.day;
+    el.innerHTML = `
+      <div class="diary-day-header ${isPoole ? 'poole-header' : ''}" onclick="toggleDiary(${d.day})">
+        <div>
+          <div class="diary-day-title">${d.label}</div>
+          <div class="diary-day-date">${d.date} ${isPoole ? '⛵ Poole' : '🏙 London'}</div>
+        </div>
+        <div class="diary-stars" id="stars-display-${d.day}">${'★'.repeat(saved.stars)}${'☆'.repeat(5-saved.stars)}</div>
+      </div>
+      <div class="diary-day-body" id="body-${d.day}">
+        <div style="font-size:0.8rem;color:var(--grey);margin-bottom:6px;font-family:'IM Fell English',serif;font-style:italic;">Bewertung:</div>
+        <div class="star-rating" id="rating-${d.day}">
+          ${[1,2,3,4,5].map(i => `<button class="star-btn ${i <= saved.stars ? 'active' : ''}" onclick="setStar(${d.day},${i})" data-val="${i}">★</button>`).join('')}
+        </div>
+        <textarea class="diary-textarea" id="text-${d.day}" placeholder="Was habt ihr heute erlebt? Was war besonders schön?">${saved.text}</textarea>
+        <button class="save-btn" onclick="saveDiary(${d.day})">💾 Speichern</button>
+        <span id="saved-msg-${d.day}" style="display:none;margin-left:10px;font-size:0.8rem;color:green;">✓ Gespeichert!</span>
+      </div>
+    `;
+    container.appendChild(el);
+  });
+}
+
+function toggleDiary(day) {
+  document.getElementById('body-' + day).classList.toggle('open');
+}
+
+function setStar(day, val) {
+  document.querySelectorAll('#rating-' + day + ' .star-btn').forEach(b => {
+    b.classList.toggle('active', parseInt(b.dataset.val) <= val);
+  });
+}
+
+function getStars(day) {
+  return document.querySelectorAll('#rating-' + day + ' .star-btn.active').length;
+}
+
+function saveDiary(day) {
+  const text = document.getElementById('text-' + day).value;
+  const stars = getStars(day);
+  localStorage.setItem('englanddiary_' + day, JSON.stringify({text, stars}));
+  document.getElementById('stars-display-' + day).textContent = '★'.repeat(stars) + '☆'.repeat(5 - stars);
+  const msg = document.getElementById('saved-msg-' + day);
+  msg.style.display = 'inline';
+  setTimeout(() => { msg.style.display = 'none'; }, 2000);
+}
+
+buildDiary();
+
+// ===================== QUIZ =====================
+const questions = [
+  {q:'Was ist die offizielle Hauptstadt von England?', opts:['Brighton','Manchester','London','Birmingham'], a:2, fact:'London ist seit fast 2000 Jahren die Hauptstadt. Die Römer gründeten "Londinium" im Jahr 43 n. Chr.!'},
+  {q:'Wie heißt der Fluss, der durch London fließt?', opts:['Severn','Avon','Mersey','Themse'], a:3, fact:'Die Themse (Thames) ist 346 km lang und hat in London Gezeiten! Man sagt sie fällt und steigt ca. 4–5 Meter täglich.'},
+  {q:'Welche Linie ist die älteste U-Bahnlinie der Welt?', opts:['District Line','Central Line','Metropolitan Line','Victoria Line'], a:2, fact:'Die Metropolitan Line, eröffnet 1863, ist die älteste U-Bahnlinie der Welt – damals noch mit Dampflokomotiven!'},
+  {q:'Was ist Poole bekannt für?', opts:['Kohlebergbau','Einer der größten Naturhäfen Europas','Den längsten Pier der Welt','Schottische Whisky-Destillation'], a:1, fact:'Poole Harbour ist einer der größten Naturhäfen der Welt – nur Sydneys Harbour soll größer sein! Brownsea Island liegt mittendrin.'},
+  {q:'Was findet man an der Jurassic Coast?', opts:['Goldvorkommen','Fossilien und 185 Millionen Jahre Erdgeschichte','Nordeuropas längste Sanddünen','Lebende Korallen'], a:1, fact:'Die Jurassic Coast in Dorset ist UNESCO-Welterbe. An Stränden wie Kimmeridge Bay kann man echte Ammoniten-Fossilien finden!'},
+  {q:'Welches Tier bewacht den Tower of London?', opts:['Adler','Rabe','Falke','Löwe'], a:1, fact:'6 Raben müssen immer im Tower leben – laut Legende würde sonst die Monarchie fallen. Sie heißen alle mit Namen und haben einen Yeoman Warder als Betreuer!'},
+  {q:'Was ist Sandbanks (bei Poole) berühmt für?', opts:['Surfen','Die teuersten Wohnungspreise pro Quadratmeter Europas','Den breitesten Strand Englands','Fossilienfunde'], a:1, fact:'Sandbanks ist nach Monaco, Manhattan und Tokio eines der teuersten Grundstücksgebiete der Welt – und trotzdem einer der besten Sandstrände Englands!'},
+  {q:'Wie heißen die Wächter im Tower of London?', opts:['Tower Guards','Beefeaters (Yeoman Warders)','Palace Guards','Royal Sentinels'], a:1, fact:'Die Yeoman Warders, auch "Beefeaters" genannt, bewachen seit 1485 den Tower. Ihr Name soll daher kommen, dass sie einst täglich Rindfleisch als Lohn bekamen!'},
+  {q:'Was ist der Thames Clipper?', opts:['Ein Rasenmäher','Ein Friseur-Salon','Ein Flussbus auf der Themse','Ein Schleppdampfer'], a:2, fact:'Der Thames Clipper ist ein Hochgeschwindigkeits-Fährdienst auf der Themse. Von Greenwich bis Westminster dauert er ca. 45 Minuten – mit traumhafter Aussicht!'},
+  {q:'In welchem englischen Park stehen Rehe in Greenwich?', opts:['Hyde Park','St. James\'s Park','Greenwich Park','Regent\'s Park'], a:2, fact:'Im Greenwich Park (direkt bei eurem Hotel!) lebt eine Herde Hirsche und Rehe seit dem 16. Jahrhundert. König Heinrich VIII. ließ den Park 1433 anlegen.'},
+];
+
+let quizStarted = false, qIndex = 0, score = 0, answered = false;
+
+function startQuiz() {
+  quizStarted = true;
+  qIndex = 0; score = 0; answered = false;
+  document.getElementById('quiz-restart').style.display = 'none';
+  renderQuestion();
+}
+
+function renderQuestion() {
+  if (qIndex >= questions.length) {
+    document.getElementById('quiz-q').textContent = `Quiz beendet! ${score} von ${questions.length} Punkten. ${score >= 8 ? '🏆 Ausgezeichnet!' : score >= 5 ? '👏 Gut gemacht!' : '📚 Übt weiter!'}`;
+    document.getElementById('quiz-opts').innerHTML = '';
+    document.getElementById('quiz-feedback').style.display = 'none';
+    document.getElementById('quiz-next').style.display = 'none';
+    document.getElementById('quiz-restart').style.display = 'inline-block';
+    document.getElementById('quiz-score-display').textContent = score + ' / ' + questions.length;
+    return;
+  }
+  const q = questions[qIndex];
+  document.getElementById('quiz-q').textContent = `${qIndex+1}/${questions.length} – ${q.q}`;
+  document.getElementById('quiz-score-display').textContent = score + ' / ' + qIndex;
+  const opts = document.getElementById('quiz-opts');
+  opts.innerHTML = '';
+  answered = false;
+  document.getElementById('quiz-feedback').style.display = 'none';
+  document.getElementById('quiz-next').style.display = 'none';
+  q.opts.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'quiz-option';
+    btn.textContent = opt;
+    btn.onclick = () => answerQuiz(i, btn);
+    opts.appendChild(btn);
+  });
+}
+
+function answerQuiz(chosen, btn) {
+  if (answered) return;
+  answered = true;
+  const q = questions[qIndex];
+  const opts = document.querySelectorAll('.quiz-option');
+  opts[q.a].classList.add('correct');
+  const fb = document.getElementById('quiz-feedback');
+  if (chosen === q.a) {
+    score++;
+    btn.classList.add('correct');
+    fb.textContent = '✅ Richtig! ' + q.fact;
+    fb.style.background = '#d8f3dc'; fb.style.color = '#2d6a4f';
+  } else {
+    btn.classList.add('wrong');
+    fb.textContent = '❌ Leider falsch. ' + q.fact;
+    fb.style.background = '#ffe0e0'; fb.style.color = '#cf142b';
+  }
+  fb.style.display = 'block';
+  document.getElementById('quiz-next').style.display = 'inline-block';
+  document.getElementById('quiz-score-display').textContent = score + ' / ' + (qIndex+1);
+}
+
+function nextQuestion() { qIndex++; renderQuestion(); }
+
+// ===================== RESTAURANT FILTER =====================
+function filterRestaurants(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.restaurant-list .card').forEach(card => {
+    if (cat === 'alle') { card.style.display = ''; return; }
+    card.style.display = (card.dataset.cat || '').split(' ').includes(cat) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>
