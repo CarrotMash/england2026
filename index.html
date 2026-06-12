@@ -32,43 +32,59 @@
 /* ===== HERO SPLASH ===== */
   .hero {
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
+    min-height: 580px;
+    max-height: 900px;
     background: var(--navy);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
   }
 
+  /* Skyline nur im unteren Drittel, nicht überlappend */
   .hero-cityscape {
     position: absolute;
     bottom: 0; left: 0; right: 0;
-    width: 100%; height: 75%;
+    width: 100%; height: 38%;
     z-index: 1;
   }
 
+  /* Gradient: oben dunkel, unten warm – Skyline-Zone abgedunkelt */
   .hero::before {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(
       180deg,
-      #0a1628 0%,
-      #012169 35%,
-      #1a3a8a 55%,
-      #c0392b 72%,
-      #e67e22 80%,
-      #f39c12 88%,
-      #fce38a 100%
+      #060e1f 0%,
+      #012169 30%,
+      #1a3a8a 52%,
+      #b03020 68%,
+      #d45010 78%,
+      #e8800a 86%,
+      #0a0e18 100%
     );
     z-index: 0;
+  }
+
+  /* Extra Abdunkelung über der Skyline damit Text lesbar bleibt */
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 42%;
+    background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%);
+    z-index: 2;
+    pointer-events: none;
   }
 
   .hero-cloud {
     position: absolute;
     background: rgba(255,255,255,0.07);
     border-radius: 50px;
-    z-index: 1;
+    z-index: 3;
   }
   .cloud-1 { width: 120px; height: 30px; top: 18%; left: -130px; animation: drift 28s linear infinite; }
   .cloud-2 { width: 80px; height: 20px; top: 28%; left: -90px; animation: drift 38s linear infinite 8s; }
@@ -78,8 +94,8 @@
   .hero-stars {
     position: absolute;
     top: 0; left: 0; right: 0;
-    height: 50%;
-    z-index: 1;
+    height: 60%;
+    z-index: 3;
   }
   .star {
     position: absolute;
@@ -90,125 +106,137 @@
   }
   @keyframes twinkle { 0%,100%{opacity:0.2} 50%{opacity:1} }
 
+  /* Content-Bereich: zentriert, über der Skyline */
   .hero-content {
     position: relative;
     z-index: 10;
     text-align: center;
-    padding: 0 24px 0;
+    padding: 0 20px;
     pointer-events: none;
+    /* Shift leicht nach oben damit Skyline nicht überlappt */
+    margin-bottom: 14%;
+    width: 100%;
   }
 
   .hero-flag {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     animation: flagwave 4s ease-in-out infinite;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
   }
   @keyframes flagwave { 0%,100%{transform:rotate(-3deg) scale(1)} 50%{transform:rotate(3deg) scale(1.05)} }
 
   .hero-title {
     font-family: 'Playfair Display', serif;
-    font-size: 3.2rem;
+    font-size: clamp(2rem, 8vw, 2.8rem);
     font-weight: 900;
     color: white;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
     text-transform: uppercase;
     line-height: 1;
+    white-space: nowrap;
     text-shadow: 0 4px 20px rgba(0,0,0,0.6), 0 0 60px rgba(200,168,75,0.3);
-    margin-bottom: 4px;
+    margin-bottom: 5px;
   }
 
   .hero-subtitle {
     font-family: 'IM Fell English', serif;
     font-style: italic;
-    font-size: 1.0rem;
+    font-size: clamp(0.75rem, 3vw, 0.95rem);
     color: var(--gold);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 8px;
   }
 
-  /* Phase pills */
+  /* Phase pills – kompakter */
   .hero-phases {
-    display: inline-flex;
-    gap: 8px;
-    margin-bottom: 14px;
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
     pointer-events: all;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding: 0 8px;
   }
   .phase-pill {
     background: rgba(255,255,255,0.13);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(200,168,75,0.5);
     border-radius: 20px;
-    padding: 5px 14px;
+    padding: 5px 10px;
     color: white;
-    font-size: 0.72rem;
+    font-size: clamp(0.6rem, 2.5vw, 0.68rem);
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
     cursor: pointer;
     transition: all 0.2s;
+    white-space: nowrap;
   }
   .phase-pill:hover { background: rgba(200,168,75,0.3); border-color: var(--gold); }
 
   .hero-countdown-box {
     display: inline-flex;
-    gap: 12px;
-    background: rgba(0,0,0,0.4);
+    gap: 8px;
+    background: rgba(0,0,0,0.45);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(200,168,75,0.4);
     border-radius: 8px;
-    padding: 12px 20px;
-    margin-bottom: 12px;
+    padding: 9px 16px;
+    margin-bottom: 8px;
   }
   .hero-count-unit {
     text-align: center;
-    min-width: 44px;
+    min-width: 36px;
   }
   .hero-count-num {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 900;
     color: var(--gold);
     line-height: 1;
     display: block;
   }
   .hero-count-label {
-    font-size: 0.62rem;
+    font-size: 0.55rem;
     color: rgba(255,255,255,0.7);
     text-transform: uppercase;
     letter-spacing: 1px;
   }
   .hero-count-sep {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: rgba(255,255,255,0.3);
     align-self: center;
     font-family: 'Playfair Display', serif;
-    margin-top: -6px;
+    margin-top: -4px;
   }
 
   .hero-date-line {
-    font-size: 0.82rem;
+    font-size: clamp(0.68rem, 2.5vw, 0.78rem);
     color: rgba(255,255,255,0.65);
     font-family: 'IM Fell English', serif;
     font-style: italic;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     pointer-events: none;
   }
 
   .hero-menu-btn {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     background: rgba(255,255,255,0.15);
     backdrop-filter: blur(10px);
     border: 2px solid rgba(200,168,75,0.7);
     border-radius: 50px;
-    padding: 12px 32px;
+    padding: 10px 28px;
     color: white;
     cursor: pointer;
-    margin-top: 8px;
     transition: all 0.2s;
     pointer-events: all;
     -webkit-tap-highlight-color: transparent;
@@ -218,10 +246,10 @@
     border-color: var(--gold);
     transform: scale(1.04);
   }
-  .hero-menu-icon { font-size: 1.3rem; }
+  .hero-menu-icon { font-size: 1.1rem; }
   .hero-menu-text {
     font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -238,8 +266,9 @@
       white 64%, white 67%,
       var(--red) 67%, var(--red) 100%
     );
-    position: relative;
-    z-index: 10;
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    z-index: 20;
   }
 
   /* ===== MENU OVERLAY ===== */
