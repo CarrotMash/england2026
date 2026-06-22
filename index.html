@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🇬🇧 England 2026 – Familie</title>
+<title>England 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IM+Fell+English:ital@0;1&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 :root{--red:#CF142B;--navy:#012169;--gold:#C8A84B;--cream:#F5F0E8;--dark:#1a1a2e;--white:#FFF;--grey:#6b6b6b;--light:#e8e2d8;--teal:#0d6e6e;}
@@ -13,7 +13,7 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#060e1f 0%,#012169 30%,#1a3a8a 52%,#b03020 68%,#d45010 78%,#e8800a 86%,#0a0e18 100%);z-index:0;}
 .hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:42%;background:linear-gradient(to top,rgba(0,0,0,.65) 0%,transparent 100%);z-index:2;pointer-events:none;}
 .hero-sky{position:absolute;bottom:0;left:0;right:0;width:100%;height:38%;z-index:1;}
-.hero-stars{position:absolute;top:0;left:0;right:0;height:60%;z-index:3;}
+.hstars{position:absolute;top:0;left:0;right:0;height:60%;z-index:3;}
 .star{position:absolute;width:2px;height:2px;background:white;border-radius:50%;animation:twinkle 3s ease-in-out infinite;}
 @keyframes twinkle{0%,100%{opacity:.2}50%{opacity:1}}
 .hcloud{position:absolute;background:rgba(255,255,255,.07);border-radius:50px;z-index:3;}
@@ -21,99 +21,93 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
 .hc2{width:80px;height:20px;top:28%;left:-90px;animation:drift 38s linear infinite 8s;}
 .hc3{width:150px;height:35px;top:12%;left:-160px;animation:drift 22s linear infinite 4s;}
 @keyframes drift{to{left:110%;}}
-.hero-content{position:relative;z-index:10;text-align:center;padding:0 20px;pointer-events:none;margin-bottom:14%;width:100%;}
-.hero-flag{font-size:2.8rem;animation:wave 4s ease-in-out infinite;display:block;margin-bottom:6px;filter:drop-shadow(0 4px 12px rgba(0,0,0,.5));}
+.hcontent{position:relative;z-index:10;text-align:center;padding:0 20px;pointer-events:none;margin-bottom:14%;width:100%;}
+.hflag{font-size:2.8rem;animation:wave 4s ease-in-out infinite;display:block;margin-bottom:6px;}
 @keyframes wave{0%,100%{transform:rotate(-3deg) scale(1)}50%{transform:rotate(3deg) scale(1.05)}}
-.hero-title{font-family:"Playfair Display",serif;font-size:clamp(2rem,8vw,2.8rem);font-weight:900;color:white;letter-spacing:6px;text-transform:uppercase;line-height:1;white-space:nowrap;text-shadow:0 4px 20px rgba(0,0,0,.6);margin-bottom:5px;}
-.hero-sub{font-family:"IM Fell English",serif;font-style:italic;font-size:clamp(.75rem,3vw,.95rem);color:var(--gold);letter-spacing:1px;margin-bottom:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 8px;}
+.htitle{font-family:"Playfair Display",serif;font-size:clamp(2rem,8vw,2.8rem);font-weight:900;color:white;letter-spacing:6px;text-transform:uppercase;line-height:1;white-space:nowrap;text-shadow:0 4px 20px rgba(0,0,0,.6);margin-bottom:5px;}
+.hsub{font-family:"IM Fell English",serif;font-style:italic;font-size:clamp(.75rem,3vw,.95rem);color:var(--gold);letter-spacing:1px;margin-bottom:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 8px;}
 .hphases{display:flex;gap:6px;margin-bottom:10px;pointer-events:all;justify-content:center;padding:0 8px;}
 .ppill{background:rgba(255,255,255,.13);backdrop-filter:blur(8px);border:1px solid rgba(200,168,75,.5);border-radius:20px;padding:5px 10px;color:white;font-size:clamp(.6rem,2.5vw,.68rem);font-weight:700;text-transform:uppercase;cursor:pointer;transition:all .2s;white-space:nowrap;}
-.ppill:hover{background:rgba(200,168,75,.3);border-color:var(--gold);}
+.ppill:hover{background:rgba(200,168,75,.3);}
 .hcd{display:inline-flex;gap:8px;background:rgba(0,0,0,.45);backdrop-filter:blur(8px);border:1px solid rgba(200,168,75,.4);border-radius:8px;padding:9px 16px;margin-bottom:8px;}
 .hcu{text-align:center;min-width:36px;}
 .hcn{font-family:"Playfair Display",serif;font-size:1.7rem;font-weight:900;color:var(--gold);line-height:1;display:block;}
 .hcl{font-size:.55rem;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:1px;}
-.hcs{font-size:1.4rem;color:rgba(255,255,255,.3);align-self:center;font-family:"Playfair Display",serif;margin-top:-4px;}
+.hcsep{font-size:1.4rem;color:rgba(255,255,255,.3);align-self:center;font-family:"Playfair Display",serif;margin-top:-4px;}
 .hdl{font-size:clamp(.68rem,2.5vw,.78rem);color:rgba(255,255,255,.65);font-family:"IM Fell English",serif;font-style:italic;margin-bottom:12px;pointer-events:none;}
-.hbtn{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border:2px solid rgba(200,168,75,.7);border-radius:50px;padding:10px 28px;color:white;cursor:pointer;transition:all .2s;pointer-events:all;-webkit-tap-highlight-color:transparent;}
-.hbtn:hover,.hbtn:active{background:rgba(200,168,75,.35);border-color:var(--gold);transform:scale(1.04);}
+.hbtn{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border:2px solid rgba(200,168,75,.7);border-radius:50px;padding:10px 28px;color:white;cursor:pointer;transition:all .2s;pointer-events:all;}
+.hbtn:hover,.hbtn:active{background:rgba(200,168,75,.35);transform:scale(1.04);}
+.hbtn-lbl{font-family:"Playfair Display",serif;font-size:1.05rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;}
 .jackbar{height:8px;background:repeating-linear-gradient(90deg,var(--red) 0,var(--red) 33%,white 33%,white 36%,var(--navy) 36%,var(--navy) 64%,white 64%,white 67%,var(--red) 67%,var(--red) 100%);position:absolute;bottom:0;left:0;right:0;z-index:20;}
-/* PERSON SCREEN */
 .pscreen{display:none;position:fixed;inset:0;background:var(--navy);z-index:1000;flex-direction:column;align-items:center;justify-content:center;padding:24px;}
 .pscreen.open{display:flex;}
 .pscreen h2{font-family:"Playfair Display",serif;color:var(--gold);font-size:1.6rem;margin-bottom:8px;text-align:center;}
 .pscreen p{color:rgba(255,255,255,.7);font-family:"IM Fell English",serif;font-style:italic;margin-bottom:28px;text-align:center;}
 .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:320px;}
-.pbtn{background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.2);border-radius:12px;padding:18px 12px;color:white;cursor:pointer;text-align:center;transition:all .2s;-webkit-tap-highlight-color:transparent;}
+.pbtn{background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.2);border-radius:12px;padding:18px 12px;color:white;cursor:pointer;text-align:center;transition:all .2s;}
 .pbtn:hover,.pbtn:active{border-color:var(--gold);background:rgba(200,168,75,.25);}
 .pbi{font-size:2rem;display:block;margin-bottom:6px;}
 .pbn{font-family:"Playfair Display",serif;font-size:1rem;font-weight:700;display:block;}
 .pbr{font-size:.72rem;color:rgba(255,255,255,.5);display:block;}
-/* MENU */
 .moverlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:500;backdrop-filter:blur(3px);align-items:flex-end;}
 .moverlay.open{display:flex;}
 .msheet{background:var(--navy);width:100%;max-width:480px;margin:0 auto;border-radius:20px 20px 0 0;padding-bottom:16px;animation:sUp .28s cubic-bezier(.22,.8,.36,1);max-height:90vh;overflow-y:auto;}
 @keyframes sUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
 .msh{display:flex;align-items:center;justify-content:space-between;padding:16px 20px 12px;border-bottom:1px solid rgba(200,168,75,.3);}
+.msh-title{font-family:"Playfair Display",serif;font-size:1.1rem;font-weight:700;color:white;letter-spacing:2px;text-transform:uppercase;}
 .mwho{font-size:.8rem;color:var(--gold);font-family:"IM Fell English",serif;font-style:italic;}
 .xcl{background:rgba(255,255,255,.1);border:none;color:white;font-size:1rem;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;}
 .xcl:hover{background:rgba(207,20,43,.5);}
 .mlbl{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);padding:10px 16px 4px;opacity:.8;}
 .mtiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:4px 16px 10px;}
-.mt{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:14px 8px 10px;text-align:center;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;transition:all .18s;-webkit-tap-highlight-color:transparent;}
+.mt{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:14px 8px 10px;text-align:center;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;transition:all .18s;}
 .mt:hover,.mt:active{background:rgba(200,168,75,.25);border-color:var(--gold);transform:translateY(-2px);}
 .mt.sos{background:rgba(207,20,43,.2);border-color:rgba(207,20,43,.5);}
-.mt.sos:hover{background:rgba(207,20,43,.4);border-color:var(--red);}
-.mti{font-size:1.8rem;line-height:1;}.mtl{font-family:"Playfair Display",serif;font-size:.82rem;font-weight:700;color:white;text-transform:uppercase;letter-spacing:.5px;}.mts{font-family:"IM Fell English",serif;font-style:italic;font-size:.68rem;color:rgba(255,255,255,.55);}
-.mfoot{text-align:center;font-family:"IM Fell English",serif;font-style:italic;color:rgba(200,168,75,.6);font-size:.8rem;padding:4px 0 8px;}
-/* INNER APP */
+.mti{font-size:1.8rem;line-height:1;}
+.mtl{font-family:"Playfair Display",serif;font-size:.82rem;font-weight:700;color:white;text-transform:uppercase;letter-spacing:.5px;}
+.mts{font-family:"IM Fell English",serif;font-style:italic;font-size:.68rem;color:rgba(255,255,255,.55);}
+.mfoot{text-align:center;font-family:"IM Fell English",serif;font-style:italic;color:rgba(200,168,75,.6);font-size:.8rem;padding:8px 0;}
 .appinner{display:none;}.appinner.vis{display:block;}
 .ihead{background:var(--navy);display:flex;align-items:center;padding:10px 16px;gap:10px;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.3);}
 .iback{background:none;border:none;color:var(--gold);font-size:1.2rem;cursor:pointer;padding:0 4px;line-height:1;}
 .ititle{font-family:"Playfair Display",serif;font-size:1rem;font-weight:700;color:white;letter-spacing:1px;text-transform:uppercase;flex:1;}
 .wbadge{background:rgba(200,168,75,.3);border:1px solid var(--gold);border-radius:12px;padding:2px 10px;font-size:.72rem;color:var(--gold);font-weight:700;cursor:pointer;}
-/* SECTIONS */
 .sec{display:none;padding:16px 16px 0;max-width:480px;margin:0 auto;}.sec.active{display:block;}
 .sh{font-family:"Playfair Display",serif;font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:4px;border-left:4px solid var(--red);padding-left:12px;}
 .ssh{font-family:"IM Fell English",serif;font-style:italic;color:var(--grey);font-size:.9rem;margin-bottom:16px;padding-left:16px;}
-/* CARDS */
 .card{background:var(--white);border:1px solid var(--light);border-radius:4px;padding:16px;margin-bottom:12px;box-shadow:3px 3px 0 var(--light);position:relative;overflow:hidden;}
 .card::before{content:"";position:absolute;top:0;left:0;width:4px;height:100%;background:var(--red);}
 .card.na::before{background:var(--navy);}.card.ga::before{background:var(--gold);}.card.ta::before{background:var(--teal);}
 .ct{font-family:"Playfair Display",serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:4px;padding-left:8px;}
 .cm{font-size:.78rem;color:var(--grey);margin-bottom:6px;padding-left:8px;}
 .cx{font-size:.88rem;line-height:1.6;color:var(--dark);padding-left:8px;}
-.tag{display:inline-block;padding:2px 8px;border-radius:2px;font-size:.7rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-right:4px;margin-top:4px;}
+.tag{display:inline-block;padding:2px 8px;border-radius:2px;font-size:.7rem;font-weight:600;text-transform:uppercase;margin-right:4px;margin-top:4px;}
 .tr{background:var(--red);color:white;}.tn{background:var(--navy);color:white;}.tg{background:var(--gold);color:white;}.tt{background:var(--teal);color:white;}.tv{background:#2d6a4f;color:white;}
-/* TRANSPORT BOX */
 .tbox{background:linear-gradient(135deg,#012169,#0d3580);border-radius:8px;padding:14px 16px;margin-bottom:12px;color:white;}
 .tbox h3{font-family:"Playfair Display",serif;font-size:1rem;color:var(--gold);margin-bottom:8px;}
 .trow{display:flex;align-items:flex-start;gap:10px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:.83rem;}
 .trow:last-child{border-bottom:none;}
 .tico{font-size:1.2rem;flex-shrink:0;width:24px;}
 .ttx{line-height:1.4;}.ttx strong{display:block;color:var(--gold);font-size:.85rem;}
-/* WEATHER */
 .wbox{background:linear-gradient(135deg,var(--navy),#1a3a7a);color:white;border-radius:8px;padding:20px;margin-bottom:16px;position:relative;overflow:hidden;}
 .wbox::after{content:"⛅";position:absolute;right:20px;top:15px;font-size:4rem;opacity:.15;}
-.wt{font-family:"Playfair Display",serif;font-size:3rem;font-weight:900;line-height:1;}
-.wd{font-family:"IM Fell English",serif;font-style:italic;color:var(--gold);font-size:1rem;margin-top:4px;}
+.wtemp{font-family:"Playfair Display",serif;font-size:3rem;font-weight:900;line-height:1;}
+.wdesc{font-family:"IM Fell English",serif;font-style:italic;color:var(--gold);font-size:1rem;margin-top:4px;}
 .wdet{display:flex;gap:16px;margin-top:12px;font-size:.8rem;opacity:.85;}
 .wsun{display:flex;justify-content:space-between;background:rgba(255,255,255,.1);border-radius:4px;padding:8px 12px;margin-top:10px;font-size:.85rem;}
-/* VOTE */
 .vtabs{display:flex;gap:8px;margin-bottom:14px;}
 .vtab{flex:1;padding:8px 6px;border-radius:6px;border:2px solid var(--light);background:var(--white);font-family:"Playfair Display",serif;font-size:.82rem;font-weight:700;text-align:center;cursor:pointer;transition:all .2s;color:var(--grey);}
 .vtab.al{background:var(--navy);border-color:var(--navy);color:white;}
 .vtab.ap{background:var(--teal);border-color:var(--teal);color:white;}
 .vtab.ar{background:var(--gold);border-color:var(--gold);color:white;}
 .vwho{background:var(--navy);border-radius:8px;padding:10px 14px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;}
-.vwho span{color:rgba(255,255,255,.7);font-size:.8rem;}
-.vwho strong{color:var(--gold);}
+.vwho span{color:rgba(255,255,255,.7);font-size:.8rem;}.vwho strong{color:var(--gold);}
 .vi{background:var(--white);border:1px solid var(--light);border-radius:8px;padding:12px 14px;margin-bottom:8px;display:flex;align-items:center;gap:10px;box-shadow:2px 2px 0 var(--light);}
 .vname{flex:1;font-size:.9rem;font-weight:600;}
 .vscore{font-family:"Playfair Display",serif;font-size:1.1rem;font-weight:700;min-width:32px;text-align:center;}
 .vscore.pos{color:#2d6a4f;}.vscore.neg{color:var(--red);}.vscore.neu{color:var(--grey);}
 .vbtns{display:flex;gap:6px;}
-.vbtn{background:none;border:2px solid var(--light);border-radius:6px;padding:6px 10px;font-size:1rem;cursor:pointer;transition:all .15s;-webkit-tap-highlight-color:transparent;}
+.vbtn{background:none;border:2px solid var(--light);border-radius:6px;padding:6px 10px;font-size:1rem;cursor:pointer;transition:all .15s;}
 .vbtn.up.voted{background:#d8f3dc;border-color:#2d6a4f;}
 .vbtn.dn.voted{background:#ffe0e0;border-color:var(--red);}
 .ri{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--light);}
@@ -124,7 +118,6 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
 .rfill.neg{background:var(--red);}
 .rnum{font-size:.8rem;font-weight:700;min-width:28px;text-align:right;}
 .rnum.pos{color:#2d6a4f;}.rnum.neg{color:var(--red);}
-/* BUDGET */
 .bsum{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;}
 .bsc{background:var(--navy);color:white;border-radius:8px;padding:12px 14px;text-align:center;}
 .bsn{font-family:"Playfair Display",serif;font-size:1.6rem;font-weight:900;color:var(--gold);display:block;}
@@ -134,27 +127,25 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
 .bform label{font-size:.78rem;font-weight:600;color:var(--navy);display:block;margin-bottom:3px;}
 .addbtn{background:var(--navy);color:white;border:none;padding:10px 20px;border-radius:4px;font-family:"Source Sans 3",sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:1px;cursor:pointer;width:100%;font-size:.85rem;}
 .addbtn:hover{background:var(--red);}
-.bcat{display:inline-flex;align-items:center;gap:4px;background:var(--light);border-radius:12px;padding:2px 8px;font-size:.72rem;font-weight:600;margin-right:4px;}
 .bdel{background:none;border:none;color:var(--red);cursor:pointer;font-size:.9rem;padding:0 4px;}
 .bli{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--light);font-size:.85rem;}
 .bli:last-child{border-bottom:none;}
 .bld{flex:1;}.bla{font-family:"Playfair Display",serif;font-weight:700;color:var(--navy);}
+.bcat{display:inline-flex;align-items:center;gap:4px;background:var(--light);border-radius:12px;padding:2px 8px;font-size:.72rem;font-weight:600;margin-right:4px;}
 .dflt{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
 .dfb{padding:4px 10px;border:2px solid var(--navy);border-radius:20px;background:none;font-size:.75rem;font-weight:600;cursor:pointer;transition:all .2s;}
 .dfb.active,.dfb:hover{background:var(--navy);color:white;}
-/* CHECKLIST */
 .clday{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
 .cdb{padding:4px 10px;border:2px solid var(--light);border-radius:20px;background:var(--white);font-size:.75rem;font-weight:700;cursor:pointer;transition:all .2s;}
 .cdb.active{background:var(--navy);border-color:var(--navy);color:white;}
-.cli{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--light);cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.cli{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--light);cursor:pointer;}
 .cli:last-child{border-bottom:none;}
 .clcb{width:22px;height:22px;border:2px solid var(--navy);border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s;}
 .clcb.done{background:var(--teal);border-color:var(--teal);}
-.clcb.done::after{content:"\2713";color:white;font-size:.9rem;font-weight:700;}
+.clcb.done::after{content:"✓";color:white;font-size:.9rem;font-weight:700;}
 .clt{flex:1;font-size:.88rem;line-height:1.4;}
 .clt.done{text-decoration:line-through;color:var(--grey);}
 .clw{font-size:.68rem;color:var(--grey);}
-/* DIARY */
 .dday{background:var(--white);border:1px solid var(--light);border-radius:4px;margin-bottom:10px;overflow:hidden;box-shadow:2px 2px 0 var(--light);}
 .ddhd{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--navy);color:white;cursor:pointer;}
 .ddhd.pl{background:var(--teal);}
@@ -169,12 +160,10 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
 .sbtn.active{color:var(--gold);}
 .savebtn{background:var(--red);color:white;border:none;padding:6px 16px;border-radius:2px;font-family:"Source Sans 3",sans-serif;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;cursor:pointer;}
 .savebtn:hover{background:var(--navy);}
-/* RAIN */
 .rbanner{background:linear-gradient(135deg,#1a3a8a,#2d6a4f);border-radius:8px;padding:16px;margin-bottom:12px;color:white;display:flex;align-items:center;gap:12px;}
 .rbico{font-size:2.5rem;}
 .rbanner h3{font-family:"Playfair Display",serif;font-size:1.1rem;color:var(--gold);}
 .rbanner p{font-size:.82rem;opacity:.85;margin-top:2px;}
-/* MISC */
 .rf{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;}
 .rfb{padding:4px 12px;border:2px solid var(--navy);border-radius:20px;background:none;font-size:.78rem;font-weight:600;cursor:pointer;transition:all .2s;font-family:"Source Sans 3",sans-serif;}
 .rfb.active,.rfb:hover{background:var(--navy);color:white;}
@@ -199,12 +188,12 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
 .qnext{background:var(--navy);color:white;border:none;padding:10px 24px;border-radius:2px;font-family:"Source Sans 3",sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:1px;cursor:pointer;display:none;margin-top:8px;}
 .bnav{position:fixed;bottom:0;left:0;right:0;background:var(--navy);display:none;grid-template-columns:repeat(4,1fr);border-top:3px solid var(--red);z-index:200;box-shadow:0 -4px 20px rgba(0,0,0,.4);}
 .bnav.vis{display:grid;}
-.nb{background:none;border:none;color:rgba(255,255,255,.55);cursor:pointer;padding:8px 4px 6px;display:flex;flex-direction:column;align-items:center;gap:2px;transition:all .15s;-webkit-tap-highlight-color:transparent;}
+.nb{background:none;border:none;color:rgba(255,255,255,.55);cursor:pointer;padding:8px 4px 6px;display:flex;flex-direction:column;align-items:center;gap:2px;transition:all .15s;}
 .nb.active{color:var(--gold);}.nb:hover{color:var(--white);}
 .ni{font-size:1.3rem;line-height:1;}.nl{font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px;}
 .mmenu{display:none;position:fixed;bottom:52px;left:0;right:0;background:var(--navy);border-top:2px solid var(--gold);z-index:190;grid-template-columns:repeat(4,1fr);padding:8px;gap:6px;}
 .mmenu.open{display:grid;}
-.mmi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:10px 4px;text-align:center;cursor:pointer;color:white;-webkit-tap-highlight-color:transparent;transition:background .15s;}
+.mmi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:10px 4px;text-align:center;cursor:pointer;color:white;transition:background .15s;}
 .mmi:hover,.mmi:active{background:rgba(200,168,75,.3);border-color:var(--gold);}
 .mmii{font-size:1.4rem;display:block;margin-bottom:3px;}
 .mmil{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;}
@@ -216,13 +205,13 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
 </style>
 </head>
 <body>
+
 <!-- HERO -->
 <div class="hero" id="hero">
-  <div class="hero-stars" id="hstars"></div>
+  <div class="hstars" id="hstars"></div>
   <div class="hcloud hc1"></div><div class="hcloud hc2"></div><div class="hcloud hc3"></div>
   <svg class="hero-sky" viewBox="0 0 400 300" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
-    <rect x="0" y="240" width="400" height="60" fill="#1a3a6a" opacity=".9"/>
-    <rect x="0" y="238" width="400" height="6" fill="#0d1f4a"/>
+    <rect x="0" y="238" width="400" height="65" fill="#0d1f4a"/>
     <rect x="0" y="185" width="18" height="55" fill="#0f2250"/><rect x="20" y="195" width="14" height="45" fill="#0f2250"/><rect x="36" y="175" width="22" height="65" fill="#0f2250"/>
     <rect x="218" y="155" width="22" height="85" fill="#1a3a7a"/><polygon points="218,155 229,138 240,155" fill="#1a3a7a"/>
     <rect x="260" y="155" width="22" height="85" fill="#1a3a7a"/><polygon points="260,155 271,138 282,155" fill="#1a3a7a"/>
@@ -242,26 +231,46 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
     <ellipse cx="345" cy="175" rx="28" ry="18" fill="#152d6b"/>
     <ellipse cx="345" cy="170" rx="18" ry="12" fill="#1a3a80"/>
     <line x1="345" y1="158" x2="345" y2="145" stroke="#c8a84b" stroke-width="2"/>
-    <g><rect x="-60" y="228" width="55" height="10" fill="#CF142B" rx="2"><animateTransform attributeName="transform" type="translate" from="0,0" to="460,0" dur="16s" repeatCount="indefinite"/></rect><circle cx="-50" cy="238" r="3" fill="#111"><animateTransform attributeName="transform" type="translate" from="0,0" to="460,0" dur="16s" repeatCount="indefinite"/></circle><circle cx="-15" cy="238" r="3" fill="#111"><animateTransform attributeName="transform" type="translate" from="0,0" to="460,0" dur="16s" repeatCount="indefinite"/></circle></g>
+    <g>
+      <rect x="-60" y="228" width="55" height="10" fill="#CF142B" rx="2"><animateTransform attributeName="transform" type="translate" from="0,0" to="460,0" dur="16s" repeatCount="indefinite"/></rect>
+      <circle cx="-50" cy="238" r="3" fill="#111"><animateTransform attributeName="transform" type="translate" from="0,0" to="460,0" dur="16s" repeatCount="indefinite"/></circle>
+      <circle cx="-15" cy="238" r="3" fill="#111"><animateTransform attributeName="transform" type="translate" from="0,0" to="460,0" dur="16s" repeatCount="indefinite"/></circle>
+    </g>
     <rect x="0" y="233" width="400" height="8" fill="#0a1628"/>
   </svg>
-  <div class="hero-content">
-    <span class="hero-flag">🇬🇧</span>
-    <div class="hero-title">England 2026</div>
-    <div class="hero-sub">Manuela, Sven, Mila, Jojo & Mikko</div>
+  <div class="hcontent">
+    <svg width="110" height="72" viewBox="0 0 110 72" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto 10px;border-radius:6px;box-shadow:0 4px 20px rgba(0,0,0,.5),0 0 0 2px rgba(255,255,255,.15);animation:wave 4s ease-in-out infinite;flex-shrink:0">
+      <!-- Union Jack background -->
+      <rect width="110" height="72" fill="#012169"/>
+      <!-- White diagonals -->
+      <polygon points="0,0 14,0 55,28 96,0 110,0 110,10 69,36 110,62 110,72 96,72 55,44 14,72 0,72 0,62 41,36 0,10" fill="white"/>
+      <!-- Red diagonals -->
+      <polygon points="0,0 5,0 55,30 105,0 110,0 110,5 60,36 110,67 110,72 105,72 55,42 5,72 0,72 0,67 50,36 0,5" fill="#CF142B"/>
+      <!-- White cross -->
+      <rect x="44" y="0" width="22" height="72" fill="white"/>
+      <rect x="0" y="28" width="110" height="16" fill="white"/>
+      <!-- Red cross -->
+      <rect x="47" y="0" width="16" height="72" fill="#CF142B"/>
+      <rect x="0" y="31" width="110" height="10" fill="#CF142B"/>
+    </svg>
+    <div class="htitle">England 2026</div>
+    <div class="hsub">Manuela, Sven, Mila, Jojo &amp; Mikko</div>
     <div class="hphases">
-      <div class="ppill" onclick="openSec('london_phase')">&#127963; London · 13.–19. Juli</div>
-      <div class="ppill" onclick="openSec('poole_phase')">&#9749; Poole · 19.–24. Juli</div>
+      <div class="ppill" onclick="openSec('london_phase')">🏙 London &middot; 13.&ndash;19. Juli</div>
+      <div class="ppill" onclick="openSec('poole_phase')">⛵ Poole &middot; 19.&ndash;24. Juli</div>
     </div>
     <div class="hcd">
       <div class="hcu"><span class="hcn" id="cd-days">-</span><span class="hcl">Tage</span></div>
-      <div class="hcs">:</div>
+      <div class="hcsep">:</div>
       <div class="hcu"><span class="hcn" id="cd-hours">-</span><span class="hcl">Std.</span></div>
-      <div class="hcs">:</div>
+      <div class="hcsep">:</div>
       <div class="hcu"><span class="hcn" id="cd-mins">-</span><span class="hcl">Min.</span></div>
     </div>
-    <div class="hdl">FR6134 · Luebeck 16:20 → Stansted · 2 Erw. + 3 Kinder · 11 Naechte</div>
-    <button class="hbtn" onclick="openMenu()"><span style="font-size:1.1rem">☰</span><span style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;">Menu</span></button>
+    <div class="hdl">FR6134 &middot; L&uuml;beck 16:20 &rarr; Stansted &middot; 2 Erw. + 3 Kinder &middot; 11 N&auml;chte</div>
+    <button class="hbtn" onclick="openMenu()">
+      <span style="font-size:1.1rem">☰</span>
+      <span class="hbtn-lbl">Men&uuml;</span>
+    </button>
   </div>
   <div class="jackbar"></div>
 </div>
@@ -269,39 +278,42 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
 <!-- PERSON SCREEN -->
 <div class="pscreen" id="pscreen">
   <h2>🇬🇧 Wer bist du?</h2>
-  <p>Abstimmungen, Tagebuch und Checklisten werden dann fuer dich gespeichert</p>
+  <p>Abstimmungen, Tagebuch und Checklisten werden dann synchronisiert</p>
   <div class="pgrid">
     <div class="pbtn" onclick="selectPerson('Manuela')"><span class="pbi">👩</span><span class="pbn">Manuela</span><span class="pbr">Erwachsener</span></div>
     <div class="pbtn" onclick="selectPerson('Sven')"><span class="pbi">👨</span><span class="pbn">Sven</span><span class="pbr">Erwachsener</span></div>
     <div class="pbtn" onclick="selectPerson('Mila')"><span class="pbi">👧</span><span class="pbn">Mila</span><span class="pbr">15 Jahre</span></div>
     <div class="pbtn" onclick="selectPerson('Jojo')"><span class="pbi">👦</span><span class="pbn">Jojo</span><span class="pbr">12 Jahre</span></div>
-    <div class="pbtn" onclick="selectPerson('Mikko')" style="grid-column:1/-1;max-width:160px;margin:0 auto;"><span class="pbi">👦</span><span class="pbn">Mikko</span><span class="pbr">12 Jahre</span></div>
+    <div class="pbtn" onclick="selectPerson('Mikko')" style="grid-column:1/-1;max-width:160px;margin:0 auto"><span class="pbi">👦</span><span class="pbn">Mikko</span><span class="pbr">12 Jahre</span></div>
   </div>
 </div>
 
-<!-- MENU OVERLAY -->
+<!-- MENU -->
 <div class="moverlay" id="moverlay" onclick="closeMenu(event)">
   <div class="msheet">
     <div class="msh">
-      <span style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:white;letter-spacing:2px;text-transform:uppercase;">🇬🇧 England 2026</span>
-      <div style="display:flex;align-items:center;gap:8px;"><span class="mwho" id="mwho"></span><button class="xcl" onclick="closeMenu()">✕</button></div>
+      <span class="msh-title">🇬🇧 England 2026</span>
+      <div style="display:flex;align-items:center;gap:8px">
+        <span class="mwho" id="mwho"></span>
+        <button class="xcl" onclick="closeMenu()">✕</button>
+      </div>
     </div>
-    <div class="mlbl">&#127963; London · 13.–19. Juli</div>
+    <div class="mlbl">🏙 London &middot; 13.&ndash;19. Juli</div>
     <div class="mtiles">
       <div class="mt" onclick="openSec('wetter')"><span class="mti">🌦</span><span class="mtl">Wetter</span><span class="mts">Live</span></div>
       <div class="mt" onclick="openSec('london_phase')"><span class="mti">🏙</span><span class="mtl">London</span><span class="mts">Phase 1</span></div>
       <div class="mt" onclick="openSec('sehenswuerdigkeiten')"><span class="mti">🎡</span><span class="mtl">Sights</span><span class="mts">Must-sees</span></div>
-      <div class="mt" onclick="openSec('oepnv')"><span class="mti">🚇</span><span class="mtl">OEPNV</span><span class="mts">Tube & Bus</span></div>
-      <div class="mt" onclick="openSec('restaurants')"><span class="mti">🫖</span><span class="mtl">Essen</span><span class="mts">Pubs & Cafes</span></div>
+      <div class="mt" onclick="openSec('oepnv')"><span class="mti">🚇</span><span class="mtl">ÖPNV</span><span class="mts">Tube &amp; Bus</span></div>
+      <div class="mt" onclick="openSec('restaurants')"><span class="mti">🫖</span><span class="mtl">Essen</span><span class="mts">Pubs &amp; Cafés</span></div>
       <div class="mt" onclick="openSec('greenwich')"><span class="mti">⚓</span><span class="mtl">Greenwich</span><span class="mts">Unser Kiez</span></div>
     </div>
-    <div class="mlbl">&#9749; Poole · 19.–24. Juli</div>
+    <div class="mlbl">⛵ Poole &middot; 19.&ndash;24. Juli</div>
     <div class="mtiles">
       <div class="mt" onclick="openSec('poole_phase')"><span class="mti">⛵</span><span class="mtl">Poole</span><span class="mts">Phase 2</span></div>
-      <div class="mt" onclick="openSec('poole_sights')"><span class="mti">🏖</span><span class="mtl">Dorset</span><span class="mts">Ausfluege</span></div>
-      <div class="mt" onclick="openSec('poole_oepnv')"><span class="mti">🚌</span><span class="mtl">Bus+Faehre</span><span class="mts">Vor Ort</span></div>
+      <div class="mt" onclick="openSec('poole_sights')"><span class="mti">🏖</span><span class="mtl">Dorset</span><span class="mts">Ausflüge</span></div>
+      <div class="mt" onclick="openSec('poole_oepnv')"><span class="mti">🚌</span><span class="mtl">Bus+Fähre</span><span class="mts">Vor Ort</span></div>
     </div>
-    <div class="mlbl">&#128202; Planen & Erleben</div>
+    <div class="mlbl">🗂 Planen &amp; Erleben</div>
     <div class="mtiles">
       <div class="mt" onclick="openSec('vote')"><span class="mti">🗳</span><span class="mtl">Abstimmung</span><span class="mts">Was wollen wir?</span></div>
       <div class="mt" onclick="openSec('budget')"><span class="mti">💷</span><span class="mtl">Budget</span><span class="mts">Ausgaben</span></div>
@@ -309,336 +321,358 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
       <div class="mt" onclick="openSec('tagebuch')"><span class="mti">📖</span><span class="mtl">Tagebuch</span><span class="mts">11 Tage</span></div>
       <div class="mt" onclick="openSec('regen')"><span class="mti">☔</span><span class="mtl">Regentag</span><span class="mts">Indoor-Plan</span></div>
     </div>
-    <div class="mlbl">&#128218; Sonstiges</div>
+    <div class="mlbl">📚 Sonstiges</div>
     <div class="mtiles">
       <div class="mt" onclick="openSec('quiz')"><span class="mti">🎓</span><span class="mtl">Quiz</span><span class="mts">England-Wissen</span></div>
-      <div class="mt" onclick="openSec('flug')"><span class="mti">&#9992;&#65039;</span><span class="mtl">Flug</span><span class="mts">Ryanair</span></div>
+      <div class="mt" onclick="openSec('flug')"><span class="mti">✈️</span><span class="mtl">Flug</span><span class="mts">Ryanair</span></div>
       <div class="mt" onclick="openSec('tipps')"><span class="mti">💡</span><span class="mtl">Tipps</span><span class="mts">Insider</span></div>
       <div class="mt sos" onclick="openSec('sos')"><span class="mti">🆘</span><span class="mtl">SOS</span><span class="mts">Notfall</span></div>
     </div>
-    <div class="mfoot">God Save the King 👑 · Safe Travels!</div>
+    <div class="mfoot">God Save the King 👑 &middot; Safe Travels!</div>
   </div>
 </div>
 
 <!-- INNER APP -->
 <div class="appinner" id="appinner">
-  <div class="ihead">
-    <button class="iback" onclick="goHome()">←</button>
-    <div class="ititle" id="ititle">England 2026</div>
-    <span class="wbadge" id="wbadge" onclick="showPscreen()">👤</span>
-  </div>
-<!-- ── WETTER ── -->
-<div id="wetter" class="sec">
-<div class="sh">Wetter</div><div class="ssh">Always carry an umbrella!</div>
-<div style="display:flex;gap:8px;margin-bottom:12px;">
-  <button class="fltr active" onclick="switchW('london',this)">London</button>
-  <button class="fltr" onclick="switchW('poole',this)">Poole</button>
-</div>
-<div class="wbox">
-  <div style="font-size:.8rem;opacity:.7;margin-bottom:8px;font-family:IM Fell English,serif;font-style:italic;" id="wcity">London, Greenwich</div>
-  <div class="wt" id="wtemp">-C</div>
-  <div class="wd" id="wdesc">Wird geladen...</div>
-  <div class="wdet"><div>Feuchte: <span id="whum">-</span>%</div><div>Wind: <span id="wwind">-</span>km/h</div><div>Gefuehlt: <span id="wfeel">-</span>C</div></div>
-  <div class="wsun"><div>Sonnenaufgang: <strong id="wrise">-</strong></div><div>Sonnenuntergang: <strong id="wset">-</strong></div></div>
-</div>
-<div class="card na"><div class="ct">Juli in England</div><div class="cx">London: 18-23 Grad, gelegentliche Schauer, 6-7 Sonnenstunden/Tag.<br>Poole/Dorset: 18-25 Grad, etwas waermer. Badetemperatur Aermelkanal: ca. 17-18 Grad.</div></div>
+<div class="ihead">
+  <button class="iback" onclick="goHome()">←</button>
+  <div class="ititle" id="ititle">England 2026</div>
+  <span class="wbadge" id="wbadge" onclick="showPscreen()">👤</span>
 </div>
 
-<!-- ── VOTE (Platzhalter - wird in Schritt 2 befuellt) ── -->
+<!-- WETTER -->
+<div id="wetter" class="sec">
+<div class="sh">Wetter</div><div class="ssh">Always carry an umbrella!</div>
+<div style="display:flex;gap:8px;margin-bottom:12px">
+  <button class="fltr active" onclick="switchWeather('london',this)">🏙 London</button>
+  <button class="fltr" onclick="switchWeather('poole',this)">⛵ Poole</button>
+</div>
+<div class="wbox"><div style="font-size:.8rem;opacity:.7;margin-bottom:8px;font-family:'IM Fell English',serif;font-style:italic" id="wcity">London, Greenwich</div>
+<div class="wtemp" id="wtemp">–°C</div><div class="wdesc" id="wdesc">Wird geladen...</div>
+<div class="wdet"><div>💧 <span id="whum">–</span>%</div><div>💨 <span id="wwind">–</span> km/h</div><div>🌡 <span id="wfeel">–</span>°C</div></div>
+<div class="wsun"><div>🌅 <strong id="wrise">–</strong></div><div>🌇 <strong id="wset">–</strong></div></div></div>
+<div class="card na"><div class="ct">Juli in England</div><div class="cx">London: 18–23°C, gelegentliche Schauer, 6–7 Sonnenstunden/Tag.<br>Poole/Dorset: 18–25°C, etwas wärmer. Badetemperatur Ärmelkanal: ca. 17–18°C.</div></div>
+</div>
+
+<!-- VOTE -->
 <div id="vote" class="sec">
-<div class="sh">Familien-Abstimmung</div><div class="ssh">Was wollen wir wirklich erleben?</div>
-<div class="vwho"><span>Du stimmst ab als:</span><strong id="vwho">-</strong></div>
+<div class="sh">🗳 Familien-Abstimmung</div><div class="ssh">Was wollen wir wirklich erleben?</div>
+<div class="vwho"><span>Du stimmst ab als:</span><strong id="vwho">–</strong></div>
 <div class="vtabs">
-  <div class="vtab al" onclick="switchVP('london',this)">London</div>
-  <div class="vtab" onclick="switchVP('poole',this)">Poole</div>
-  <div class="vtab" onclick="switchVP('rank',this)">Ranking</div>
+  <div class="vtab al" id="vtab-l" onclick="switchVP('london',this)">🏙 London</div>
+  <div class="vtab" id="vtab-p" onclick="switchVP('poole',this)">⛵ Poole</div>
+  <div class="vtab" id="vtab-r" onclick="switchVP('rank',this)">🏆 Ranking</div>
 </div>
 <div id="vlist-london"></div>
 <div id="vlist-poole" style="display:none"></div>
 <div id="vlist-rank" style="display:none"></div>
 </div>
 
-<!-- ── BUDGET (Platzhalter - wird in Schritt 3 befuellt) ── -->
+<!-- BUDGET -->
 <div id="budget" class="sec">
-<div class="sh">Budget-Tracker</div><div class="ssh">Ausgaben fuer alle 5 im Blick behalten</div>
-<div class="bsum"><div class="bsc"><span class="bsn" id="btotal">0</span><span class="bsl">Gesamt GBP</span></div><div class="bsc"><span class="bsn" id="btoday">0</span><span class="bsl">Heute (Tag <span id="btday">-</span>)</span></div></div>
+<div class="sh">💷 Budget-Tracker</div><div class="ssh">Ausgaben für alle 5 im Blick behalten</div>
+<div class="bsum">
+  <div class="bsc"><span class="bsn" id="btotal">£0</span><span class="bsl">Gesamt</span></div>
+  <div class="bsc"><span class="bsn" id="btoday">£0</span><span class="bsl">Heute (Tag <span id="btday">–</span>)</span></div>
+</div>
 <div class="bform">
   <label>Tag</label>
-  <select id="bday"><option value="1">Tag 1 - 13. Juli - Ankunft London</option><option value="2">Tag 2 - 14. Juli - South Bank</option><option value="3">Tag 3 - 15. Juli - Tower</option><option value="4">Tag 4 - 16. Juli - Museen</option><option value="5">Tag 5 - 17. Juli - Hyde Park</option><option value="6">Tag 6 - 18. Juli - Buckingham</option><option value="7">Tag 7 - 19. Juli - Abreise Poole</option><option value="8">Tag 8 - 20. Juli - Sandbanks</option><option value="9">Tag 9 - 21. Juli - Brownsea</option><option value="10">Tag 10 - 22. Juli - Jurassic Coast</option><option value="11">Tag 11 - 23. Juli - Bournemouth</option><option value="12">Tag 12 - 24. Juli - Abreise</option></select>
+  <select id="bday">
+    <option value="1">Tag 1 · 13. Juli – Ankunft London</option>
+    <option value="2">Tag 2 · 14. Juli – South Bank</option>
+    <option value="3">Tag 3 · 15. Juli – Tower</option>
+    <option value="4">Tag 4 · 16. Juli – Museen</option>
+    <option value="5">Tag 5 · 17. Juli – Hyde Park</option>
+    <option value="6">Tag 6 · 18. Juli – Buckingham</option>
+    <option value="7">Tag 7 · 19. Juli – Abreise Poole</option>
+    <option value="8">Tag 8 · 20. Juli – Sandbanks</option>
+    <option value="9">Tag 9 · 21. Juli – Brownsea</option>
+    <option value="10">Tag 10 · 22. Juli – Jurassic Coast</option>
+    <option value="11">Tag 11 · 23. Juli – Bournemouth</option>
+    <option value="12">Tag 12 · 24. Juli – Abreise</option>
+  </select>
   <label>Kategorie</label>
-  <select id="bcat"><option value="eintritt">Eintritt</option><option value="essen">Essen & Trinken</option><option value="oepnv">OEPNV</option><option value="souvenirs">Souvenirs</option><option value="unterkunft">Unterkunft</option><option value="sonstiges">Sonstiges</option></select>
+  <select id="bcat">
+    <option value="eintritt">🎟 Eintritt</option>
+    <option value="essen">🍽 Essen &amp; Trinken</option>
+    <option value="oepnv">🚇 ÖPNV</option>
+    <option value="souvenirs">🛍 Souvenirs</option>
+    <option value="unterkunft">🏨 Unterkunft</option>
+    <option value="sonstiges">📦 Sonstiges</option>
+  </select>
   <label>Beschreibung</label><input type="text" id="bdesc" placeholder="z.B. Tower of London x5">
-  <label>Betrag (GBP)</label><input type="number" id="bamt" placeholder="0.00" min="0" step="0.01">
-  <button class="addbtn" onclick="addBudget()">+ Ausgabe hinzufuegen</button>
+  <label>Betrag (£ GBP)</label><input type="number" id="bamt" placeholder="0.00" min="0" step="0.01">
+  <button class="addbtn" onclick="addBudget()">+ Ausgabe hinzufügen</button>
   <div id="bsyncmsg" class="syncmsg"></div>
 </div>
 <div class="dflt" id="bfilter"></div>
 <div id="blist"></div>
 </div>
 
-<!-- ── CHECKLIST (Platzhalter - wird in Schritt 4 befuellt) ── -->
+<!-- CHECKLIST -->
 <div id="checklist" class="sec">
-<div class="sh">Tages-Checkliste</div><div class="ssh">Was brauchen wir heute?</div>
+<div class="sh">✅ Tages-Checkliste</div><div class="ssh">Was brauchen wir heute?</div>
 <div class="clday" id="cldays"></div>
 <div id="cllist"></div>
-<div style="margin-top:10px;">
-  <input type="text" id="clnew" class="dta" style="min-height:0;padding:8px;" placeholder="Eigenes Item hinzufuegen...">
-  <button class="addbtn" style="margin-top:6px;" onclick="addClItem()">+ Hinzufuegen</button>
+<div style="margin-top:10px">
+  <input type="text" id="clnew" class="dta" style="min-height:0;padding:8px" placeholder="Eigenes Item hinzufügen...">
+  <button class="addbtn" style="margin-top:6px" onclick="addClItem()">+ Hinzufügen</button>
 </div>
 </div>
 
-<!-- ── TAGEBUCH ── -->
+<!-- TAGEBUCH -->
 <div id="tagebuch" class="sec">
-<div class="sh">Reisetagebuch</div><div class="ssh">Every day in England is an adventure</div>
+<div class="sh">📖 Reisetagebuch</div><div class="ssh">Every day in England is an adventure</div>
 <div id="dcontainer"></div>
 </div>
 
-<!-- ── REGENTAG ── -->
+<!-- REGENTAG -->
 <div id="regen" class="sec">
-<div class="sh">Regentag-Plan</div><div class="ssh">Into each life some rain must fall</div>
-<div class="rbanner"><div class="rbico">☔</div><div><h3>Es regnet - kein Problem!</h3><p>Die besten wetterunabhaengigen Aktivitaeten</p></div></div>
-<div style="font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);margin-bottom:8px;">London - Indoor</div>
-<div class="card na"><div class="ct">Natural History Museum</div><div class="cm">South Kensington - Kostenlos - 3-4 Std.</div><div class="cx">Blauwalskelett, Dinos, Vulkane. Kostenlos und riesig. Perfekter Regentag!</div><div><span class="tag tv">Kostenlos</span><span class="tag tn">Indoor</span></div></div>
-<div class="card na"><div class="ct">Science Museum</div><div class="cm">South Kensington - Kostenlos - 2-3 Std.</div><div class="cx">Weltraumkapseln, Dampfmaschinen, interaktive Stationen. Direkt neben NHM!</div><div><span class="tag tv">Kostenlos</span></div></div>
-<div class="card na"><div class="ct">British Museum</div><div class="cm">Tottenham Court Rd - Kostenlos - 2-3 Std.</div><div class="cx">Rosetta Stone, aegyptische Mumien, griechische Tempel. Fuer Mila besonders interessant.</div><div><span class="tag tv">Kostenlos</span></div></div>
-<div class="card na"><div class="ct">West End Musical</div><div class="cm">Covent Garden</div><div class="cx">Regentag = perfekter Abend-Anlass! The Lion King, Matilda, Back to the Future.</div><div><span class="tag tr">Abends</span><span class="tag tg">Erlebnis</span></div></div>
-<div class="card na"><div class="ct">Covent Garden Shopping</div><div class="cx">Strassenmusiker, Haendler, Cafes unter Glasdach. Oxford Street fuer Shopping. Mila-Pflicht!</div></div>
+<div class="sh">☔ Regentag-Plan</div><div class="ssh">Into each life some rain must fall</div>
+<div class="rbanner"><div class="rbico">☔</div><div><h3>Es regnet – kein Problem!</h3><p>Die besten wetterunabhängigen Aktivitäten</p></div></div>
+<div style="font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);margin-bottom:8px">🏙 London – Indoor</div>
+<div class="card na"><div class="ct">🦕 Natural History Museum</div><div class="cm">South Kensington · Kostenlos · 3–4 Std.</div><div class="cx">Blauwalskelett, Dinos, Vulkane. Kostenlos und riesig. Perfekter Regentag für alle!</div><div><span class="tag tv">Kostenlos</span><span class="tag tn">Indoor</span></div></div>
+<div class="card na"><div class="ct">🔬 Science Museum</div><div class="cm">South Kensington · Kostenlos · 2–3 Std.</div><div class="cx">Weltraumkapseln, Dampfmaschinen, interaktive Stationen. Direkt neben NHM!</div><div><span class="tag tv">Kostenlos</span></div></div>
+<div class="card na"><div class="ct">🏛 British Museum</div><div class="cm">Tottenham Court Rd · Kostenlos · 2–3 Std.</div><div class="cx">Rosetta Stone, ägyptische Mumien. Für Mila besonders interessant.</div><div><span class="tag tv">Kostenlos</span></div></div>
+<div class="card na"><div class="ct">🎭 West End Musical</div><div class="cm">Covent Garden</div><div class="cx">Regentag = perfekter Abend-Anlass! The Lion King, Matilda, Back to the Future.</div><div><span class="tag tr">Abends</span><span class="tag tg">Erlebnis</span></div></div>
+<div class="card na"><div class="ct">🛍 Covent Garden &amp; Shopping</div><div class="cx">Straßenmusiker, Händler, Cafés unter Glasdach. Oxford Street für Shopping. Mila-Pflicht!</div></div>
 <div class="bdiv"><span>⛵</span></div>
-<div style="font-family:'Playfair Display',serif;font-weight:700;color:var(--teal);margin-bottom:8px;">Poole - Indoor</div>
-<div class="card ta"><div class="ct">Waterfront Museum Poole</div><div class="cm">4 High St, Poole Quay</div><div class="cx">Geschichte des Poole Harbour - Piraten, Haendler, Entdecker.</div><div><span class="tag tt">Museum</span></div></div>
-<div class="card ta"><div class="ct">Bowling & Kino Bournemouth</div><div class="cm">Bus nach Bournemouth</div><div class="cx">Bowling, Kino, Restaurant - alles unter einem Dach fuer den kompletten Regentag.</div></div>
-<div class="card ta"><div class="ct">Afternoon Tea in Poole Old Town</div><div class="cx">Scones, Clotted Cream, Sandwiches - echter britischer Lifestyle bei Regen!</div><div><span class="tag tg">Gemuetlich</span></div></div>
+<div style="font-family:'Playfair Display',serif;font-weight:700;color:var(--teal);margin-bottom:8px">⛵ Poole – Indoor</div>
+<div class="card ta"><div class="ct">🚢 Waterfront Museum Poole</div><div class="cm">4 High St, Poole Quay</div><div class="cx">Geschichte des Poole Harbour – Piraten, Händler, Entdecker.</div><div><span class="tag tt">Museum</span></div></div>
+<div class="card ta"><div class="ct">🎳 Bowling &amp; Kino Bournemouth</div><div class="cm">Bus nach Bournemouth</div><div class="cx">Bowling, Kino, Restaurant – alles unter einem Dach für den kompletten Regentag.</div></div>
+<div class="card ta"><div class="ct">☕ Afternoon Tea in Poole Old Town</div><div class="cx">Scones, Clotted Cream, Sandwiches – echter britischer Lifestyle bei Regen!</div><div><span class="tag tg">Gemütlich</span></div></div>
 </div>
 
-<!-- ── LONDON PHASE ── -->
+<!-- LONDON PHASE -->
 <div id="london_phase" class="sec">
-<div class="sh">London - Phase 1</div><div class="ssh">13. bis 19. Juli 2026 - 6 Naechte</div>
-<div class="card na"><div class="ct">Clarendon Hotel</div><div class="cx">Montpelier Row, Blackheath / Greenwich, London SE3<br><br>Blackheath Station: 3 Min. zu Fuss<br>Blackheath nach London Bridge: 20 Min. (Southeastern)<br>Greenwich DLR nach Bank: 20 Min.</div></div>
-<div class="tbox"><h3>OEPNV ab Blackheath/Greenwich</h3>
-<div class="trow"><div class="tico">&#128642;</div><div class="ttx"><strong>Southeastern Zug (Blackheath)</strong>nach London Bridge (20'), Charing Cross (27'), Waterloo East</div></div>
-<div class="trow"><div class="tico">&#128648;</div><div class="ttx"><strong>DLR (Greenwich)</strong>nach Canary Wharf (5'), Bank/Monument (20'), Tower Gateway</div></div>
-<div class="trow"><div class="tico">&#128691;</div><div class="ttx"><strong>Thames Clipper</strong>ab Greenwich Pier nach Westminster / London Eye. Traumhaft!</div></div>
-<div class="trow"><div class="tico">&#128652;</div><div class="ttx"><strong>Bus 177/180</strong>ab Greenwich nach Waterloo. Oben vorne sitzen!</div></div>
+<div class="sh">London – Phase 1</div><div class="ssh">13. bis 19. Juli 2026 · 6 Nächte</div>
+<div class="card na"><div class="ct">🏨 Clarendon Hotel</div><div class="cx">Montpelier Row, Blackheath / Greenwich, London SE3<br><br>🚂 Blackheath → London Bridge: 20 Min. (Southeastern)<br>🚈 Greenwich DLR → Bank: 20 Min.<br>🛳 Thames Clipper ab Greenwich Pier</div></div>
+<div class="tbox"><h3>🚇 ÖPNV ab Blackheath/Greenwich</h3>
+<div class="trow"><div class="tico">🚂</div><div class="ttx"><strong>Southeastern Zug (Blackheath)</strong>→ London Bridge (20') → Charing Cross (27') → Waterloo East</div></div>
+<div class="trow"><div class="tico">🚈</div><div class="ttx"><strong>DLR (Greenwich)</strong>→ Canary Wharf (5') → Bank/Monument (20') → Tower Gateway</div></div>
+<div class="trow"><div class="tico">🛳</div><div class="ttx"><strong>Thames Clipper</strong>Ab Greenwich Pier → Westminster / London Eye. Traumhaft!</div></div>
+<div class="trow"><div class="tico">🚌</div><div class="ttx"><strong>Bus 177/180</strong>Ab Greenwich → Waterloo. Oben vorne sitzen!</div></div>
 </div>
-<div class="card ga"><div class="ct">Tages-Vorschlaege London</div><div class="cx">
-<strong>Tag 1 (13.7.):</strong> Stansted Express nach Blackheath, einchecken, Greenwich Park und Meridian.<br><br>
-<strong>Tag 2 (14.7.):</strong> Thames Clipper nach Westminster. London Eye, Tate Modern, Borough Market.<br><br>
-<strong>Tag 3 (15.7.):</strong> DLR nach Tower Gateway. Tower of London, Tower Bridge.<br><br>
-<strong>Tag 4 (16.7.):</strong> Natural History Museum und Science Museum (South Kensington).<br><br>
+<div class="card ga"><div class="ct">🗓 Tages-Vorschläge London</div><div class="cx">
+<strong>Tag 1 (13.7.):</strong> Stansted Express → Blackheath, einchecken, Greenwich Park &amp; Meridian.<br><br>
+<strong>Tag 2 (14.7.):</strong> Thames Clipper → Westminster. London Eye, Tate Modern, Borough Market.<br><br>
+<strong>Tag 3 (15.7.):</strong> DLR → Tower Gateway. Tower of London, Tower Bridge.<br><br>
+<strong>Tag 4 (16.7.):</strong> Natural History Museum + Science Museum (South Kensington).<br><br>
 <strong>Tag 5 (17.7.):</strong> Hyde Park, Kensington Gardens. Abends ggf. Musical.<br><br>
-<strong>Tag 6 (18.7.):</strong> Buckingham Palace Wachabloesung 11 Uhr, British Museum.<br><br>
-<strong>Tag 7 (19.7.):</strong> Zug London Waterloo nach Poole (2 Std.).
+<strong>Tag 6 (18.7.):</strong> Buckingham Palace Wachablösung 11 Uhr, British Museum.<br><br>
+<strong>Tag 7 (19.7.):</strong> Zug London Waterloo → Poole (2 Std.).
 </div></div>
 </div>
 
-<!-- ── SEHENSWUERDIGKEITEN ── -->
+<!-- SEHENSWUERDIGKEITEN -->
 <div id="sehenswuerdigkeiten" class="sec">
 <div class="sh">Sights London</div><div class="ssh">London, thou art the flower of cities all</div>
-<div class="card"><div class="ct">London Eye</div><div class="cm">South Bank SE1 - Waterloo (Tube) oder Thames Clipper</div><div class="cx">360-Grad-Blick fuer alle 5. Online vorbuchen - spart Wartezeit!</div><div><span class="tag tr">Top Kinder</span><span class="tag tn">Vorbuchen!</span></div></div>
-<div class="card"><div class="ct">Tower of London</div><div class="cm">Tower Hill EC3N - DLR Tower Gateway</div><div class="cx">Kronjuwelen, Beefeaters, 1000 Jahre Geschichte. Wachabloesung unbedingt mitmachen!</div><div><span class="tag tr">Highlight</span></div></div>
-<div class="card"><div class="ct">Natural History Museum</div><div class="cm">Cromwell Rd SW7 - South Kensington - Kostenlos</div><div class="cx">Blauwalskelett, Dinos, Vulkane. Pflicht fuer alle Kinder!</div><div><span class="tag tv">Kostenlos</span></div></div>
-<div class="card"><div class="ct">Science Museum</div><div class="cm">Exhibition Rd SW7 - South Kensington - Kostenlos</div><div class="cx">Weltraumkapseln, interaktive Stationen. Direkt neben NHM - beide an einem Tag!</div><div><span class="tag tv">Kostenlos</span><span class="tag tn">Teens</span></div></div>
-<div class="card"><div class="ct">Hyde Park und Diana Spielplatz</div><div class="cm">Hyde Park Corner - Kostenlos</div><div class="cx">Riesiger Park, Tretboote auf dem Serpentine, Konzerte im Sommer.</div><div><span class="tag tv">Kostenlos</span></div></div>
-<div class="card"><div class="ct">Buckingham Palace - Wachabloesung</div><div class="cm">Westminster SW1A - St James's Park</div><div class="cx">Wachabloesung meist 11:00 Uhr. Spektakel fuer die ganze Familie!</div><div><span class="tag tr">Klassiker</span></div></div>
-<div class="card"><div class="ct">Tower Bridge Glasbruecke</div><div class="cm">SE1 2UP - DLR Tower Gateway</div><div class="cx">Glaeserne Gehbruecke 42m ueber der Themse. Nichts fuer schwache Nerven!</div><div><span class="tag tn">Fotostopp</span></div></div>
-<div class="card"><div class="ct">West End Musical</div><div class="cm">Covent Garden WC2</div><div class="cx">The Lion King, Matilda, Back to the Future. Fruehzeitig buchen! Fuer Mila ein Highlight.</div><div><span class="tag tr">Abends</span><span class="tag tg">Vorbuchen!</span></div></div>
+<div class="card"><div class="ct">🎡 London Eye</div><div class="cm">📍 South Bank SE1 · 🚇 Waterloo oder Thames Clipper</div><div class="cx">360°-Blick für alle 5. Online vorbuchen – spart Wartezeit!</div><div><span class="tag tr">Top Kinder</span><span class="tag tn">Vorbuchen!</span></div></div>
+<div class="card"><div class="ct">🏰 Tower of London</div><div class="cm">📍 Tower Hill EC3N · 🚈 DLR Tower Gateway</div><div class="cx">Kronjuwelen, Beefeaters, 1000 Jahre Geschichte. Wachablösungs-Rundgang!</div><div><span class="tag tr">Highlight</span></div></div>
+<div class="card"><div class="ct">🦕 Natural History Museum</div><div class="cm">📍 Cromwell Rd SW7 · 🚇 South Kensington · Kostenlos</div><div class="cx">Blauwalskelett, Dinos, Vulkane. Pflicht für alle Kinder!</div><div><span class="tag tv">Kostenlos</span></div></div>
+<div class="card"><div class="ct">🔬 Science Museum</div><div class="cm">📍 Exhibition Rd SW7 · 🚇 South Kensington · Kostenlos</div><div class="cx">Weltraumkapseln, interaktive Stationen. Direkt neben NHM!</div><div><span class="tag tv">Kostenlos</span><span class="tag tn">Teens</span></div></div>
+<div class="card"><div class="ct">🌳 Hyde Park &amp; Diana Spielplatz</div><div class="cm">📍 Hyde Park · 🚇 Hyde Park Corner · Kostenlos</div><div class="cx">Riesiger Park, Tretboote auf dem Serpentine, Konzerte im Sommer.</div><div><span class="tag tv">Kostenlos</span></div></div>
+<div class="card"><div class="ct">👑 Buckingham Palace – Wachablösung</div><div class="cm">📍 Westminster SW1A · 🚇 St James's Park</div><div class="cx">Wachablösung meist 11:00 Uhr. Spektakel für die ganze Familie!</div><div><span class="tag tr">Klassiker</span></div></div>
+<div class="card"><div class="ct">🌉 Tower Bridge Glasbrücke</div><div class="cm">📍 SE1 · 🚈 DLR Tower Gateway</div><div class="cx">Gläserne Gehbrücke 42m über der Themse – nichts für schwache Nerven!</div><div><span class="tag tn">Fotostopp</span></div></div>
+<div class="card"><div class="ct">🎭 West End Musical</div><div class="cm">📍 Covent Garden WC2</div><div class="cx">The Lion King, Matilda, Back to the Future. Für Mila ein Highlight!</div><div><span class="tag tr">Abends</span><span class="tag tg">Vorbuchen!</span></div></div>
 </div>
 
-<!-- ── OEPNV LONDON ── -->
+<!-- ÖPNV -->
 <div id="oepnv" class="sec">
-<div class="sh">OEPNV in London</div><div class="ssh">The Tube and the Bus - London's lifeline</div>
-<div class="card na"><div class="ct">Oyster Card - Das Wichtigste</div><div class="cx">
-<strong>Fuer alle 5 Oyster Cards besorgen!</strong><br><br>
-Am Stansted Flughafen und allen Tube-Stationen erhaeltlich. Kaution: 7 GBP pro Karte.<br><br>
-<strong>Kindertarife (Mila, Jojo, Mikko):</strong> 11-15 Jahre, halber Preis nach Aktivierung auf tfl.gov.uk<br><br>
-<strong>Daily Cap</strong> Zonen 1-2: ca. 8,10 GBP (Erwachsener), ca. 4,05 GBP (Kind)
+<div class="sh">ÖPNV in London</div><div class="ssh">The Tube &amp; the Bus – London's lifeline</div>
+<div class="card na"><div class="ct">🃏 Oyster Card – Das Wichtigste</div><div class="cx">
+<strong>Für alle 5 Oyster Cards besorgen!</strong><br><br>
+📍 Am Stansted Flughafen und allen Tube-Stationen erhältlich. Kaution: £7/Karte.<br><br>
+<strong>Kindertarife (Mila, Jojo, Mikko):</strong> 11–15 Jahre, halber Preis nach Aktivierung auf tfl.gov.uk<br><br>
+<strong>Daily Cap</strong> Zonen 1–2: ca. £8,10 (Erw.), ca. £4,05 (Kind)
 </div></div>
-<div class="tbox"><h3>Apps fuer den OEPNV</h3>
-<div class="trow"><div class="tico">&#128506;</div><div class="ttx"><strong>Citymapper London</strong>Beste App fuer Londoner OEPNV. Tube, Bus, DLR, Thames Clipper in Echtzeit.</div></div>
-<div class="trow"><div class="tico">&#128647;</div><div class="ttx"><strong>TfL Go (offiziell)</strong>Oyster-Guthaben pruefen, Live-Abfahrtszeiten, Service-Alerts.</div></div>
+<div class="tbox"><h3>📱 Apps für den ÖPNV</h3>
+<div class="trow"><div class="tico">🗺</div><div class="ttx"><strong>Citymapper London</strong>Beste App für Londoner ÖPNV. Tube, Bus, DLR, Thames Clipper in Echtzeit.</div></div>
+<div class="trow"><div class="tico">🚇</div><div class="ttx"><strong>TfL Go (offiziell)</strong>Oyster-Guthaben prüfen, Live-Abfahrtszeiten, Service-Alerts.</div></div>
 </div>
-<div class="card ga"><div class="ct">Familien-Tipps OEPNV</div><div class="cx">
-Roter Doppeldecker: Oben vorne sitzen - kostenlose Stadttour!<br><br>
-Rush Hour meiden: 7:30-9:30 und 17-19 Uhr sehr voll.<br><br>
-Thames Clipper: Von Greenwich Pier - malerisch und preiswert!<br><br>
-Auf Rolltreppen: Rechts stehen, links gehen - sonst boese Blicke!
+<div class="card ga"><div class="ct">💡 Familien-Tipps ÖPNV</div><div class="cx">
+🔴 <strong>Roter Doppeldecker:</strong> Oben vorne sitzen – kostenlose Stadttour!<br><br>
+⏰ <strong>Rush Hour meiden:</strong> 7:30–9:30 und 17–19 Uhr sehr voll.<br><br>
+🛳 <strong>Thames Clipper:</strong> Von Greenwich Pier – malerisch und preiswert!<br><br>
+🚶 <strong>Links gehen!</strong> Auf Rolltreppen rechts stehen – sonst böse Blicke!
 </div></div>
 </div>
 
-<!-- ── GREENWICH ── -->
+<!-- GREENWICH -->
 <div id="greenwich" class="sec">
-<div class="sh">Greenwich und Blackheath</div><div class="ssh">Euer Londoner Zuhause auf Zeit</div>
-<div class="card na"><div class="ct">Clarendon Hotel</div><div class="cx">Montpelier Row, Blackheath SE3<br>Blackheath Station: 3 Min. zu Fuss<br>Greenwich Stadtzentrum: 15 Min. zu Fuss oder Bus 54<br><br>Ruhiges Viertel mit Cafes und Parks - weit weg vom Trubel, gut angebunden.</div></div>
-<div class="card"><div class="ct">Greenwich erkunden</div><div class="cx">
-Royal Observatory und Meridian-Linie: Gratis (Park). Familienfoto auf der Nullmeridianlinie!<br><br>
-Cutty Sark: Weltberuhmtes Tee-Klipperschiff am Ufer. Ca. 18 GBP Erw., 9 GBP Kinder.<br><br>
-Greenwich Park: Royal Park mit Rehen - kostenlos und wunderschoen.<br><br>
-Greenwich Market: Kunst, Streetfood, Souvenirs. Di-So geoeffnet.
+<div class="sh">Greenwich &amp; Blackheath</div><div class="ssh">Euer Londoner Zuhause auf Zeit</div>
+<div class="card na"><div class="ct">🏨 Clarendon Hotel</div><div class="cx">Montpelier Row, Blackheath SE3<br>Blackheath Station: 3 Min. zu Fuß<br>Greenwich Stadtzentrum: 15 Min. zu Fuß oder Bus 54<br><br>Ruhiges Viertel mit Cafés und Parks – weit weg vom Trubel, gut angebunden.</div></div>
+<div class="card"><div class="ct">⚓ Greenwich erkunden</div><div class="cx">
+🌍 <strong>Royal Observatory &amp; Meridian:</strong> Gratis (Park). Familienfoto auf der Nullmeridianlinie!<br><br>
+⚓ <strong>Cutty Sark:</strong> Weltberühmtes Tee-Klipperschiff. Ca. £18 Erw., £9 Kinder.<br><br>
+🏞 <strong>Greenwich Park:</strong> Royal Park mit Rehen – kostenlos und wunderschön.<br><br>
+🛒 <strong>Greenwich Market:</strong> Kunst, Streetfood, Souvenirs. Di–So.
 </div></div>
-<div class="card ga"><div class="ct">Cafes und Pubs in der Naehe</div><div class="cx">
-Zerodegrees Brewery - Montpelier Vale (Hausgebrautes Bier, familienfreundlich)<br>
-The Hare and Billet - Blackheath (Traditioneller Pub, Terrasse)<br>
-Greenwich Market - Streetfood aus aller Welt
+<div class="card ga"><div class="ct">☕ Cafés &amp; Pubs in der Nähe</div><div class="cx">
+<strong>Zerodegrees Brewery</strong> – Montpelier Vale (hausgebrautes Bier, familienfreundlich)<br>
+<strong>The Hare &amp; Billet</strong> – Blackheath (traditioneller Pub, Terrasse)<br>
+<strong>Greenwich Market</strong> – Streetfood aus aller Welt
 </div></div>
 </div>
 
-<!-- ── RESTAURANTS ── -->
+<!-- RESTAURANTS -->
 <div id="restaurants" class="sec">
-<div class="sh">Essen und Trinken</div><div class="ssh">We are a nation of pub-goers</div>
+<div class="sh">Essen &amp; Trinken</div><div class="ssh">We are a nation of pub-goers</div>
 <div class="rf">
   <button class="rfb active" onclick="filterR('alle',this)">Alle</button>
-  <button class="rfb" onclick="filterR('britisch',this)">Britisch</button>
-  <button class="rfb" onclick="filterR('familie',this)">Familie</button>
-  <button class="rfb" onclick="filterR('budget',this)">Budget</button>
+  <button class="rfb" onclick="filterR('britisch',this)">🫖 Britisch</button>
+  <button class="rfb" onclick="filterR('familie',this)">👨‍👩‍👧 Familie</button>
+  <button class="rfb" onclick="filterR('budget',this)">💰 Budget</button>
 </div>
 <div class="rlist">
-<div class="card" data-cat="britisch familie"><div class="ct">Dishoom</div><div class="cm">Covent Garden WC2 - Covent Garden Tube</div><div class="cx">Bombay-Cafe-Flair. Das Bacon Naan zum Fruehstueck ist legendaer. Frueh hingehen!</div><div><span class="tag tn">Fruehstueck</span><span class="tag tr">Muss!</span></div></div>
-<div class="card" data-cat="britisch"><div class="ct">The Golden Hind</div><div class="cm">Marylebone Lane W1 - Bond Street Tube</div><div class="cx">Bester Fish and Chips Londons seit 1914. Der Klassiker fuer die Familie!</div><div><span class="tag tr">Britisch</span></div></div>
-<div class="card" data-cat="budget familie"><div class="ct">Borough Market</div><div class="cm">Southwark St SE1 - London Bridge Tube</div><div class="cx">Jeder waehlt selbst - Kaese, Pasta, Pasteten. Perfekt fuer 5 verschiedene Geschmaecker!</div><div><span class="tag tv">Budget</span></div></div>
-<div class="card" data-cat="familie budget"><div class="ct">Flat Iron Pizza</div><div class="cm">Mehrere Standorte</div><div class="cx">Riesige, guenstige Pizzen. Perfekt nach Museumstag.</div><div><span class="tag tv">Budget</span></div></div>
-<div class="card" data-cat="britisch"><div class="ct">The Churchill Arms</div><div class="cm">Kensington Church St W8 - Notting Hill Gate</div><div class="cx">Beruhmtester Pub Londons dank Blumenpracht. Foto-Pflicht!</div><div><span class="tag tn">Pub</span></div></div>
-<div class="card" data-cat="britisch familie"><div class="ct">Afternoon Tea</div><div class="cm">Diverse Orte</div><div class="cx">Scones, Clotted Cream, Sandwiches. Das volle britische Erlebnis - Mila wird begeistert sein!</div><div><span class="tag tg">Britisch</span></div></div>
+<div class="card" data-cat="britisch familie"><div class="ct">🥣 Dishoom</div><div class="cm">📍 Covent Garden WC2 · 🚇 Covent Garden · ££</div><div class="cx">Bombay-Café-Flair. Das Bacon Naan zum Frühstück ist legendär. Früh hingehen!</div><div><span class="tag tn">Frühstück</span><span class="tag tr">Muss!</span></div></div>
+<div class="card" data-cat="britisch"><div class="ct">🐟 The Golden Hind</div><div class="cm">📍 Marylebone Lane W1 · 🚇 Bond Street · ££</div><div class="cx">Bester Fish &amp; Chips Londons seit 1914. Der Klassiker für die Familie!</div><div><span class="tag tr">Britisch</span></div></div>
+<div class="card" data-cat="budget familie"><div class="ct">🥙 Borough Market</div><div class="cm">📍 Southwark St SE1 · 🚇 London Bridge · £</div><div class="cx">Jeder wählt selbst – Käse, Pasta, Pasteten. Perfekt für 5 verschiedene Geschmäcker!</div><div><span class="tag tv">Budget</span></div></div>
+<div class="card" data-cat="familie budget"><div class="ct">🍕 Flat Iron Pizza</div><div class="cm">📍 Mehrere Standorte · £</div><div class="cx">Riesige, günstige Pizzen. Perfekt nach Museumstag.</div><div><span class="tag tv">Budget</span></div></div>
+<div class="card" data-cat="britisch"><div class="ct">🍺 The Churchill Arms</div><div class="cm">📍 Kensington Church St W8 · 🚇 Notting Hill Gate · ££</div><div class="cx">Berühmtester Pub Londons dank Blumenpracht. Foto-Pflicht!</div><div><span class="tag tn">Pub</span></div></div>
+<div class="card" data-cat="britisch familie"><div class="ct">☕ Afternoon Tea</div><div class="cm">📍 Diverse Orte · £££</div><div class="cx">Scones, Clotted Cream, Sandwiches. Das volle britische Erlebnis – Mila wird begeistert sein!</div><div><span class="tag tg">Britisch</span></div></div>
 </div>
 </div>
 
-<!-- ── POOLE PHASE ── -->
+<!-- POOLE PHASE -->
 <div id="poole_phase" class="sec">
-<div class="sh">Poole - Phase 2</div><div class="ssh">19. bis 24. Juli 2026 - 5 Naechte</div>
-<div class="card ta"><div class="ct">Drift and Dune</div><div class="cx">39 Labrador Drive, BH15 1UX Poole<br><br>Lage: Hamworthy, direkt am Poole Harbour.<br>Bus More 2/2A: Labrador Drive nach Poole Quay (ca. 10 Min.)<br>Bus More 50: Poole Quay nach Sandbanks<br>Poole Bahnhof: ca. 15 Min. mit Bus</div></div>
-<div class="card"><div class="ct">Anreise London nach Poole</div><div class="cx"><strong>Zug (empfohlen):</strong> London Waterloo nach Poole, ca. 2 Std. (South Western Railway). Direkt, kein Umsteigen!<br><br>Mit 5 Personen: Zug oft bestes Preis-Leistungs-Verhaeltnis bei Advance-Buchung.</div></div>
-<div class="card ga"><div class="ct">Tages-Vorschlaege Poole</div><div class="cx">
-<strong>Tag 7 (19.7.):</strong> Ankunft, Drift and Dune einchecken, Poole Quay Abendbummel.<br><br>
+<div class="sh">Poole – Phase 2</div><div class="ssh">19. bis 24. Juli 2026 · 5 Nächte</div>
+<div class="card ta"><div class="ct">🏨 Drift &amp; Dune</div><div class="cx">39 Labrador Drive, BH15 1UX Poole<br><br>📍 Hamworthy, direkt am Poole Harbour.<br>🚌 Bus More 2/2A: Labrador Drive → Poole Quay (ca. 10 Min.)<br>🚌 Bus More 50: Poole Quay → Sandbanks<br>🚉 Poole Bahnhof: ca. 15 Min. mit Bus</div></div>
+<div class="card"><div class="ct">🚂 Anreise London → Poole</div><div class="cx"><strong>Zug (empfohlen):</strong> London Waterloo → Poole, ca. 2 Std. (South Western Railway). Direkt, kein Umsteigen!<br><br>💡 Mit 5 Personen: Zug oft bestes Preis-Leistungs-Verhältnis bei Advance-Buchung.</div></div>
+<div class="card ga"><div class="ct">🗓 Tages-Vorschläge Poole</div><div class="cx">
+<strong>Tag 7 (19.7.):</strong> Ankunft, Drift &amp; Dune einchecken, Poole Quay Abendbummel.<br><br>
 <strong>Tag 8 (20.7.):</strong> Sandbanks Beach! Bus More 50 ab Quay.<br><br>
-<strong>Tag 9 (21.7.):</strong> Brownsea Island - Faehre ab Poole Quay.<br><br>
-<strong>Tag 10 (22.7.):</strong> Jurassic Coast - Bus X54 nach Swanage. Fossilien suchen!<br><br>
-<strong>Tag 11 (23.7.):</strong> Bournemouth - Bus/Zug. Pier, Strand, Farewell Dinner.<br><br>
-<strong>Tag 12 (24.7.):</strong> Abreise - Zug Poole nach Waterloo, Stansted Express. FR6135 13:10 Uhr.
+<strong>Tag 9 (21.7.):</strong> Brownsea Island – Fähre ab Poole Quay.<br><br>
+<strong>Tag 10 (22.7.):</strong> Jurassic Coast – Bus X54 → Swanage. Fossilien!<br><br>
+<strong>Tag 11 (23.7.):</strong> Bournemouth – Bus/Zug. Pier, Strand, Farewell Dinner.<br><br>
+<strong>Tag 12 (24.7.):</strong> Abreise – Zug Poole → Waterloo → Stansted Express. FR6135 13:10 Uhr.
 </div></div>
 </div>
 
-<!-- ── POOLE SIGHTS ── -->
+<!-- POOLE SIGHTS -->
 <div id="poole_sights" class="sec">
-<div class="sh">Dorset Highlights</div><div class="ssh">Dorset - England at its most beautiful</div>
-<div class="card ta"><div class="ct">Sandbanks Beach</div><div class="cm">Sandbanks BH13 - Bus More 50</div><div class="cx">Einer der besten Sandstraende Europas - weitlaeufig, sauber, flaches Wasser.</div><div><span class="tag tt">Strand</span><span class="tag tr">Familie</span></div></div>
-<div class="card"><div class="ct">Brownsea Island</div><div class="cm">Poole Harbour - Faehre ab Poole Quay (15 Min.)</div><div class="cx">Letzte rote Eichhoernchen Suedenglands und wilde Pfauen. National Trust. Fuer Jojo und Mikko unvergesslich!</div><div><span class="tag tv">Natur</span></div></div>
-<div class="card"><div class="ct">Jurassic Coast</div><div class="cm">Kimmeridge Bay / Old Harry Rocks - Bus X54 nach Swanage</div><div class="cx">UNESCO-Welterbe! Fossilien suchen am Strand (Ammoniten!). 185 Millionen Jahre Erdgeschichte.</div><div><span class="tag tt">UNESCO</span><span class="tag tr">Fossilien</span></div></div>
-<div class="card"><div class="ct">Corfe Castle und Swanage Railway</div><div class="cm">Corfe Castle BH20 - Swanage Railway (Dampfbahn!)</div><div class="cx">Spektakulaere Burgruine und historische Dampflokomotive Swanage nach Corfe Castle. Fuer Jojo und Mikko wie Harry Potter!</div><div><span class="tag tr">Highlight</span><span class="tag tt">Dampfbahn</span></div></div>
-<div class="card"><div class="ct">Bournemouth</div><div class="cm">Bus oder Zug (10-15 Min.)</div><div class="cx">Langer Sandstrand, Pier, gute Restaurants. Eiscreme am Pier ist Pflicht!</div></div>
+<div class="sh">Dorset Highlights</div><div class="ssh">Dorset – England at its most beautiful</div>
+<div class="card ta"><div class="ct">🏖 Sandbanks Beach</div><div class="cm">📍 Sandbanks BH13 · 🚌 Bus More 50</div><div class="cx">Einer der besten Sandstrände Europas – weitläufig, sauber, flaches Wasser.</div><div><span class="tag tt">Strand</span><span class="tag tr">Familie</span></div></div>
+<div class="card"><div class="ct">🦚 Brownsea Island</div><div class="cm">📍 Poole Harbour · 🛳 Fähre ab Poole Quay (15 Min.)</div><div class="cx">Letzte rote Eichhörnchen Südenglands und wilde Pfauen. National Trust. Für Jojo &amp; Mikko unvergesslich!</div><div><span class="tag tv">Natur</span></div></div>
+<div class="card"><div class="ct">🦕 Jurassic Coast</div><div class="cm">📍 Kimmeridge Bay / Old Harry Rocks · 🚌 Bus X54 → Swanage</div><div class="cx">UNESCO-Welterbe! Fossilien suchen am Strand (Ammoniten!). 185 Millionen Jahre Erdgeschichte.</div><div><span class="tag tt">UNESCO</span><span class="tag tr">Fossilien</span></div></div>
+<div class="card"><div class="ct">🏰 Corfe Castle &amp; Swanage Railway</div><div class="cm">📍 Corfe Castle BH20 · 🚂 Swanage Railway (Dampfbahn!)</div><div class="cx">Spektakuläre Burgruine und historische Dampflokomotive Swanage → Corfe Castle. Für Jojo &amp; Mikko wie Harry Potter!</div><div><span class="tag tr">Highlight</span><span class="tag tt">Dampfbahn</span></div></div>
+<div class="card"><div class="ct">🏖 Bournemouth</div><div class="cm">📍 Bournemouth · 🚌 Bus oder Zug (10–15 Min.)</div><div class="cx">Langer Sandstrand, Pier, gute Restaurants. Eiscreme am Pier ist Pflicht!</div></div>
 </div>
 
-<!-- ── POOLE OEPNV ── -->
+<!-- POOLE ÖPNV -->
 <div id="poole_oepnv" class="sec">
-<div class="sh">OEPNV in Poole und Dorset</div><div class="ssh">Ohne eigenes Auto durch Dorset</div>
-<div class="card ta"><div class="ct">Morebus - Das Rueckgrat</div><div class="cx">
-Linie 50: Poole Quay nach Sandbanks nach Bournemouth<br>
-Linie X54: Poole nach Wareham nach Swanage<br>
-Linie 2/2A: Labrador Drive (Drift and Dune) nach Poole Quay<br><br>
-App: Morebus App oder Bustimes.org<br>
-Tageskarte: Morebus Day Rider ca. 5-7 GBP/Person
+<div class="sh">ÖPNV in Poole &amp; Dorset</div><div class="ssh">Ohne eigenes Auto durch Dorset</div>
+<div class="card ta"><div class="ct">🚌 Morebus – Das Rückgrat</div><div class="cx">
+🔵 <strong>Linie 50:</strong> Poole Quay → Sandbanks → Bournemouth<br>
+🟡 <strong>Linie X54:</strong> Poole → Wareham → Swanage<br>
+🟢 <strong>Linie 2/2A:</strong> Labrador Drive (Drift &amp; Dune) → Poole Quay<br><br>
+📱 App: Morebus App oder Bustimes.org<br>
+🎟 Tageskarte: Morebus Day Rider ca. £5–7/Person
 </div></div>
-<div class="card"><div class="ct">Faehren im Hafen</div><div class="cx">
-Brownsea Island Ferry: ab Poole Quay, ca. 10 GBP/Person.<br>
-Chain Ferry: Sandbanks nach Shell Bay - guenstig, fuer Jojo und Mikko ein Erlebnis!
+<div class="card"><div class="ct">🛳 Fähren im Hafen</div><div class="cx">
+🦚 <strong>Brownsea Island Ferry</strong> ab Poole Quay, ca. £10/Person.<br>
+⛴ <strong>Chain Ferry</strong> Sandbanks ↔ Shell Bay – günstig, für Jojo &amp; Mikko ein Erlebnis!
 </div></div>
-<div class="card na"><div class="ct">Tipps ohne Auto</div><div class="cx">
-Abendbusse in Dorset nur stuendlich - letzten Bus immer kennen!<br><br>
-Kontaktlos zahlen: Morebus akzeptiert Kreditkarten und App-Tickets.<br><br>
-Taxi Notfall: Flexi Cabs Poole: 01202 555555.
+<div class="card na"><div class="ct">💡 Tipps ohne Auto</div><div class="cx">
+📅 Abendbusse in Dorset nur stündlich – letzten Bus immer kennen!<br><br>
+💳 Kontaktlos zahlen: Morebus akzeptiert Kreditkarten und App-Tickets.<br><br>
+🚕 Taxi Notfall: Flexi Cabs Poole: 01202 555555.
 </div></div>
 </div>
 
-<!-- ── FLUG ── -->
+<!-- FLUG -->
 <div id="flug" class="sec">
-<div class="sh">Flug und Anreise</div><div class="ssh">Ryanair - Luebeck nach London Stansted</div>
-<div class="card na"><div class="ct">Hinflug - 13. Juli 2026</div><div class="cx">
-<strong style="font-size:1.1rem;">FR 6134</strong> - Ryanair<br><br>
-Luebeck (LBC) nach London Stansted (STN)<br>
-Abflug: <strong>16:20 Uhr</strong><br><br>
-Manuela, Sven, Mila, Jojo, Mikko<br><br>
-Tipp: Online-Check-in oeffnet 60 Tage vor Abflug!
+<div class="sh">✈️ Flug &amp; Anreise</div><div class="ssh">Ryanair · Lübeck ↔ London Stansted</div>
+<div class="card na"><div class="ct">✈️ Hinflug – 13. Juli 2026</div><div class="cx">
+<strong style="font-size:1.1rem">FR 6134</strong> · Ryanair<br><br>
+🛫 Lübeck (LBC) → 🛬 London Stansted (STN)<br>
+⏰ Abflug: <strong>16:20 Uhr</strong><br><br>
+👥 Manuela · Sven · Mila · Jojo · Mikko<br><br>
+💡 Online-Check-in öffnet 60 Tage vor Abflug!
 </div></div>
-<div class="card ta"><div class="ct">Rueckflug - 24. Juli 2026</div><div class="cx">
-<strong style="font-size:1.1rem;">FR 6135</strong> - Ryanair<br><br>
-London Stansted (STN) nach Luebeck (LBC)<br>
-Abflug: <strong>13:10 Uhr</strong><br><br>
-Abreise aus Poole <strong>spaetestens 08:30 Uhr</strong> empfohlen!
+<div class="card ta"><div class="ct">✈️ Rückflug – 24. Juli 2026</div><div class="cx">
+<strong style="font-size:1.1rem">FR 6135</strong> · Ryanair<br><br>
+🛫 London Stansted (STN) → 🛬 Lübeck (LBC)<br>
+⏰ Abflug: <strong>13:10 Uhr</strong><br><br>
+⚠️ Abreise aus Poole <strong>spätestens 08:30 Uhr</strong> empfohlen!
 </div></div>
-<div class="card"><div class="ct">Stansted nach Blackheath (Ankunftstag)</div><div class="cx">
-Stansted Express nach Liverpool Street (50 Min.)<br>
-dann Southeastern nach Blackheath (25 Min.)<br>
-Gesamt: ca. 1 Std. 30 Min.<br><br>
-Ankunft Stansted ca. 17:30-18:00 Uhr - Ankunft Hotel ca. 19:30 Uhr
+<div class="card"><div class="ct">🚂 Stansted → Blackheath (Ankunftstag)</div><div class="cx">
+Stansted Express → Liverpool Street (50 Min.)<br>
+dann Southeastern → Blackheath (25 Min.)<br>
+<strong>Gesamt: ca. 1 Std. 30 Min.</strong><br><br>
+Ankunft Stansted ca. 17:30–18:00 Uhr → Ankunft Hotel ca. 19:30 Uhr
 </div></div>
-<div class="card"><div class="ct">Poole nach Stansted (Rueckreise)</div><div class="cx">
-Poole nach London Waterloo (2 Std.) - Tube nach Liverpool Street (20 Min.) - Stansted Express (50 Min.)<br>
-Gesamt: ca. 3,5 Std.<br><br>
-Abflug 13:10 Uhr - Abfahrt Poole <strong>spaetestens 08:30 Uhr</strong>!
+<div class="card"><div class="ct">🚂 Poole → Stansted (Rückreise)</div><div class="cx">
+Poole → London Waterloo (2 Std.) → Tube → Liverpool Street (20 Min.) → Stansted Express (50 Min.)<br>
+<strong>Gesamt: ca. 3,5 Std.</strong><br><br>
+⚠️ Abflug 13:10 Uhr → Abfahrt Poole <strong>spätestens 08:30 Uhr</strong>!
 </div></div>
-<div class="card ga"><div class="ct">Checkliste vor dem Abflug</div><div class="cx">
-Reisepaesse fuer alle 5 (UK = Reisepass noetig!)<br>
-GHIC-Karte fuer alle beantragen (nhs.uk)<br>
-Ryanair Online-Check-in (60 Tage vorher)<br>
-Boarding Passes auf Handy<br>
-Oyster Cards vorregistrieren (tfl.gov.uk)<br>
-Stecker-Adapter Typ G kaufen (2-3 Stueck!)<br>
-Citymapper App herunterladen<br>
-West End Tickets vorbuchen<br>
-London Eye vorbuchen<br>
-Badezeug fuer Poole nicht vergessen!
+<div class="card ga"><div class="ct">📋 Checkliste vor dem Abflug</div><div class="cx">
+☐ Reisepässe für alle 5 (UK = Reisepass nötig!)<br>
+☐ GHIC-Karte für alle beantragen (nhs.uk)<br>
+☐ Ryanair Online-Check-in (60 Tage vorher)<br>
+☐ Boarding Passes auf Handy<br>
+☐ Oyster Cards vorregistrieren (tfl.gov.uk)<br>
+☐ Stecker-Adapter Typ G kaufen (2–3 Stück!)<br>
+☐ Citymapper App herunterladen<br>
+☐ West End Tickets vorbuchen<br>
+☐ London Eye vorbuchen<br>
+☐ Badezeug für Poole nicht vergessen! 🩱
 </div></div>
 </div>
 
-<!-- ── QUIZ ── -->
+<!-- QUIZ -->
 <div id="quiz" class="sec">
-<div class="sh">England-Quiz</div><div class="ssh">Wie gut kennt ihr das Vereinigte Koenigreich?</div>
-<div class="qsbar"><span style="font-family:IM Fell English,serif;font-style:italic;">Punkte:</span><span id="qscore">0 / 0</span></div>
+<div class="sh">England-Quiz 🎓</div><div class="ssh">Wie gut kennt ihr das Vereinigte Königreich?</div>
+<div class="qsbar"><span style="font-family:'IM Fell English',serif;font-style:italic">Punkte:</span><span id="qscore">0 / 0</span></div>
 <div class="card" id="qcard">
   <div class="quiz-q" id="qq"></div>
   <div class="quiz-opts" id="qopts"></div>
   <div class="quiz-fb" id="qfb"></div>
-  <button class="qnext" id="qnext" onclick="nextQ()">Naechste Frage</button>
-  <button class="savebtn" id="qrestart" onclick="startQuiz()" style="display:none;">Nochmal spielen</button>
+  <button class="qnext" id="qnext" onclick="nextQ()">Nächste Frage →</button>
+  <button class="savebtn" id="qrestart" onclick="startQuiz()" style="display:none">Nochmal spielen</button>
 </div>
 </div>
 
-<!-- ── TIPPS ── -->
+<!-- TIPPS -->
 <div id="tipps" class="sec">
-<div class="sh">Familien-Tipps</div><div class="ssh">Insider-Wissen fuer England mit Kindern</div>
-<div class="card na"><div class="ct">Geld und Kosten</div><div class="cx">
-<div class="tiprow"><div class="tipico">💷</div><div class="tiptx"><strong>Pfund Sterling (GBP)</strong>Kreditkarten ueberall akzeptiert. Kontaktlos ist Standard.</div></div>
-<div class="tiprow"><div class="tipico">🏦</div><div class="tiptx"><strong>Reisekarte</strong>Revolut oder Wise - keine Auslandsgebuehren. Vorher einrichten!</div></div>
-<div class="tiprow"><div class="tipico">🎟</div><div class="tiptx"><strong>Kostenlose Museen</strong>NHM, Science Museum, British Museum, Tate Modern - alle gratis!</div></div>
+<div class="sh">💡 Familien-Tipps</div><div class="ssh">Insider-Wissen für England mit Kindern</div>
+<div class="card na"><div class="ct">💰 Geld &amp; Kosten</div><div class="cx">
+<div class="tiprow"><div class="tipico">💷</div><div class="tiptx"><strong>Pfund Sterling (GBP)</strong>Kreditkarten überall akzeptiert. Kontaktlos ist Standard.</div></div>
+<div class="tiprow"><div class="tipico">🏦</div><div class="tiptx"><strong>Reisekarte</strong>Revolut oder Wise – keine Auslandsgebühren. Vorher einrichten!</div></div>
+<div class="tiprow"><div class="tipico">🎟</div><div class="tiptx"><strong>Kostenlose Museen</strong>NHM, Science Museum, British Museum, Tate Modern – alle gratis!</div></div>
 </div></div>
-<div class="card ga"><div class="ct">Typisch britisch</div><div class="cx">
-<div class="tiprow"><div class="tipico">☂</div><div class="tiptx"><strong>Regen</strong>Kommt kurz und heftig. Mini-Schirm immer dabei - kein Drama!</div></div>
-<div class="tiprow"><div class="tipico">🙏</div><div class="tiptx"><strong>Queuing</strong>Briten lieben Warteschlangen - einfach hinten anstellen!</div></div>
-<div class="tiprow"><div class="tipico">🚶</div><div class="tiptx"><strong>Links gehen!</strong>Auf Rolltreppen rechts stehen, links gehen - sonst boese Blicke!</div></div>
-<div class="tiprow"><div class="tipico">🔌</div><div class="tiptx"><strong>Stecker Typ G</strong>UK-Stecker (3 Stifte) - mindestens 2-3 Adapter kaufen!</div></div>
+<div class="card ga"><div class="ct">🌧 Typisch britisch</div><div class="cx">
+<div class="tiprow"><div class="tipico">☂</div><div class="tiptx"><strong>Regen</strong>Kommt kurz und heftig. Mini-Schirm immer dabei – kein Drama!</div></div>
+<div class="tiprow"><div class="tipico">🙏</div><div class="tiptx"><strong>Queuing</strong>Briten lieben Warteschlangen – einfach hinten anstellen!</div></div>
+<div class="tiprow"><div class="tipico">🚶</div><div class="tiptx"><strong>Links gehen!</strong>Auf Rolltreppen rechts stehen, links gehen – sonst böse Blicke!</div></div>
+<div class="tiprow"><div class="tipico">🔌</div><div class="tiptx"><strong>Stecker Typ G</strong>UK-Stecker (3 Stifte) – mindestens 2–3 Adapter kaufen!</div></div>
 </div></div>
 </div>
 
-<!-- ── SOS ── -->
+<!-- SOS -->
 <div id="sos" class="sec">
-<div class="sh" style="color:var(--red);">SOS und Notfall</div><div class="ssh">Sicherheit geht vor - immer</div>
-<div class="card" style="border-top:4px solid var(--red);">
-<div class="ct" style="color:var(--red);">Notrufnummern UK</div>
-<div class="cx" style="padding-left:8px;font-size:1rem;line-height:2.4;">
-<strong style="font-size:1.5rem;color:var(--red);">999</strong> - Polizei, Feuerwehr, Rettungsdienst<br>
-<strong style="font-size:1.3rem;color:var(--navy);">112</strong> - Europaweiter Notruf<br>
-<strong style="color:var(--navy);">NHS 111</strong> - Aerztliche Auskunft (nicht lebensbedrohlich)<br>
-<strong style="color:var(--navy);">101</strong> - Polizei (nicht dringend)
+<div class="sh" style="color:var(--red)">🆘 SOS &amp; Notfall</div><div class="ssh">Sicherheit geht vor – immer</div>
+<div class="card" style="border-top:4px solid var(--red)">
+<div class="ct" style="color:var(--red)">☎ Notrufnummern UK</div>
+<div class="cx" style="padding-left:8px;font-size:1rem;line-height:2.4">
+<strong style="font-size:1.5rem;color:var(--red)">999</strong> – Polizei, Feuerwehr, Rettungsdienst<br>
+<strong style="font-size:1.3rem;color:var(--navy)">112</strong> – Europaweiter Notruf<br>
+<strong style="color:var(--navy)">NHS 111</strong> – Ärztliche Auskunft (nicht lebensbedrohlich)<br>
+<strong style="color:var(--navy)">101</strong> – Polizei (nicht dringend)
 </div></div>
-<div class="card na"><div class="ct">Notaufnahmen</div><div class="cx">
-<strong>London - Blackheath:</strong><br>Queen Elizabeth Hospital, Stadium Rd SE18 - Tel. 020 8836 6000<br><br>
-<strong>Poole:</strong><br>Poole Hospital, Longfleet Rd BH15 2JB - Tel. 01202 665511<br><br>
-<strong>Kinder (London):</strong><br>Great Ormond Street, WC1N 3JH - Tel. 020 7405 9200
+<div class="card na"><div class="ct">🏥 Notaufnahmen</div><div class="cx">
+<strong>London – Blackheath:</strong><br>Queen Elizabeth Hospital, Stadium Rd SE18 · ☎ 020 8836 6000<br><br>
+<strong>Poole:</strong><br>Poole Hospital, Longfleet Rd BH15 2JB · ☎ 01202 665511<br><br>
+<strong>Kinder (London):</strong><br>Great Ormond Street, WC1N 3JH · ☎ 020 7405 9200
 </div></div>
-<div class="card ga"><div class="ct">Deutsche Botschaft London</div><div class="cx">23 Belgrave Square, SW1X 8PZ<br>Tel. +44 20 7824 1300<br>Notfall-Hotline (24h): +49 30 5000</div></div>
-<div class="card"><div class="ct">Karten sperren</div><div class="cx">Visa: +1 800 847 2911<br>Mastercard: +1 800 627 8372<br><br>iOS: icloud.com/find<br>Android: android.com/find</div></div>
+<div class="card ga"><div class="ct">🇩🇪 Deutsche Botschaft London</div><div class="cx">23 Belgrave Square, SW1X 8PZ<br>☎ +44 20 7824 1300<br>Notfall-Hotline (24h): +49 30 5000</div></div>
+<div class="card"><div class="ct">💳 Karten sperren</div><div class="cx">🔴 Visa: +1 800 847 2911<br>🔵 Mastercard: +1 800 627 8372<br><br>📱 iOS: icloud.com/find · Android: android.com/find</div></div>
 </div>
 
 <div class="nsp"></div>
 </div><!-- end appinner -->
+
 <!-- BOTTOM NAV -->
 <div class="bnav" id="bnav">
   <button class="nb" id="nb-wetter" onclick="openSec('wetter')"><span class="ni">🌦</span><span class="nl">Wetter</span></button>
@@ -650,7 +684,7 @@ Badezeug fuer Poole nicht vergessen!
   <div class="mmi" onclick="openSec('london_phase')"><span class="mmii">🏙</span><span class="mmil">London</span></div>
   <div class="mmi" onclick="openSec('poole_phase')"><span class="mmii">⛵</span><span class="mmil">Poole</span></div>
   <div class="mmi" onclick="openSec('sehenswuerdigkeiten')"><span class="mmii">🎡</span><span class="mmil">Sights</span></div>
-  <div class="mmi" onclick="openSec('oepnv')"><span class="mmii">🚇</span><span class="mmil">OEPNV</span></div>
+  <div class="mmi" onclick="openSec('oepnv')"><span class="mmii">🚇</span><span class="mmil">ÖPNV</span></div>
   <div class="mmi" onclick="openSec('checklist')"><span class="mmii">✅</span><span class="mmil">Checkliste</span></div>
   <div class="mmi" onclick="openSec('tagebuch')"><span class="mmii">📖</span><span class="mmil">Tagebuch</span></div>
   <div class="mmi" onclick="openSec('regen')"><span class="mmii">☔</span><span class="mmil">Regen</span></div>
@@ -660,95 +694,98 @@ Badezeug fuer Poole nicht vergessen!
   <div class="mmi" onclick="openSec('tipps')"><span class="mmii">💡</span><span class="mmil">Tipps</span></div>
   <div class="mmi" onclick="openSec('sos')"><span class="mmii">🆘</span><span class="mmil">SOS</span></div>
 </div>
-<div class="footer">England 2026 - <span>Manuela, Sven, Mila, Jojo & Mikko</span> 🇬🇧 - God Save the King!</div>
+<div class="footer">England 2026 – <span>Manuela, Sven, Mila, Jojo &amp; Mikko</span> 🇬🇧 · God Save the King!</div>
 
 <script>
 // ── SUPABASE ──
-const SB='https://itoruomzunlcbmtlsjoy.supabase.co';
-const SK='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0b3J1b216dW5sY2JtdGxzam95Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIxMTgwMTAsImV4cCI6MjA5NzY5NDAxMH0.K5YHQ00iwSkCpa0O04i5MrdS4hPA8ikoVZRQiCHfuno';
-const AS='england2026-xK9mP3qR';
-const SH={'apikey':SK,'Authorization':'Bearer '+SK,'Content-Type':'application/json','x-app-secret':AS};
+var SB='https://itoruomzunlcbmtlsjoy.supabase.co';
+var SK='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0b3J1b216dW5sY2JtdGxzam95Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIxMTgwMTAsImV4cCI6MjA5NzY5NDAxMH0.K5YHQ00iwSkCpa0O04i5MrdS4hPA8ikoVZRQiCHfuno';
+var AS='england2026-xK9mP3qR';
 
-async function sbGet(t,q){
-  const r=await fetch(SB+'/rest/v1/'+t+'?'+q,{headers:{'apikey':SK,'Authorization':'Bearer '+SK}});
-  return r.ok?r.json():[];
-}
-async function sbPost(t,b){
-  const r=await fetch(SB+'/rest/v1/'+t,{method:'POST',headers:{...SH,'Prefer':'resolution=merge-duplicates,return=representation'},body:JSON.stringify(b)});
-  return r.ok?r.json():null;
-}
-async function sbPatch(t,q,b){
-  await fetch(SB+'/rest/v1/'+t+'?'+q,{method:'PATCH',headers:SH,body:JSON.stringify(b)});
-}
-async function sbDel(t,q){
-  await fetch(SB+'/rest/v1/'+t+'?'+q,{method:'DELETE',headers:SH});
-}
+async function sbGet(t,q){try{var r=await fetch(SB+'/rest/v1/'+t+'?'+q,{headers:{'apikey':SK,'Authorization':'Bearer '+SK}});return r.ok?r.json():[];}catch(e){return[];}}
+async function sbPost(t,b){try{var r=await fetch(SB+'/rest/v1/'+t,{method:'POST',headers:{'apikey':SK,'Authorization':'Bearer '+SK,'Content-Type':'application/json','Prefer':'resolution=merge-duplicates,return=representation','x-app-secret':AS},body:JSON.stringify(b)});return r.ok?r.json():null;}catch(e){return null;}}
+async function sbPatch(t,q,b){try{await fetch(SB+'/rest/v1/'+t+'?'+q,{method:'PATCH',headers:{'apikey':SK,'Authorization':'Bearer '+SK,'Content-Type':'application/json','x-app-secret':AS},body:JSON.stringify(b)});}catch(e){}}
+async function sbDel(t,q){try{await fetch(SB+'/rest/v1/'+t+'?'+q,{method:'DELETE',headers:{'apikey':SK,'Authorization':'Bearer '+SK,'x-app-secret':AS}});}catch(e){}}
 
-// ── PERSON ──
-let WHO=localStorage.getItem('eng_who')||null;
-let SESS=localStorage.getItem('eng_sess')||null;
-let PENDING=null;
+// ── PERSON / SESSION ──
+var WHO=localStorage.getItem('eng_who')||null;
+var SESS=localStorage.getItem('eng_sess')||null;
+var PENDING=null;
 
 function showPscreen(){document.getElementById('pscreen').classList.add('open');}
 function selectPerson(n){
-  WHO=n;SESS=n+'-'+Date.now();
-  localStorage.setItem('eng_who',n);localStorage.setItem('eng_sess',SESS);
+  WHO=n; SESS=n+'-'+Date.now();
+  localStorage.setItem('eng_who',n); localStorage.setItem('eng_sess',SESS);
   document.getElementById('pscreen').classList.remove('open');
   updateWho();
   if(PENDING){openSec(PENDING);PENDING=null;}
 }
 function needWho(sec){if(!WHO){PENDING=sec;showPscreen();return true;}return false;}
 function updateWho(){
-  const ic={Manuela:'👩',Sven:'👨',Mila:'👧',Jojo:'👦',Mikko:'👦'};
-  const lbl=WHO?(ic[WHO]||'👤')+' '+WHO:'👤 Wer bist du?';
-  document.getElementById('wbadge').innerHTML=lbl;
-  document.getElementById('mwho').textContent=WHO||'';
-  const vw=document.getElementById('vwho');if(vw)vw.textContent=WHO||'-';
+  var icons={Manuela:'👩',Sven:'👨',Mila:'👧',Jojo:'👦',Mikko:'👦'};
+  var lbl=WHO?(icons[WHO]||'👤')+' '+WHO:'👤 Wer bist du?';
+  document.getElementById('wbadge').textContent=lbl;
+  var mw=document.getElementById('mwho'); if(mw)mw.textContent=WHO||'';
+  var vw=document.getElementById('vwho'); if(vw)vw.textContent=WHO||'–';
 }
+
+// ── STARS ──
+(function(){
+  var cont=document.getElementById('hstars');
+  if(!cont)return;
+  for(var i=0;i<40;i++){
+    var s=document.createElement('div');
+    s.className='star';
+    s.style.left=Math.random()*100+'%';
+    s.style.top=Math.random()*100+'%';
+    s.style.animationDelay=Math.random()*4+'s';
+    s.style.opacity=String(Math.random()*.6+.1);
+    cont.appendChild(s);
+  }
+})();
 
 // ── COUNTDOWN ──
-(function(){
-  const c=document.getElementById('hstars');
-  for(let i=0;i<40;i++){const s=document.createElement('div');s.className='star';s.style.cssText='left:'+Math.random()*100+'%;top:'+Math.random()*100+'%;animation-delay:'+Math.random()*4+'s;opacity:'+(Math.random()*.6+.1);c.appendChild(s);}
-})();
 function updCD(){
-  try{
-    const d=new Date('2026-07-13T14:20:00Z')-new Date();
-    if(d<=0){
-      document.getElementById('cd-days').textContent='✈️';
-      document.getElementById('cd-hours').textContent='00';
-      document.getElementById('cd-mins').textContent='00';
-      return;
-    }
-    document.getElementById('cd-days').textContent=Math.floor(d/86400000);
-    document.getElementById('cd-hours').textContent=String(Math.floor((d%86400000)/3600000)).padStart(2,'0');
-    document.getElementById('cd-mins').textContent=String(Math.floor((d%3600000)/60000)).padStart(2,'0');
-  }catch(e){console.error('Countdown error:',e);}
+  var dep=new Date('2026-07-13T14:20:00Z');
+  var now=new Date();
+  var diff=dep.getTime()-now.getTime();
+  var d=document.getElementById('cd-days');
+  var h=document.getElementById('cd-hours');
+  var m=document.getElementById('cd-mins');
+  if(!d||!h||!m)return;
+  if(diff<=0){d.textContent='✈️';h.textContent='00';m.textContent='00';return;}
+  d.textContent=String(Math.floor(diff/86400000));
+  h.textContent=String(Math.floor((diff%86400000)/3600000)).padStart(2,'0');
+  m.textContent=String(Math.floor((diff%3600000)/60000)).padStart(2,'0');
 }
-updCD();setInterval(updCD,30000);
+updCD();
+setInterval(updCD,30000);
 
 // ── NAVIGATION ──
-const TITLES={wetter:'Wetter',vote:'Familien-Abstimmung',budget:'Budget-Tracker',checklist:'Tages-Checkliste',tagebuch:'Reisetagebuch',regen:'Regentag-Plan',london_phase:'London - Phase 1',poole_phase:'Poole - Phase 2',sehenswuerdigkeiten:'Sights London',oepnv:'OEPNV London',greenwich:'Greenwich',restaurants:'Essen und Trinken',poole_sights:'Dorset Highlights',poole_oepnv:'OEPNV Poole',quiz:'England-Quiz',tipps:'Familien-Tipps',flug:'Flug und Anreise',sos:'SOS und Notfall'};
-let MORE=false;
+var TITLES={wetter:'Wetter',vote:'Familien-Abstimmung',budget:'Budget-Tracker',checklist:'Tages-Checkliste',tagebuch:'Reisetagebuch',regen:'Regentag-Plan',london_phase:'London – Phase 1',poole_phase:'Poole – Phase 2',sehenswuerdigkeiten:'Sights London',oepnv:'ÖPNV London',greenwich:'Greenwich',restaurants:'Essen & Trinken',poole_sights:'Dorset Highlights',poole_oepnv:'ÖPNV Poole',quiz:'England-Quiz',tipps:'Familien-Tipps',flug:'Flug & Anreise',sos:'SOS & Notfall'};
+var MORE=false;
 
 function openMenu(){document.getElementById('moverlay').classList.add('open');}
 function closeMenu(e){if(!e||e.target===document.getElementById('moverlay'))document.getElementById('moverlay').classList.remove('open');}
 
 function openSec(id){
-  if(['vote','budget','checklist','tagebuch'].includes(id)&&needWho(id))return;
+  var needAuth=['vote','budget','checklist','tagebuch'];
+  if(needAuth.indexOf(id)>=0&&needWho(id))return;
   document.getElementById('moverlay').classList.remove('open');
   if(MORE)toggleMore();
   document.getElementById('hero').style.display='none';
   document.getElementById('appinner').classList.add('vis');
   document.getElementById('bnav').classList.add('vis');
   document.getElementById('ititle').textContent=TITLES[id]||'England 2026';
-  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
-  const el=document.getElementById(id);if(el)el.classList.add('active');
-  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
-  const nb=document.getElementById('nb-'+id);if(nb)nb.classList.add('active');
+  var secs=document.querySelectorAll('.sec');
+  for(var i=0;i<secs.length;i++)secs[i].classList.remove('active');
+  var el=document.getElementById(id);if(el)el.classList.add('active');
+  var nbs=document.querySelectorAll('.nb');
+  for(var i=0;i<nbs.length;i++)nbs[i].classList.remove('active');
+  var nb=document.getElementById('nb-'+id);if(nb)nb.classList.add('active');
   window.scrollTo(0,0);
   if(id==='wetter')loadWeather('london');
-  if(id==='vote'){loadVotes();}
+  if(id==='vote')loadVotes();
   if(id==='budget')loadBudget();
   if(id==='checklist')loadChecklist();
   if(id==='tagebuch')loadDiary();
@@ -758,245 +795,449 @@ function goHome(){
   document.getElementById('hero').style.display='';
   document.getElementById('appinner').classList.remove('vis');
   document.getElementById('bnav').classList.remove('vis');
-  if(MORE)toggleMore();window.scrollTo(0,0);
+  if(MORE)toggleMore();
+  window.scrollTo(0,0);
 }
-function toggleMore(){MORE=!MORE;document.getElementById('mmenu').classList.toggle('open',MORE);document.getElementById('nb-more').classList.toggle('active',MORE);}
+function toggleMore(){
+  MORE=!MORE;
+  document.getElementById('mmenu').classList.toggle('open',MORE);
+  document.getElementById('nb-more').classList.toggle('active',MORE);
+}
 
 // ── WEATHER ──
-const WC={london:{name:'London, Greenwich',lat:51.4826,lon:-0.0077},poole:{name:'Poole, Dorset',lat:50.7192,lon:-1.9874}};
-function switchW(c,btn){document.querySelectorAll('#wetter .fltr').forEach(b=>b.classList.remove('active'));btn.classList.add('active');loadWeather(c);}
+var WC={london:{name:'London, Greenwich',lat:51.4826,lon:-0.0077},poole:{name:'Poole, Dorset',lat:50.7192,lon:-1.9874}};
+function switchWeather(c,btn){
+  var btns=document.querySelectorAll('#wetter .fltr');
+  for(var i=0;i<btns.length;i++)btns[i].classList.remove('active');
+  btn.classList.add('active');
+  loadWeather(c);
+}
 async function loadWeather(c){
-  const ci=WC[c];document.getElementById('wcity').textContent=ci.name;
-  document.getElementById('wtemp').textContent='-C';document.getElementById('wdesc').textContent='Wird geladen...';
+  var ci=WC[c]||WC.london;
+  document.getElementById('wcity').textContent=ci.name;
+  document.getElementById('wtemp').textContent='–°C';
+  document.getElementById('wdesc').textContent='Wird geladen...';
   try{
-    const r=await fetch('https://api.open-meteo.com/v1/forecast?latitude='+ci.lat+'&longitude='+ci.lon+'&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m&daily=sunrise,sunset&timezone=Europe%2FLondon');
-    const d=await r.json();const cu=d.current;
+    var url='https://api.open-meteo.com/v1/forecast?latitude='+ci.lat+'&longitude='+ci.lon+'&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m&daily=sunrise,sunset&timezone=Europe%2FLondon';
+    var r=await fetch(url);
+    var data=await r.json();
+    var cu=data.current;
     document.getElementById('wtemp').textContent=Math.round(cu.temperature_2m)+'°C';
     document.getElementById('wdesc').textContent=wCode(cu.weather_code);
     document.getElementById('whum').textContent=cu.relative_humidity_2m;
     document.getElementById('wwind').textContent=Math.round(cu.wind_speed_10m);
     document.getElementById('wfeel').textContent=Math.round(cu.apparent_temperature);
-    if(d.daily){
-      document.getElementById('wrise').textContent=new Date(d.daily.sunrise[0]).toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'})+' Uhr';
-      document.getElementById('wset').textContent=new Date(d.daily.sunset[0]).toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'})+' Uhr';
+    if(data.daily){
+      document.getElementById('wrise').textContent=new Date(data.daily.sunrise[0]).toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'})+' Uhr';
+      document.getElementById('wset').textContent=new Date(data.daily.sunset[0]).toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'})+' Uhr';
     }
-  }catch(e){document.getElementById('wdesc').textContent='Keine Verbindung';}
+  }catch(ex){document.getElementById('wdesc').textContent='Keine Verbindung';}
 }
-function wCode(c){const m={0:'Sonnig',1:'Ueberwiegend klar',2:'Teilbewoelkt',3:'Bedeckt',45:'Neblig',51:'Leichter Niesel',61:'Leichter Regen',63:'Regen',65:'Starker Regen',80:'Schauer',81:'Kraeftige Schauer',95:'Gewitter'};return m[c]||'Wetterdaten';}
+function wCode(c){var m={0:'☀️ Sonnig',1:'🌤 Überwiegend klar',2:'⛅ Teilbewölkt',3:'☁️ Bedeckt',45:'🌫 Neblig',51:'🌦 Leichter Niesel',61:'🌧 Leichter Regen',63:'🌧 Regen',65:'🌧 Starker Regen',80:'🌦 Schauer',81:'🌧 Kräftige Schauer',95:'⛈ Gewitter'};return m[c]||'Wetterdaten';}
 
 // ── VOTE ──
-const ACTS={
+var ACTS={
   london:[
-    {id:'lon_eye',n:'London Eye'},
-    {id:'lon_tower',n:'Tower of London'},
-    {id:'lon_nhm',n:'Natural History Museum'},
-    {id:'lon_science',n:'Science Museum'},
-    {id:'lon_bridge',n:'Tower Bridge Glasbruecke'},
-    {id:'lon_hyde',n:'Hyde Park und Diana Spielplatz'},
-    {id:'lon_buck',n:'Buckingham Wachabloesung'},
-    {id:'lon_british',n:'British Museum'},
-    {id:'lon_musical',n:'West End Musical'},
-    {id:'lon_clipper',n:'Thames Clipper Fahrt'},
-    {id:'lon_borough',n:'Borough Market'},
-    {id:'lon_covent',n:'Covent Garden'},
-    {id:'lon_cutty',n:'Cutty Sark Greenwich'},
+    {id:'lon_eye',n:'🎡 London Eye'},
+    {id:'lon_tower',n:'🏰 Tower of London'},
+    {id:'lon_nhm',n:'🦕 Natural History Museum'},
+    {id:'lon_science',n:'🔬 Science Museum'},
+    {id:'lon_bridge',n:'🌉 Tower Bridge Glasbrücke'},
+    {id:'lon_hyde',n:'🌳 Hyde Park & Diana Spielplatz'},
+    {id:'lon_buck',n:'👑 Buckingham Wachablösung'},
+    {id:'lon_british',n:'🏛 British Museum'},
+    {id:'lon_musical',n:'🎭 West End Musical'},
+    {id:'lon_clipper',n:'🛳 Thames Clipper Fahrt'},
+    {id:'lon_borough',n:'🥙 Borough Market'},
+    {id:'lon_covent',n:'🎪 Covent Garden'},
+    {id:'lon_cutty',n:'⚓ Cutty Sark Greenwich'}
   ],
   poole:[
-    {id:'poo_sand',n:'Sandbanks Beach'},
-    {id:'poo_brown',n:'Brownsea Island'},
-    {id:'poo_jura',n:'Jurassic Coast Fossilien'},
-    {id:'poo_corfe',n:'Corfe Castle'},
-    {id:'poo_sw',n:'Swanage Railway Dampfbahn'},
-    {id:'poo_bm',n:'Bournemouth Promenade'},
-    {id:'poo_chain',n:'Sandbanks Chain Ferry'},
-    {id:'poo_quay',n:'Poole Old Town und Quay'},
+    {id:'poo_sand',n:'🏖 Sandbanks Beach'},
+    {id:'poo_brown',n:'🦚 Brownsea Island'},
+    {id:'poo_jura',n:'🦕 Jurassic Coast Fossilien'},
+    {id:'poo_corfe',n:'🏰 Corfe Castle'},
+    {id:'poo_sw',n:'🚂 Swanage Railway Dampfbahn'},
+    {id:'poo_bm',n:'🏖 Bournemouth Promenade'},
+    {id:'poo_chain',n:'⛴ Sandbanks Chain Ferry'},
+    {id:'poo_quay',n:'⚓ Poole Old Town & Quay'}
   ]
 };
-let VD={};let VP='london';
+var VD={};
 
 async function loadVotes(){
-  document.getElementById('vwho').textContent=WHO||'-';
-  try{const rows=await sbGet('votes','select=*');VD={};if(Array.isArray(rows))rows.forEach(r=>{if(!VD[r.activity_id])VD[r.activity_id]={};VD[r.activity_id][r.person]=r.vote;});}catch(e){}
-  renderVotes();
+  document.getElementById('vwho').textContent=WHO||'–';
+  var rows=await sbGet('votes','select=*');
+  VD={};
+  if(Array.isArray(rows)){
+    for(var i=0;i<rows.length;i++){
+      var r=rows[i];
+      if(!VD[r.activity_id])VD[r.activity_id]={};
+      VD[r.activity_id][r.person]=r.vote;
+    }
+  }
+  renderVotePhase('london');
 }
-function renderVotes(){renderVP('london');renderVP('poole');renderRank();}
-function renderVP(ph){
-  const el=document.getElementById('vlist-'+ph);el.innerHTML='';
-  ACTS[ph].forEach(a=>{
-    const v=VD[a.id]||{};const tot=Object.values(v).reduce((s,x)=>s+x,0);
-    const my=v[WHO]||0;const sc=tot>0?'pos':tot<0?'neg':'neu';
-    el.innerHTML+=`<div class="vi"><div class="vname">${a.n}</div><div class="vscore ${sc}">${tot>0?'+':''}${tot}</div><div class="vbtns"><button class="vbtn up${my===1?' voted':''}" onclick="castV('${a.id}','${a.n}','${ph}',1)">👍</button><button class="vbtn dn${my===-1?' voted':''}" onclick="castV('${a.id}','${a.n}','${ph}',-1)">👎</button></div></div>`;
-  });
+
+function renderVotePhase(ph){
+  var el=document.getElementById('vlist-'+ph);
+  if(!el)return;
+  el.innerHTML='';
+  var acts=ACTS[ph]||[];
+  for(var i=0;i<acts.length;i++){
+    var a=acts[i];
+    var votes=VD[a.id]||{};
+    var keys=Object.keys(votes);
+    var tot=0;
+    for(var k=0;k<keys.length;k++)tot+=votes[keys[k]];
+    var my=votes[WHO]||0;
+    var sc=tot>0?'pos':tot<0?'neg':'neu';
+    var upCls='vbtn up'+(my===1?' voted':'');
+    var dnCls='vbtn dn'+(my===-1?' voted':'');
+    var totStr=(tot>0?'+':'')+String(tot);
+    var div=document.createElement('div');
+    div.className='vi';
+    div.innerHTML='<div class="vname">'+a.n+'</div>'
+      +'<div class="vscore '+sc+'">'+totStr+'</div>'
+      +'<div class="vbtns">'
+      +'<button class="'+upCls+'" onclick="castV(\''+a.id+'\',\''+a.n+'\',\''+ph+'\',1)">👍</button>'
+      +'<button class="'+dnCls+'" onclick="castV(\''+a.id+'\',\''+a.n+'\',\''+ph+'\',-1)">👎</button>'
+      +'</div>';
+    el.appendChild(div);
+  }
 }
-function renderRank(){
-  const all=[...ACTS.london,...ACTS.poole];
-  const sc=all.map(a=>{const v=VD[a.id]||{};return{...a,tot:Object.values(v).reduce((s,x)=>s+x,0)};}).sort((a,b)=>b.tot-a.tot);
-  const mx=Math.max(...sc.map(a=>Math.abs(a.tot)),1);
-  document.getElementById('vlist-rank').innerHTML=sc.map((a,i)=>`<div class="ri"><div class="rp">${i<3?['🏋','🥈','🥉'][i]:i+1}</div><div class="rbw"><div class="rn">${a.n}</div><div class="rbar"><div class="rfill${a.tot<0?' neg':''}" style="width:${Math.round(Math.abs(a.tot)/mx*100)}%"></div></div></div><div class="rnum ${a.tot>0?'pos':a.tot<0?'neg':''}">${a.tot>0?'+':''}${a.tot}</div></div>`).join('');
+
+function renderVoteRank(){
+  var all=ACTS.london.concat(ACTS.poole);
+  var scored=[];
+  for(var i=0;i<all.length;i++){
+    var a=all[i];
+    var votes=VD[a.id]||{};
+    var keys=Object.keys(votes);
+    var tot=0;
+    for(var k=0;k<keys.length;k++)tot+=votes[keys[k]];
+    scored.push({n:a.n,tot:tot});
+  }
+  scored.sort(function(a,b){return b.tot-a.tot;});
+  var maxAbs=1;
+  for(var i=0;i<scored.length;i++)if(Math.abs(scored[i].tot)>maxAbs)maxAbs=Math.abs(scored[i].tot);
+  var el=document.getElementById('vlist-rank');
+  if(!el)return;
+  el.innerHTML='';
+  var medals=['🥇','🥈','🥉'];
+  for(var i=0;i<scored.length;i++){
+    var a=scored[i];
+    var pct=Math.round(Math.abs(a.tot)/maxAbs*100);
+    var div=document.createElement('div');
+    div.className='ri';
+    div.innerHTML='<div class="rp">'+(i<3?medals[i]:String(i+1))+'</div>'
+      +'<div class="rbw"><div class="rn">'+a.n+'</div>'
+      +'<div class="rbar"><div class="rfill'+(a.tot<0?' neg':'')+'" style="width:'+pct+'%"></div></div></div>'
+      +'<div class="rnum '+(a.tot>0?'pos':a.tot<0?'neg':'')+'">'+(a.tot>0?'+':'')+String(a.tot)+'</div>';
+    el.appendChild(div);
+  }
 }
+
 async function castV(id,nm,ph,v){
   if(!WHO)return;
-  const cur=(VD[id]||{})[WHO]||0;const nv=cur===v?0:v;
-  if(!VD[id])VD[id]={};VD[id][WHO]=nv;renderVotes();
-  try{if(nv===0){await sbDel('votes','person=eq.'+WHO+'&activity_id=eq.'+id);}else{await sbPost('votes',{person:WHO,activity_id:id,activity_name:nm,phase:ph,vote:nv,session_token:SESS,updated_at:new Date().toISOString()});}}catch(e){}
+  var cur=(VD[id]||{})[WHO]||0;
+  var nv=cur===v?0:v;
+  if(!VD[id])VD[id]={};
+  VD[id][WHO]=nv;
+  renderVotePhase(ph);
+  if(nv===0){await sbDel('votes','person=eq.'+WHO+'&activity_id=eq.'+id);}
+  else{await sbPost('votes',{person:WHO,activity_id:id,activity_name:nm,phase:ph,vote:nv,session_token:SESS||'guest',updated_at:new Date().toISOString()});}
 }
+
 function switchVP(ph,btn){
-  document.querySelectorAll('.vtab').forEach(t=>{t.classList.remove('al','ap','ar');});
+  var tabs=document.querySelectorAll('.vtab');
+  for(var i=0;i<tabs.length;i++)tabs[i].classList.remove('al','ap','ar');
   btn.classList.add(ph==='london'?'al':ph==='poole'?'ap':'ar');
-  ['london','poole','rank'].forEach(p=>{const el=document.getElementById('vlist-'+p);if(el)el.style.display=p===ph?'':'none';});
+  var phases=['london','poole','rank'];
+  for(var i=0;i<phases.length;i++){
+    var el=document.getElementById('vlist-'+phases[i]);
+    if(el)el.style.display=phases[i]===ph?'':'none';
+  }
+  if(ph==='rank')renderVoteRank();
 }
 
 // ── BUDGET ──
-const CATI={eintritt:'🎟',essen:'🍽',oepnv:'🚇',souvenirs:'🛍',unterkunft:'🏠',sonstiges:'📦'};
-const DATES=['13. Juli','14. Juli','15. Juli','16. Juli','17. Juli','18. Juli','19. Juli','20. Juli','21. Juli','22. Juli','23. Juli','24. Juli'];
-let BD=[];let BF='all';
+var CATI={eintritt:'🎟',essen:'🍽',oepnv:'🚇',souvenirs:'🛍',unterkunft:'🏨',sonstiges:'📦'};
+var DTSTR=['13. Juli','14. Juli','15. Juli','16. Juli','17. Juli','18. Juli','19. Juli','20. Juli','21. Juli','22. Juli','23. Juli','24. Juli'];
+var BD=[];var BF='all';
 
-function tripDay(){const s=new Date('2026-07-13');const d=Math.floor((new Date()-s)/86400000)+1;return Math.max(1,Math.min(12,d));}
+function tripDay(){var s=new Date('2026-07-13');var diff=Math.floor((new Date()-s)/86400000)+1;return Math.max(1,Math.min(12,diff));}
 
 async function loadBudget(){
-  try{const r=await sbGet('budget','select=*&order=created_at.asc');BD=Array.isArray(r)?r:[];}catch(e){BD=[];}
+  var rows=await sbGet('budget','select=*&order=created_at.asc');
+  BD=Array.isArray(rows)?rows:[];
   renderBudget();
 }
+
 function renderBudget(){
-  const tot=BD.reduce((s,r)=>s+parseFloat(r.amount_gbp),0);
-  const td=tripDay();
-  const tod=BD.filter(r=>r.day_num===td).reduce((s,r)=>s+parseFloat(r.amount_gbp),0);
+  var tot=0;
+  for(var i=0;i<BD.length;i++)tot+=parseFloat(BD[i].amount_gbp);
+  var td=tripDay();
+  var todTot=0;
+  for(var i=0;i<BD.length;i++)if(BD[i].day_num===td)todTot+=parseFloat(BD[i].amount_gbp);
   document.getElementById('btotal').textContent='£'+tot.toFixed(2);
-  document.getElementById('btoday').textContent='£'+tod.toFixed(2);
-  document.getElementById('btday').textContent=td;
-  const days=[...new Set(BD.map(r=>r.day_num))].sort((a,b)=>a-b);
-  const bf=document.getElementById('bfilter');
-  bf.innerHTML='<button class="dfb'+(BF==='all'?' active':'')+'" onclick="setBF('all',this)">Alle</button>';
-  days.forEach(d=>bf.innerHTML+=`<button class="dfb${BF===d?' active':''}" onclick="setBF(${d},this)">Tag ${d}</button>`);
-  const filt=BF==='all'?BD:BD.filter(r=>r.day_num===BF);
-  const bl=document.getElementById('blist');
-  if(!filt.length){bl.innerHTML='<div style="text-align:center;color:var(--grey);padding:20px;font-style:italic;">Noch keine Ausgaben.</div>';return;}
-  bl.innerHTML=filt.map(r=>`<div class="card" style="padding:10px 10px 10px 20px;margin-bottom:6px;"><div class="bli"><span class="bcat">${CATI[r.category]||''} ${r.category}</span><div class="bld">${r.description||'-'} <span style="font-size:.72rem;color:var(--grey);">Tag ${r.day_num} - ${r.added_by||''}</span></div><div class="bla">£${parseFloat(r.amount_gbp).toFixed(2)}</div><button class="bdel" onclick="delB('${r.id}')">🗑</button></div></div>`).join('');
+  document.getElementById('btoday').textContent='£'+todTot.toFixed(2);
+  document.getElementById('btday').textContent=String(td);
+
+  var days=[];
+  for(var i=0;i<BD.length;i++)if(days.indexOf(BD[i].day_num)<0)days.push(BD[i].day_num);
+  days.sort(function(a,b){return a-b;});
+  var bf=document.getElementById('bfilter');
+  bf.innerHTML='<button class="dfb'+(BF==='all'?' active':'')+'" onclick="setBF(\'all\',this)">Alle</button>';
+  for(var i=0;i<days.length;i++)bf.innerHTML+='<button class="dfb'+(BF===days[i]?' active':'')+'" onclick="setBF('+days[i]+',this)">Tag '+days[i]+'</button>';
+
+  var filt=BF==='all'?BD:BD.filter(function(r){return r.day_num===BF;});
+  var bl=document.getElementById('blist');
+  if(!filt.length){bl.innerHTML='<div style="text-align:center;color:var(--grey);padding:20px;font-style:italic">Noch keine Ausgaben.</div>';return;}
+  bl.innerHTML='';
+  for(var i=0;i<filt.length;i++){
+    var r=filt[i];
+    var div=document.createElement('div');
+    div.className='card';
+    div.style.cssText='padding:10px 10px 10px 20px;margin-bottom:6px';
+    div.innerHTML='<div class="bli">'
+      +'<span class="bcat">'+(CATI[r.category]||'📦')+' '+r.category+'</span>'
+      +'<div class="bld">'+(r.description||'–')+' <span style="font-size:.72rem;color:var(--grey)">Tag '+r.day_num+' · '+(r.added_by||'')+'</span></div>'
+      +'<div class="bla">£'+parseFloat(r.amount_gbp).toFixed(2)+'</div>'
+      +'<button class="bdel" onclick="delB(\''+r.id+'\')">🗑</button>'
+      +'</div>';
+    bl.appendChild(div);
+  }
 }
-function setBF(f,btn){BF=f;document.querySelectorAll('.dfb').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderBudget();}
+
+function setBF(f,btn){BF=f;var dfbs=document.querySelectorAll('.dfb');for(var i=0;i<dfbs.length;i++)dfbs[i].classList.remove('active');btn.classList.add('active');renderBudget();}
+
 async function addBudget(){
-  const day=parseInt(document.getElementById('bday').value);
-  const cat=document.getElementById('bcat').value;
-  const desc=document.getElementById('bdesc').value.trim();
-  const amt=parseFloat(document.getElementById('bamt').value);
-  if(!amt||isNaN(amt)){alert('Bitte einen gueltigen Betrag eingeben.');return;}
-  const msg=document.getElementById('bsyncmsg');msg.textContent='Wird gespeichert...';msg.className='syncmsg wait';
-  try{
-    const row=await sbPost('budget',{day_num:day,date_str:DATES[day-1]+' 2026',category:cat,description:desc,amount_gbp:amt,added_by:WHO||'Gast',session_token:SESS||'guest'});
-    if(row&&row[0])BD.push(row[0]);
-    document.getElementById('bdesc').value='';document.getElementById('bamt').value='';
-    msg.textContent='Gespeichert!';msg.className='syncmsg ok';renderBudget();
-  }catch(e){msg.textContent='Fehler!';msg.className='syncmsg err';}
-  setTimeout(()=>{msg.textContent='';},2000);
+  var day=parseInt(document.getElementById('bday').value);
+  var cat=document.getElementById('bcat').value;
+  var desc=document.getElementById('bdesc').value.trim();
+  var amt=parseFloat(document.getElementById('bamt').value);
+  if(!amt||isNaN(amt)){alert('Bitte einen gültigen Betrag eingeben.');return;}
+  var msg=document.getElementById('bsyncmsg');msg.textContent='Wird gespeichert...';msg.className='syncmsg wait';
+  var row=await sbPost('budget',{day_num:day,date_str:DTSTR[day-1]+' 2026',category:cat,description:desc,amount_gbp:amt,added_by:WHO||'Gast',session_token:SESS||'guest'});
+  if(row&&row[0]){BD.push(row[0]);document.getElementById('bdesc').value='';document.getElementById('bamt').value='';msg.textContent='✓ Gespeichert!';msg.className='syncmsg ok';renderBudget();}
+  else{msg.textContent='⚠ Fehler!';msg.className='syncmsg err';}
+  setTimeout(function(){msg.textContent='';},2000);
 }
-async function delB(id){await sbDel('budget','id=eq.'+id);BD=BD.filter(r=>r.id!=id);renderBudget();}
+
+async function delB(id){
+  await sbDel('budget','id=eq.'+id);
+  var nb=[];for(var i=0;i<BD.length;i++)if(BD[i].id!=id)nb.push(BD[i]);
+  BD=nb;renderBudget();
+}
 
 // ── CHECKLIST ──
-let CLD=[];let CLDAY=tripDay();
+var CLD=[];var CLDAY=tripDay();
 
 async function loadChecklist(){
-  try{const r=await sbGet('checklist','select=*&order=created_at.asc');CLD=Array.isArray(r)?r:[];}catch(e){CLD=[];}
+  var rows=await sbGet('checklist','select=*&order=created_at.asc');
+  CLD=Array.isArray(rows)?rows:[];
   renderClDays();renderCl();
 }
+
 function renderClDays(){
-  const el=document.getElementById('cldays');el.innerHTML='';
-  for(let d=1;d<=12;d++){const b=document.createElement('button');b.className='cdb'+(d===CLDAY?' active':'');b.textContent='Tag '+d;b.onclick=(function(dd){return function(){CLDAY=dd;document.querySelectorAll('.cdb').forEach(x=>x.classList.remove('active'));this.classList.add('active');renderCl();};})(d);el.appendChild(b);}
+  var el=document.getElementById('cldays');el.innerHTML='';
+  for(var d=1;d<=12;d++){
+    var b=document.createElement('button');
+    b.className='cdb'+(d===CLDAY?' active':'');
+    b.textContent='Tag '+d;
+    b.setAttribute('data-d',d);
+    b.onclick=function(){
+      CLDAY=parseInt(this.getAttribute('data-d'));
+      var cdbs=document.querySelectorAll('.cdb');
+      for(var i=0;i<cdbs.length;i++)cdbs[i].classList.remove('active');
+      this.classList.add('active');
+      renderCl();
+    };
+    el.appendChild(b);
+  }
 }
+
 function renderCl(){
-  const el=document.getElementById('cllist');
-  const its=CLD.filter(r=>r.day_num===CLDAY);
-  if(!its.length){el.innerHTML='<div style="text-align:center;color:var(--grey);padding:20px;font-style:italic;">Keine Items fuer Tag '+CLDAY+'.</div>';return;}
-  el.innerHTML=its.map(r=>`<div class="cli" onclick="togCl('${r.id}',${r.checked})"><div class="clcb${r.checked?' done':''}"></div><div class="clt${r.checked?' done':''}">${r.item}</div><div class="clw">${r.checked_by||''}</div></div>`).join('');
+  var el=document.getElementById('cllist');
+  var its=CLD.filter(function(r){return r.day_num===CLDAY;});
+  if(!its.length){el.innerHTML='<div style="text-align:center;color:var(--grey);padding:20px;font-style:italic">Keine Items für Tag '+CLDAY+'.</div>';return;}
+  el.innerHTML='';
+  for(var i=0;i<its.length;i++){
+    var r=its[i];
+    var div=document.createElement('div');
+    div.className='cli';
+    div.setAttribute('data-id',r.id);
+    div.setAttribute('data-checked',r.checked?'1':'0');
+    div.innerHTML='<div class="clcb'+(r.checked?' done':'')+'"></div>'
+      +'<div class="clt'+(r.checked?' done':'')+'">'+r.item+'</div>'
+      +'<div class="clw">'+(r.checked_by||'')+'</div>';
+    div.onclick=function(){togCl(this.getAttribute('data-id'),this.getAttribute('data-checked')==='1');};
+    el.appendChild(div);
+  }
 }
+
 async function togCl(id,checked){
-  if(!WHO)return;const nc=!checked;
-  const i=CLD.findIndex(r=>r.id==id);
-  if(i>=0){CLD[i].checked=nc;CLD[i].checked_by=nc?WHO:null;}
+  if(!WHO)return;
+  var nc=!checked;
+  for(var i=0;i<CLD.length;i++){if(CLD[i].id==id){CLD[i].checked=nc;CLD[i].checked_by=nc?WHO:null;break;}}
   renderCl();
-  try{await sbPatch('checklist','id=eq.'+id,{checked:nc,checked_by:nc?WHO:null,checked_at:nc?new Date().toISOString():null});}catch(e){}
+  await sbPatch('checklist','id=eq.'+id,{checked:nc,checked_by:nc?WHO:null,checked_at:nc?new Date().toISOString():null});
 }
+
 async function addClItem(){
-  const txt=document.getElementById('clnew').value.trim();if(!txt)return;
-  try{const r=await sbPost('checklist',{day_num:CLDAY,item:txt,checked:false,session_token:SESS||'guest'});if(r&&r[0])CLD.push(r[0]);document.getElementById('clnew').value='';renderCl();}catch(e){alert('Fehler beim Speichern.');}
+  var txt=document.getElementById('clnew').value.trim();if(!txt)return;
+  var row=await sbPost('checklist',{day_num:CLDAY,item:txt,checked:false,session_token:SESS||'guest'});
+  if(row&&row[0]){CLD.push(row[0]);document.getElementById('clnew').value='';renderCl();}
+  else alert('Fehler beim Speichern.');
 }
 
 // ── DIARY ──
-const DDAYS=[
-  {d:1,dt:'13. Juli 2026',l:'Tag 1 - Ankunft London und Greenwich'},
-  {d:2,dt:'14. Juli 2026',l:'Tag 2 - South Bank und Thames Clipper'},
-  {d:3,dt:'15. Juli 2026',l:'Tag 3 - Tower of London'},
-  {d:4,dt:'16. Juli 2026',l:'Tag 4 - Natural History und Science Museum'},
-  {d:5,dt:'17. Juli 2026',l:'Tag 5 - Hyde Park und West End'},
-  {d:6,dt:'18. Juli 2026',l:'Tag 6 - Buckingham Palace'},
-  {d:7,dt:'19. Juli 2026',l:'Tag 7 - Abreise nach Poole',p:true},
-  {d:8,dt:'20. Juli 2026',l:'Tag 8 - Sandbanks Beach',p:true},
-  {d:9,dt:'21. Juli 2026',l:'Tag 9 - Brownsea Island',p:true},
-  {d:10,dt:'22. Juli 2026',l:'Tag 10 - Jurassic Coast',p:true},
-  {d:11,dt:'23. Juli 2026',l:'Tag 11 - Bournemouth',p:true},
-  {d:12,dt:'24. Juli 2026',l:'Tag 12 - Abreise',p:true},
+var DDAYS=[
+  {d:1,dt:'13. Juli 2026',l:'Tag 1 – Ankunft London & Greenwich'},
+  {d:2,dt:'14. Juli 2026',l:'Tag 2 – South Bank & Thames Clipper'},
+  {d:3,dt:'15. Juli 2026',l:'Tag 3 – Tower of London'},
+  {d:4,dt:'16. Juli 2026',l:'Tag 4 – Natural History & Science Museum'},
+  {d:5,dt:'17. Juli 2026',l:'Tag 5 – Hyde Park & West End'},
+  {d:6,dt:'18. Juli 2026',l:'Tag 6 – Buckingham Palace'},
+  {d:7,dt:'19. Juli 2026',l:'Tag 7 – Abreise nach Poole',p:true},
+  {d:8,dt:'20. Juli 2026',l:'Tag 8 – Sandbanks Beach',p:true},
+  {d:9,dt:'21. Juli 2026',l:'Tag 9 – Brownsea Island',p:true},
+  {d:10,dt:'22. Juli 2026',l:'Tag 10 – Jurassic Coast',p:true},
+  {d:11,dt:'23. Juli 2026',l:'Tag 11 – Bournemouth',p:true},
+  {d:12,dt:'24. Juli 2026',l:'Tag 12 – Abreise',p:true}
 ];
-let DD=[];
+var DD=[];
 
 async function loadDiary(){
-  try{const r=await sbGet('diary','select=*&order=day_num.asc');DD=Array.isArray(r)?r:[];}catch(e){DD=[];}
+  var rows=await sbGet('diary','select=*&order=day_num.asc');
+  DD=Array.isArray(rows)?rows:[];
   buildDiary();
 }
+
 function buildDiary(){
-  const c=document.getElementById('dcontainer');c.innerHTML='';
-  DDAYS.forEach(day=>{
-    const sv=DD.find(r=>r.day_num===day.d)||{entry_text:'',stars:0,updated_by:''};
-    const el=document.createElement('div');el.className='dday';
-    el.innerHTML=`<div class="ddhd${day.p?' pl':''}" onclick="togD(${day.d})"><div><div class="ddtl">${day.l}</div><div class="dddt">${day.dt}</div></div><div class="ddst" id="dst-${day.d}">${'★'.repeat(sv.stars||0)}${'☆'.repeat(5-(sv.stars||0))}</div></div><div class="ddbody" id="db-${day.d}"><div class="ddsync" id="dsy-${day.d}">${sv.updated_by?'Zuletzt: '+sv.updated_by:''}</div><div class="srow" id="dr-${day.d}">${[1,2,3,4,5].map(i=>`<button class="sbtn${i<=(sv.stars||0)?' active':''}" onclick="setStar(${day.d},${i})" data-v="${i}">★</button>`).join('')}</div><textarea class="dta" id="dt-${day.d}" placeholder="Was habt ihr heute erlebt?">${sv.entry_text||''}</textarea><button class="savebtn" onclick="saveDiary(${day.d})">Speichern</button><span id="dm-${day.d}" style="display:none;margin-left:10px;font-size:.8rem;color:green;">Gespeichert!</span></div>`;
-    c.appendChild(el);
-  });
+  var cont=document.getElementById('dcontainer');
+  cont.innerHTML='';
+  for(var i=0;i<DDAYS.length;i++){
+    var day=DDAYS[i];
+    var sv=null;
+    for(var j=0;j<DD.length;j++)if(DD[j].day_num===day.d){sv=DD[j];break;}
+    if(!sv)sv={entry_text:'',stars:0,updated_by:''};
+    var stars=sv.stars||0;
+    var starHTML='';
+    for(var s=1;s<=5;s++)starHTML+='<button class="sbtn'+(s<=stars?' active':'')+'" data-d="'+day.d+'" data-v="'+s+'" onclick="setStar('+day.d+','+s+')">★</button>';
+    var syncTxt=sv.updated_by?'Zuletzt: '+sv.updated_by:'';
+    var starsDisp='';
+    for(var s=0;s<stars;s++)starsDisp+='★';
+    for(var s=stars;s<5;s++)starsDisp+='☆';
+    var div=document.createElement('div');
+    div.className='dday';
+    div.innerHTML='<div class="ddhd'+(day.p?' pl':'')+'" onclick="togD('+day.d+')">'
+      +'<div><div class="ddtl">'+day.l+'</div><div class="dddt">'+day.dt+'</div></div>'
+      +'<div class="ddst" id="dst-'+day.d+'">'+starsDisp+'</div>'
+      +'</div>'
+      +'<div class="ddbody" id="db-'+day.d+'">'
+      +'<div class="ddsync" id="dsy-'+day.d+'">'+syncTxt+'</div>'
+      +'<div class="srow" id="dr-'+day.d+'">'+starHTML+'</div>'
+      +'<textarea class="dta" id="dt-'+day.d+'" placeholder="Was habt ihr heute erlebt?">'+(sv.entry_text||'')+'</textarea>'
+      +'<button class="savebtn" onclick="saveDiary('+day.d+')">💾 Speichern</button>'
+      +'<span id="dm-'+day.d+'" style="display:none;margin-left:10px;font-size:.8rem;color:green">✓ Gespeichert!</span>'
+      +'</div>';
+    cont.appendChild(div);
+  }
 }
+
 function togD(d){document.getElementById('db-'+d).classList.toggle('open');}
-function setStar(d,v){document.querySelectorAll('#dr-'+d+' .sbtn').forEach(b=>{b.classList.toggle('active',parseInt(b.dataset.v)<=v);});}
+function setStar(d,v){
+  var btns=document.querySelectorAll('#dr-'+d+' .sbtn');
+  for(var i=0;i<btns.length;i++)btns[i].classList.toggle('active',parseInt(btns[i].getAttribute('data-v'))<=v);
+}
 function getStars(d){return document.querySelectorAll('#dr-'+d+' .sbtn.active').length;}
+
 async function saveDiary(d){
   if(!WHO)return;
-  const txt=document.getElementById('dt-'+d).value;const st=getStars(d);
-  const ex=DD.find(r=>r.day_num===d);
-  try{
-    if(ex){await sbPatch('diary','day_num=eq.'+d,{entry_text:txt,stars:st,updated_by:WHO,updated_at:new Date().toISOString()});ex.entry_text=txt;ex.stars=st;ex.updated_by=WHO;}
-    else{const r=await sbPost('diary',{day_num:d,date_str:DDAYS[d-1].dt,entry_text:txt,stars:st,updated_by:WHO,session_token:SESS||'guest',updated_at:new Date().toISOString()});if(r&&r[0])DD.push(r[0]);}
-    document.getElementById('dst-'+d).textContent='★'.repeat(st)+'☆'.repeat(5-st);
-    document.getElementById('dsy-'+d).textContent='Zuletzt: '+WHO;
-    const m=document.getElementById('dm-'+d);m.style.display='inline';setTimeout(()=>{m.style.display='none';},2000);
-  }catch(e){alert('Fehler beim Speichern.');}
+  var txt=document.getElementById('dt-'+d).value;
+  var st=getStars(d);
+  var ex=null;for(var i=0;i<DD.length;i++)if(DD[i].day_num===d){ex=DD[i];break;}
+  var idx=-1;for(var i=0;i<DDAYS.length;i++)if(DDAYS[i].d===d){idx=i;break;}
+  if(ex){
+    await sbPatch('diary','day_num=eq.'+d,{entry_text:txt,stars:st,updated_by:WHO,updated_at:new Date().toISOString()});
+    ex.entry_text=txt;ex.stars=st;ex.updated_by=WHO;
+  }else{
+    var row=await sbPost('diary',{day_num:d,date_str:idx>=0?DDAYS[idx].dt:'',entry_text:txt,stars:st,updated_by:WHO,session_token:SESS||'guest',updated_at:new Date().toISOString()});
+    if(row&&row[0])DD.push(row[0]);
+  }
+  var starsDisp='';
+  for(var s=0;s<st;s++)starsDisp+='★';
+  for(var s=st;s<5;s++)starsDisp+='☆';
+  document.getElementById('dst-'+d).textContent=starsDisp;
+  document.getElementById('dsy-'+d).textContent='Zuletzt: '+WHO;
+  var ms=document.getElementById('dm-'+d);ms.style.display='inline';
+  setTimeout(function(){ms.style.display='none';},2000);
 }
 
 // ── RESTAURANT FILTER ──
-function filterR(cat,btn){document.querySelectorAll('.rfb').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.rlist .card').forEach(c=>{c.style.display=cat==='alle'||(c.dataset.cat||'').split(' ').includes(cat)?'':'none';});}
+function filterR(cat,btn){
+  var rfbs=document.querySelectorAll('.rfb');
+  for(var i=0;i<rfbs.length;i++)rfbs[i].classList.remove('active');
+  btn.classList.add('active');
+  var cards=document.querySelectorAll('.rlist .card');
+  for(var i=0;i<cards.length;i++){
+    var c=cards[i];
+    c.style.display=cat==='alle'||(c.getAttribute('data-cat')||'').indexOf(cat)>=0?'':'none';
+  }
+}
 
 // ── QUIZ ──
-const QQ=[
-  {q:'Was ist die Hauptstadt von England?',o:['Brighton','Manchester','London','Birmingham'],a:2,f:'London ist seit 2000 Jahren Hauptstadt - gegruendet von den Roemern als Londinium im Jahr 43 n.Chr.!'},
-  {q:'Wie heisst der Fluss durch London?',o:['Severn','Avon','Mersey','Themse'],a:3,f:'Die Themse ist 346 km lang und hat Gezeiten in London - der Wasserstand schwankt um 4-5 Meter!'},
-  {q:'Welche ist die aelteste U-Bahnlinie der Welt?',o:['District Line','Central Line','Metropolitan Line','Victoria Line'],a:2,f:'Die Metropolitan Line wurde 1863 eroeffnet - damals noch mit Dampflokomotiven!'},
-  {q:'Wofuer ist Poole bekannt?',o:['Kohlebergbau','Einer der groessten Naturhaefen Europas','Den laengsten Pier der Welt','Whisky-Destillation'],a:1,f:'Poole Harbour ist einer der groessten Naturhaefen der Welt! Brownsea Island liegt mittendrin.'},
-  {q:'Was findet man an der Jurassic Coast?',o:['Goldvorkommen','Fossilien und 185 Mio. Jahre Erdgeschichte','Sandduenen','Lebende Korallen'],a:1,f:'Die Jurassic Coast in Dorset ist UNESCO-Welterbe. An Straenden wie Kimmeridge Bay findet man echte Ammoniten!'},
-  {q:'Welches Tier bewacht den Tower of London?',o:['Adler','Rabe','Falke','Loewe'],a:1,f:'6 Raben muessen immer im Tower leben - laut Legende wuerde sonst die Monarchie fallen!'},
-  {q:'Wie heissen die Waechter im Tower of London?',o:['Tower Guards','Beefeaters (Yeoman Warders)','Palace Guards','Royal Sentinels'],a:1,f:'Die Yeoman Warders, auch Beefeaters genannt, bewachen den Tower seit 1485!'},
-  {q:'Was ist der Thames Clipper?',o:['Rasenmaeher','Friseur-Salon','Flussbus auf der Themse','Schleppdampfer'],a:2,f:'Der Thames Clipper faehrt von Greenwich bis Westminster - ca. 45 Min. mit traumhafter Aussicht!'},
-  {q:'In welchem Londoner Park leben Rehe - direkt bei eurem Hotel?',o:['Hyde Park','St. James Park','Greenwich Park','Regent Park'],a:2,f:'Im Greenwich Park lebt eine Herde Hirsche seit dem 15. Jahrhundert!'},
-  {q:'Was ist Sandbanks (bei Poole) bekannt fuer?',o:['Surfen','Teuerste Grundstueckspreise Europas','Breitester Strand Englands','Fossilienfunde'],a:1,f:'Sandbanks ist nach Monaco und Manhattan eines der teuersten Grundstuecksgebiete der Welt!'},
+var QQ=[
+  {q:'Was ist die Hauptstadt von England?',o:['Brighton','Manchester','London','Birmingham'],a:2,f:'London ist seit 2000 Jahren Hauptstadt – gegründet von den Römern als Londinium im Jahr 43 n.Chr.!'},
+  {q:'Wie heißt der Fluss durch London?',o:['Severn','Avon','Mersey','Themse'],a:3,f:'Die Themse ist 346 km lang und hat Gezeiten in London – der Wasserstand schwankt um 4–5 Meter!'},
+  {q:'Welche ist die älteste U-Bahnlinie der Welt?',o:['District Line','Central Line','Metropolitan Line','Victoria Line'],a:2,f:'Die Metropolitan Line wurde 1863 eröffnet – damals noch mit Dampflokomotiven!'},
+  {q:'Wofür ist Poole bekannt?',o:['Kohlebergbau','Einer der größten Naturhäfen Europas','Den längsten Pier der Welt','Whisky-Destillation'],a:1,f:'Poole Harbour ist einer der größten Naturhäfen der Welt! Brownsea Island liegt mittendrin.'},
+  {q:'Was findet man an der Jurassic Coast?',o:['Goldvorkommen','Fossilien und 185 Mio. Jahre Erdgeschichte','Sanddünen','Lebende Korallen'],a:1,f:'Die Jurassic Coast in Dorset ist UNESCO-Welterbe. An Stränden wie Kimmeridge Bay findet man echte Ammoniten!'},
+  {q:'Welches Tier bewacht den Tower of London?',o:['Adler','Rabe','Falke','Löwe'],a:1,f:'6 Raben müssen immer im Tower leben – laut Legende würde sonst die Monarchie fallen!'},
+  {q:'Was ist der Thames Clipper?',o:['Rasenmäher','Friseur-Salon','Flussbus auf der Themse','Schleppdampfer'],a:2,f:'Der Thames Clipper fährt von Greenwich bis Westminster – ca. 45 Min. mit traumhafter Aussicht!'},
+  {q:'In welchem Londoner Park leben Rehe – direkt bei eurem Hotel?',o:['Hyde Park','St. James Park','Greenwich Park','Regent Park'],a:2,f:'Im Greenwich Park lebt eine Herde Hirsche seit dem 15. Jahrhundert!'},
+  {q:'Was ist Sandbanks (bei Poole) bekannt für?',o:['Surfen','Teuerste Grundstückspreise Europas','Breitester Strand Englands','Fossilienfunde'],a:1,f:'Sandbanks ist nach Monaco und Manhattan eines der teuersten Grundstücksgebiete der Welt!'},
+  {q:'Wie heißen die Wächter im Tower of London?',o:['Tower Guards','Beefeaters (Yeoman Warders)','Palace Guards','Royal Sentinels'],a:1,f:'Die Yeoman Warders, auch Beefeaters genannt, bewachen den Tower seit 1485!'}
 ];
-let QS=false,QI=0,QSCO=0,QANS=false;
+var QS=false,QI=0,QSCO=0,QANS=false;
+
 function startQuiz(){QS=true;QI=0;QSCO=0;QANS=false;document.getElementById('qrestart').style.display='none';renderQ();}
 function renderQ(){
-  if(QI>=QQ.length){document.getElementById('qq').textContent='Quiz beendet! '+QSCO+'/'+QQ.length+' Punkte. '+(QSCO>=8?'Ausgezeichnet!':QSCO>=5?'Gut gemacht!':'Weiter ueben!');document.getElementById('qopts').innerHTML='';document.getElementById('qfb').style.display='none';document.getElementById('qnext').style.display='none';document.getElementById('qrestart').style.display='inline-block';document.getElementById('qscore').textContent=QSCO+'/'+QQ.length;return;}
-  const q=QQ[QI];document.getElementById('qq').textContent=(QI+1)+'/'+QQ.length+' - '+q.q;document.getElementById('qscore').textContent=QSCO+'/'+QI;
-  const el=document.getElementById('qopts');el.innerHTML='';QANS=false;document.getElementById('qfb').style.display='none';document.getElementById('qnext').style.display='none';
-  q.o.forEach((o,i)=>{const b=document.createElement('button');b.className='qopt';b.textContent=o;b.onclick=()=>ansQ(i,b);el.appendChild(b);});
+  if(QI>=QQ.length){
+    document.getElementById('qq').textContent='Quiz beendet! '+QSCO+'/'+QQ.length+' Punkte. '+(QSCO>=8?'🏆 Ausgezeichnet!':QSCO>=5?'👏 Gut gemacht!':'📚 Weiter üben!');
+    document.getElementById('qopts').innerHTML='';
+    document.getElementById('qfb').style.display='none';
+    document.getElementById('qnext').style.display='none';
+    document.getElementById('qrestart').style.display='inline-block';
+    document.getElementById('qscore').textContent=QSCO+'/'+QQ.length;
+    return;
+  }
+  var q=QQ[QI];
+  document.getElementById('qq').textContent=(QI+1)+'/'+QQ.length+' – '+q.q;
+  document.getElementById('qscore').textContent=QSCO+'/'+QI;
+  var el=document.getElementById('qopts');el.innerHTML='';QANS=false;
+  document.getElementById('qfb').style.display='none';
+  document.getElementById('qnext').style.display='none';
+  for(var i=0;i<q.o.length;i++){
+    var b=document.createElement('button');
+    b.className='qopt';b.textContent=q.o[i];
+    b.setAttribute('data-i',i);
+    b.onclick=function(){ansQ(parseInt(this.getAttribute('data-i')),this);};
+    el.appendChild(b);
+  }
 }
 function ansQ(ch,btn){
-  if(QANS)return;QANS=true;const q=QQ[QI];
+  if(QANS)return;QANS=true;
+  var q=QQ[QI];
   document.querySelectorAll('.qopt')[q.a].classList.add('correct');
-  const fb=document.getElementById('qfb');
-  if(ch===q.a){QSCO++;btn.classList.add('correct');fb.textContent='Richtig! '+q.f;fb.style.background='#d8f3dc';fb.style.color='#2d6a4f';}
-  else{btn.classList.add('wrong');fb.textContent='Leider falsch. '+q.f;fb.style.background='#ffe0e0';fb.style.color='#cf142b';}
-  fb.style.display='block';document.getElementById('qnext').style.display='inline-block';document.getElementById('qscore').textContent=QSCO+'/'+(QI+1);
+  var fb=document.getElementById('qfb');
+  if(ch===q.a){QSCO++;btn.classList.add('correct');fb.textContent='✅ Richtig! '+q.f;fb.style.background='#d8f3dc';fb.style.color='#2d6a4f';}
+  else{btn.classList.add('wrong');fb.textContent='❌ Leider falsch. '+q.f;fb.style.background='#ffe0e0';fb.style.color='#cf142b';}
+  fb.style.display='block';
+  document.getElementById('qnext').style.display='inline-block';
+  document.getElementById('qscore').textContent=QSCO+'/'+(QI+1);
 }
 function nextQ(){QI++;renderQ();}
 
