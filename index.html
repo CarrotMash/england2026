@@ -261,7 +261,7 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
       <div class="hcu"><span class="hcn" id="cd-mins">-</span><span class="hcl">Min.</span></div>
     </div>
     <div class="hdl">FR6134 &middot; Luebeck 16:20 &rarr; Stansted &middot; 2 Erw. + 3 Kinder &middot; 11 Naechte</div>
-    <button class="hbtn" onclick="openMenu()"><span style="font-size:1.1rem">&#9776;</span><span style="font-family:Playfair Display,serif;font-size:1.05rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;">Menu</span></button>
+    <button class="hbtn" onclick="openMenu()"><span style="font-size:1.1rem">&#9776;</span><span style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;">Menu</span></button>
   </div>
   <div class="jackbar"></div>
 </div>
@@ -283,7 +283,7 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
 <div class="moverlay" id="moverlay" onclick="closeMenu(event)">
   <div class="msheet">
     <div class="msh">
-      <span style="font-family:Playfair Display,serif;font-size:1.1rem;font-weight:700;color:white;letter-spacing:2px;text-transform:uppercase;">&#127468;&#127463; England 2026</span>
+      <span style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:white;letter-spacing:2px;text-transform:uppercase;">&#127468;&#127463; England 2026</span>
       <div style="display:flex;align-items:center;gap:8px;"><span class="mwho" id="mwho"></span><button class="xcl" onclick="closeMenu()">&#x2715;</button></div>
     </div>
     <div class="mlbl">&#127963; London &middot; 13.&ndash;19. Juli</div>
@@ -397,14 +397,14 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
 <div id="regen" class="sec">
 <div class="sh">Regentag-Plan</div><div class="ssh">Into each life some rain must fall</div>
 <div class="rbanner"><div class="rbico">&#9748;</div><div><h3>Es regnet - kein Problem!</h3><p>Die besten wetterunabhaengigen Aktivitaeten</p></div></div>
-<div style="font-family:Playfair Display,serif;font-weight:700;color:var(--navy);margin-bottom:8px;">London - Indoor</div>
+<div style="font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);margin-bottom:8px;">London - Indoor</div>
 <div class="card na"><div class="ct">Natural History Museum</div><div class="cm">South Kensington - Kostenlos - 3-4 Std.</div><div class="cx">Blauwalskelett, Dinos, Vulkane. Kostenlos und riesig. Perfekter Regentag!</div><div><span class="tag tv">Kostenlos</span><span class="tag tn">Indoor</span></div></div>
 <div class="card na"><div class="ct">Science Museum</div><div class="cm">South Kensington - Kostenlos - 2-3 Std.</div><div class="cx">Weltraumkapseln, Dampfmaschinen, interaktive Stationen. Direkt neben NHM!</div><div><span class="tag tv">Kostenlos</span></div></div>
 <div class="card na"><div class="ct">British Museum</div><div class="cm">Tottenham Court Rd - Kostenlos - 2-3 Std.</div><div class="cx">Rosetta Stone, aegyptische Mumien, griechische Tempel. Fuer Mila besonders interessant.</div><div><span class="tag tv">Kostenlos</span></div></div>
 <div class="card na"><div class="ct">West End Musical</div><div class="cm">Covent Garden</div><div class="cx">Regentag = perfekter Abend-Anlass! The Lion King, Matilda, Back to the Future.</div><div><span class="tag tr">Abends</span><span class="tag tg">Erlebnis</span></div></div>
 <div class="card na"><div class="ct">Covent Garden Shopping</div><div class="cx">Strassenmusiker, Haendler, Cafes unter Glasdach. Oxford Street fuer Shopping. Mila-Pflicht!</div></div>
 <div class="bdiv"><span>&#9749;</span></div>
-<div style="font-family:Playfair Display,serif;font-weight:700;color:var(--teal);margin-bottom:8px;">Poole - Indoor</div>
+<div style="font-family:'Playfair Display',serif;font-weight:700;color:var(--teal);margin-bottom:8px;">Poole - Indoor</div>
 <div class="card ta"><div class="ct">Waterfront Museum Poole</div><div class="cm">4 High St, Poole Quay</div><div class="cx">Geschichte des Poole Harbour - Piraten, Haendler, Entdecker.</div><div><span class="tag tt">Museum</span></div></div>
 <div class="card ta"><div class="ct">Bowling &amp; Kino Bournemouth</div><div class="cm">Bus nach Bournemouth</div><div class="cx">Bowling, Kino, Restaurant - alles unter einem Dach fuer den kompletten Regentag.</div></div>
 <div class="card ta"><div class="ct">Afternoon Tea in Poole Old Town</div><div class="cx">Scones, Clotted Cream, Sandwiches - echter britischer Lifestyle bei Regen!</div><div><span class="tag tg">Gemuetlich</span></div></div>
@@ -712,11 +712,18 @@ function updateWho(){
   for(let i=0;i<40;i++){const s=document.createElement('div');s.className='star';s.style.cssText='left:'+Math.random()*100+'%;top:'+Math.random()*100+'%;animation-delay:'+Math.random()*4+'s;opacity:'+(Math.random()*.6+.1);c.appendChild(s);}
 })();
 function updCD(){
-  const d=new Date('2026-07-13T16:20:00')-new Date();
-  if(d<=0){document.getElementById('cd-days').textContent='\u2708';return;}
-  document.getElementById('cd-days').textContent=Math.floor(d/86400000);
-  document.getElementById('cd-hours').textContent=String(Math.floor((d%86400000)/3600000)).padStart(2,'0');
-  document.getElementById('cd-mins').textContent=String(Math.floor((d%3600000)/60000)).padStart(2,'0');
+  try{
+    const d=new Date('2026-07-13T14:20:00Z')-new Date();
+    if(d<=0){
+      document.getElementById('cd-days').textContent='✈️';
+      document.getElementById('cd-hours').textContent='00';
+      document.getElementById('cd-mins').textContent='00';
+      return;
+    }
+    document.getElementById('cd-days').textContent=Math.floor(d/86400000);
+    document.getElementById('cd-hours').textContent=String(Math.floor((d%86400000)/3600000)).padStart(2,'0');
+    document.getElementById('cd-mins').textContent=String(Math.floor((d%3600000)/60000)).padStart(2,'0');
+  }catch(e){console.error('Countdown error:',e);}
 }
 updCD();setInterval(updCD,30000);
 
