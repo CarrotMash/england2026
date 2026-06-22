@@ -246,12 +246,12 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
     <rect x="0" y="233" width="400" height="8" fill="#0a1628"/>
   </svg>
   <div class="hero-content">
-    <span class="hero-flag">&#127468;&#127463;</span>
+    <span class="hero-flag">🇬🇧</span>
     <div class="hero-title">England 2026</div>
-    <div class="hero-sub">Manuela, Sven, Mila, Jojo &amp; Mikko</div>
+    <div class="hero-sub">Manuela, Sven, Mila, Jojo & Mikko</div>
     <div class="hphases">
-      <div class="ppill" onclick="openSec('london_phase')">&#127963; London &middot; 13.&ndash;19. Juli</div>
-      <div class="ppill" onclick="openSec('poole_phase')">&#9749; Poole &middot; 19.&ndash;24. Juli</div>
+      <div class="ppill" onclick="openSec('london_phase')">&#127963; London · 13.–19. Juli</div>
+      <div class="ppill" onclick="openSec('poole_phase')">&#9749; Poole · 19.–24. Juli</div>
     </div>
     <div class="hcd">
       <div class="hcu"><span class="hcn" id="cd-days">-</span><span class="hcl">Tage</span></div>
@@ -260,22 +260,22 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
       <div class="hcs">:</div>
       <div class="hcu"><span class="hcn" id="cd-mins">-</span><span class="hcl">Min.</span></div>
     </div>
-    <div class="hdl">FR6134 &middot; Luebeck 16:20 &rarr; Stansted &middot; 2 Erw. + 3 Kinder &middot; 11 Naechte</div>
-    <button class="hbtn" onclick="openMenu()"><span style="font-size:1.1rem">&#9776;</span><span style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;">Menu</span></button>
+    <div class="hdl">FR6134 · Luebeck 16:20 → Stansted · 2 Erw. + 3 Kinder · 11 Naechte</div>
+    <button class="hbtn" onclick="openMenu()"><span style="font-size:1.1rem">☰</span><span style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;">Menu</span></button>
   </div>
   <div class="jackbar"></div>
 </div>
 
 <!-- PERSON SCREEN -->
 <div class="pscreen" id="pscreen">
-  <h2>&#127468;&#127463; Wer bist du?</h2>
+  <h2>🇬🇧 Wer bist du?</h2>
   <p>Abstimmungen, Tagebuch und Checklisten werden dann fuer dich gespeichert</p>
   <div class="pgrid">
-    <div class="pbtn" onclick="selectPerson('Manuela')"><span class="pbi">&#128105;</span><span class="pbn">Manuela</span><span class="pbr">Erwachsener</span></div>
-    <div class="pbtn" onclick="selectPerson('Sven')"><span class="pbi">&#128104;</span><span class="pbn">Sven</span><span class="pbr">Erwachsener</span></div>
-    <div class="pbtn" onclick="selectPerson('Mila')"><span class="pbi">&#128103;</span><span class="pbn">Mila</span><span class="pbr">15 Jahre</span></div>
-    <div class="pbtn" onclick="selectPerson('Jojo')"><span class="pbi">&#128102;</span><span class="pbn">Jojo</span><span class="pbr">12 Jahre</span></div>
-    <div class="pbtn" onclick="selectPerson('Mikko')" style="grid-column:1/-1;max-width:160px;margin:0 auto;"><span class="pbi">&#128102;</span><span class="pbn">Mikko</span><span class="pbr">12 Jahre</span></div>
+    <div class="pbtn" onclick="selectPerson('Manuela')"><span class="pbi">👩</span><span class="pbn">Manuela</span><span class="pbr">Erwachsener</span></div>
+    <div class="pbtn" onclick="selectPerson('Sven')"><span class="pbi">👨</span><span class="pbn">Sven</span><span class="pbr">Erwachsener</span></div>
+    <div class="pbtn" onclick="selectPerson('Mila')"><span class="pbi">👧</span><span class="pbn">Mila</span><span class="pbr">15 Jahre</span></div>
+    <div class="pbtn" onclick="selectPerson('Jojo')"><span class="pbi">👦</span><span class="pbn">Jojo</span><span class="pbr">12 Jahre</span></div>
+    <div class="pbtn" onclick="selectPerson('Mikko')" style="grid-column:1/-1;max-width:160px;margin:0 auto;"><span class="pbi">👦</span><span class="pbn">Mikko</span><span class="pbr">12 Jahre</span></div>
   </div>
 </div>
 
@@ -283,49 +283,49 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
 <div class="moverlay" id="moverlay" onclick="closeMenu(event)">
   <div class="msheet">
     <div class="msh">
-      <span style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:white;letter-spacing:2px;text-transform:uppercase;">&#127468;&#127463; England 2026</span>
-      <div style="display:flex;align-items:center;gap:8px;"><span class="mwho" id="mwho"></span><button class="xcl" onclick="closeMenu()">&#x2715;</button></div>
+      <span style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:white;letter-spacing:2px;text-transform:uppercase;">🇬🇧 England 2026</span>
+      <div style="display:flex;align-items:center;gap:8px;"><span class="mwho" id="mwho"></span><button class="xcl" onclick="closeMenu()">✕</button></div>
     </div>
-    <div class="mlbl">&#127963; London &middot; 13.&ndash;19. Juli</div>
+    <div class="mlbl">&#127963; London · 13.–19. Juli</div>
     <div class="mtiles">
-      <div class="mt" onclick="openSec('wetter')"><span class="mti">&#127782;</span><span class="mtl">Wetter</span><span class="mts">Live</span></div>
-      <div class="mt" onclick="openSec('london_phase')"><span class="mti">&#127963;</span><span class="mtl">London</span><span class="mts">Phase 1</span></div>
-      <div class="mt" onclick="openSec('sehenswuerdigkeiten')"><span class="mti">&#127905;</span><span class="mtl">Sights</span><span class="mts">Must-sees</span></div>
-      <div class="mt" onclick="openSec('oepnv')"><span class="mti">&#128647;</span><span class="mtl">OEPNV</span><span class="mts">Tube &amp; Bus</span></div>
-      <div class="mt" onclick="openSec('restaurants')"><span class="mti">&#129830;</span><span class="mtl">Essen</span><span class="mts">Pubs &amp; Cafes</span></div>
-      <div class="mt" onclick="openSec('greenwich')"><span class="mti">&#9875;</span><span class="mtl">Greenwich</span><span class="mts">Unser Kiez</span></div>
+      <div class="mt" onclick="openSec('wetter')"><span class="mti">🌦</span><span class="mtl">Wetter</span><span class="mts">Live</span></div>
+      <div class="mt" onclick="openSec('london_phase')"><span class="mti">🏙</span><span class="mtl">London</span><span class="mts">Phase 1</span></div>
+      <div class="mt" onclick="openSec('sehenswuerdigkeiten')"><span class="mti">🎡</span><span class="mtl">Sights</span><span class="mts">Must-sees</span></div>
+      <div class="mt" onclick="openSec('oepnv')"><span class="mti">🚇</span><span class="mtl">OEPNV</span><span class="mts">Tube & Bus</span></div>
+      <div class="mt" onclick="openSec('restaurants')"><span class="mti">🫖</span><span class="mtl">Essen</span><span class="mts">Pubs & Cafes</span></div>
+      <div class="mt" onclick="openSec('greenwich')"><span class="mti">⚓</span><span class="mtl">Greenwich</span><span class="mts">Unser Kiez</span></div>
     </div>
-    <div class="mlbl">&#9749; Poole &middot; 19.&ndash;24. Juli</div>
+    <div class="mlbl">&#9749; Poole · 19.–24. Juli</div>
     <div class="mtiles">
-      <div class="mt" onclick="openSec('poole_phase')"><span class="mti">&#9749;</span><span class="mtl">Poole</span><span class="mts">Phase 2</span></div>
-      <div class="mt" onclick="openSec('poole_sights')"><span class="mti">&#127958;</span><span class="mtl">Dorset</span><span class="mts">Ausfluege</span></div>
-      <div class="mt" onclick="openSec('poole_oepnv')"><span class="mti">&#128652;</span><span class="mtl">Bus+Faehre</span><span class="mts">Vor Ort</span></div>
+      <div class="mt" onclick="openSec('poole_phase')"><span class="mti">⛵</span><span class="mtl">Poole</span><span class="mts">Phase 2</span></div>
+      <div class="mt" onclick="openSec('poole_sights')"><span class="mti">🏖</span><span class="mtl">Dorset</span><span class="mts">Ausfluege</span></div>
+      <div class="mt" onclick="openSec('poole_oepnv')"><span class="mti">🚌</span><span class="mtl">Bus+Faehre</span><span class="mts">Vor Ort</span></div>
     </div>
-    <div class="mlbl">&#128202; Planen &amp; Erleben</div>
+    <div class="mlbl">&#128202; Planen & Erleben</div>
     <div class="mtiles">
-      <div class="mt" onclick="openSec('vote')"><span class="mti">&#128499;</span><span class="mtl">Abstimmung</span><span class="mts">Was wollen wir?</span></div>
-      <div class="mt" onclick="openSec('budget')"><span class="mti">&#128183;</span><span class="mtl">Budget</span><span class="mts">Ausgaben</span></div>
-      <div class="mt" onclick="openSec('checklist')"><span class="mti">&#9989;</span><span class="mtl">Checkliste</span><span class="mts">Tagespack</span></div>
-      <div class="mt" onclick="openSec('tagebuch')"><span class="mti">&#128214;</span><span class="mtl">Tagebuch</span><span class="mts">11 Tage</span></div>
-      <div class="mt" onclick="openSec('regen')"><span class="mti">&#9748;</span><span class="mtl">Regentag</span><span class="mts">Indoor-Plan</span></div>
+      <div class="mt" onclick="openSec('vote')"><span class="mti">🗳</span><span class="mtl">Abstimmung</span><span class="mts">Was wollen wir?</span></div>
+      <div class="mt" onclick="openSec('budget')"><span class="mti">💷</span><span class="mtl">Budget</span><span class="mts">Ausgaben</span></div>
+      <div class="mt" onclick="openSec('checklist')"><span class="mti">✅</span><span class="mtl">Checkliste</span><span class="mts">Tagespack</span></div>
+      <div class="mt" onclick="openSec('tagebuch')"><span class="mti">📖</span><span class="mtl">Tagebuch</span><span class="mts">11 Tage</span></div>
+      <div class="mt" onclick="openSec('regen')"><span class="mti">☔</span><span class="mtl">Regentag</span><span class="mts">Indoor-Plan</span></div>
     </div>
     <div class="mlbl">&#128218; Sonstiges</div>
     <div class="mtiles">
-      <div class="mt" onclick="openSec('quiz')"><span class="mti">&#127891;</span><span class="mtl">Quiz</span><span class="mts">England-Wissen</span></div>
+      <div class="mt" onclick="openSec('quiz')"><span class="mti">🎓</span><span class="mtl">Quiz</span><span class="mts">England-Wissen</span></div>
       <div class="mt" onclick="openSec('flug')"><span class="mti">&#9992;&#65039;</span><span class="mtl">Flug</span><span class="mts">Ryanair</span></div>
-      <div class="mt" onclick="openSec('tipps')"><span class="mti">&#128161;</span><span class="mtl">Tipps</span><span class="mts">Insider</span></div>
-      <div class="mt sos" onclick="openSec('sos')"><span class="mti">&#128274;</span><span class="mtl">SOS</span><span class="mts">Notfall</span></div>
+      <div class="mt" onclick="openSec('tipps')"><span class="mti">💡</span><span class="mtl">Tipps</span><span class="mts">Insider</span></div>
+      <div class="mt sos" onclick="openSec('sos')"><span class="mti">🆘</span><span class="mtl">SOS</span><span class="mts">Notfall</span></div>
     </div>
-    <div class="mfoot">God Save the King &#128081; &middot; Safe Travels!</div>
+    <div class="mfoot">God Save the King 👑 · Safe Travels!</div>
   </div>
 </div>
 
 <!-- INNER APP -->
 <div class="appinner" id="appinner">
   <div class="ihead">
-    <button class="iback" onclick="goHome()">&#8592;</button>
+    <button class="iback" onclick="goHome()">←</button>
     <div class="ititle" id="ititle">England 2026</div>
-    <span class="wbadge" id="wbadge" onclick="showPscreen()">&#128100;</span>
+    <span class="wbadge" id="wbadge" onclick="showPscreen()">👤</span>
   </div>
 <!-- ── WETTER ── -->
 <div id="wetter" class="sec">
@@ -366,7 +366,7 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
   <label>Tag</label>
   <select id="bday"><option value="1">Tag 1 - 13. Juli - Ankunft London</option><option value="2">Tag 2 - 14. Juli - South Bank</option><option value="3">Tag 3 - 15. Juli - Tower</option><option value="4">Tag 4 - 16. Juli - Museen</option><option value="5">Tag 5 - 17. Juli - Hyde Park</option><option value="6">Tag 6 - 18. Juli - Buckingham</option><option value="7">Tag 7 - 19. Juli - Abreise Poole</option><option value="8">Tag 8 - 20. Juli - Sandbanks</option><option value="9">Tag 9 - 21. Juli - Brownsea</option><option value="10">Tag 10 - 22. Juli - Jurassic Coast</option><option value="11">Tag 11 - 23. Juli - Bournemouth</option><option value="12">Tag 12 - 24. Juli - Abreise</option></select>
   <label>Kategorie</label>
-  <select id="bcat"><option value="eintritt">Eintritt</option><option value="essen">Essen &amp; Trinken</option><option value="oepnv">OEPNV</option><option value="souvenirs">Souvenirs</option><option value="unterkunft">Unterkunft</option><option value="sonstiges">Sonstiges</option></select>
+  <select id="bcat"><option value="eintritt">Eintritt</option><option value="essen">Essen & Trinken</option><option value="oepnv">OEPNV</option><option value="souvenirs">Souvenirs</option><option value="unterkunft">Unterkunft</option><option value="sonstiges">Sonstiges</option></select>
   <label>Beschreibung</label><input type="text" id="bdesc" placeholder="z.B. Tower of London x5">
   <label>Betrag (GBP)</label><input type="number" id="bamt" placeholder="0.00" min="0" step="0.01">
   <button class="addbtn" onclick="addBudget()">+ Ausgabe hinzufuegen</button>
@@ -396,17 +396,17 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
 <!-- ── REGENTAG ── -->
 <div id="regen" class="sec">
 <div class="sh">Regentag-Plan</div><div class="ssh">Into each life some rain must fall</div>
-<div class="rbanner"><div class="rbico">&#9748;</div><div><h3>Es regnet - kein Problem!</h3><p>Die besten wetterunabhaengigen Aktivitaeten</p></div></div>
+<div class="rbanner"><div class="rbico">☔</div><div><h3>Es regnet - kein Problem!</h3><p>Die besten wetterunabhaengigen Aktivitaeten</p></div></div>
 <div style="font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);margin-bottom:8px;">London - Indoor</div>
 <div class="card na"><div class="ct">Natural History Museum</div><div class="cm">South Kensington - Kostenlos - 3-4 Std.</div><div class="cx">Blauwalskelett, Dinos, Vulkane. Kostenlos und riesig. Perfekter Regentag!</div><div><span class="tag tv">Kostenlos</span><span class="tag tn">Indoor</span></div></div>
 <div class="card na"><div class="ct">Science Museum</div><div class="cm">South Kensington - Kostenlos - 2-3 Std.</div><div class="cx">Weltraumkapseln, Dampfmaschinen, interaktive Stationen. Direkt neben NHM!</div><div><span class="tag tv">Kostenlos</span></div></div>
 <div class="card na"><div class="ct">British Museum</div><div class="cm">Tottenham Court Rd - Kostenlos - 2-3 Std.</div><div class="cx">Rosetta Stone, aegyptische Mumien, griechische Tempel. Fuer Mila besonders interessant.</div><div><span class="tag tv">Kostenlos</span></div></div>
 <div class="card na"><div class="ct">West End Musical</div><div class="cm">Covent Garden</div><div class="cx">Regentag = perfekter Abend-Anlass! The Lion King, Matilda, Back to the Future.</div><div><span class="tag tr">Abends</span><span class="tag tg">Erlebnis</span></div></div>
 <div class="card na"><div class="ct">Covent Garden Shopping</div><div class="cx">Strassenmusiker, Haendler, Cafes unter Glasdach. Oxford Street fuer Shopping. Mila-Pflicht!</div></div>
-<div class="bdiv"><span>&#9749;</span></div>
+<div class="bdiv"><span>⛵</span></div>
 <div style="font-family:'Playfair Display',serif;font-weight:700;color:var(--teal);margin-bottom:8px;">Poole - Indoor</div>
 <div class="card ta"><div class="ct">Waterfront Museum Poole</div><div class="cm">4 High St, Poole Quay</div><div class="cx">Geschichte des Poole Harbour - Piraten, Haendler, Entdecker.</div><div><span class="tag tt">Museum</span></div></div>
-<div class="card ta"><div class="ct">Bowling &amp; Kino Bournemouth</div><div class="cm">Bus nach Bournemouth</div><div class="cx">Bowling, Kino, Restaurant - alles unter einem Dach fuer den kompletten Regentag.</div></div>
+<div class="card ta"><div class="ct">Bowling & Kino Bournemouth</div><div class="cm">Bus nach Bournemouth</div><div class="cx">Bowling, Kino, Restaurant - alles unter einem Dach fuer den kompletten Regentag.</div></div>
 <div class="card ta"><div class="ct">Afternoon Tea in Poole Old Town</div><div class="cx">Scones, Clotted Cream, Sandwiches - echter britischer Lifestyle bei Regen!</div><div><span class="tag tg">Gemuetlich</span></div></div>
 </div>
 
@@ -605,15 +605,15 @@ Badezeug fuer Poole nicht vergessen!
 <div id="tipps" class="sec">
 <div class="sh">Familien-Tipps</div><div class="ssh">Insider-Wissen fuer England mit Kindern</div>
 <div class="card na"><div class="ct">Geld und Kosten</div><div class="cx">
-<div class="tiprow"><div class="tipico">&#128183;</div><div class="tiptx"><strong>Pfund Sterling (GBP)</strong>Kreditkarten ueberall akzeptiert. Kontaktlos ist Standard.</div></div>
-<div class="tiprow"><div class="tipico">&#127981;</div><div class="tiptx"><strong>Reisekarte</strong>Revolut oder Wise - keine Auslandsgebuehren. Vorher einrichten!</div></div>
-<div class="tiprow"><div class="tipico">&#127903;</div><div class="tiptx"><strong>Kostenlose Museen</strong>NHM, Science Museum, British Museum, Tate Modern - alle gratis!</div></div>
+<div class="tiprow"><div class="tipico">💷</div><div class="tiptx"><strong>Pfund Sterling (GBP)</strong>Kreditkarten ueberall akzeptiert. Kontaktlos ist Standard.</div></div>
+<div class="tiprow"><div class="tipico">🏦</div><div class="tiptx"><strong>Reisekarte</strong>Revolut oder Wise - keine Auslandsgebuehren. Vorher einrichten!</div></div>
+<div class="tiprow"><div class="tipico">🎟</div><div class="tiptx"><strong>Kostenlose Museen</strong>NHM, Science Museum, British Museum, Tate Modern - alle gratis!</div></div>
 </div></div>
 <div class="card ga"><div class="ct">Typisch britisch</div><div class="cx">
-<div class="tiprow"><div class="tipico">&#9730;</div><div class="tiptx"><strong>Regen</strong>Kommt kurz und heftig. Mini-Schirm immer dabei - kein Drama!</div></div>
-<div class="tiprow"><div class="tipico">&#128591;</div><div class="tiptx"><strong>Queuing</strong>Briten lieben Warteschlangen - einfach hinten anstellen!</div></div>
-<div class="tiprow"><div class="tipico">&#128694;</div><div class="tiptx"><strong>Links gehen!</strong>Auf Rolltreppen rechts stehen, links gehen - sonst boese Blicke!</div></div>
-<div class="tiprow"><div class="tipico">&#128268;</div><div class="tiptx"><strong>Stecker Typ G</strong>UK-Stecker (3 Stifte) - mindestens 2-3 Adapter kaufen!</div></div>
+<div class="tiprow"><div class="tipico">☂</div><div class="tiptx"><strong>Regen</strong>Kommt kurz und heftig. Mini-Schirm immer dabei - kein Drama!</div></div>
+<div class="tiprow"><div class="tipico">🙏</div><div class="tiptx"><strong>Queuing</strong>Briten lieben Warteschlangen - einfach hinten anstellen!</div></div>
+<div class="tiprow"><div class="tipico">🚶</div><div class="tiptx"><strong>Links gehen!</strong>Auf Rolltreppen rechts stehen, links gehen - sonst boese Blicke!</div></div>
+<div class="tiprow"><div class="tipico">🔌</div><div class="tiptx"><strong>Stecker Typ G</strong>UK-Stecker (3 Stifte) - mindestens 2-3 Adapter kaufen!</div></div>
 </div></div>
 </div>
 
@@ -641,26 +641,26 @@ Badezeug fuer Poole nicht vergessen!
 </div><!-- end appinner -->
 <!-- BOTTOM NAV -->
 <div class="bnav" id="bnav">
-  <button class="nb" id="nb-wetter" onclick="openSec('wetter')"><span class="ni">&#127782;</span><span class="nl">Wetter</span></button>
-  <button class="nb" id="nb-vote" onclick="openSec('vote')"><span class="ni">&#128499;</span><span class="nl">Abstimmung</span></button>
-  <button class="nb" id="nb-budget" onclick="openSec('budget')"><span class="ni">&#128183;</span><span class="nl">Budget</span></button>
-  <button class="nb" id="nb-more" onclick="toggleMore()"><span class="ni">&#9776;</span><span class="nl">Mehr</span></button>
+  <button class="nb" id="nb-wetter" onclick="openSec('wetter')"><span class="ni">🌦</span><span class="nl">Wetter</span></button>
+  <button class="nb" id="nb-vote" onclick="openSec('vote')"><span class="ni">🗳</span><span class="nl">Abstimmung</span></button>
+  <button class="nb" id="nb-budget" onclick="openSec('budget')"><span class="ni">💷</span><span class="nl">Budget</span></button>
+  <button class="nb" id="nb-more" onclick="toggleMore()"><span class="ni">☰</span><span class="nl">Mehr</span></button>
 </div>
 <div class="mmenu" id="mmenu">
-  <div class="mmi" onclick="openSec('london_phase')"><span class="mmii">&#127963;</span><span class="mmil">London</span></div>
-  <div class="mmi" onclick="openSec('poole_phase')"><span class="mmii">&#9749;</span><span class="mmil">Poole</span></div>
-  <div class="mmi" onclick="openSec('sehenswuerdigkeiten')"><span class="mmii">&#127905;</span><span class="mmil">Sights</span></div>
-  <div class="mmi" onclick="openSec('oepnv')"><span class="mmii">&#128647;</span><span class="mmil">OEPNV</span></div>
-  <div class="mmi" onclick="openSec('checklist')"><span class="mmii">&#9989;</span><span class="mmil">Checkliste</span></div>
-  <div class="mmi" onclick="openSec('tagebuch')"><span class="mmii">&#128214;</span><span class="mmil">Tagebuch</span></div>
-  <div class="mmi" onclick="openSec('regen')"><span class="mmii">&#9748;</span><span class="mmil">Regen</span></div>
-  <div class="mmi" onclick="openSec('restaurants')"><span class="mmii">&#129830;</span><span class="mmil">Essen</span></div>
-  <div class="mmi" onclick="openSec('quiz')"><span class="mmii">&#127891;</span><span class="mmil">Quiz</span></div>
-  <div class="mmi" onclick="openSec('flug')"><span class="mmii">&#9992;</span><span class="mmil">Flug</span></div>
-  <div class="mmi" onclick="openSec('tipps')"><span class="mmii">&#128161;</span><span class="mmil">Tipps</span></div>
-  <div class="mmi" onclick="openSec('sos')"><span class="mmii">&#128274;</span><span class="mmil">SOS</span></div>
+  <div class="mmi" onclick="openSec('london_phase')"><span class="mmii">🏙</span><span class="mmil">London</span></div>
+  <div class="mmi" onclick="openSec('poole_phase')"><span class="mmii">⛵</span><span class="mmil">Poole</span></div>
+  <div class="mmi" onclick="openSec('sehenswuerdigkeiten')"><span class="mmii">🎡</span><span class="mmil">Sights</span></div>
+  <div class="mmi" onclick="openSec('oepnv')"><span class="mmii">🚇</span><span class="mmil">OEPNV</span></div>
+  <div class="mmi" onclick="openSec('checklist')"><span class="mmii">✅</span><span class="mmil">Checkliste</span></div>
+  <div class="mmi" onclick="openSec('tagebuch')"><span class="mmii">📖</span><span class="mmil">Tagebuch</span></div>
+  <div class="mmi" onclick="openSec('regen')"><span class="mmii">☔</span><span class="mmil">Regen</span></div>
+  <div class="mmi" onclick="openSec('restaurants')"><span class="mmii">🫖</span><span class="mmil">Essen</span></div>
+  <div class="mmi" onclick="openSec('quiz')"><span class="mmii">🎓</span><span class="mmil">Quiz</span></div>
+  <div class="mmi" onclick="openSec('flug')"><span class="mmii">✈️</span><span class="mmil">Flug</span></div>
+  <div class="mmi" onclick="openSec('tipps')"><span class="mmii">💡</span><span class="mmil">Tipps</span></div>
+  <div class="mmi" onclick="openSec('sos')"><span class="mmii">🆘</span><span class="mmil">SOS</span></div>
 </div>
-<div class="footer">England 2026 - <span>Manuela, Sven, Mila, Jojo &amp; Mikko</span> &#127468;&#127463; - God Save the King!</div>
+<div class="footer">England 2026 - <span>Manuela, Sven, Mila, Jojo & Mikko</span> 🇬🇧 - God Save the King!</div>
 
 <script>
 // ── SUPABASE ──
@@ -699,8 +699,8 @@ function selectPerson(n){
 }
 function needWho(sec){if(!WHO){PENDING=sec;showPscreen();return true;}return false;}
 function updateWho(){
-  const ic={Manuela:'&#128105;',Sven:'&#128104;',Mila:'&#128103;',Jojo:'&#128102;',Mikko:'&#128102;'};
-  const lbl=WHO?(ic[WHO]||'&#128100;')+' '+WHO:'&#128100; Wer bist du?';
+  const ic={Manuela:'👩',Sven:'👨',Mila:'👧',Jojo:'👦',Mikko:'👦'};
+  const lbl=WHO?(ic[WHO]||'👤')+' '+WHO:'👤 Wer bist du?';
   document.getElementById('wbadge').innerHTML=lbl;
   document.getElementById('mwho').textContent=WHO||'';
   const vw=document.getElementById('vwho');if(vw)vw.textContent=WHO||'-';
@@ -825,14 +825,14 @@ function renderVP(ph){
   ACTS[ph].forEach(a=>{
     const v=VD[a.id]||{};const tot=Object.values(v).reduce((s,x)=>s+x,0);
     const my=v[WHO]||0;const sc=tot>0?'pos':tot<0?'neg':'neu';
-    el.innerHTML+=`<div class="vi"><div class="vname">${a.n}</div><div class="vscore ${sc}">${tot>0?'+':''}${tot}</div><div class="vbtns"><button class="vbtn up${my===1?' voted':''}" onclick="castV('${a.id}','${a.n}','${ph}',1)">&#128077;</button><button class="vbtn dn${my===-1?' voted':''}" onclick="castV('${a.id}','${a.n}','${ph}',-1)">&#128078;</button></div></div>`;
+    el.innerHTML+=`<div class="vi"><div class="vname">${a.n}</div><div class="vscore ${sc}">${tot>0?'+':''}${tot}</div><div class="vbtns"><button class="vbtn up${my===1?' voted':''}" onclick="castV('${a.id}','${a.n}','${ph}',1)">👍</button><button class="vbtn dn${my===-1?' voted':''}" onclick="castV('${a.id}','${a.n}','${ph}',-1)">👎</button></div></div>`;
   });
 }
 function renderRank(){
   const all=[...ACTS.london,...ACTS.poole];
   const sc=all.map(a=>{const v=VD[a.id]||{};return{...a,tot:Object.values(v).reduce((s,x)=>s+x,0)};}).sort((a,b)=>b.tot-a.tot);
   const mx=Math.max(...sc.map(a=>Math.abs(a.tot)),1);
-  document.getElementById('vlist-rank').innerHTML=sc.map((a,i)=>`<div class="ri"><div class="rp">${i<3?['&#127947;','&#129352;','&#129353;'][i]:i+1}</div><div class="rbw"><div class="rn">${a.n}</div><div class="rbar"><div class="rfill${a.tot<0?' neg':''}" style="width:${Math.round(Math.abs(a.tot)/mx*100)}%"></div></div></div><div class="rnum ${a.tot>0?'pos':a.tot<0?'neg':''}">${a.tot>0?'+':''}${a.tot}</div></div>`).join('');
+  document.getElementById('vlist-rank').innerHTML=sc.map((a,i)=>`<div class="ri"><div class="rp">${i<3?['🏋','🥈','🥉'][i]:i+1}</div><div class="rbw"><div class="rn">${a.n}</div><div class="rbar"><div class="rfill${a.tot<0?' neg':''}" style="width:${Math.round(Math.abs(a.tot)/mx*100)}%"></div></div></div><div class="rnum ${a.tot>0?'pos':a.tot<0?'neg':''}">${a.tot>0?'+':''}${a.tot}</div></div>`).join('');
 }
 async function castV(id,nm,ph,v){
   if(!WHO)return;
@@ -847,7 +847,7 @@ function switchVP(ph,btn){
 }
 
 // ── BUDGET ──
-const CATI={eintritt:'&#127903;',essen:'&#127869;',oepnv:'&#128647;',souvenirs:'&#128717;',unterkunft:'&#127968;',sonstiges:'&#128230;'};
+const CATI={eintritt:'🎟',essen:'🍽',oepnv:'🚇',souvenirs:'🛍',unterkunft:'🏠',sonstiges:'📦'};
 const DATES=['13. Juli','14. Juli','15. Juli','16. Juli','17. Juli','18. Juli','19. Juli','20. Juli','21. Juli','22. Juli','23. Juli','24. Juli'];
 let BD=[];let BF='all';
 
@@ -871,7 +871,7 @@ function renderBudget(){
   const filt=BF==='all'?BD:BD.filter(r=>r.day_num===BF);
   const bl=document.getElementById('blist');
   if(!filt.length){bl.innerHTML='<div style="text-align:center;color:var(--grey);padding:20px;font-style:italic;">Noch keine Ausgaben.</div>';return;}
-  bl.innerHTML=filt.map(r=>`<div class="card" style="padding:10px 10px 10px 20px;margin-bottom:6px;"><div class="bli"><span class="bcat">${CATI[r.category]||''} ${r.category}</span><div class="bld">${r.description||'-'} <span style="font-size:.72rem;color:var(--grey);">Tag ${r.day_num} - ${r.added_by||''}</span></div><div class="bla">£${parseFloat(r.amount_gbp).toFixed(2)}</div><button class="bdel" onclick="delB('${r.id}')">&#128465;</button></div></div>`).join('');
+  bl.innerHTML=filt.map(r=>`<div class="card" style="padding:10px 10px 10px 20px;margin-bottom:6px;"><div class="bli"><span class="bcat">${CATI[r.category]||''} ${r.category}</span><div class="bld">${r.description||'-'} <span style="font-size:.72rem;color:var(--grey);">Tag ${r.day_num} - ${r.added_by||''}</span></div><div class="bla">£${parseFloat(r.amount_gbp).toFixed(2)}</div><button class="bdel" onclick="delB('${r.id}')">🗑</button></div></div>`).join('');
 }
 function setBF(f,btn){BF=f;document.querySelectorAll('.dfb').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderBudget();}
 async function addBudget(){
