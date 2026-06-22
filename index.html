@@ -202,6 +202,16 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
 .syncmsg.ok{color:var(--teal);}.syncmsg.err{color:var(--red);}.syncmsg.wait{color:var(--grey);}
 .footer{background:var(--navy);color:rgba(255,255,255,.5);text-align:center;padding:16px;font-size:.75rem;font-family:"IM Fell English",serif;font-style:italic;margin-top:24px;}
 .footer span{color:var(--gold);}
+.flashcard{perspective:600px;cursor:pointer;margin-bottom:12px;}
+.fc-inner{position:relative;width:100%;min-height:120px;transition:transform .5s;transform-style:preserve-3d;}
+.flashcard.flipped .fc-inner{transform:rotateY(180deg);}
+.fc-front,.fc-back{position:absolute;width:100%;min-height:120px;backface-visibility:hidden;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center;}
+.fc-front{background:var(--navy);color:white;}
+.fc-back{background:var(--teal);color:white;transform:rotateY(180deg);}
+.fc-hint{font-size:.72rem;opacity:.6;margin-top:8px;}
+.fc-de{font-family:"Playfair Display",serif;font-size:1.2rem;font-weight:700;}
+.fc-en{font-family:"Playfair Display",serif;font-size:1.1rem;font-weight:700;margin-bottom:6px;}
+.fc-pr{font-size:.82rem;font-style:italic;opacity:.85;}
 </style>
 </head>
 <body>
@@ -298,10 +308,18 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
         <button class="xcl" onclick="closeMenu()">✕</button>
       </div>
     </div>
+    <div class="mlbl">📍 Täglich unterwegs</div>
+    <div class="mtiles">
+      <div class="mt" onclick="openSec('tagesplaner')"><span class="mti">📅</span><span class="mtl">Tagesplan</span><span class="mts">Morgen·Mittag·Abend</span></div>
+      <div class="mt" onclick="openSec('checklist')"><span class="mti">✅</span><span class="mtl">Checkliste</span><span class="mts">Startklar?</span></div>
+      <div class="mt" onclick="openSec('wetter')"><span class="mti">🌦</span><span class="mtl">Wetter</span><span class="mts">Live</span></div>
+      <div class="mt" onclick="openSec('tube')"><span class="mti">🚇</span><span class="mtl">Tube-Status</span><span class="mts">Störungen</span></div>
+      <div class="mt" onclick="openSec('budget')"><span class="mti">💷</span><span class="mtl">Budget</span><span class="mts">Ausgaben</span></div>
+      <div class="mt" onclick="openSec('regen')"><span class="mti">☔</span><span class="mtl">Regentag</span><span class="mts">Indoor-Plan</span></div>
+    </div>
     <div class="mlbl">🏙 London &middot; 13.&ndash;19. Juli</div>
     <div class="mtiles">
-      <div class="mt" onclick="openSec('wetter')"><span class="mti">🌦</span><span class="mtl">Wetter</span><span class="mts">Live</span></div>
-      <div class="mt" onclick="openSec('london_phase')"><span class="mti">🏙</span><span class="mtl">London</span><span class="mts">Phase 1</span></div>
+      <div class="mt" onclick="openSec('london_phase')"><span class="mti">🏙</span><span class="mtl">London</span><span class="mts">Übersicht</span></div>
       <div class="mt" onclick="openSec('sehenswuerdigkeiten')"><span class="mti">🎡</span><span class="mtl">Sights</span><span class="mts">Must-sees</span></div>
       <div class="mt" onclick="openSec('oepnv')"><span class="mti">🚇</span><span class="mtl">ÖPNV</span><span class="mts">Tube &amp; Bus</span></div>
       <div class="mt" onclick="openSec('restaurants')"><span class="mti">🫖</span><span class="mtl">Essen</span><span class="mts">Pubs &amp; Cafés</span></div>
@@ -309,25 +327,20 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
     </div>
     <div class="mlbl">⛵ Poole &middot; 19.&ndash;24. Juli</div>
     <div class="mtiles">
-      <div class="mt" onclick="openSec('poole_phase')"><span class="mti">⛵</span><span class="mtl">Poole</span><span class="mts">Phase 2</span></div>
+      <div class="mt" onclick="openSec('poole_phase')"><span class="mti">⛵</span><span class="mtl">Poole</span><span class="mts">Übersicht</span></div>
       <div class="mt" onclick="openSec('poole_sights')"><span class="mti">🏖</span><span class="mtl">Dorset</span><span class="mts">Ausflüge</span></div>
       <div class="mt" onclick="openSec('poole_oepnv')"><span class="mti">🚌</span><span class="mtl">Bus+Fähre</span><span class="mts">Vor Ort</span></div>
     </div>
-    <div class="mlbl">🗂 Planen &amp; Erleben</div>
+    <div class="mlbl">🎒 Erleben &amp; Erinnern</div>
     <div class="mtiles">
-      <div class="mt" onclick="openSec('vote')"><span class="mti">🗳</span><span class="mtl">Abstimmung</span><span class="mts">Was wollen wir?</span></div>
-      <div class="mt" onclick="openSec('budget')"><span class="mti">💷</span><span class="mtl">Budget</span><span class="mts">Ausgaben</span></div>
-      <div class="mt" onclick="openSec('checklist')"><span class="mti">✅</span><span class="mtl">Checkliste</span><span class="mts">Tagespack</span></div>
-      <div class="mt" onclick="openSec('tagebuch')"><span class="mti">📖</span><span class="mtl">Tagebuch</span><span class="mts">11 Tage</span></div>
-      <div class="mt" onclick="openSec('regen')"><span class="mti">☔</span><span class="mtl">Regentag</span><span class="mts">Indoor-Plan</span></div>
-      <div class="mt" onclick="openSec('tagesplaner')"><span class="mti">📅</span><span class="mtl">Tagesplan</span><span class="mts">Tag planen</span></div>
-      <div class="mt" onclick="openSec('tube')"><span class="mti">🚇</span><span class="mtl">Tube-Status</span><span class="mts">Störungen</span></div>
       <div class="mt" onclick="openSec('kinder')"><span class="mti">🧒</span><span class="mtl">Kinder</span><span class="mts">Highlights</span></div>
-      <div class="mt" onclick="openSec('phrasen')"><span class="mti">🗣</span><span class="mtl">Englisch</span><span class="mts">Phrasen</span></div>
       <div class="mt" onclick="openSec('fotos')"><span class="mti">📸</span><span class="mtl">Foto-Spots</span><span class="mts">Best Shots</span></div>
-      <div class="mt" onclick="openSec('rueckblick')"><span class="mti">🏆</span><span class="mtl">Rückblick</span><span class="mts">Highlights</span></div>
+      <div class="mt" onclick="openSec('tagebuch')"><span class="mti">📖</span><span class="mtl">Tagebuch</span><span class="mts">11 Tage</span></div>
+      <div class="mt" onclick="openSec('rueckblick')"><span class="mti">🏆</span><span class="mtl">Rückblick</span><span class="mts">Top-Erlebnisse</span></div>
+      <div class="mt" onclick="openSec('vote')"><span class="mti">🗳</span><span class="mtl">Abstimmung</span><span class="mts">Was wollen wir?</span></div>
+      <div class="mt" onclick="openSec('phrasen')"><span class="mti">🗣</span><span class="mtl">Englisch</span><span class="mts">Phrasen</span></div>
     </div>
-    <div class="mlbl">📚 Sonstiges</div>
+    <div class="mlbl">📚 Nachschlagen</div>
     <div class="mtiles">
       <div class="mt" onclick="openSec('quiz')"><span class="mti">🎓</span><span class="mtl">Quiz</span><span class="mts">England-Wissen</span></div>
       <div class="mt" onclick="openSec('flug')"><span class="mti">✈️</span><span class="mtl">Flug</span><span class="mts">Ryanair</span></div>
@@ -344,6 +357,7 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
   <button class="iback" onclick="goHome()">←</button>
   <div class="ititle" id="ititle">England 2026</div>
   <span class="wbadge" id="wbadge" onclick="showPscreen()">👤</span>
+  <button onclick="openSec('sos')" style="background:var(--red);border:none;color:white;border-radius:6px;padding:4px 10px;font-size:.75rem;font-weight:700;cursor:pointer;letter-spacing:.5px;margin-left:4px">🆘</button>
 </div>
 
 <!-- WETTER -->
@@ -805,16 +819,45 @@ Poole → London Waterloo (2 Std.) → Tube → Liverpool Street (20 Min.) → S
 <div id="phrasen" class="sec">
 <div class="sh">🗣 Englisch für unterwegs</div><div class="ssh">Die wichtigsten Sätze – für alle 5!</div>
 
-<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px" id="ph-filter">
-  <button class="fltr active" onclick="filterPh('alle',this)">Alle</button>
-  <button class="fltr" onclick="filterPh('oepnv',this)">🚇 ÖPNV</button>
-  <button class="fltr" onclick="filterPh('restaurant',this)">🍽 Essen</button>
-  <button class="fltr" onclick="filterPh('hoeflich',this)">🙏 Höflichkeit</button>
-  <button class="fltr" onclick="filterPh('einkaufen',this)">🛍 Einkaufen</button>
-  <button class="fltr" onclick="filterPh('notfall',this)">🆘 Notfall</button>
+<div style="display:flex;gap:8px;margin-bottom:14px">
+  <button class="addbtn" id="ph-mode-list" onclick="setPhMode('list')" style="flex:1;background:var(--navy)">📋 Liste</button>
+  <button class="addbtn" id="ph-mode-card" onclick="setPhMode('card')" style="flex:1;background:var(--light);color:var(--dark)">🃏 Lernkarten</button>
 </div>
 
-<div id="ph-list"></div>
+<div id="ph-list-mode">
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px" id="ph-filter">
+    <button class="fltr active" onclick="filterPh('alle',this)">Alle</button>
+    <button class="fltr" onclick="filterPh('oepnv',this)">🚇 ÖPNV</button>
+    <button class="fltr" onclick="filterPh('restaurant',this)">🍽 Essen</button>
+    <button class="fltr" onclick="filterPh('hoeflich',this)">🙏 Höflichkeit</button>
+    <button class="fltr" onclick="filterPh('einkaufen',this)">🛍 Einkaufen</button>
+    <button class="fltr" onclick="filterPh('notfall',this)">🆘 Notfall</button>
+  </div>
+  <div id="ph-list"></div>
+</div>
+
+<div id="ph-card-mode" style="display:none">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <button onclick="prevCard()" style="background:var(--navy);color:white;border:none;border-radius:6px;padding:8px 16px;cursor:pointer;font-size:1.2rem">←</button>
+    <span id="fc-counter" style="font-family:'Playfair Display',serif;color:var(--navy);font-weight:700">1 / 25</span>
+    <button onclick="nextCard()" style="background:var(--navy);color:white;border:none;border-radius:6px;padding:8px 16px;cursor:pointer;font-size:1.2rem">→</button>
+  </div>
+  <div class="flashcard" id="flashcard" onclick="flipCard()">
+    <div class="fc-inner">
+      <div class="fc-front">
+        <div class="fc-de" id="fc-de"></div>
+        <div class="fc-hint">Tippen zum Aufdecken</div>
+      </div>
+      <div class="fc-back">
+        <div class="fc-en" id="fc-en"></div>
+        <div class="fc-pr" id="fc-pr"></div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:8px">
+    <button onclick="shuffleCards()" style="background:var(--teal);color:white;border:none;border-radius:6px;padding:8px 20px;cursor:pointer;font-size:.85rem;font-weight:700">🔀 Mischen</button>
+  </div>
+</div>
 
 <div class="card na" style="margin-top:8px">
   <div class="ct">🎮 Lern-Tipp für Jojo &amp; Mikko</div>
@@ -886,9 +929,9 @@ Poole → London Waterloo (2 Std.) → Tube → Liverpool Street (20 Min.) → S
 
 <!-- BOTTOM NAV -->
 <div class="bnav" id="bnav">
-  <button class="nb" id="nb-wetter" onclick="openSec('wetter')"><span class="ni">🌦</span><span class="nl">Wetter</span></button>
-  <button class="nb" id="nb-vote" onclick="openSec('vote')"><span class="ni">🗳</span><span class="nl">Abstimmung</span></button>
-  <button class="nb" id="nb-budget" onclick="openSec('budget')"><span class="ni">💷</span><span class="nl">Budget</span></button>
+  <button class="nb" id="nb-tagesplaner" onclick="openSec('tagesplaner')"><span class="ni">📅</span><span class="nl">Tagesplan</span></button>
+  <button class="nb" id="nb-checklist" onclick="openSec('checklist')"><span class="ni">✅</span><span class="nl">Checkliste</span></button>
+  <button class="nb" id="nb-tube" onclick="openSec('tube')"><span class="ni">🚇</span><span class="nl">Tube</span></button>
   <button class="nb" id="nb-more" onclick="toggleMore()"><span class="ni">☰</span><span class="nl">Mehr</span></button>
 </div>
 <div class="mmenu" id="mmenu">
@@ -1537,7 +1580,7 @@ function renderTp() {
     + '<button class="addbtn" onclick="saveTp(' + d + ')">💾 Speichern</button>'
     + '<span id="tpsaved-' + d + '" style="display:none;margin-left:10px;font-size:.8rem;color:var(--teal)">✓ Gespeichert!</span>'
     + '</div>'
-    + tpChecklist(d);
+    + '<div style="margin-top:12px;padding:10px 12px;background:var(--cream);border-radius:6px;font-size:.82rem;color:var(--grey);border:1px solid var(--light)">💡 Tipp: Die tagesspezifische Packliste findest du in der <button onclick="openSec(\'checklist\')" style="background:none;border:none;color:var(--navy);font-weight:700;cursor:pointer;font-size:.82rem;text-decoration:underline">✅ Checkliste</button></div>';
 }
 
 function tpSlot(slot, label, val, d) {
@@ -1547,32 +1590,7 @@ function tpSlot(slot, label, val, d) {
     + '</div>';
 }
 
-function tpChecklist(d) {
-  var items = {
-    1:['Oyster Cards kaufen/aufladen','Pfund Sterling vorhanden','Adapter Typ G eingesteckt'],
-    2:['London Eye Tickets dabei','Thames Clipper Ticket','Sonnencreme eingepackt'],
-    3:['Tower of London Tickets','Oyster aufgeladen','Snacks für Kinder'],
-    4:['Rucksack für Museen','NHM Eintritt kostenlos – kein Ticket nötig'],
-    5:['Bequeme Schuhe','Picknick für Hyde Park','Ggf. West End Tickets'],
-    6:['Früh aufstehen – Wachablösung 11 Uhr!','Koffer für morgen vorbereiten'],
-    7:['Check-out Clarendon Hotel','Zug Waterloo→Poole gebucht','Drift & Dune Adresse im Handy'],
-    8:['Badezeug','Sonnencreme SPF 50','Handtücher','Bus More 50 Abfahrt geprüft'],
-    9:['Fähre-Ticket Brownsea Island','Fernglas','Insektenspray','Picknick'],
-    10:['Bus X54 Abfahrt gecheckt','Festes Schuhwerk','Hammer/Meissel für Fossilien'],
-    11:['Morebus Tageskarte','Farewell-Dinner reserviert?'],
-    12:['Check-out Drift & Dune bis 08:30!','Alle Koffer gepackt','Boarding Passes FR6135 bereit']
-  };
-  var its = items[d] || [];
-  if (!its.length) return '';
-  var html = '<div style="margin-top:14px;border-top:1px solid var(--light);padding-top:12px">'
-    + '<div style="font-size:.78rem;font-weight:700;color:var(--navy);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">✅ Startklar-Checkliste</div>';
-  for (var i = 0; i < its.length; i++) {
-    html += '<div style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:.85rem">'
-      + '<input type="checkbox" style="width:18px;height:18px;accent-color:var(--teal);cursor:pointer">'
-      + '<span>' + its[i] + '</span></div>';
-  }
-  return html + '</div>';
-}
+// tpChecklist entfernt – Checkliste-Sektion wird verlinkt
 
 async function saveTp(d) {
   if (!WHO) { showPscreen(); return; }
@@ -1675,6 +1693,25 @@ async function loadRueckblick() {
     for (var i = Math.round(avg); i < 5; i++) starsStr += '☆';
     document.getElementById('rl-avg').textContent = avg > 0 ? starsStr + ' (' + avg.toFixed(1) + ')' : '–';
     document.getElementById('rl-status').textContent = filled.length + ' von 12 Tagen beschrieben';
+    if (filled.length === 0) {
+      document.getElementById('rl-avg').textContent = '✏️';
+      document.getElementById('rl-status').textContent = 'Noch keine Tagebucheinträge – schreibt los!';
+      document.getElementById('rl-badges').innerHTML = '<div style="font-size:.85rem;opacity:.8;margin-top:8px">Der Rückblick füllt sich automatisch wenn ihr im Tagebuch schreibt und Sterne vergebt.</div>';
+      var rl3 = document.getElementById('rl-top3');
+      rl3.innerHTML = '';
+      var rlDiv = document.createElement('div');
+      rlDiv.style.cssText = 'text-align:center;padding:20px';
+      var rlBtn = document.createElement('button');
+      rlBtn.className = 'addbtn';
+      rlBtn.style.background = 'var(--teal)';
+      rlBtn.textContent = '📖 Zum Tagebuch';
+      rlBtn.onclick = function() { openSec('tagebuch'); };
+      rlDiv.appendChild(rlBtn);
+      rl3.appendChild(rlDiv);
+      document.getElementById('rl-loading').style.display = 'none';
+      document.getElementById('rl-content').style.display = 'block';
+      return;
+    }
     var badges = [];
     if (filled.length >= 6) badges.push('🏅 Hälfte beschrieben!');
     if (filled.length === 12) badges.push('✅ Vollständig!');
@@ -1738,6 +1775,62 @@ function shareRl() {
   if (!ta) return;
   ta.style.display = ta.style.display === 'none' ? 'block' : 'none';
   if (ta.style.display === 'block') { ta.select(); document.execCommand('copy'); }
+}
+
+
+// ── LERNKARTEN ──
+var PH_MODE = 'list';
+var FC_IDX = 0;
+var FC_DECK = [];
+
+function setPhMode(mode) {
+  PH_MODE = mode;
+  document.getElementById('ph-list-mode').style.display = mode === 'list' ? '' : 'none';
+  document.getElementById('ph-card-mode').style.display = mode === 'card' ? '' : 'none';
+  document.getElementById('ph-mode-list').style.background = mode === 'list' ? 'var(--navy)' : 'var(--light)';
+  document.getElementById('ph-mode-list').style.color = mode === 'list' ? 'white' : 'var(--dark)';
+  document.getElementById('ph-mode-card').style.background = mode === 'card' ? 'var(--teal)' : 'var(--light)';
+  document.getElementById('ph-mode-card').style.color = mode === 'card' ? 'white' : 'var(--dark)';
+  if (mode === 'card') {
+    FC_DECK = PHRASES.slice();
+    FC_IDX = 0;
+    showCard();
+  }
+}
+
+function showCard() {
+  var p = FC_DECK[FC_IDX];
+  if (!p) return;
+  document.getElementById('fc-de').textContent = p.de;
+  document.getElementById('fc-en').textContent = p.en;
+  document.getElementById('fc-pr').textContent = p.pr || '';
+  document.getElementById('fc-counter').textContent = (FC_IDX + 1) + ' / ' + FC_DECK.length;
+  var fc = document.getElementById('flashcard');
+  if (fc) fc.classList.remove('flipped');
+}
+
+function flipCard() {
+  var fc = document.getElementById('flashcard');
+  if (fc) fc.classList.toggle('flipped');
+}
+
+function nextCard() {
+  FC_IDX = (FC_IDX + 1) % FC_DECK.length;
+  showCard();
+}
+
+function prevCard() {
+  FC_IDX = (FC_IDX - 1 + FC_DECK.length) % FC_DECK.length;
+  showCard();
+}
+
+function shuffleCards() {
+  for (var i = FC_DECK.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = FC_DECK[i]; FC_DECK[i] = FC_DECK[j]; FC_DECK[j] = tmp;
+  }
+  FC_IDX = 0;
+  showCard();
 }
 
 // ── INIT ──
