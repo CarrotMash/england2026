@@ -320,6 +320,12 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
       <div class="mt" onclick="openSec('checklist')"><span class="mti">✅</span><span class="mtl">Checkliste</span><span class="mts">Tagespack</span></div>
       <div class="mt" onclick="openSec('tagebuch')"><span class="mti">📖</span><span class="mtl">Tagebuch</span><span class="mts">11 Tage</span></div>
       <div class="mt" onclick="openSec('regen')"><span class="mti">☔</span><span class="mtl">Regentag</span><span class="mts">Indoor-Plan</span></div>
+      <div class="mt" onclick="openSec('tagesplaner')"><span class="mti">📅</span><span class="mtl">Tagesplan</span><span class="mts">Tag planen</span></div>
+      <div class="mt" onclick="openSec('tube')"><span class="mti">🚇</span><span class="mtl">Tube-Status</span><span class="mts">Störungen</span></div>
+      <div class="mt" onclick="openSec('kinder')"><span class="mti">🧒</span><span class="mtl">Kinder</span><span class="mts">Highlights</span></div>
+      <div class="mt" onclick="openSec('phrasen')"><span class="mti">🗣</span><span class="mtl">Englisch</span><span class="mts">Phrasen</span></div>
+      <div class="mt" onclick="openSec('fotos')"><span class="mti">📸</span><span class="mtl">Foto-Spots</span><span class="mts">Best Shots</span></div>
+      <div class="mt" onclick="openSec('rueckblick')"><span class="mti">🏆</span><span class="mtl">Rückblick</span><span class="mts">Highlights</span></div>
     </div>
     <div class="mlbl">📚 Sonstiges</div>
     <div class="mtiles">
@@ -670,6 +676,211 @@ Poole → London Waterloo (2 Std.) → Tube → Liverpool Street (20 Min.) → S
 <div class="card"><div class="ct">💳 Karten sperren</div><div class="cx">🔴 Visa: +1 800 847 2911<br>🔵 Mastercard: +1 800 627 8372<br><br>📱 iOS: icloud.com/find · Android: android.com/find</div></div>
 </div>
 
+
+<!-- TAGESPLANER -->
+<div id="tagesplaner" class="sec">
+<div class="sh">📅 Tagesplaner</div><div class="ssh">Morgen · Mittag · Abend – euer Plan für jeden Tag</div>
+<div class="clday" id="tp-days"></div>
+<div id="tp-content"></div>
+</div>
+
+<!-- TUBE STATUS -->
+<div id="tube" class="sec">
+<div class="sh">🚇 Tube-Status</div><div class="ssh">Aktuelle Störungen &amp; Ausweichpläne</div>
+<div class="card na">
+  <div class="ct">📡 TfL Live-Status</div>
+  <div class="cx">Der aktuelle Status aller Londoner Linien – direkt von Transport for London.</div>
+</div>
+<div style="text-align:center;margin-bottom:16px">
+  <a href="https://tfl.gov.uk/tube-dlr-overground/status/" target="_blank"
+     style="display:inline-block;background:var(--navy);color:white;padding:12px 24px;border-radius:6px;font-family:'Playfair Display',serif;font-weight:700;text-decoration:none;font-size:1rem;letter-spacing:1px">
+    🚇 TfL Status öffnen
+  </a>
+</div>
+<a href="https://citymapper.com/london" target="_blank"
+   style="display:block;background:linear-gradient(135deg,#00b140,#007a2f);color:white;padding:14px 20px;border-radius:8px;text-decoration:none;margin-bottom:12px;font-weight:700;font-size:.95rem">
+  🗺 Citymapper London öffnen – beste ÖPNV-App
+</a>
+<div class="sec-h" style="font-size:1rem;margin:16px 0 8px">🔄 Ausweichpläne bei Tube-Ausfall</div>
+<div class="card">
+  <div class="ct">Tower of London / Tower Bridge</div>
+  <div class="cx">
+    <strong>Normal:</strong> DLR → Tower Gateway<br>
+    <strong>Ausweich:</strong> Bus 15 ab Trafalgar Square oder Thames Clipper → Tower Millennium Pier
+  </div>
+</div>
+<div class="card">
+  <div class="ct">Natural History &amp; Science Museum</div>
+  <div class="cx">
+    <strong>Normal:</strong> Tube → South Kensington<br>
+    <strong>Ausweich:</strong> Bus 14 oder 74 ab Hyde Park Corner
+  </div>
+</div>
+<div class="card">
+  <div class="ct">London Eye / South Bank</div>
+  <div class="cx">
+    <strong>Normal:</strong> Tube → Waterloo oder Thames Clipper<br>
+    <strong>Ausweich:</strong> Bus 211 ab Victoria oder zu Fuß über Westminster Bridge
+  </div>
+</div>
+<div class="card">
+  <div class="ct">British Museum</div>
+  <div class="cx">
+    <strong>Normal:</strong> Tube → Tottenham Court Road<br>
+    <strong>Ausweich:</strong> Bus 8, 25 oder 55 ab Oxford Street
+  </div>
+</div>
+<div class="card">
+  <div class="ct">Hyde Park / Kensington</div>
+  <div class="cx">
+    <strong>Normal:</strong> Tube → Hyde Park Corner oder Knightsbridge<br>
+    <strong>Ausweich:</strong> Bus 9 oder 10 ab Piccadilly Circus
+  </div>
+</div>
+<div class="card">
+  <div class="ct">Buckingham Palace</div>
+  <div class="cx">
+    <strong>Normal:</strong> Tube → St James's Park oder Victoria<br>
+    <strong>Ausweich:</strong> Bus 11, 211 ab Victoria – oder zu Fuß durch St James's Park (schön!)
+  </div>
+</div>
+<div class="card na">
+  <div class="ct">💡 Goldene Regel bei Tube-Ausfall</div>
+  <div class="cx">
+    1. Citymapper öffnen → zeigt automatisch Busalternativen<br>
+    2. Thames Clipper ist oft die schnellste Alternative für alles entlang der Themse<br>
+    3. London ist kompakter als es scheint – vieles ist zu Fuß in 20–30 Min. erreichbar
+  </div>
+</div>
+</div>
+
+<!-- KINDER-HIGHLIGHTS -->
+<div id="kinder" class="sec">
+<div class="sh">🧒 Kinder-Highlights</div><div class="ssh">Personalisiert für Mila, Jojo &amp; Mikko</div>
+<div class="vtabs" style="margin-bottom:16px">
+  <div class="vtab al" id="ktab-mila" onclick="switchKids('mila',this)">👧🏼 Mila</div>
+  <div class="vtab" id="ktab-jojo" onclick="switchKids('jojo',this)">👦🏼 Jojo</div>
+  <div class="vtab" id="ktab-mikko" onclick="switchKids('mikko',this)">👦🏻 Mikko</div>
+</div>
+
+<div id="kids-mila">
+  <div style="background:rgba(200,168,75,.15);border-left:4px solid var(--gold);border-radius:4px;padding:10px 14px;margin-bottom:12px;font-size:.85rem;color:var(--dark)">
+    <strong>Mila, 15 Jahre</strong> – Teenager mit Stil. Shopping, Kultur, Erlebnisse die man Instagram-würdig findet.
+  </div>
+  <div class="card ga"><div class="ct">🎭 West End Musical</div><div class="cm">📍 Theaterviertel WC2 · abends</div><div class="cx">Back to the Future, Matilda oder The Lion King – ein Musical in London gehört zu den unvergesslichen Erlebnissen. Tickets vorbuchen!</div></div>
+  <div class="card ga"><div class="ct">🛍 Carnaby Street &amp; Covent Garden</div><div class="cm">📍 🚇 Oxford Circus / Covent Garden</div><div class="cx">Londons coolste Shoppingstraßen mit unabhängigen Läden, Vintage-Mode und Streetfood. Straßenkünstler in Covent Garden sind ein Erlebnis.</div></div>
+  <div class="card ga"><div class="ct">🌉 Tower Bridge Glasbrücke</div><div class="cm">📍 SE1 · 🚈 DLR Tower Gateway</div><div class="cx">42 Meter über der Themse auf einer Glasscheibe stehen – für Mutige! Das Foto ist episch.</div></div>
+  <div class="card ga"><div class="ct">🦕 Fossilien suchen – Jurassic Coast</div><div class="cm">📍 Kimmeridge Bay, Dorset · 🚌 Bus X54</div><div class="cx">Echte Ammoniten aus dem Fels schlagen – fühlt sich an wie echte Entdeckerin. Hammer und Meissel mitnehmen!</div></div>
+  <div class="card ga"><div class="ct">🏛 Tate Modern &amp; South Bank</div><div class="cm">📍 Bankside SE1 · 🛳 Thames Clipper</div><div class="cx">Zeitgenössische Kunst im riesigen Kraftwerk. Davor und danach: South Bank Promenade mit Streetfood und Buchmarkt.</div></div>
+  <div class="card ga"><div class="ct">☕ Afternoon Tea</div><div class="cm">📍 diverse Cafés in London &amp; Poole</div><div class="cx">Scones, Clotted Cream, Mini-Sandwiches – das volle britische Erlebnis. Für Mila ein Pflichttermin!</div></div>
+</div>
+
+<div id="kids-jojo" style="display:none">
+  <div style="background:rgba(1,33,105,.12);border-left:4px solid var(--navy);border-radius:4px;padding:10px 14px;margin-bottom:12px;font-size:.85rem;color:var(--dark)">
+    <strong>Jojo, 12 Jahre</strong> – Abenteurer. Liebt Action, Geschichte und Dinge die groß, laut oder spektakulär sind.
+  </div>
+  <div class="card na"><div class="ct">🦴 Dino-Skelett im Natural History Museum</div><div class="cm">📍 South Kensington · Kostenlos</div><div class="cx">Das Blauwalskelett im Eingang und der T-Rex-Flügel – gigantisch! Stundenlang zu erkunden. Kostenlos!</div></div>
+  <div class="card na"><div class="ct">🐦 Beefeater-Tour im Tower of London</div><div class="cm">📍 Tower Hill EC3N · 🚈 DLR Tower Gateway</div><div class="cx">Die geführte Tour mit einem Beefeater ist wie ein Mittelalter-Abenteuer. Raben mit echten Namen, Folterkammern, Kronjuwelen!</div></div>
+  <div class="card na"><div class="ct">🚂 Swanage Railway – echte Dampflok!</div><div class="cm">📍 Swanage → Corfe Castle · 🚌 Bus X54 nach Swanage</div><div class="cx">Eine funktionierende historische Dampflokomotive durch die Purbeck Hills – wie aus Harry Potter. Für Jojo ein echtes Highlight.</div></div>
+  <div class="card na"><div class="ct">🌍 Nullmeridian im Greenwich Park</div><div class="cm">📍 Royal Observatory · direkt beim Hotel!</div><div class="cx">Ein Bein in der westlichen, eines in der östlichen Hälfte der Welt stehen. Kostenlos und direkt um die Ecke!</div></div>
+  <div class="card na"><div class="ct">🏖 Sandbanks – Freiheit am Meer</div><div class="cm">📍 Sandbanks BH13 · 🚌 Bus More 50</div><div class="cx">Einfach ins Meer springen, buddeln, toben. Für 12-Jährige ist das purer Spaß ohne Programm.</div></div>
+  <div class="card na"><div class="ct">🌉 Tower Bridge Glasbrücke</div><div class="cm">📍 SE1 · 🚈 DLR Tower Gateway</div><div class="cx">42m über der Themse auf Glas stehen – für Mutige. Jojo wird es lieben!</div></div>
+</div>
+
+<div id="kids-mikko" style="display:none">
+  <div style="background:rgba(13,110,110,.12);border-left:4px solid var(--teal);border-radius:4px;padding:10px 14px;margin-bottom:12px;font-size:.85rem;color:var(--dark)">
+    <strong>Mikko, 12 Jahre</strong> – Entdecker. Liebt Natur, Tiere und Dinge die er noch nie gesehen hat.
+  </div>
+  <div class="card ta"><div class="ct">🦚 Rote Eichhörnchen auf Brownsea Island</div><div class="cm">📍 Poole Harbour · 🛳 Fähre ab Poole Quay</div><div class="cx">Die kleinen roten Eichhörnchen kommen sehr nah. Mit Fernglas auf Pirsch gehen – wie eine echte Safari! Dazu wilde Pfauen.</div></div>
+  <div class="card ta"><div class="ct">🦕 Fossilien suchen – Jurassic Coast</div><div class="cm">📍 Kimmeridge Bay · 🚌 Bus X54 nach Swanage</div><div class="cx">185 Millionen Jahre alte Ammoniten selbst aus dem Stein schlagen. Hammer &amp; Meissel mitnehmen!</div></div>
+  <div class="card ta"><div class="ct">🏰 Corfe Castle</div><div class="cm">📍 Corfe Castle BH20 · 🚂 Swanage Railway</div><div class="cx">Spektakuläre Burgruine auf einem Hügel. Kombinieren mit der Dampfbahn – unvergesslich!</div></div>
+  <div class="card ta"><div class="ct">🐦 Raben im Tower of London</div><div class="cm">📍 Tower Hill · 🚈 DLR Tower Gateway</div><div class="cx">Die Raben des Towers heißen alle mit Namen und haben einen eigenen Wächter. Laut Legende fällt die Monarchie wenn sie weg sind!</div></div>
+  <div class="card ta"><div class="ct">🌳 Rehe im Greenwich Park</div><div class="cm">📍 Greenwich Park · direkt beim Hotel!</div><div class="cx">Eine echte Hirsch- und Rehherde lebt seit Jahrhunderten im Park. Früh morgens sind sie besonders aktiv – und das direkt bei eurem Hotel!</div></div>
+  <div class="card ta"><div class="ct">⛴ Sandbanks Chain Ferry</div><div class="cm">📍 Sandbanks → Shell Bay</div><div class="cx">Die kleine Kettenfähre über den Hafen – für Mikko ein technisches Wunder! Günstig, kurz und spaßig.</div></div>
+</div>
+</div>
+
+
+<!-- PHRASEN -->
+<div id="phrasen" class="sec">
+<div class="sh">🗣 Englisch für unterwegs</div><div class="ssh">Die wichtigsten Sätze – für alle 5!</div>
+
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px" id="ph-filter">
+  <button class="fltr active" onclick="filterPh('alle',this)">Alle</button>
+  <button class="fltr" onclick="filterPh('oepnv',this)">🚇 ÖPNV</button>
+  <button class="fltr" onclick="filterPh('restaurant',this)">🍽 Essen</button>
+  <button class="fltr" onclick="filterPh('hoeflich',this)">🙏 Höflichkeit</button>
+  <button class="fltr" onclick="filterPh('einkaufen',this)">🛍 Einkaufen</button>
+  <button class="fltr" onclick="filterPh('notfall',this)">🆘 Notfall</button>
+</div>
+
+<div id="ph-list"></div>
+
+<div class="card na" style="margin-top:8px">
+  <div class="ct">🎮 Lern-Tipp für Jojo &amp; Mikko</div>
+  <div class="cx">Wer schafft es, heute 3 englische Sätze selbst zu sagen? Wer bestellt beim nächsten Café auf Englisch? Kleiner Wettkampf – großer Spaß!</div>
+</div>
+</div>
+
+<!-- FOTO-SPOTS -->
+<div id="fotos" class="sec">
+<div class="sh">📸 Beste Foto-Spots</div><div class="ssh">»The perfect shot – location matters!«</div>
+
+<div class="card ga">
+  <div class="ct">🌉 Tower Bridge</div>
+  <div class="cx">Stell dich auf die <strong>Südseite der Themse</strong> (Shad Thames / Horsleydown Lane). Von hier beide Türme im perfekten Winkel – vor allem bei Sonnenuntergang golden!</div>
+</div>
+<div class="card ga">
+  <div class="ct">🎡 London Eye</div>
+  <div class="cx">Das beste Foto entsteht <strong>von der Westminster Bridge</strong> – Brücke im Vordergrund, Eye im Hintergrund. Abends für Lichtreflexion auf der Themse.</div>
+</div>
+<div class="card ga">
+  <div class="ct">🏙 London Skyline</div>
+  <div class="cx">Vom <strong>Greenwich Park Hügel</strong> (Royal Observatory) der beste kostenlose Blick auf London – Canary Wharf, die City, das O2. Morgens für klare Luft.</div>
+</div>
+<div class="card ga">
+  <div class="ct">👑 Buckingham Palace</div>
+  <div class="cx">Steh auf der <strong>Victoria Memorial-Plattform</strong> direkt vor dem Palast. Wachablösung 11 Uhr: früh da sein, zweite Reihe lohnt sich!</div>
+</div>
+<div class="card ga">
+  <div class="ct">🌍 Greenwich Meridian</div>
+  <div class="cx">Die goldene Meridian-Linie am Royal Observatory: <strong>beide Beine links/rechts der Linie</strong>. Nachts leuchtet ein grüner Laser! Direkt beim Hotel.</div>
+</div>
+<div class="card ga">
+  <div class="ct">🏖 Sandbanks</div>
+  <div class="cx"><strong>Von der Chain Ferry aus</strong> fotografieren: Blick auf Sandbanks mit dem Poole Harbour dahinter. Sonnenuntergang Richtung Westen – traumhaft.</div>
+</div>
+<div class="card ga">
+  <div class="ct">🏰 Corfe Castle</div>
+  <div class="cx">Das ikonischste Foto: <strong>von der B3069 aus dem Dorf heraus</strong> die Ruine auf dem Hügel. Zum kleinen Aussichtspunkt vor dem Schloss – unvergesslich.</div>
+</div>
+<div class="card ga">
+  <div class="ct">🦚 Brownsea Island</div>
+  <div class="cx">Früh morgens zur <strong>Lagune im Süden der Insel</strong> – dort sind rote Eichhörnchen am aktivsten. Mit Geduld kommen sie sehr nah.</div>
+</div>
+<div class="card ga">
+  <div class="ct">🌉 Millennium Bridge</div>
+  <div class="cx"><strong>Mitte der Brücke</strong>: links die St Paul's Cathedral, rechts die City-Skyline. Morgens leer, tagsüber voll – früh hingehen!</div>
+</div>
+</div>
+
+<!-- RUECKBLICK -->
+<div id="rueckblick" class="sec">
+<div class="sh">🏆 Reise-Rückblick</div><div class="ssh">Eure persönlichen Highlights der Reise</div>
+<div id="rl-loading" style="text-align:center;padding:24px;color:var(--grey);font-family:'IM Fell English',serif;font-style:italic">Lade Tagebucheinträge...</div>
+<div id="rl-content" style="display:none">
+  <div style="background:linear-gradient(135deg,var(--navy),#1a3a8a);border-radius:12px;padding:20px;margin-bottom:14px;color:white;text-align:center">
+    <div style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--gold);margin-bottom:8px">🇬🇧 England 2026</div>
+    <div id="rl-avg" style="font-size:2.5rem;margin:8px 0">–</div>
+    <div id="rl-status" style="font-size:.82rem;opacity:.7">– von 12 Tagen beschrieben</div>
+    <div id="rl-badges" style="margin-top:10px"></div>
+  </div>
+  <div id="rl-top3"></div>
+  <div id="rl-budget-sum"></div>
+  <div id="rl-share"></div>
+</div>
+</div>
+
 <div class="nsp"></div>
 </div><!-- end appinner -->
 
@@ -688,6 +899,12 @@ Poole → London Waterloo (2 Std.) → Tube → Liverpool Street (20 Min.) → S
   <div class="mmi" onclick="openSec('checklist')"><span class="mmii">✅</span><span class="mmil">Checkliste</span></div>
   <div class="mmi" onclick="openSec('tagebuch')"><span class="mmii">📖</span><span class="mmil">Tagebuch</span></div>
   <div class="mmi" onclick="openSec('regen')"><span class="mmii">☔</span><span class="mmil">Regen</span></div>
+  <div class="mmi" onclick="openSec('tagesplaner')"><span class="mmii">📅</span><span class="mmil">Tagesplan</span></div>
+  <div class="mmi" onclick="openSec('tube')"><span class="mmii">🚇</span><span class="mmil">Tube</span></div>
+  <div class="mmi" onclick="openSec('kinder')"><span class="mmii">🧒</span><span class="mmil">Kinder</span></div>
+  <div class="mmi" onclick="openSec('phrasen')"><span class="mmii">🗣</span><span class="mmil">Phrasen</span></div>
+  <div class="mmi" onclick="openSec('fotos')"><span class="mmii">📸</span><span class="mmil">Fotos</span></div>
+  <div class="mmi" onclick="openSec('rueckblick')"><span class="mmii">🏆</span><span class="mmil">Rückblick</span></div>
   <div class="mmi" onclick="openSec('restaurants')"><span class="mmii">🫖</span><span class="mmil">Essen</span></div>
   <div class="mmi" onclick="openSec('quiz')"><span class="mmii">🎓</span><span class="mmil">Quiz</span></div>
   <div class="mmi" onclick="openSec('flug')"><span class="mmii">✈️</span><span class="mmil">Flug</span></div>
@@ -762,7 +979,7 @@ updCD();
 setInterval(updCD,30000);
 
 // ── NAVIGATION ──
-var TITLES={wetter:'Wetter',vote:'Familien-Abstimmung',budget:'Budget-Tracker',checklist:'Tages-Checkliste',tagebuch:'Reisetagebuch',regen:'Regentag-Plan',london_phase:'London – Phase 1',poole_phase:'Poole – Phase 2',sehenswuerdigkeiten:'Sights London',oepnv:'ÖPNV London',greenwich:'Greenwich',restaurants:'Essen & Trinken',poole_sights:'Dorset Highlights',poole_oepnv:'ÖPNV Poole',quiz:'England-Quiz',tipps:'Familien-Tipps',flug:'Flug & Anreise',sos:'SOS & Notfall'};
+var TITLES={wetter:'Wetter',vote:'Familien-Abstimmung',budget:'Budget-Tracker',checklist:'Tages-Checkliste',tagebuch:'Reisetagebuch',regen:'Regentag-Plan',london_phase:'London – Phase 1',poole_phase:'Poole – Phase 2',sehenswuerdigkeiten:'Sights London',oepnv:'ÖPNV London',greenwich:'Greenwich',restaurants:'Essen & Trinken',poole_sights:'Dorset Highlights',poole_oepnv:'ÖPNV Poole',quiz:'England-Quiz',tipps:'Familien-Tipps',flug:'Flug & Anreise',sos:'SOS & Notfall',tagesplaner:'📅 Tagesplaner',tube:'🚇 Tube-Status & Ausweichpläne',kinder:'🧒 Kinder-Highlights',phrasen:'🗣 Englisch für unterwegs',fotos:'📸 Beste Foto-Spots',rueckblick:'🏆 Reise-Rückblick'};
 var MORE=false;
 
 function openMenu(){document.getElementById('moverlay').classList.add('open');}
@@ -790,6 +1007,9 @@ function openSec(id){
   if(id==='checklist')loadChecklist();
   if(id==='tagebuch')loadDiary();
   if(id==='quiz'&&!QS)startQuiz();
+  if(id==='tagesplaner')loadTagesplaner();
+  if(id==='phrasen')renderPhrases();
+  if(id==='rueckblick')loadRueckblick();
 }
 function goHome(){
   document.getElementById('hero').style.display='';
@@ -1240,6 +1460,285 @@ function ansQ(ch,btn){
   document.getElementById('qscore').textContent=QSCO+'/'+(QI+1);
 }
 function nextQ(){QI++;renderQ();}
+
+
+// ── TAGESPLANER ──
+var TP_DAY = 1;
+var TP_DATA = {};
+
+var TP_DEFAULTS = {
+  1:  {m:'Stansted Express → Blackheath, einchecken',mi:'Greenwich Park & Meridian-Linie erkunden',a:'Abendessen in Greenwich Market'},
+  2:  {m:'Thames Clipper ab Greenwich Pier → Westminster',mi:'London Eye + South Bank + Tate Modern',a:'Borough Market zum Abendessen'},
+  3:  {m:'DLR ab Greenwich → Tower Gateway',mi:'Tower of London (Beefeater-Tour!)',a:'Tower Bridge Glasbrücke'},
+  4:  {m:'Tube → South Kensington',mi:'Natural History Museum',a:'Science Museum (nebenan)'},
+  5:  {m:'Tube → Hyde Park Corner',mi:'Hyde Park & Diana Spielplatz + Kensington Gardens',a:'West End: Covent Garden / ggf. Musical'},
+  6:  {m:'St James\'s Park → Buckingham Palace (Wachablösung 11 Uhr!)',mi:'British Museum',a:'Abschiedsabend London'},
+  7:  {m:'Check-out Clarendon Hotel',mi:'Zug London Waterloo → Poole (2 Std.)',a:'Check-in Drift & Dune, Poole Quay Bummel'},
+  8:  {m:'Bus More 50 ab Poole Quay → Sandbanks',mi:'Sandbanks Beach – ganzer Tag!',a:'Rückkehr mit Bus, Abendessen Poole'},
+  9:  {m:'Fähre ab Poole Quay → Brownsea Island',mi:'Brownsea Island: Eichhörnchen & Pfauen',a:'Rückfähre, Abend in Poole Old Town'},
+  10: {m:'Bus X54 → Swanage',mi:'Kimmeridge Bay: Fossilien suchen!',a:'Old Harry Rocks oder Swanage Strand'},
+  11: {m:'Bus/Zug nach Bournemouth',mi:'Bournemouth Promenade & Pier',a:'Farewell Dinner in Poole'},
+  12: {m:'Check-out Drift & Dune – spätestens 08:30 Uhr!',mi:'Zug Poole → Waterloo → Stansted Express',a:'FR6135 Stansted → Lübeck, 13:10 Uhr ✈️'}
+};
+
+var TP_LABELS = {
+  1:'13.7. – Ankunft London',2:'14.7. – South Bank',3:'15.7. – Tower',
+  4:'16.7. – Museen',5:'17.7. – Hyde Park',6:'18.7. – Buckingham',
+  7:'19.7. – Abreise Poole',8:'20.7. – Sandbanks',9:'21.7. – Brownsea',
+  10:'22.7. – Jurassic Coast',11:'23.7. – Bournemouth',12:'24.7. – Abreise'
+};
+
+async function loadTagesplaner() {
+  var rows = await sbGet('tagesplaner', 'select=*');
+  TP_DATA = {};
+  if (Array.isArray(rows)) {
+    for (var i = 0; i < rows.length; i++) {
+      TP_DATA[rows[i].day_num] = rows[i];
+    }
+  }
+  renderTpDays();
+  renderTp();
+}
+
+function renderTpDays() {
+  var el = document.getElementById('tp-days');
+  if (!el) return;
+  el.innerHTML = '';
+  for (var d = 1; d <= 12; d++) {
+    var b = document.createElement('button');
+    b.className = 'cdb' + (d === TP_DAY ? ' active' : '');
+    b.textContent = 'Tag ' + d;
+    b.setAttribute('data-d', d);
+    b.onclick = function() {
+      TP_DAY = parseInt(this.getAttribute('data-d'));
+      var cdbs = document.querySelectorAll('#tp-days .cdb');
+      for (var i = 0; i < cdbs.length; i++) cdbs[i].classList.remove('active');
+      this.classList.add('active');
+      renderTp();
+    };
+    el.appendChild(b);
+  }
+}
+
+function renderTp() {
+  var el = document.getElementById('tp-content');
+  if (!el) return;
+  var d = TP_DAY;
+  var saved = TP_DATA[d] || {};
+  var def = TP_DEFAULTS[d] || {m:'', mi:'', a:''};
+  var isPoole = d >= 7;
+  var color = isPoole ? 'var(--teal)' : 'var(--navy)';
+  el.innerHTML = '<div style="font-family:\'Playfair Display\',serif;font-size:1.1rem;font-weight:700;color:' + color + ';margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid ' + color + '">'
+    + (isPoole ? '⛵' : '🏙') + ' ' + (TP_LABELS[d] || 'Tag ' + d) + '</div>'
+    + tpSlot('morgen', '🌅 Morgen', saved.morgen || def.m, d)
+    + tpSlot('mittag', '☀️ Mittag', saved.mittag || def.mi, d)
+    + tpSlot('abend', '🌆 Abend', saved.abend || def.a, d)
+    + '<div style="margin-top:8px">'
+    + '<button class="addbtn" onclick="saveTp(' + d + ')">💾 Speichern</button>'
+    + '<span id="tpsaved-' + d + '" style="display:none;margin-left:10px;font-size:.8rem;color:var(--teal)">✓ Gespeichert!</span>'
+    + '</div>'
+    + tpChecklist(d);
+}
+
+function tpSlot(slot, label, val, d) {
+  return '<div style="margin-bottom:10px">'
+    + '<div style="font-size:.78rem;font-weight:700;color:var(--navy);margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">' + label + '</div>'
+    + '<textarea id="tp-' + slot + '-' + d + '" style="width:100%;border:1px solid var(--light);border-radius:4px;padding:8px;font-family:\'Source Sans 3\',sans-serif;font-size:.88rem;resize:none;background:var(--cream);color:var(--dark);min-height:56px">' + (val || '') + '</textarea>'
+    + '</div>';
+}
+
+function tpChecklist(d) {
+  var items = {
+    1:['Oyster Cards kaufen/aufladen','Pfund Sterling vorhanden','Adapter Typ G eingesteckt'],
+    2:['London Eye Tickets dabei','Thames Clipper Ticket','Sonnencreme eingepackt'],
+    3:['Tower of London Tickets','Oyster aufgeladen','Snacks für Kinder'],
+    4:['Rucksack für Museen','NHM Eintritt kostenlos – kein Ticket nötig'],
+    5:['Bequeme Schuhe','Picknick für Hyde Park','Ggf. West End Tickets'],
+    6:['Früh aufstehen – Wachablösung 11 Uhr!','Koffer für morgen vorbereiten'],
+    7:['Check-out Clarendon Hotel','Zug Waterloo→Poole gebucht','Drift & Dune Adresse im Handy'],
+    8:['Badezeug','Sonnencreme SPF 50','Handtücher','Bus More 50 Abfahrt geprüft'],
+    9:['Fähre-Ticket Brownsea Island','Fernglas','Insektenspray','Picknick'],
+    10:['Bus X54 Abfahrt gecheckt','Festes Schuhwerk','Hammer/Meissel für Fossilien'],
+    11:['Morebus Tageskarte','Farewell-Dinner reserviert?'],
+    12:['Check-out Drift & Dune bis 08:30!','Alle Koffer gepackt','Boarding Passes FR6135 bereit']
+  };
+  var its = items[d] || [];
+  if (!its.length) return '';
+  var html = '<div style="margin-top:14px;border-top:1px solid var(--light);padding-top:12px">'
+    + '<div style="font-size:.78rem;font-weight:700;color:var(--navy);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">✅ Startklar-Checkliste</div>';
+  for (var i = 0; i < its.length; i++) {
+    html += '<div style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:.85rem">'
+      + '<input type="checkbox" style="width:18px;height:18px;accent-color:var(--teal);cursor:pointer">'
+      + '<span>' + its[i] + '</span></div>';
+  }
+  return html + '</div>';
+}
+
+async function saveTp(d) {
+  if (!WHO) { showPscreen(); return; }
+  var m = document.getElementById('tp-morgen-' + d);
+  var mi = document.getElementById('tp-mittag-' + d);
+  var a = document.getElementById('tp-abend-' + d);
+  if (!m) return;
+  var body = {day_num: d, morgen: m.value, mittag: mi.value, abend: a.value, updated_by: WHO, session_token: SESS || 'guest', updated_at: new Date().toISOString()};
+  if (TP_DATA[d]) {
+    await sbPatch('tagesplaner', 'day_num=eq.' + d, body);
+  } else {
+    var row = await sbPost('tagesplaner', body);
+    if (row && row[0]) TP_DATA[d] = row[0];
+  }
+  if (!TP_DATA[d]) TP_DATA[d] = body;
+  else { TP_DATA[d].morgen = m.value; TP_DATA[d].mittag = mi.value; TP_DATA[d].abend = a.value; }
+  var ms = document.getElementById('tpsaved-' + d);
+  if (ms) { ms.style.display = 'inline'; setTimeout(function() { ms.style.display = 'none'; }, 2000); }
+}
+
+function switchKids(tab, btn) {
+  var tabs = document.querySelectorAll('#kinder .vtab');
+  for (var i = 0; i < tabs.length; i++) tabs[i].classList.remove('al', 'ap', 'ar');
+  btn.classList.add('al');
+  var panels = ['mila', 'jojo', 'mikko'];
+  for (var i = 0; i < panels.length; i++) {
+    var el = document.getElementById('kids-' + panels[i]);
+    if (el) el.style.display = panels[i] === tab ? '' : 'none';
+  }
+}
+
+
+// ── PHRASEN ──
+var PHRASES = [
+  {cat:'oepnv', de:'Wie komme ich zu...?', en:'How do I get to...?', pr:'hau du ai get tu'},
+  {cat:'oepnv', de:'Welche Linie fährt nach...?', en:'Which line goes to...?', pr:'witsch lain gous tu'},
+  {cat:'oepnv', de:'Einfach / Hin und zurück', en:'Single / Return ticket please', pr:'singel / ritern tiket pliis'},
+  {cat:'oepnv', de:'Wo ist die nächste Haltestelle?', en:'Where is the next stop?', pr:'wea is de nekst stop'},
+  {cat:'oepnv', de:'Muss ich umsteigen?', en:'Do I need to change?', pr:'du ai niid tu tscheindsch'},
+  {cat:'restaurant', de:'Einen Tisch für fünf, bitte', en:'A table for five, please', pr:'e tejbel fo faiv pliis'},
+  {cat:'restaurant', de:'Was empfehlen Sie?', en:'What do you recommend?', pr:'wot du ju rekemend'},
+  {cat:'restaurant', de:'Ohne Gluten / vegetarisch', en:'Gluten-free / vegetarian please', pr:''},
+  {cat:'restaurant', de:'Die Rechnung bitte', en:'Could we have the bill, please?', pr:'kud wi hav de bil pliis'},
+  {cat:'restaurant', de:'Mit Karte zahlen', en:'Can I pay by card?', pr:'kan ai pej bai kaad'},
+  {cat:'restaurant', de:'Sehr lecker!', en:'This is delicious!', pr:'dis is delieschos'},
+  {cat:'hoeflich', de:'Entschuldigung', en:'Sorry! / Excuse me!', pr:'sori / ekskjuus mi'},
+  {cat:'hoeflich', de:'Bitte', en:'Please / Could you...?', pr:'pliis / kud ju'},
+  {cat:'hoeflich', de:'Danke / Vielen Dank', en:'Thank you / Thanks a lot', pr:'sänk ju / sänks e lot'},
+  {cat:'hoeflich', de:'Kein Problem', en:"No worries! / That's alright", pr:'nou woris'},
+  {cat:'hoeflich', de:'Wie bitte?', en:'Pardon? / Could you repeat that?', pr:'padon / kud ju ripiet dät'},
+  {cat:'einkaufen', de:'Wie viel kostet das?', en:'How much is this?', pr:'hau matsch is dis'},
+  {cat:'einkaufen', de:'Haben Sie das in Größe...?', en:'Do you have this in size...?', pr:'du ju hav dis in sais'},
+  {cat:'einkaufen', de:'Nur schauen, danke', en:'Just browsing, thanks', pr:'dschast brausin sänks'},
+  {cat:'einkaufen', de:'Haben Sie etwas Günstigeres?', en:'Do you have something cheaper?', pr:'du ju hav samsin tscheeper'},
+  {cat:'notfall', de:'Ich brauche Hilfe!', en:'I need help!', pr:'ai niid help'},
+  {cat:'notfall', de:'Rufen Sie einen Arzt!', en:'Please call a doctor!', pr:'pliis kol e dokter'},
+  {cat:'notfall', de:'Notruf England', en:'Emergency: call 999', pr:''},
+  {cat:'notfall', de:'Ich bin aus Deutschland', en:"I'm from Germany", pr:'aim from dschörmeni'},
+  {cat:'notfall', de:'Ich habe meine Tasche verloren', en:"I've lost my bag", pr:'aiv lost mai bäg'}
+];
+
+var PH_CAT = 'alle';
+function filterPh(cat, btn) {
+  var btns = document.querySelectorAll('#ph-filter .fltr');
+  for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
+  btn.classList.add('active');
+  PH_CAT = cat;
+  renderPhrases();
+}
+
+function renderPhrases() {
+  var el = document.getElementById('ph-list');
+  if (!el) return;
+  var filtered = PH_CAT === 'alle' ? PHRASES : PHRASES.filter(function(p) { return p.cat === PH_CAT; });
+  var catColors = {oepnv:'var(--navy)', restaurant:'var(--teal)', hoeflich:'var(--gold)', einkaufen:'#6b4f8b', notfall:'var(--red)'};
+  el.innerHTML = '';
+  for (var i = 0; i < filtered.length; i++) {
+    var p = filtered[i];
+    var div = document.createElement('div');
+    div.style.cssText = 'padding:10px 0;border-bottom:1px solid var(--light);display:flex;flex-direction:column;gap:3px';
+    div.innerHTML = '<div style="font-size:.78rem;color:var(--grey)">' + p.de + '</div>'
+      + '<div style="font-size:.95rem;font-weight:700;color:var(--navy)">' + p.en + '</div>'
+      + (p.pr ? '<div style="font-size:.75rem;color:var(--teal);font-style:italic">' + p.pr + '</div>' : '');
+    el.appendChild(div);
+  }
+}
+
+// ── RÜCKBLICK ──
+async function loadRueckblick() {
+  document.getElementById('rl-loading').style.display = 'block';
+  document.getElementById('rl-content').style.display = 'none';
+  try {
+    var rows = await sbGet('diary', 'select=*&order=day_num.asc');
+    var entries = Array.isArray(rows) ? rows : [];
+    var filled = entries.filter(function(r) { return r.entry_text && r.entry_text.length > 2; });
+    var allStars = entries.map(function(r) { return r.stars || 0; });
+    var avg = allStars.length ? allStars.reduce(function(a,b){return a+b;},0) / allStars.length : 0;
+    var starsStr = '';
+    for (var i = 0; i < Math.round(avg); i++) starsStr += '★';
+    for (var i = Math.round(avg); i < 5; i++) starsStr += '☆';
+    document.getElementById('rl-avg').textContent = avg > 0 ? starsStr + ' (' + avg.toFixed(1) + ')' : '–';
+    document.getElementById('rl-status').textContent = filled.length + ' von 12 Tagen beschrieben';
+    var badges = [];
+    if (filled.length >= 6) badges.push('🏅 Hälfte beschrieben!');
+    if (filled.length === 12) badges.push('✅ Vollständig!');
+    if (allStars.some(function(s){return s===5;})) badges.push('⭐ 5-Sterne-Tag dabei!');
+    if (avg >= 4) badges.push('🏆 Tolle Reise!');
+    var badgeEl = document.getElementById('rl-badges');
+    badgeEl.innerHTML = badges.map(function(b) {
+      return '<span style="display:inline-block;background:rgba(200,168,75,.3);border:1px solid var(--gold);border-radius:20px;padding:3px 12px;font-size:.78rem;color:var(--gold);margin:3px">' + b + '</span>';
+    }).join('');
+    // Top 3
+    var top3 = entries.filter(function(r){return r.stars>=4;}).sort(function(a,b){return b.stars-a.stars;}).slice(0,3);
+    var DLABELS = {1:'13.7. Ankunft',2:'14.7. South Bank',3:'15.7. Tower',4:'16.7. Museen',5:'17.7. Hyde Park',6:'18.7. Buckingham',7:'19.7. Poole-Ankunft',8:'20.7. Sandbanks',9:'21.7. Brownsea',10:'22.7. Jurassic Coast',11:'23.7. Bournemouth',12:'24.7. Abreise'};
+    var t3el = document.getElementById('rl-top3');
+    if (top3.length) {
+      t3el.innerHTML = '<div style="font-family:\'Playfair Display\',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin:16px 0 8px">🌟 Eure Top-Erlebnisse</div>';
+      for (var i = 0; i < top3.length; i++) {
+        var r = top3[i];
+        var stars = '';
+        for (var s = 0; s < (r.stars||0); s++) stars += '★';
+        var div = document.createElement('div');
+        div.className = 'card ga';
+        div.innerHTML = '<div class="ct">' + stars + ' ' + (DLABELS[r.day_num]||'Tag '+r.day_num) + '</div>'
+          + '<div class="cx">' + (r.entry_text||'').substring(0,160) + ((r.entry_text||'').length>160?'…':'') + '</div>';
+        t3el.appendChild(div);
+      }
+    } else {
+      t3el.innerHTML = '<div style="color:var(--grey);font-style:italic;padding:12px 0">Noch keine 4–5-Sterne-Tage eingetragen.</div>';
+    }
+    // Budget summary
+    var brows = await sbGet('budget', 'select=*');
+    var ball = Array.isArray(brows) ? brows : [];
+    var bel = document.getElementById('rl-budget-sum');
+    if (ball.length) {
+      var total = ball.reduce(function(s,r){return s+parseFloat(r.amount_gbp);},0);
+      var byCat = {};
+      for (var i=0;i<ball.length;i++){var r=ball[i];byCat[r.category]=(byCat[r.category]||0)+parseFloat(r.amount_gbp);}
+      var topCat = Object.keys(byCat).sort(function(a,b){return byCat[b]-byCat[a];})[0];
+      bel.innerHTML = '<div style="font-family:\'Playfair Display\',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin:16px 0 8px">💷 Budget-Zusammenfassung</div>'
+        + '<div class="card na"><div class="ct">Gesamtausgaben: £' + total.toFixed(2) + '</div>'
+        + '<div class="cx">Größte Kategorie: ' + (topCat||'–') + ' (£' + (byCat[topCat]||0).toFixed(2) + ')<br>Anzahl Einträge: ' + ball.length + '</div></div>';
+    }
+    // Share text
+    var sel = document.getElementById('rl-share');
+    var shareText = '🇬🇧 England 2026 – Reise-Rückblick\n'
+      + 'Familie: Manuela, Sven, Mila, Jojo & Mikko\n'
+      + filled.length + '/12 Tage beschrieben · Ø ' + avg.toFixed(1) + ' Sterne\n';
+    if (top3.length) shareText += '🌟 Highlight: ' + (DLABELS[top3[0].day_num]||'Tag '+top3[0].day_num) + '\n';
+    sel.innerHTML = '<div style="margin-top:16px">'
+      + '<button class="addbtn" onclick="shareRl()" style="background:var(--teal)">📤 Rückblick teilen</button>'
+      + '<textarea id="rl-share-text" style="display:none;width:100%;margin-top:8px;padding:10px;border:1px solid var(--light);border-radius:4px;font-size:.85rem;background:var(--cream);min-height:80px">' + shareText + '</textarea>'
+      + '</div>';
+    document.getElementById('rl-loading').style.display = 'none';
+    document.getElementById('rl-content').style.display = 'block';
+  } catch(e) {
+    document.getElementById('rl-loading').textContent = 'Fehler beim Laden.';
+  }
+}
+
+function shareRl() {
+  var ta = document.getElementById('rl-share-text');
+  if (!ta) return;
+  ta.style.display = ta.style.display === 'none' ? 'block' : 'none';
+  if (ta.style.display === 'block') { ta.select(); document.execCommand('copy'); }
+}
 
 // ── INIT ──
 updateWho();
