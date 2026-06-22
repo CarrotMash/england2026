@@ -254,11 +254,11 @@ body{font-family:"Source Sans 3",sans-serif;background:var(--cream);color:var(--
       <div class="ppill" onclick="openSec('poole_phase')">&#9749; Poole &middot; 19.&ndash;24. Juli</div>
     </div>
     <div class="hcd">
-      <div class="hcu"><span class="hcn" id="hcd">-</span><span class="hcl">Tage</span></div>
+      <div class="hcu"><span class="hcn" id="cd-days">-</span><span class="hcl">Tage</span></div>
       <div class="hcs">:</div>
-      <div class="hcu"><span class="hcn" id="hch">-</span><span class="hcl">Std.</span></div>
+      <div class="hcu"><span class="hcn" id="cd-hours">-</span><span class="hcl">Std.</span></div>
       <div class="hcs">:</div>
-      <div class="hcu"><span class="hcn" id="hcm">-</span><span class="hcl">Min.</span></div>
+      <div class="hcu"><span class="hcn" id="cd-mins">-</span><span class="hcl">Min.</span></div>
     </div>
     <div class="hdl">FR6134 &middot; Luebeck 16:20 &rarr; Stansted &middot; 2 Erw. + 3 Kinder &middot; 11 Naechte</div>
     <button class="hbtn" onclick="openMenu()"><span style="font-size:1.1rem">&#9776;</span><span style="font-family:Playfair Display,serif;font-size:1.05rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;">Menu</span></button>
@@ -713,10 +713,10 @@ function updateWho(){
 })();
 function updCD(){
   const d=new Date('2026-07-13T16:20:00')-new Date();
-  if(d<=0){document.getElementById('hcd').textContent='&#9992;';return;}
-  document.getElementById('hcd').textContent=Math.floor(d/86400000);
-  document.getElementById('hch').textContent=String(Math.floor((d%86400000)/3600000)).padStart(2,'0');
-  document.getElementById('hcm').textContent=String(Math.floor((d%3600000)/60000)).padStart(2,'0');
+  if(d<=0){document.getElementById('cd-days').textContent='\u2708';return;}
+  document.getElementById('cd-days').textContent=Math.floor(d/86400000);
+  document.getElementById('cd-hours').textContent=String(Math.floor((d%86400000)/3600000)).padStart(2,'0');
+  document.getElementById('cd-mins').textContent=String(Math.floor((d%3600000)/60000)).padStart(2,'0');
 }
 updCD();setInterval(updCD,30000);
 
