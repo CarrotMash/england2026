@@ -634,15 +634,28 @@ body {
 
 <!-- VOTE -->
 <div id="vote" class="sec">
-<div class="sh">🗳 Familien-Abstimmung</div><div class="ssh">Was wollen wir wirklich erleben?</div>
+<div class="sh">🗳 Familien-Tagesplanung</div>
+<div class="ssh">Wählt gemeinsam – was kommt als nächstes?</div>
+
+<div class="card na">
+  <div class="ct">💡 So funktioniert's</div>
+  <div class="cx">Jeder stimmt für die Pakete ab die er sich wünscht. Pakete sind so zusammengestellt, dass alle Ziele nah beieinander liegen – kein unnötiges Hin- und Herfahren! 👍 = will ich, 👎 = lieber nicht.</div>
+</div>
+
 <div class="vwho"><span>Du stimmst ab als:</span><strong id="vwho">–</strong></div>
+
 <div class="vtabs">
-  <div class="vtab al" id="vtab-l" onclick="switchVP('london',this)">🏙 London</div>
-  <div class="vtab" id="vtab-p" onclick="switchVP('poole',this)">⛵ Poole</div>
+  <div class="vtab al" id="vtab-l" onclick="switchVP('london',this)">🏙 London-Tage</div>
+  <div class="vtab" id="vtab-p" onclick="switchVP('poole',this)">⛵ Poole-Tage</div>
   <div class="vtab" id="vtab-r" onclick="switchVP('rank',this)">🏆 Ranking</div>
 </div>
-<div id="vlist-london"></div>
-<div id="vlist-poole" style="display:none"></div>
+
+<div id="vlist-london">
+  <div style="font-size:.8rem;color:var(--muted);margin-bottom:10px;font-family:'Source Sans 3',sans-serif">📍 Alle Pakete sind geografisch sinnvoll – pro Paket max. 1–2 U-Bahn-Stationen Umweg.</div>
+</div>
+<div id="vlist-poole" style="display:none">
+  <div style="font-size:.8rem;color:var(--muted);margin-bottom:10px;font-family:'Source Sans 3',sans-serif">⛵ Poole & Dorset – tagesweise geplant, kein unnötiger Mehraufwand.</div>
+</div>
 <div id="vlist-rank" style="display:none"></div>
 </div>
 
@@ -730,7 +743,8 @@ body {
 <div class="bdiv"><span>⛵</span></div>
 <div style="font-family:'Playfair Display',serif;font-weight:700;color:var(--teal);margin-bottom:8px">⛵ Poole – Indoor</div>
 <div class="card ta"><div class="ct">🚢 Waterfront Museum Poole</div><div class="cm">4 High St, Poole Quay</div><div class="cx">Geschichte des Poole Harbour – Piraten, Händler, Entdecker.</div><div><span class="tag tt">Museum</span></div></div>
-<div class="card ta"><div class="ct">🎳 Bowling &amp; Kino Bournemouth</div><div class="cm">Bus nach Bournemouth</div><div class="cx">Bowling, Kino, Restaurant – alles unter einem Dach für den kompletten Regentag.</div></div>
+<div class="card ta"><div class="ct">🎮 Otherworld VR London</div><div class="cm">📍 Tottenham Court Road · 🚇 Tottenham Court Road</div><div class="cx">Regentag = perfekter Gaming-Tag! Jojo und Mikko im VR-Paradies während Mila shoppt. Ca. 1–2 Stunden VR reichen. Vorab buchen!</div><div><span class="tag tn">Jojo &amp; Mikko</span></div></div>
+<div class="card ta"><div class="ct">🎳 Bowling &amp; Kino Bournemouth (Poole)</div><div class="cm">Bus nach Bournemouth</div><div class="cx">Bowling, Kino, Restaurant – alles unter einem Dach für den kompletten Regentag in Poole.</div></div>
 <div class="card ta"><div class="ct">☕ Afternoon Tea in Poole Old Town</div><div class="cx">Scones, Clotted Cream, Sandwiches – echter britischer Lifestyle bei Regen!</div><div><span class="tag tg">Gemütlich</span></div></div>
 </div>
 
@@ -757,15 +771,27 @@ body {
 
 <!-- SEHENSWUERDIGKEITEN -->
 <div id="sehenswuerdigkeiten" class="sec">
-<div class="sh">Sights London</div><div class="ssh">London, thou art the flower of cities all</div>
-<div class="card"><div class="ct">🎡 London Eye</div><div class="cm">📍 South Bank SE1 · 🚇 Waterloo oder Thames Clipper</div><div class="cx">360°-Blick für alle 5. Online vorbuchen – spart Wartezeit!</div><div><span class="tag tr">Top Kinder</span><span class="tag tn">Vorbuchen!</span></div></div>
-<div class="card"><div class="ct">🏰 Tower of London</div><div class="cm">📍 Tower Hill EC3N · 🚈 DLR Tower Gateway</div><div class="cx">Kronjuwelen, Beefeaters, 1000 Jahre Geschichte. Wachablösungs-Rundgang!</div><div><span class="tag tr">Highlight</span></div></div>
-<div class="card"><div class="ct">🦕 Natural History Museum</div><div class="cm">📍 Cromwell Rd SW7 · 🚇 South Kensington · Kostenlos</div><div class="cx">Blauwalskelett, Dinos, Vulkane. Pflicht für alle Kinder!</div><div><span class="tag tv">Kostenlos</span></div></div>
-<div class="card"><div class="ct">🔬 Science Museum</div><div class="cm">📍 Exhibition Rd SW7 · 🚇 South Kensington · Kostenlos</div><div class="cx">Weltraumkapseln, interaktive Stationen. Direkt neben NHM!</div><div><span class="tag tv">Kostenlos</span><span class="tag tn">Teens</span></div></div>
-<div class="card"><div class="ct">🌳 Hyde Park &amp; Diana Spielplatz</div><div class="cm">📍 Hyde Park · 🚇 Hyde Park Corner · Kostenlos</div><div class="cx">Riesiger Park, Tretboote auf dem Serpentine, Konzerte im Sommer.</div><div><span class="tag tv">Kostenlos</span></div></div>
-<div class="card"><div class="ct">👑 Buckingham Palace – Wachablösung</div><div class="cm">📍 Westminster SW1A · 🚇 St James's Park</div><div class="cx">Wachablösung meist 11:00 Uhr. Spektakel für die ganze Familie!</div><div><span class="tag tr">Klassiker</span></div></div>
-<div class="card"><div class="ct">🌉 Tower Bridge Glasbrücke</div><div class="cm">📍 SE1 · 🚈 DLR Tower Gateway</div><div class="cx">Gläserne Gehbrücke 42m über der Themse – nichts für schwache Nerven!</div><div><span class="tag tn">Fotostopp</span></div></div>
-<div class="card"><div class="ct">🎭 West End Musical</div><div class="cm">📍 Covent Garden WC2</div><div class="cx">The Lion King, Matilda, Back to the Future. Für Mila ein Highlight!</div><div><span class="tag tr">Abends</span><span class="tag tg">Vorbuchen!</span></div></div>
+<div class="sh">Sights London</div><div class="ssh">Klassiker + kinderfreundliche Highlights · wenig Laufen!</div>
+<div class="card na"><div class="ct">💡 Strategie für die Familie</div><div class="cx">
+Die Kinder laufen nicht gern lange. Deshalb: <strong>Pro Tag maximal 1–2 Hauptziele</strong>, dazwischen Pausen mit Snacks. ÖPNV nutzen statt zu Fuß. Zwischen den Zielen gern einen kurzen Café-Stopp einplanen – das hilft der Motivation!
+</div></div>
+<div class="card"><div class="ct">🦕 Natural History Museum ⭐ Top-Tipp</div><div class="cm">📍 South Kensington SW7 · 🚇 South Kensington · KOSTENLOS · 3–4 Std.</div><div class="cx">Absolutes Pflicht-Highlight! Blauwalskelett, lebensgroßer T-Rex, interaktive Vulkan-Station. Jojo und Mikko werden begeistert sein. Direkt nebenan: Science Museum (auch kostenlos). Beide an einem Tag!</div><div><span class="tag tv">Kostenlos</span><span class="tag tr">Top Kinder</span><span class="tag tn">Interaktiv</span></div></div>
+
+<div class="card"><div class="ct">🔬 Science Museum ⭐ Interaktiv</div><div class="cm">📍 Exhibition Rd SW7 · 🚇 South Kensington · KOSTENLOS</div><div class="cx">Direkt neben NHM – perfekte Kombination! Weltraumkapseln zum Anfassen, Dampfmaschinen, interaktive Stationen. Für Jojo &amp; Mikko ideal: viel zum Ausprobieren. IMAX-Vorführungen gegen Aufpreis.</div><div><span class="tag tv">Kostenlos</span><span class="tag tn">Interaktiv</span></div></div>
+
+<div class="card"><div class="ct">🏰 Tower of London + Tower Bridge</div><div class="cm">📍 Tower Hill EC3N · 🚈 DLR Tower Gateway · ca. £30 Erw., £15 Kinder</div><div class="cx">Kronjuwelen, Beefeater-Führung, 1000 Jahre Geschichte – kompakt auf kleinem Gebiet. Danach zu Fuß zur Tower Bridge Glasbrücke (separate Tickets). Kein großes Laufen nötig!</div><div><span class="tag tr">Klassiker</span></div></div>
+
+<div class="card"><div class="ct">🎡 London Eye</div><div class="cm">📍 South Bank SE1 · 🚇 Waterloo · online vorbuchen!</div><div class="cx">Unbedingt online vorbuchen (günstiger + keine Wartezeit). 30 Min. in der Kapsel, 360°-Blick. Danach einfach entlang der South Bank bummeln – Thames Path ist wenig anstrengend und toll!</div><div><span class="tag tr">Klassiker</span><span class="tag tn">Vorbuchen!</span></div></div>
+
+<div class="card"><div class="ct">👑 Buckingham Palace – Wachablösung</div><div class="cm">📍 Westminster SW1A · 🚇 St James's Park · KOSTENLOS</div><div class="cx">Wachablösung meist 11:00 Uhr (nicht täglich – vorher checken!). Einfach hinschauen – kein Eintritt. Danach durch den St. James's Park (Pelikane!) zur Westminster/London Eye.</div><div><span class="tag tv">Kostenlos</span><span class="tag tr">Klassiker</span></div></div>
+
+<div class="card"><div class="ct">🌳 Hyde Park &amp; Diana-Gedenkspielplatz</div><div class="cm">📍 Hyde Park Corner · 🚇 Hyde Park Corner · KOSTENLOS</div><div class="cx">Der Diana Memorial Playground ist kostenlos und riesig – ein echtes Erlebnis für Kinder! Danach Paddleboat auf dem Serpentine See (günstig, Spaß für alle). Wenig Laufen, viel Spaß.</div><div><span class="tag tv">Kostenlos</span><span class="tag tr">Kinder!</span></div></div>
+
+<div class="card"><div class="ct">🌍 Royal Observatory &amp; Greenwich Park</div><div class="cm">📍 Greenwich SE10 · direkt beim Hotel · teilweise kostenlos</div><div class="cx">Familienfoto auf der Nullmeridianlinie (kostenlos, draußen). Deer Park mit Hirschen im Park – kostenlos und direkt ums Eck! Observatorium-Besuch innen: ca. £10–16, schön aber nicht Pflicht.</div><div><span class="tag tv">Weitgehend kostenlos</span></div></div>
+
+<div class="card"><div class="ct">🎭 West End Musical – für Mila!</div><div class="cm">📍 Theaterviertel WC2 · abends · vorbuchen!</div><div class="cx">Back to the Future, Matilda oder The Lion King. Für Mila ein absolutes Highlight. Tipp: Günstigere Plätze im Oberdeck oft ab £25 – Sicht trotzdem toll. Tickets auf officialondon theatre.com vorbuchen.</div><div><span class="tag tr">Mila!</span><span class="tag tg">Abends</span></div></div>
+
+<div class="card"><div class="ct">🎮 Raven Street VR / Otherworld London</div><div class="cm">📍 Shoreditch E1 / Covent Garden · 🚇 Old Street · ca. £15–25/Person · 1–2 Std.</div><div class="cx"><strong>Für Jojo &amp; Mikko ein Highlight!</strong> Virtual Reality Erlebnisse zum Selberspielen – Weltraum, Horror, Action. Otherworld London bietet VR-Pods mieten. Couch Gaming, VR-Headsets – Gaming-Paradies für die Jungs!</div><div><span class="tag tr">Jojo &amp; Mikko!</span><span class="tag tn">VR Games</span></div></div>
 </div>
 
 <!-- ÖPNV -->
@@ -808,66 +834,104 @@ body {
 
 <!-- RESTAURANTS -->
 <div id="restaurants" class="sec">
-<div class="sh">Essen &amp; Trinken</div><div class="ssh">We are a nation of pub-goers</div>
+<div class="sh">Essen &amp; Trinken</div><div class="ssh">Lecker, günstig, familienfreundlich – für alle 5!</div>
 <div class="rf">
   <button class="rfb active" onclick="filterR('alle',this)">Alle</button>
-  <button class="rfb" onclick="filterR('britisch',this)">🫖 Britisch</button>
-  <button class="rfb" onclick="filterR('familie',this)">👨‍👩‍👧 Familie</button>
-  <button class="rfb" onclick="filterR('budget',this)">💰 Budget</button>
+  <button class="rfb" onclick="filterR('italienisch',this)">🍕 Italienisch</button>
+  <button class="rfb" onclick="filterR('asiatisch',this)">🍜 Asiatisch</button>
+  <button class="rfb" onclick="filterR('britisch',this)">🐟 Britisch</button>
+  <button class="rfb" onclick="filterR('budget',this)">💰 Super günstig</button>
 </div>
+<div class="card na"><div class="ct">💡 Familien-Strategie</div><div class="cx">London ist teuer – aber nicht wenn man weiß wo man isst. Supermärkte (Tesco, Sainsbury's, M&amp;S Simply Food) für Frühstück und Snacks. Mittags Streetfood oder Markthallen. Abends ein richtiges Restaurant. Budget: ca. £15–25 für alle 5 beim Mittag!</div></div>
 <div class="rlist">
-<div class="card" data-cat="britisch familie"><div class="ct">🥣 Dishoom</div><div class="cm">📍 Covent Garden WC2 · 🚇 Covent Garden · ££</div><div class="cx">Bombay-Café-Flair. Das Bacon Naan zum Frühstück ist legendär. Früh hingehen!</div><div><span class="tag tn">Frühstück</span><span class="tag tr">Muss!</span></div></div>
-<div class="card" data-cat="britisch"><div class="ct">🐟 The Golden Hind</div><div class="cm">📍 Marylebone Lane W1 · 🚇 Bond Street · ££</div><div class="cx">Bester Fish &amp; Chips Londons seit 1914. Der Klassiker für die Familie!</div><div><span class="tag tr">Britisch</span></div></div>
-<div class="card" data-cat="budget familie"><div class="ct">🥙 Borough Market</div><div class="cm">📍 Southwark St SE1 · 🚇 London Bridge · £</div><div class="cx">Jeder wählt selbst – Käse, Pasta, Pasteten. Perfekt für 5 verschiedene Geschmäcker!</div><div><span class="tag tv">Budget</span></div></div>
-<div class="card" data-cat="familie budget"><div class="ct">🍕 Flat Iron Pizza</div><div class="cm">📍 Mehrere Standorte · £</div><div class="cx">Riesige, günstige Pizzen. Perfekt nach Museumstag.</div><div><span class="tag tv">Budget</span></div></div>
-<div class="card" data-cat="britisch"><div class="ct">🍺 The Churchill Arms</div><div class="cm">📍 Kensington Church St W8 · 🚇 Notting Hill Gate · ££</div><div class="cx">Berühmtester Pub Londons dank Blumenpracht. Foto-Pflicht!</div><div><span class="tag tn">Pub</span></div></div>
-<div class="card" data-cat="britisch familie"><div class="ct">☕ Afternoon Tea</div><div class="cm">📍 Diverse Orte · £££</div><div class="cx">Scones, Clotted Cream, Sandwiches. Das volle britische Erlebnis – Mila wird begeistert sein!</div><div><span class="tag tg">Britisch</span></div></div>
+
+<div class="card" data-cat="italienisch budget"><div class="ct">🍕 Pizza Express</div><div class="cm">📍 Viele Standorte in London · ££</div><div class="cx">Klassische britisch-italienische Kette – überall zu finden, verlässlich gut, kinderfreundlich. Kinder-Menü ca. £7. Auf Angebote achten (oft 2-für-1 via Apps)!</div><div><span class="tag tv">Kinder OK</span><span class="tag tn">Kette</span></div></div>
+
+<div class="card" data-cat="italienisch budget"><div class="ct">🍕 Bella Italia / Prezzo</div><div class="cm">📍 Diverse Standorte · ££</div><div class="cx">Pasta, Pizza, große Portionen – günstige Familienketten. Perfekt wenn die Kinder nach einem langen Sightseeing-Tag einfach satt werden wollen ohne Diskussion.</div><div><span class="tag tv">Budget</span></div></div>
+
+<div class="card" data-cat="asiatisch budget"><div class="ct">🍜 Wagamama</div><div class="cm">📍 Überall in London · ££</div><div class="cx">Japanisch-asiatische Nudelgerichte – Ramen, Udon, gebratene Nudeln. Großzügige Portionen, schnell, modern. Jojo und Mikko lieben die Gyoza-Vorspeise! Ca. £10–13 pro Person.</div><div><span class="tag tr">Top Familie</span><span class="tag tn">Asiatisch</span></div></div>
+
+<div class="card" data-cat="asiatisch budget"><div class="ct">🍣 Yo! Sushi / Sushi Daily</div><div class="cm">📍 Diverse Standorte und Supermärkte · £–££</div><div class="cx">Förderband-Sushi oder Sushi aus dem Supermarkt. Für Sushi-Fans ein Erlebnis! Tesco und Sainsbury's haben günstige Sushi-Boxen ab £3 – perfekt als Snack zwischendurch.</div><div><span class="tag tn">Asiatisch</span></div></div>
+
+<div class="card" data-cat="asiatisch budget"><div class="ct">🍜 Chinatown London</div><div class="cm">📍 Gerrard Street, Soho WC2 · 🚇 Leicester Square · £–££</div><div class="cx">Echter Geheimtipp: Chinatown rund um die Gerrard Street bietet gebratene Nudeln, Dim Sum, Bubble Tea für kleines Geld. Die Kinder lieben Bubble Tea! Mittagsmenüs oft unter £8.</div><div><span class="tag tv">Günstig</span><span class="tag tr">Highlight</span></div></div>
+
+<div class="card" data-cat="asiatisch"><div class="ct">🍛 Dishoom</div><div class="cm">📍 Covent Garden WC2 · 🚇 Covent Garden · ££</div><div class="cx">Bombay-Café-Flair, Indisch. Das legendäre Bacon Naan zum Frühstück. Etwas teurer, aber für einen besonderen Abend lohnt es sich. Früh hingehen – oft Schlange!</div><div><span class="tag tg">Besonders</span></div></div>
+
+<div class="card" data-cat="britisch budget"><div class="ct">🐟 Fish &amp; Chips</div><div class="cm">📍 Überall in London · £</div><div class="cx">Einfach Pflicht! The Golden Hind (Marylebone) oder lokale Chippies. Zum Mitnehmen oft nur £6–8. Mit Malt Vinegar – so isst man das hier. Jojo und Mikko werden es lieben!</div><div><span class="tag tr">Britisch</span><span class="tag tv">Günstig</span></div></div>
+
+<div class="card" data-cat="britisch budget"><div class="ct">🥙 Borough Market</div><div class="cm">📍 Southwark St SE1 · 🚇 London Bridge · £</div><div class="cx">Jeder wählt selbst: Pulled Pork, Raclette, Pasta, Pasteten. Riesige Auswahl – perfekt für 5 verschiedene Geschmäcker. Mi–Sa. Günstig wenn man clever wählt.</div><div><span class="tag tv">Streetfood</span></div></div>
+
+<div class="card" data-cat="budget"><div class="ct">🛒 Tesco / Sainsbury's / M&amp;S Food</div><div class="cm">📍 Überall in London · £</div><div class="cx">Der unterschätzte Geheimtipp! M&amp;S Simply Food hat sensationliche Sandwiches, Sushi, Salate. Tesco Meal Deal: Sandwich + Snack + Getränk für £3.90 – bestes Preis-Leistungs-Verhältnis Londons!</div><div><span class="tag tv">Günstigste Option</span><span class="tag tn">Täglich</span></div></div>
+
+<div class="card" data-cat="budget"><div class="ct">🧁 Greggs / Pret a Manger</div><div class="cm">📍 Überall · £</div><div class="cx">Greggs: britische Bäckerei, Sausage Rolls für 50p–£2. Pret: Sandwiches, Wraps, Kaffee. Perfekt für schnelles Frühstück oder Mittagssnack zwischen zwei Sehenswürdigkeiten.</div><div><span class="tag tv">Super günstig</span></div></div>
+
 </div>
 </div>
 
 <!-- POOLE PHASE -->
 <div id="poole_phase" class="sec">
-<div class="sh">Poole – Phase 2</div><div class="ssh">19. bis 24. Juli 2026 · 5 Nächte</div>
+<div class="sh">Poole – Phase 2</div><div class="ssh">19. bis 24. Juli 2026 · 5 Nächte · Entspannung &amp; Abenteuer</div>
 <div class="card ta"><div class="ct">🏨 Drift &amp; Dune</div><div class="cx">39 Labrador Drive, BH15 1UX Poole<br><br>📍 Hamworthy, direkt am Poole Harbour.<br>🚌 Bus More 2/2A: Labrador Drive → Poole Quay (ca. 10 Min.)<br>🚌 Bus More 50: Poole Quay → Sandbanks<br>🚉 Poole Bahnhof: ca. 15 Min. mit Bus</div></div>
-<div class="card"><div class="ct">🚂 Anreise London → Poole</div><div class="cx"><strong>Zug (empfohlen):</strong> London Waterloo → Poole, ca. 2 Std. (South Western Railway). Direkt, kein Umsteigen!<br><br>💡 Mit 5 Personen: Zug oft bestes Preis-Leistungs-Verhältnis bei Advance-Buchung.</div></div>
-<div class="card ga"><div class="ct">🗓 Tages-Vorschläge Poole</div><div class="cx">
-<strong>Tag 7 (19.7.):</strong> Ankunft, Drift &amp; Dune einchecken, Poole Quay Abendbummel.<br><br>
-<strong>Tag 8 (20.7.):</strong> Sandbanks Beach! Bus More 50 ab Quay.<br><br>
-<strong>Tag 9 (21.7.):</strong> Brownsea Island – Fähre ab Poole Quay.<br><br>
-<strong>Tag 10 (22.7.):</strong> Jurassic Coast – Bus X54 → Swanage. Fossilien!<br><br>
-<strong>Tag 11 (23.7.):</strong> Bournemouth – Bus/Zug. Pier, Strand, Farewell Dinner.<br><br>
-<strong>Tag 12 (24.7.):</strong> Abreise – Zug Poole → Waterloo → Stansted Express. FR6135 13:10 Uhr.
+
+<div class="card na"><div class="ct">💡 Poole mit Kindern – Strategie</div><div class="cx">
+Poole ist <strong>perfekt für Familien mit Kindern</strong> die nicht gern laufen: Bus- und Fährverbindungen bringen euch überall hin ohne lange Fußwege. Sandbanks ist flach und sicher zum Baden. Brownsea Island per Fähre – kein Laufen zur Anreise! Die Jungs werden die Dampfbahn und Fossilien lieben, Mila den Bournemouth-Bummel.
+</div></div>
+
+<div class="card"><div class="ct">🚂 Anreise London → Poole</div><div class="cx"><strong>Zug (empfohlen):</strong> London Waterloo → Poole, ca. 2 Std. direkt (South Western Railway).<br><br>💡 Mit 5 Personen lohnt Advance-Buchung stark – kann günstiger als Einzeltickets sein. Kinder unter 5 kostenlos!</div></div>
+
+<div class="card ga"><div class="ct">🗓 5-Tages-Plan Poole (familiengerecht)</div><div class="cx">
+<strong>Tag 7 (19.7., Ankunft):</strong> Zug London→Poole, einchecken, Poole Quay kurz ansehen. Abends Pizza oder Fish &amp; Chips am Quay – entspannt ankommen.<br><br>
+<strong>Tag 8 (20.7.):</strong> 🏖 Sandbanks! Bus More 50 (10 Min.). Ganzer Tag Strand – Jojo &amp; Mikko buddeln, schwimmen, toben. Günstige Snacks mitbringen.<br><br>
+<strong>Tag 9 (21.7.):</strong> 🦚 Brownsea Island – Fähre ab Poole Quay. Eichhörnchen, Pfauen, Natur. Mikko wird begeistert sein!<br><br>
+<strong>Tag 10 (22.7.):</strong> 🦕 Jurassic Coast – Bus X54 nach Swanage, Fossilien suchen (Mikko &amp; Jojo!). Optional: Corfe Castle + Swanage Railway zurück.<br><br>
+<strong>Tag 11 (23.7.):</strong> 🏖 Bournemouth – Bus. Pier mit Arcade-Games (Jojo &amp; Mikko!), Strand, Bummel. Mila: Shopping in Bournemouth. Abends: Farewell-Dinner.<br><br>
+<strong>Tag 12 (24.7.):</strong> Abreise. Check-out spätestens 08:30 Uhr!
 </div></div>
 </div>
 
 <!-- POOLE SIGHTS -->
 <div id="poole_sights" class="sec">
-<div class="sh">Dorset Highlights</div><div class="ssh">Dorset – England at its most beautiful</div>
-<div class="card ta"><div class="ct">🏖 Sandbanks Beach</div><div class="cm">📍 Sandbanks BH13 · 🚌 Bus More 50</div><div class="cx">Einer der besten Sandstrände Europas – weitläufig, sauber, flaches Wasser.</div><div><span class="tag tt">Strand</span><span class="tag tr">Familie</span></div></div>
-<div class="card"><div class="ct">🦚 Brownsea Island</div><div class="cm">📍 Poole Harbour · 🛳 Fähre ab Poole Quay (15 Min.)</div><div class="cx">Letzte rote Eichhörnchen Südenglands und wilde Pfauen. National Trust. Für Jojo &amp; Mikko unvergesslich!</div><div><span class="tag tv">Natur</span></div></div>
-<div class="card"><div class="ct">🦕 Jurassic Coast</div><div class="cm">📍 Kimmeridge Bay / Old Harry Rocks · 🚌 Bus X54 → Swanage</div><div class="cx">UNESCO-Welterbe! Fossilien suchen am Strand (Ammoniten!). 185 Millionen Jahre Erdgeschichte.</div><div><span class="tag tt">UNESCO</span><span class="tag tr">Fossilien</span></div></div>
-<div class="card"><div class="ct">🏰 Corfe Castle &amp; Swanage Railway</div><div class="cm">📍 Corfe Castle BH20 · 🚂 Swanage Railway (Dampfbahn!)</div><div class="cx">Spektakuläre Burgruine und historische Dampflokomotive Swanage → Corfe Castle. Für Jojo &amp; Mikko wie Harry Potter!</div><div><span class="tag tr">Highlight</span><span class="tag tt">Dampfbahn</span></div></div>
-<div class="card"><div class="ct">🏖 Bournemouth</div><div class="cm">📍 Bournemouth · 🚌 Bus oder Zug (10–15 Min.)</div><div class="cx">Langer Sandstrand, Pier, gute Restaurants. Eiscreme am Pier ist Pflicht!</div></div>
+<div class="sh">Dorset Highlights</div><div class="ssh">Natur, Abenteuer &amp; Entspannung – für alle 5!</div>
+
+<div class="card na"><div class="ct">💡 Wenig Laufen, viel Erleben</div><div class="cx">Alle Ziele in Dorset sind per Bus oder Fähre erreichbar – kein stundenlanger Fußmarsch. Pro Tag ein Hauptziel reicht, dann Snackpause und entspannen. Die Kinder werden es danken!</div></div>
+
+<div class="card ta"><div class="ct">🏖 Sandbanks Beach ⭐ Tag 1</div><div class="cm">📍 Sandbanks BH13 · 🚌 Bus More 50 ab Quay (10 Min.) · KOSTENLOS</div><div class="cx">Einer der schönsten Sandstrände Europas – flaches Wasser, sauber, familienfreundlich. Für Jojo &amp; Mikko: buddeln, Wellen, toben. Snacks im Supermarkt vorher kaufen (Tesco am Quay). Perfekter Ankunftstag-Strand!</div><div><span class="tag tt">Tag 8</span><span class="tag tr">Kinder!</span><span class="tag tv">Kostenlos</span></div></div>
+
+<div class="card ta"><div class="ct">🦚 Brownsea Island ⭐ Mikko &amp; Natur-Tag</div><div class="cm">📍 Poole Harbour · 🛳 Fähre ab Poole Quay (15 Min.) · ca. £10–12 Fähre + Eintritt</div><div class="cx">Rote Eichhörnchen kommen sehr nah – mit Fernglas auf Safari! Wilde Pfauen im Park. <strong>Für Mikko das Highlight!</strong> Bequemes Schuhwerk, wenig Laufen auf der Insel. Picknick mitnehmen spart Kosten.</div><div><span class="tag tt">Tag 9</span><span class="tag tr">Mikko!</span><span class="tag tn">Natur</span></div></div>
+
+<div class="card ta"><div class="ct">🦕 Jurassic Coast + Swanage Railway</div><div class="cm">📍 Kimmeridge Bay · 🚌 Bus X54 → Swanage (40 Min. sitzen) · günstig</div><div class="cx"><strong>Für Jojo &amp; Mikko der beste Tag!</strong> Fossilien selbst aus dem Fels schlagen (Hammer vor Ort kaufen oder mitbringen). Dann Dampfbahn-Fahrt Swanage → Corfe Castle zurück – wie aus einem Videospiel. Kein großes Laufen nötig!</div><div><span class="tag tt">Tag 10</span><span class="tag tr">Jojo &amp; Mikko!</span><span class="tag tn">Dampfbahn</span></div></div>
+
+<div class="card ta"><div class="ct">🏖 Bournemouth – Pier &amp; Arcade</div><div class="cm">📍 Bournemouth BH1 · 🚌 Bus More 50 (20 Min.) oder Zug · günstig</div><div class="cx">Langer Sandstrand, Pier mit <strong>Arcade-Games für Jojo &amp; Mikko</strong>, gutes Shopping für Mila in der Innenstadt. Eiscreme am Pier ist Pflicht! Bournemouth hat eine lebhafte Einkaufsstraße – Mila-gerecht. Alle haben was davon!</div><div><span class="tag tt">Tag 11</span><span class="tag tg">Alle!</span></div></div>
+
+<div class="card"><div class="ct">🏰 Corfe Castle (optional/kombiniert)</div><div class="cm">📍 Corfe Castle BH20 · 🚂 Swanage Railway oder Bus</div><div class="cx">Spektakuläre Burgruine – am besten kombiniert mit dem Jurassic-Coast-Tag (Dampfbahn Swanage→Corfe). Kurzer Aufstieg zur Ruine (ca. 10 Min.), dann atemberaubende Aussicht. National Trust-Eintritt ca. £12 Erw., £6 Kinder.</div><div><span class="tag tt">Kombination</span></div></div>
+
+<div class="card"><div class="ct">⛴ Sandbanks Chain Ferry (Bonus-Erlebnis)</div><div class="cm">📍 Sandbanks → Shell Bay · günstiger Fährfahrt</div><div class="cx">Die kleine Kettenfähre über den Hafen – für Mikko ein technisches Wunder! Günstig, kurz und spaßig. Kombinierbar mit Sandbanks-Strand-Tag als Ausflug nach Shell Bay.</div></div>
 </div>
 
 <!-- POOLE ÖPNV -->
 <div id="poole_oepnv" class="sec">
-<div class="sh">ÖPNV in Poole &amp; Dorset</div><div class="ssh">Ohne eigenes Auto durch Dorset</div>
-<div class="card ta"><div class="ct">🚌 Morebus – Das Rückgrat</div><div class="cx">
-🔵 <strong>Linie 50:</strong> Poole Quay → Sandbanks → Bournemouth<br>
-🟡 <strong>Linie X54:</strong> Poole → Wareham → Swanage<br>
-🟢 <strong>Linie 2/2A:</strong> Labrador Drive (Drift &amp; Dune) → Poole Quay<br><br>
-📱 App: Morebus App oder Bustimes.org<br>
-🎟 Tageskarte: Morebus Day Rider ca. £5–7/Person
+<div class="sh">ÖPNV in Poole &amp; Dorset</div><div class="ssh">Kein Auto nötig – alles per Bus &amp; Fähre erreichbar</div>
+<div class="card ta"><div class="ct">🚌 Morebus – Eure Hauptverbindungen</div><div class="cx">
+🟢 <strong>Linie 2/2A:</strong> Drift &amp; Dune (Labrador Drive) → Poole Quay (10 Min., Startpunkt für alles!)<br>
+🔵 <strong>Linie 50:</strong> Poole Quay → Sandbanks → Bournemouth (10–20 Min.)<br>
+🟡 <strong>Linie X54:</strong> Poole → Wareham → Swanage (40 Min. bequem sitzen – für Fossilien-Tag!)<br><br>
+📱 App: <strong>Morebus App</strong> (Echtzeit-Abfahrten)<br>
+🎟 Tipp: Morebus Day Rider ca. £6–8/Person – lohnt sich bei 2+ Fahrten!
 </div></div>
-<div class="card"><div class="ct">🛳 Fähren im Hafen</div><div class="cx">
-🦚 <strong>Brownsea Island Ferry</strong> ab Poole Quay, ca. £10/Person.<br>
-⛴ <strong>Chain Ferry</strong> Sandbanks ↔ Shell Bay – günstig, für Jojo &amp; Mikko ein Erlebnis!
+
+<div class="card"><div class="ct">🛳 Fähren – bequem &amp; günstig</div><div class="cx">
+🦚 <strong>Brownsea Island Ferry:</strong> Ab Poole Quay, ca. £10–12/Person hin &amp; zurück inkl. Inseleintritt.<br>
+⛴ <strong>Sandbanks Chain Ferry:</strong> Sandbanks ↔ Shell Bay, Fußgänger günstig – für Jojo &amp; Mikko ein Erlebnis!<br><br>
+💡 Fähren kaufen am Anleger – kein Vorbuchen nötig.
 </div></div>
-<div class="card na"><div class="ct">💡 Tipps ohne Auto</div><div class="cx">
-📅 Abendbusse in Dorset nur stündlich – letzten Bus immer kennen!<br><br>
-💳 Kontaktlos zahlen: Morebus akzeptiert Kreditkarten und App-Tickets.<br><br>
-🚕 Taxi Notfall: Flexi Cabs Poole: 01202 555555.
+
+<div class="card na"><div class="ct">💡 Familien-Tipp: Wenig Laufen!</div><div class="cx">
+Bus und Fähre bringen euch direkt zu den Zielen – ihr müsst nirgends weit laufen. Strategie:<br><br>
+1. Morgens Bus ab Labrador Drive → Poole Quay (Startpunkt)<br>
+2. Von dort Fähre oder Bus zum Tagesziel<br>
+3. Snacks und Getränke vorher im <strong>Tesco am Quay</strong> kaufen<br>
+4. Letzten Bus kennen – Abendbusse in Dorset stündlich!<br><br>
+🚕 Notfall Taxi: <strong>Flexi Cabs Poole: 01202 555555</strong>
 </div></div>
 </div>
 
@@ -1041,7 +1105,7 @@ Poole → London Waterloo (2 Std.) → Tube → Liverpool Street (20 Min.) → S
 
 <!-- KINDER-HIGHLIGHTS -->
 <div id="kinder" class="sec">
-<div class="sh">🧒 Kinder-Highlights</div><div class="ssh">Personalisiert für Mila, Jojo &amp; Mikko</div>
+<div class="sh">🧒 Kinder-Highlights</div><div class="ssh">Personalisiert – Mila shoppt, Jojo &amp; Mikko zocken und naschen!</div>
 <div class="vtabs" style="margin-bottom:16px">
   <div class="vtab al" id="ktab-mila" onclick="switchKids('mila',this)">👧🏼 Mila</div>
   <div class="vtab" id="ktab-jojo" onclick="switchKids('jojo',this)">👦🏼 Jojo</div>
@@ -1049,39 +1113,57 @@ Poole → London Waterloo (2 Std.) → Tube → Liverpool Street (20 Min.) → S
 </div>
 
 <div id="kids-mila">
-  <div style="background:rgba(200,168,75,.15);border-left:4px solid var(--gold);border-radius:4px;padding:10px 14px;margin-bottom:12px;font-size:.85rem;color:var(--dark)">
-    <strong>Mila, 15 Jahre</strong> – Teenager mit Stil. Shopping, Kultur, Erlebnisse die man Instagram-würdig findet.
+  <div style="background:rgba(200,168,75,.15);border-left:4px solid var(--gold);border-radius:4px;padding:10px 14px;margin-bottom:12px;font-size:.85rem;">
+    <strong>Mila, 15 Jahre</strong> – Shopping, Style &amp; Erlebnisse. Liebt modische Klamotten (günstig &amp; Vintage), coole Cafés und Dinge die sich auf Instagram lohnen.
   </div>
-  <div class="card ga"><div class="ct">🎭 West End Musical</div><div class="cm">📍 Theaterviertel WC2 · abends</div><div class="cx">Back to the Future, Matilda oder The Lion King – ein Musical in London gehört zu den unvergesslichen Erlebnissen. Tickets vorbuchen!</div></div>
-  <div class="card ga"><div class="ct">🛍 Carnaby Street &amp; Covent Garden</div><div class="cm">📍 🚇 Oxford Circus / Covent Garden</div><div class="cx">Londons coolste Shoppingstraßen mit unabhängigen Läden, Vintage-Mode und Streetfood. Straßenkünstler in Covent Garden sind ein Erlebnis.</div></div>
-  <div class="card ga"><div class="ct">🌉 Tower Bridge Glasbrücke</div><div class="cm">📍 SE1 · 🚈 DLR Tower Gateway</div><div class="cx">42 Meter über der Themse auf einer Glasscheibe stehen – für Mutige! Das Foto ist episch.</div></div>
-  <div class="card ga"><div class="ct">🦕 Fossilien suchen – Jurassic Coast</div><div class="cm">📍 Kimmeridge Bay, Dorset · 🚌 Bus X54</div><div class="cx">Echte Ammoniten aus dem Fels schlagen – fühlt sich an wie echte Entdeckerin. Hammer und Meissel mitnehmen!</div></div>
-  <div class="card ga"><div class="ct">🏛 Tate Modern &amp; South Bank</div><div class="cm">📍 Bankside SE1 · 🛳 Thames Clipper</div><div class="cx">Zeitgenössische Kunst im riesigen Kraftwerk. Davor und danach: South Bank Promenade mit Streetfood und Buchmarkt.</div></div>
-  <div class="card ga"><div class="ct">☕ Afternoon Tea</div><div class="cm">📍 diverse Cafés in London &amp; Poole</div><div class="cx">Scones, Clotted Cream, Mini-Sandwiches – das volle britische Erlebnis. Für Mila ein Pflichttermin!</div></div>
+
+  <div class="card ga"><div class="ct">🛍 Carnaby Street &amp; Covent Garden</div><div class="cm">📍 🚇 Oxford Circus / Covent Garden</div><div class="cx">Londons coolste Shoppingstraßen! Carnaby: independent Labels, Streetwear, Teens. Covent Garden: Straßenkünstler und Boutiquen. Beide zu Fuß verbindbar – wenig Laufen!</div><div><span class="tag tr">Mila!</span><span class="tag tg">Shopping</span></div></div>
+
+  <div class="card ga"><div class="ct">👗 Portobello Road Market</div><div class="cm">📍 Notting Hill W11 · 🚇 Notting Hill Gate · Sa. 9–17 Uhr</div><div class="cx">Londons berühmtester Vintage- und Antiquitätenmarkt. Secondhand-Mode, Schmuck, Prints – günstig und einzigartig. Notting Hill mit seinen bunten Häusern ist nebenbei foto-perfekt!</div><div><span class="tag tr">Vintage!</span><span class="tag tn">Sa. only</span></div></div>
+
+  <div class="card ga"><div class="ct">🧥 Brick Lane &amp; Spitalfields Market</div><div class="cm">📍 East London E1 · 🚇 Shoreditch High Street · So. Markt</div><div class="cx">Trendigste Ecke Londons: Vintage-Läden, Street Art, unabhängige Designer. Old Spitalfields Market am Sonntag – günstige Mode, Vintage-Pieces. Für Mila der beste Einkaufstag!</div><div><span class="tag tr">Vintage Top!</span><span class="tag tv">Günstig</span></div></div>
+
+  <div class="card ga"><div class="ct">🎭 West End Musical</div><div class="cm">📍 Theaterviertel WC2 · abends</div><div class="cx">Back to the Future, Matilda oder The Lion King. Für Mila absolutes Highlight – ein Abend in einem Weltklasse-Musical ist unvergesslich!</div><div><span class="tag tr">Muss!</span></div></div>
+
+  <div class="card ga"><div class="ct">🌉 Tower Bridge Glasbrücke + Foto-Spots</div><div class="cm">📍 SE1 · 🚈 DLR Tower Gateway</div><div class="cx">42m über der Themse stehen – für mutige Fotos! Danach: Shad Thames (malerische Gasse) für das beste London-Foto. Instagram-Pflicht für Mila!</div><div><span class="tag tn">Foto-Spot</span></div></div>
+
+  <div class="card ga"><div class="ct">☕ Afternoon Tea &amp; Trendy Cafés</div><div class="cm">📍 Diverse Orte in London</div><div class="cx">Scones, Clotted Cream, Mini-Sandwiches – das volle britische Erlebnis. Günstigere Option: Bettys-style Cafés oder Konditorei in Covent Garden. Bubble Tea in Chinatown als Alternative!</div><div><span class="tag tg">Britisch</span></div></div>
 </div>
 
 <div id="kids-jojo" style="display:none">
-  <div style="background:rgba(1,33,105,.12);border-left:4px solid var(--navy);border-radius:4px;padding:10px 14px;margin-bottom:12px;font-size:.85rem;color:var(--dark)">
-    <strong>Jojo, 12 Jahre</strong> – Abenteurer. Liebt Action, Geschichte und Dinge die groß, laut oder spektakulär sind.
+  <div style="background:rgba(1,33,105,.12);border-left:4px solid var(--navy);border-radius:4px;padding:10px 14px;margin-bottom:12px;font-size:.85rem;">
+    <strong>Jojo, 12 Jahre</strong> – Gamer, Naschkatze, Entdecker. Liebt Videospiele und VR, interaktive Erlebnisse, nascht gern und möchte nicht stundenlang laufen.
   </div>
-  <div class="card na"><div class="ct">🦴 Dino-Skelett im Natural History Museum</div><div class="cm">📍 South Kensington · Kostenlos</div><div class="cx">Das Blauwalskelett im Eingang und der T-Rex-Flügel – gigantisch! Stundenlang zu erkunden. Kostenlos!</div></div>
-  <div class="card na"><div class="ct">🐦 Beefeater-Tour im Tower of London</div><div class="cm">📍 Tower Hill EC3N · 🚈 DLR Tower Gateway</div><div class="cx">Die geführte Tour mit einem Beefeater ist wie ein Mittelalter-Abenteuer. Raben mit echten Namen, Folterkammern, Kronjuwelen!</div></div>
-  <div class="card na"><div class="ct">🚂 Swanage Railway – echte Dampflok!</div><div class="cm">📍 Swanage → Corfe Castle · 🚌 Bus X54 nach Swanage</div><div class="cx">Eine funktionierende historische Dampflokomotive durch die Purbeck Hills – wie aus Harry Potter. Für Jojo ein echtes Highlight.</div></div>
-  <div class="card na"><div class="ct">🌍 Nullmeridian im Greenwich Park</div><div class="cm">📍 Royal Observatory · direkt beim Hotel!</div><div class="cx">Ein Bein in der westlichen, eines in der östlichen Hälfte der Welt stehen. Kostenlos und direkt um die Ecke!</div></div>
-  <div class="card na"><div class="ct">🏖 Sandbanks – Freiheit am Meer</div><div class="cm">📍 Sandbanks BH13 · 🚌 Bus More 50</div><div class="cx">Einfach ins Meer springen, buddeln, toben. Für 12-Jährige ist das purer Spaß ohne Programm.</div></div>
-  <div class="card na"><div class="ct">🌉 Tower Bridge Glasbrücke</div><div class="cm">📍 SE1 · 🚈 DLR Tower Gateway</div><div class="cx">42m über der Themse auf Glas stehen – für Mutige. Jojo wird es lieben!</div></div>
+
+  <div class="card na"><div class="ct">🎮 Otherworld London – VR &amp; Gaming</div><div class="cm">📍 Tottenham Court Rd W1 · 🚇 Tottenham Court Road · ca. £15–20</div><div class="cx"><strong>Jojos absolutes Highlight!</strong> VR-Pods zum Mieten – Shooter, Abenteuer, Weltraum. Mehrere Headsets gleichzeitig nutzbar. Perfekt für 1–2 Stunden nach Museen. Vorab buchen!</div><div><span class="tag tr">Top!</span><span class="tag tn">Gaming</span></div></div>
+
+  <div class="card na"><div class="ct">🔬 Science Museum – Interaktiv</div><div class="cm">📍 South Kensington SW7 · KOSTENLOS</div><div class="cx">Für Jojo das beste kostenlose Museum! Raketen, Weltraumkapseln, Dampfmaschinen zum Anfassen. Launch Pad Galerie: alles interaktiv – Jojo wird Stunden brauchen. Kombinieren mit NHM!</div><div><span class="tag tv">Kostenlos</span><span class="tag tn">Interaktiv!</span></div></div>
+
+  <div class="card na"><div class="ct">🦕 Natural History Museum – Dino-Flügel</div><div class="cm">📍 South Kensington SW7 · KOSTENLOS</div><div class="cx">Der T-Rex-Bereich und das Blauwalskelett: spektakulär! Jojo wird die Erdbebenstation lieben – man steht auf echten Rüttelplatten. Kostenlos und gigantisch.</div><div><span class="tag tv">Kostenlos</span><span class="tag tr">Dinos!</span></div></div>
+
+  <div class="card na"><div class="ct">🐦 Tower of London – Beefeater-Tour</div><div class="cm">📍 Tower Hill EC3N · 🚈 DLR Tower Gateway</div><div class="cx">Geführte Tour mit einem Beefeater – Raben, Folterkammer, Kronjuwelen. Wie Assassin's Creed in echt! Raben haben echte Namen. Jojo wird Geschichten zum Erzählen haben.</div><div><span class="tag tr">Geschichte!</span></div></div>
+
+  <div class="card na"><div class="ct">🍫 M&amp;M's World &amp; LEGO Store</div><div class="cm">📍 Leicester Square WC2 · 🚇 Leicester Square · kostenlos reinschauen</div><div class="cx">M&amp;M's Store mit 4 Etagen Süßkram – Naschparadies für Jojo! Direkt daneben: LEGO Store. Kostenlos reinschauen, Budget für eine Tüte M&amp;M's einplanen. Leicester Square ist immer ein Erlebnis!</div><div><span class="tag tv">Naschparadies</span></div></div>
+
+  <div class="card na"><div class="ct">🚂 Swanage Railway – echte Dampflok (Poole!)</div><div class="cm">📍 Swanage → Corfe Castle · 🚌 Bus X54</div><div class="cx">Im Poole-Teil der Reise: eine funktionierende historische Dampflok – wie aus einem Spiel! Kombination mit Corfe Castle: Burgruine auf Hügel. Für Jojo ein echter Adventure-Tag.</div><div><span class="tag tt">Poole</span><span class="tag tr">Dampfbahn!</span></div></div>
 </div>
 
 <div id="kids-mikko" style="display:none">
-  <div style="background:rgba(13,110,110,.12);border-left:4px solid var(--teal);border-radius:4px;padding:10px 14px;margin-bottom:12px;font-size:.85rem;color:var(--dark)">
-    <strong>Mikko, 12 Jahre</strong> – Entdecker. Liebt Natur, Tiere und Dinge die er noch nie gesehen hat.
+  <div style="background:rgba(13,110,110,.12);border-left:4px solid var(--teal);border-radius:4px;padding:10px 14px;margin-bottom:12px;font-size:.85rem;">
+    <strong>Mikko, 12 Jahre</strong> – Entdecker, Gamer, Naschkatze. Liebt Natur und Tiere, interaktive Erlebnisse und Videospiele – und nascht gern wie sein Bruder!
   </div>
-  <div class="card ta"><div class="ct">🦚 Rote Eichhörnchen auf Brownsea Island</div><div class="cm">📍 Poole Harbour · 🛳 Fähre ab Poole Quay</div><div class="cx">Die kleinen roten Eichhörnchen kommen sehr nah. Mit Fernglas auf Pirsch gehen – wie eine echte Safari! Dazu wilde Pfauen.</div></div>
-  <div class="card ta"><div class="ct">🦕 Fossilien suchen – Jurassic Coast</div><div class="cm">📍 Kimmeridge Bay · 🚌 Bus X54 nach Swanage</div><div class="cx">185 Millionen Jahre alte Ammoniten selbst aus dem Stein schlagen. Hammer &amp; Meissel mitnehmen!</div></div>
-  <div class="card ta"><div class="ct">🏰 Corfe Castle</div><div class="cm">📍 Corfe Castle BH20 · 🚂 Swanage Railway</div><div class="cx">Spektakuläre Burgruine auf einem Hügel. Kombinieren mit der Dampfbahn – unvergesslich!</div></div>
-  <div class="card ta"><div class="ct">🐦 Raben im Tower of London</div><div class="cm">📍 Tower Hill · 🚈 DLR Tower Gateway</div><div class="cx">Die Raben des Towers heißen alle mit Namen und haben einen eigenen Wächter. Laut Legende fällt die Monarchie wenn sie weg sind!</div></div>
-  <div class="card ta"><div class="ct">🌳 Rehe im Greenwich Park</div><div class="cm">📍 Greenwich Park · direkt beim Hotel!</div><div class="cx">Eine echte Hirsch- und Rehherde lebt seit Jahrhunderten im Park. Früh morgens sind sie besonders aktiv – und das direkt bei eurem Hotel!</div></div>
-  <div class="card ta"><div class="ct">⛴ Sandbanks Chain Ferry</div><div class="cm">📍 Sandbanks → Shell Bay</div><div class="cx">Die kleine Kettenfähre über den Hafen – für Mikko ein technisches Wunder! Günstig, kurz und spaßig.</div></div>
+
+  <div class="card ta"><div class="ct">🎮 Otherworld London – VR (mit Jojo!)</div><div class="cm">📍 Tottenham Court Rd W1 · ca. £15–20</div><div class="cx">Mikko und Jojo können VR-Abenteuer zusammen erleben – Multiplayer-Modi möglich! Ein Erlebnis das man zuhause nicht hat. Mikko wird Jojo herausfordern wollen.</div><div><span class="tag tr">Jojo &amp; Mikko!</span><span class="tag tn">Gaming</span></div></div>
+
+  <div class="card ta"><div class="ct">🦚 Brownsea Island – Rote Eichhörnchen</div><div class="cm">📍 Poole Harbour · 🛳 Fähre ab Poole Quay</div><div class="cx">Rote Eichhörnchen kommen sehr nah – mit Fernglas auf Safari gehen! Wilde Pfauen im Park. Für Mikko wie echte Tierbeobachtung in freier Wildbahn. Unvergesslich!</div><div><span class="tag tt">Poole</span><span class="tag tv">Natur!</span></div></div>
+
+  <div class="card ta"><div class="ct">🦕 Fossilien suchen – Jurassic Coast</div><div class="cm">📍 Kimmeridge Bay, Dorset · 🚌 Bus X54 nach Swanage</div><div class="cx">185 Millionen Jahre alte Ammoniten selbst aus dem Stein schlagen – wie ein echter Paläontologe! Hammer mitbringen (oder vor Ort kaufen). Mikko wird seinen Fund mit nach Hause nehmen wollen.</div><div><span class="tag tt">Poole</span><span class="tag tr">Fossilien!</span></div></div>
+
+  <div class="card ta"><div class="ct">🌳 Rehe im Greenwich Park</div><div class="cm">📍 Greenwich Park SE10 · direkt beim Hotel! · kostenlos</div><div class="cx">Echte Hirsch- und Rehherde – morgens aktiv. Direkt ums Eck vom Hotel. Für Mikko perfekt: Natur erleben ohne weite Wege. Fernglas mitbringen!</div><div><span class="tag tv">Kostenlos</span><span class="tag tn">Direkt beim Hotel</span></div></div>
+
+  <div class="card ta"><div class="ct">🍫 Nasch-Tour London</div><div class="cm">📍 Leicester Square, Chinatown, diverse · £</div><div class="cx">M&amp;M's World (4 Etagen Süßkram!), Bubble Tea in Chinatown (ab £4), Churros am South Bank-Markt, Crepes am Portobello Market. Mikko und Jojo können sich eine kleine Nasch-Tour zusammenstellen!</div><div><span class="tag tv">Naschparadies</span><span class="tag tg">Budget</span></div></div>
+
+  <div class="card ta"><div class="ct">🔬 Science Museum Interactive Galleries</div><div class="cm">📍 South Kensington SW7 · KOSTENLOS</div><div class="cx">Launch Pad Galerie: alles anfassen und ausprobieren! Roboter, Energie, Physik zum Mitmachen. Mikko und Jojo können Stunden hier verbringen. Kostenlos und einer der besten Stops in London!</div><div><span class="tag tv">Kostenlos</span><span class="tag tn">Interaktiv!</span></div></div>
 </div>
 </div>
 
@@ -1602,19 +1684,151 @@ function wCode(c) {
 // ══════════════════════════════════════════════
 var ACTS = {
   london: [
-    {id:'lon_eye',n:'🎡 London Eye'},{id:'lon_tower',n:'🏰 Tower of London'},
-    {id:'lon_nhm',n:'🦕 Natural History Museum'},{id:'lon_science',n:'🔬 Science Museum'},
-    {id:'lon_bridge',n:'🌉 Tower Bridge Glasbrücke'},{id:'lon_hyde',n:'🌳 Hyde Park & Diana Spielplatz'},
-    {id:'lon_buck',n:'👑 Buckingham Wachablösung'},{id:'lon_british',n:'🏛 British Museum'},
-    {id:'lon_musical',n:'🎭 West End Musical'},{id:'lon_clipper',n:'🛳 Thames Clipper Fahrt'},
-    {id:'lon_borough',n:'🥙 Borough Market'},{id:'lon_covent',n:'🎪 Covent Garden'},
-    {id:'lon_cutty',n:'⚓ Cutty Sark Greenwich'}
+    {
+      id:'lon_south_bank',
+      n:'🎡 South Bank & London Eye',
+      area:'South Bank (Waterloo)',
+      anreise:'Thames Clipper ab Greenwich oder Tube Waterloo',
+      highlights:['London Eye (vorbuchen!)','South Bank Promenade','Tate Modern (kostenlos)','Borough Market'],
+      kids:'Auf dem Wasser fahren, Straßenkünstler, Streetfood',
+      essen:'Borough Market Streetfood, Wagamama Waterloo',
+      dauer:'Ganzer Tag',
+      laufen:'Minimal – alles direkt am Flussufer'
+    },
+    {
+      id:'lon_tower_area',
+      n:'🏰 Tower & Tower Bridge',
+      area:'City of London (Tower Hill)',
+      anreise:'DLR ab Greenwich → Tower Gateway (20 Min.)',
+      highlights:['Tower of London Beefeater-Tour','Tower Bridge Glasbrücke','HMS Belfast (optional)'],
+      kids:'Für Jojo & Mikko: mittelalterliche Geschichte wie aus einem Spiel!',
+      essen:'Fish & Chips in der Nähe, Pub-Lunch',
+      dauer:'Halbtag – nachmittags South Bank kombinierbar',
+      laufen:'Gering – Tower und Bridge direkt nebeneinander'
+    },
+    {
+      id:'lon_museums',
+      n:'🦕 Naturkundemuseum + Science Museum',
+      area:'South Kensington',
+      anreise:'Tube → South Kensington (direkt)',
+      highlights:['Natural History Museum – T-Rex, Walskelett (KOSTENLOS)','Science Museum – interaktiv (KOSTENLOS)','Diana Spielplatz (Hyde Park) optional'],
+      kids:'Jojo & Mikko: beste Kombination! Stunden zum Entdecken. Alles kostenlos!',
+      essen:'Wagamama South Kensington, Pizza Express',
+      dauer:'Ganzer Tag – beide Museen nebeneinander!',
+      laufen:'Minimal – beide Museen direkt nebeneinander'
+    },
+    {
+      id:'lon_hyde_covent',
+      n:'🌳 Hyde Park + Covent Garden',
+      area:'Hyde Park / West End (verbunden)',
+      anreise:'Tube → Hyde Park Corner, dann → Covent Garden',
+      highlights:['Diana Memorial Playground','Kensington Gardens','Covent Garden Straßenkünstler','Carnaby Street für Mila'],
+      kids:'Mila: Shopping! Jojo & Mikko: Spielplatz, Paddleboat Serpentine',
+      essen:'Chinatown (5 Min. von Covent Garden!) für Nudelgerichte & Bubble Tea',
+      dauer:'Ganzer Tag – zwei Bereiche, eine U-Bahn-Fahrt dazwischen',
+      laufen:'Mittel – aber kein Muss, Tube nutzen'
+    },
+    {
+      id:'lon_vr_gaming',
+      n:'🎮 VR Gaming Day',
+      area:'Tottenham Court Road / Soho',
+      anreise:'Tube → Tottenham Court Road',
+      highlights:['Otherworld London VR','M&M\'s World Leicester Square','LEGO Store','Chinatown zum Essen'],
+      kids:'Jojo & Mikko absolutes Highlight! VR-Pods, Naschparadies, Bubble Tea',
+      essen:'Chinatown (1 Min. zu Fuß!) – günstigste asiatische Küche Londons',
+      dauer:'Halbtag VR + Nachmittag Chinatown/Leicester Square',
+      laufen:'Minimal – alles auf wenigen Straßen konzentriert'
+    },
+    {
+      id:'lon_buckingham_westminster',
+      n:'👑 Buckingham Palace & Westminster',
+      area:'Westminster / St James',
+      anreise:'Tube → St James\'s Park oder Victoria',
+      highlights:['Wachablösung 11 Uhr (kostenlos)','St James\'s Park (Pelikane!)','Houses of Parliament','Big Ben Foto'],
+      kids:'Wachablösung – Jojo & Mikko lieben die Uniformen & Pferde!',
+      essen:'Pret a Manger oder Sainsbury\'s in der Nähe für günstige Mittagspause',
+      dauer:'Halbtagl – nachmittags Southbank oder Shopping kombinierbar',
+      laufen:'Gering – Spaziergang durch Park, dann fertig'
+    },
+    {
+      id:'lon_mila_shopping',
+      n:'🛍 Shopping-Tour für Mila',
+      area:'East London / Shoreditch',
+      anreise:'Tube → Shoreditch High Street (Overground)',
+      highlights:['Brick Lane Vintage','Old Spitalfields Market (So!)','Carnaby Street (Mo-Sa)','Portobello Road (Sa Markt)'],
+      kids:'Mila: Vintage-Paradies! Jojo & Mikko können währenddessen VR oder Covent Garden',
+      essen:'Streetfood Brick Lane, Bagels am Brick Lane Beigel Shop (24h, iconic!)',
+      dauer:'Halbtag',
+      laufen:'Mittel – aber alles auf einer Straße'
+    },
+    {
+      id:'lon_greenwich',
+      n:'🌍 Greenwich erkunden',
+      area:'Greenwich (direkt beim Hotel!)',
+      anreise:'Zu Fuß vom Hotel!',
+      highlights:['Royal Observatory & Meridian-Linie (Familienfoto!)','Deer Park mit Rehen (kostenlos)','Cutty Sark','Greenwich Market'],
+      kids:'Mikko: Rehe! Jojo: "Ein Bein in Ost, ein Bein in West"! Alle: Markt-Streetfood',
+      essen:'Greenwich Market Streetfood, lokale Pubs',
+      dauer:'Halbtag – perfekt als erster oder letzter London-Tag',
+      laufen:'Gering – direkt vom Hotel aus zu Fuß'
+    }
   ],
   poole: [
-    {id:'poo_sand',n:'🏖 Sandbanks Beach'},{id:'poo_brown',n:'🦚 Brownsea Island'},
-    {id:'poo_jura',n:'🦕 Jurassic Coast Fossilien'},{id:'poo_corfe',n:'🏰 Corfe Castle'},
-    {id:'poo_sw',n:'🚂 Swanage Railway Dampfbahn'},{id:'poo_bm',n:'🏖 Bournemouth Promenade'},
-    {id:'poo_chain',n:'⛴ Sandbanks Chain Ferry'},{id:'poo_quay',n:'⚓ Poole Old Town & Quay'}
+    {
+      id:'poo_sandbanks',
+      n:'🏖 Sandbanks Strandtag',
+      area:'Sandbanks (Bus 10 Min.)',
+      anreise:'Bus More 50 ab Poole Quay → Sandbanks',
+      highlights:['Einer der besten Strände Europas','Flaches Wasser – sicher für Kinder','Paddeln, buddeln, schwimmen'],
+      kids:'Jojo & Mikko: volle Freiheit am Strand! Mikko baut Sandburgen.',
+      essen:'Snacks vom Tesco vorher kaufen – günstigste Option. Cafe am Strand für Eis.',
+      dauer:'Ganzer Tag',
+      laufen:'Minimal – Bus direkt zum Strand'
+    },
+    {
+      id:'poo_brownsea',
+      n:'🦚 Brownsea Island – Tier-Safari',
+      area:'Poole Harbour (Fähre 15 Min.)',
+      anreise:'Fähre ab Poole Quay',
+      highlights:['Rote Eichhörnchen (kommen sehr nah!)','Wilde Pfauen','Natur pur','Vogel-Lagune'],
+      kids:'Mikko absolutes Highlight! Fernglas mitbringen – echte Safari-Stimmung.',
+      essen:'Picknick mitbringen (spart Geld!), kleines Café auf der Insel',
+      dauer:'Halbtag bis ganzer Tag',
+      laufen:'Gering – gemütliche Pfade, kein Pflicht-Programm'
+    },
+    {
+      id:'poo_jurassic_dampfbahn',
+      n:'🦕 Fossilien + Dampfbahn-Abenteuer',
+      area:'Swanage / Kimmeridge (Bus 40 Min.)',
+      anreise:'Bus X54 → Swanage, dann Dampfbahn nach Corfe',
+      highlights:['Kimmeridge Bay: echte Ammoniten suchen!','Swanage Railway Dampfbahn','Corfe Castle Burgruine'],
+      kids:'Jojo & Mikko: bestes Tag der ganzen Reise! Fossilien, Dampflok, Burg.',
+      essen:'Fish & Chips in Swanage (günstig), Snacks mitnehmen',
+      dauer:'Ganzer Tag – früh losgehen!',
+      laufen:'Mittel – aber Dampfbahn und Bus machen viel ab'
+    },
+    {
+      id:'poo_bournemouth',
+      n:'🎡 Bournemouth – Arcade & Shopping',
+      area:'Bournemouth (Bus 20 Min.)',
+      anreise:'Bus More 50 oder Zug ab Poole',
+      highlights:['Bournemouth Pier mit Arcade-Games (Jojo & Mikko!)','Langer Sandstrand','Shopping-Innenstadt für Mila','Eiscreme am Pier'],
+      kids:'Jojo & Mikko: Arcade-Games! Mila: Einkaufsstraße. Eltern: Strandcafé.',
+      essen:'Günstige Pizza oder Noodle-Bar in Bournemouth City, Chips am Pier',
+      dauer:'Ganzer Tag',
+      laufen:'Gering – Bus direkt zum Pier/Strand'
+    },
+    {
+      id:'poo_entspannung',
+      n:'🌊 Entspannungstag Poole Quay',
+      area:'Poole Old Town (direkt um die Ecke)',
+      anreise:'Bus 10 Min. oder Taxi',
+      highlights:['Poole Quay bummeln','Waterfront Museum (günstig)','Boat Trip Hafen-Rundfahrt','Chain Ferry nach Shell Bay'],
+      kids:'Jojo & Mikko: Chain Ferry als Technik-Erlebnis! Einfach entspannter Tag.',
+      essen:'Günstige Pubs am Quay, Fish & Chips, Eiscreme',
+      dauer:'Flexibel – halbtags reicht',
+      laufen:'Minimal'
+    }
   ]
 };
 var VD = {};
@@ -1635,7 +1849,10 @@ async function loadVotes() {
 
 function renderVotePhase(ph) {
   var el = document.getElementById('vlist-' + ph); if (!el) return;
-  el.innerHTML = '';
+  // Remove old cards but keep the header div
+  var children = el.children;
+  while (el.children.length > 1) el.removeChild(el.lastChild);
+
   var acts = ACTS[ph] || [];
   for (var i = 0; i < acts.length; i++) {
     var a = acts[i];
@@ -1644,14 +1861,41 @@ function renderVotePhase(ph) {
     var tot = 0; for (var k = 0; k < keys.length; k++) tot += votes[keys[k]];
     var my = votes[WHO] || 0;
     var sc = tot > 0 ? 'pos' : tot < 0 ? 'neg' : 'neu';
-    var div = document.createElement('div'); div.className = 'vi';
-    div.innerHTML = '<div class="vname">' + a.n + '</div>'
-      + '<div class="vscore ' + sc + '">' + (tot > 0 ? '+' : '') + String(tot) + '</div>'
-      + '<div class="vbtns">'
-      + '<button class="vbtn up' + (my === 1 ? ' voted' : '') + '" onclick="castV(\'' + a.id + '\',\'' + a.n + '\',\'' + ph + '\',1)">👍</button>'
-      + '<button class="vbtn dn' + (my === -1 ? ' voted' : '') + '" onclick="castV(\'' + a.id + '\',\'' + a.n + '\',\'' + ph + '\',-1)">👎</button>'
-      + '</div>';
-    el.appendChild(div);
+    var totStr = (tot > 0 ? '+' : '') + String(tot);
+
+    // Build rich package card
+    var card = document.createElement('div');
+    card.className = 'card' + (ph === 'poole' ? ' ta' : ' na');
+    card.style.cssText = 'margin-bottom:14px;';
+
+    var hlHTML = '';
+    if (a.highlights) {
+      for (var h = 0; h < a.highlights.length; h++) {
+        hlHTML += '<div style="padding:2px 0;font-size:.82rem">✓ ' + a.highlights[h] + '</div>';
+      }
+    }
+
+    card.innerHTML =
+      '<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px">'
+      + '<div>'
+      + '<div class="ct" style="margin-bottom:2px">' + a.n + '</div>'
+      + '<div style="font-size:.72rem;color:var(--muted);font-family:\'Source Sans 3\',sans-serif">📍 ' + (a.area||'') + ' · ⏱ ' + (a.dauer||'') + '</div>'
+      + '</div>'
+      + '<div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex-shrink:0">'
+      + '<div class="vscore ' + sc + '" style="font-size:1.3rem">' + totStr + '</div>'
+      + '<div style="display:flex;gap:4px">'
+      + '<button class="vbtn up' + (my===1?' voted':'') + '" onclick="castV(\'' + a.id + '\',\'' + a.n.replace(/'/g,"\\'") + '\',\'' + ph + '\',1)" style="padding:5px 10px;font-size:.9rem">👍</button>'
+      + '<button class="vbtn dn' + (my===-1?' voted':'') + '" onclick="castV(\'' + a.id + '\',\'' + a.n.replace(/'/g,"\\'") + '\',\'' + ph + '\',-1)" style="padding:5px 10px;font-size:.9rem">👎</button>'
+      + '</div></div></div>'
+      + '<div style="font-size:.8rem;color:var(--dark);font-family:\'Source Sans 3\',sans-serif;margin-bottom:6px">' + hlHTML + '</div>'
+      + '<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">'
+      + '<span style="background:rgba(200,168,75,.2);border-radius:10px;padding:2px 8px;font-size:.72rem;color:var(--dark)">🚇 ' + (a.anreise||'') + '</span>'
+      + '</div>'
+      + (a.kids ? '<div style="margin-top:6px;font-size:.78rem;font-family:\'Source Sans 3\',sans-serif;color:var(--teal);font-weight:600">👧 ' + a.kids + '</div>' : '')
+      + (a.essen ? '<div style="margin-top:4px;font-size:.78rem;font-family:\'Source Sans 3\',sans-serif;color:var(--muted)">🍽 ' + a.essen + '</div>' : '')
+      + '<div style="margin-top:4px;font-size:.72rem;font-family:\'Source Sans 3\',sans-serif;color:var(--muted)">🚶 ' + (a.laufen||'') + '</div>';
+
+    el.appendChild(card);
   }
 }
 
@@ -1660,23 +1904,57 @@ function renderVoteRank() {
   for (var i = 0; i < all.length; i++) {
     var a = all[i]; var votes = VD[a.id] || {}; var keys = Object.keys(votes); var tot = 0;
     for (var k = 0; k < keys.length; k++) tot += votes[keys[k]];
-    scored.push({ n: a.n, tot: tot });
+    scored.push({ n: a.n, tot: tot, area: a.area || '' });
   }
   scored.sort(function(a, b) { return b.tot - a.tot; });
   var maxAbs = 1;
   for (var i = 0; i < scored.length; i++) if (Math.abs(scored[i].tot) > maxAbs) maxAbs = Math.abs(scored[i].tot);
   var el = document.getElementById('vlist-rank'); if (!el) return;
-  el.innerHTML = '';
+
+  // Keep header, remove rest
+  while (el.children.length > 0) el.removeChild(el.lastChild);
+
   var medals = ['🥇', '🥈', '🥉'];
-  for (var i = 0; i < scored.length; i++) {
-    var a = scored[i];
+  var topWanted = scored.filter(function(a) { return a.tot > 0; });
+  var notWanted = scored.filter(function(a) { return a.tot < 0; });
+  var neutral = scored.filter(function(a) { return a.tot === 0; });
+
+  if (topWanted.length) {
+    var hdr = document.createElement('div');
+    hdr.style.cssText = 'font-family:\'Playfair Display\',serif;font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:8px;margin-top:4px';
+    hdr.textContent = '✅ Gewünschte Tage';
+    el.appendChild(hdr);
+  }
+  for (var i = 0; i < topWanted.length; i++) {
+    var a = topWanted[i];
     var pct = Math.round(Math.abs(a.tot) / maxAbs * 100);
     var div = document.createElement('div'); div.className = 'ri';
-    div.innerHTML = '<div class="rp">' + (i < 3 ? medals[i] : String(i + 1)) + '</div>'
+    div.innerHTML = '<div class="rp">' + (i < 3 ? medals[i] : String(i+1)) + '</div>'
       + '<div class="rbw"><div class="rn">' + a.n + '</div>'
-      + '<div class="rbar"><div class="rfill' + (a.tot < 0 ? ' neg' : '') + '" style="width:' + pct + '%"></div></div></div>'
-      + '<div class="rnum ' + (a.tot > 0 ? 'pos' : a.tot < 0 ? 'neg' : '') + '">' + (a.tot > 0 ? '+' : '') + String(a.tot) + '</div>';
+      + '<div style="font-size:.72rem;color:var(--muted);margin-bottom:3px">' + a.area + '</div>'
+      + '<div class="rbar"><div class="rfill" style="width:' + pct + '%"></div></div></div>'
+      + '<div class="rnum pos">+' + String(a.tot) + '</div>';
     el.appendChild(div);
+  }
+  if (notWanted.length) {
+    var hdr2 = document.createElement('div');
+    hdr2.style.cssText = 'font-family:\'Playfair Display\',serif;font-size:.9rem;font-weight:700;color:var(--red);margin:12px 0 6px';
+    hdr2.textContent = '❌ Lieber nicht';
+    el.appendChild(hdr2);
+    for (var i = 0; i < notWanted.length; i++) {
+      var a = notWanted[i];
+      var div = document.createElement('div'); div.className = 'ri';
+      div.innerHTML = '<div class="rp" style="color:var(--red)">✗</div>'
+        + '<div class="rbw"><div class="rn" style="color:var(--muted)">' + a.n + '</div></div>'
+        + '<div class="rnum neg">' + String(a.tot) + '</div>';
+      el.appendChild(div);
+    }
+  }
+  if (!topWanted.length && !notWanted.length) {
+    var empty = document.createElement('div');
+    empty.style.cssText = 'text-align:center;padding:24px;color:var(--muted);font-family:\'Source Sans 3\',sans-serif;font-style:italic';
+    empty.textContent = 'Noch keine Stimmen – stimmt ab!';
+    el.appendChild(empty);
   }
 }
 
@@ -2065,17 +2343,17 @@ function nextQ() { QI++; renderQ(); }
 var TP_DAY = 1;
 var TP_DATA = {};
 var TP_DEFAULTS = {
-  1:{m:'Stansted Express → Blackheath, einchecken',mi:'Greenwich Park & Meridian-Linie erkunden',a:'Abendessen in Greenwich Market'},
-  2:{m:'Thames Clipper ab Greenwich Pier → Westminster',mi:'London Eye + South Bank + Tate Modern',a:'Borough Market zum Abendessen'},
-  3:{m:'DLR ab Greenwich → Tower Gateway',mi:'Tower of London (Beefeater-Tour!)',a:'Tower Bridge Glasbrücke'},
-  4:{m:'Tube → South Kensington',mi:'Natural History Museum',a:'Science Museum (nebenan)'},
-  5:{m:'Tube → Hyde Park Corner',mi:'Hyde Park & Diana Spielplatz + Kensington Gardens',a:'West End: Covent Garden / ggf. Musical'},
-  6:{m:"St James's Park → Buckingham Palace (Wachablösung 11 Uhr!)",mi:'British Museum',a:'Abschiedsabend London'},
-  7:{m:'Check-out Clarendon Hotel',mi:'Zug London Waterloo → Poole (2 Std.)',a:'Check-in Drift & Dune, Poole Quay Bummel'},
-  8:{m:'Bus More 50 ab Poole Quay → Sandbanks',mi:'Sandbanks Beach – ganzer Tag!',a:'Rückkehr mit Bus, Abendessen Poole'},
-  9:{m:'Fähre ab Poole Quay → Brownsea Island',mi:'Brownsea Island: Eichhörnchen & Pfauen',a:'Rückfähre, Abend in Poole Old Town'},
-  10:{m:'Bus X54 → Swanage',mi:'Kimmeridge Bay: Fossilien suchen!',a:'Old Harry Rocks oder Swanage Strand'},
-  11:{m:'Bus/Zug nach Bournemouth',mi:'Bournemouth Promenade & Pier',a:'Farewell Dinner in Poole'},
+  1:{m:'Stansted Express → Blackheath, einchecken',mi:'Greenwich Park & Deer Park (Rehe!) – kurzer Spaziergang',a:'Pizza in Greenwich (Bella Italia oder local) – früh schlafen!'},
+  2:{m:'Thames Clipper ab Greenwich Pier → South Bank (sitzen, entspannt)',mi:'London Eye + South Bank Promenade + Straßenfood',a:'Wagamama South Bank oder Chinatown für Nudelgerichte'},
+  3:{m:'DLR ab Greenwich → Tower Gateway',mi:'Tower of London Beefeater-Tour (ca. 2 Std.) – kein weites Laufen',a:'Tower Bridge Glasbrücke + Fish & Chips zum Abendessen'},
+  4:{m:'Tube → South Kensington',mi:'Natural History Museum (Dinos! T-Rex!) + Science Museum interaktiv – ganzer Tag, kein extra Laufen',a:'Pizza Express South Kensington oder Wagamama'},
+  5:{m:'Tube → Hyde Park Corner → Diana Spielplatz (Kinder!)',mi:'Hyde Park Paddleboat Serpentine + Mila: Carnaby Street / Covent Garden Shopping',a:'Chinatown Abendessen (günstig, Bubble Tea für Kinder!) + ggf. Musical für Mila'},
+  6:{m:'St James Park kurz → Buckingham Palace Wachablösung 11 Uhr (stehen, nicht laufen)',mi:'Jojo & Mikko: Otherworld VR London! Mila: Brick Lane Vintage',a:'Farewell-London-Dinner: Dishoom oder gutes Italiener'},
+  7:{m:'Check-out Clarendon Hotel',mi:'Zug London Waterloo → Poole (2 Std.) – sitzen und entspannen',a:'Check-in Drift & Dune, Poole Quay Bummel + Fish & Chips'},
+  8:{m:'Bus More 50 ab Poole Quay → Sandbanks',mi:'Sandbanks Beach – ganzer Tag! Kinder bauen, schwimmen, toben',a:'Rückkehr mit Bus – Supermarkt M&S für Picknick-Snacks'},
+  9:{m:'Fähre ab Poole Quay → Brownsea Island (entspannt auf Fähre)',mi:'Brownsea Island: Eichhörnchen & Pfauen beobachten (Mikko!)',a:'Rückfähre, Abend Pizza in Poole Old Town'},
+  10:{m:'Bus X54 → Swanage (entspannt sitzen)',mi:'Kimmeridge Bay: Fossilien suchen! (Mikko & Jojo lieben das)',a:'Old Harry Rocks oder Swanage – Chips am Strand'},
+  11:{m:'Bus/Zug nach Bournemouth',mi:'Bournemouth Pier + Arcade Games am Pier (Jojo & Mikko!)',a:'Farewell Dinner Poole – gutes Italienisch oder Sushi'},
   12:{m:'Check-out Drift & Dune – spätestens 08:30 Uhr!',mi:'Zug Poole → Waterloo → Stansted Express',a:'FR6135 Stansted → Lübeck, 13:10 Uhr ✈️'}
 };
 var TP_LABELS = {
