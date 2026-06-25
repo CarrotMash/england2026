@@ -1991,6 +1991,7 @@ function switchVP(ph, btn) {
     if (el) el.style.display = phases[i] === ph ? '' : 'none';
   }
   if (ph === 'rank') renderVoteRank();
+  else renderVotePhase(ph);
 }
 
 // ══════════════════════════════════════════════
